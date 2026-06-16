@@ -98,14 +98,18 @@ jobs:
             | grep -v '/00' \
             | sort \
             | python3 -c "
-          import sys, json
+          import sys, json, os
           lignes = [l.strip() for l in sys.stdin if l.strip()]
-          # Pour chaque dossier, on cherche le premier .tex
-          import os
           result = []
           for dossier in lignes:
               fichiers_tex = [f for f in os.listdir(dossier) if f.endswith('.tex')]
-              if fichiers_tex:
+              # Le fichier principal est celui sans underscore dans le nom
+              fichiers_principaux = [f for f in fichiers_tex if '_' not in f]
+              if fichiers_principaux:
+                  result.append({'dossier': dossier, 'fichier': fichiers_principaux[0]})
+              elif fichiers_tex:
+                  # Aucun fichier sans underscore : on prend le premier et on avertit
+                  print(f"⚠️ Aucun fichier principal trouvé dans {dossier}, on prend {fichiers_tex[0]}", file=sys.stderr)
                   result.append({'dossier': dossier, 'fichier': fichiers_tex[0]})
           print(json.dumps(result))
           ")
