@@ -90,6 +90,189 @@ jobs:
       - name: Récupérer les fichiers du dépôt
         uses: actions/checkout@v4
 
+      - name: Lister les chapitres (dossiers 01 et au-dela)
+        id: liste
+        run: |
+          cat > /tmp/lister.py << 'PYEOF'
+import sys, json, os
+lignes = [l.strip() for l in sys.stdin if l.strip()]
+result = []
+for dossier in lignes:
+    fichiers_tex = [f for f in os.listdir(dossier) if f.endswith('.tex')]
+    fichiers_principaux = [f for f in fichiers_tex if '_' not in f]
+    if fichiers_principaux:
+        result.append({'dossier': dossier, 'fichier': fichiers_principaux[0]})
+    elif fichiers_tex:
+        print("AVERTISSEMENT : pas de fichier principal dans " + dossier, file=sys.stderr)
+        result.append({'dossier': dossier, 'fichier': fichiers_tex[0]})
+print(json.dumps(result))
+PYEOF
+          CHAPITRES=$(find "${{ inputs.niveau }}" -mindepth 1 -maxdepth 1 -type d \
+            | grep -v '/00' \
+            | sort \
+            | python3 /tmp/lister.py)
+          echo "chapitres=$CHAPITRES" >> $GITHUB_OUTPUT
+          echo "Chapitres trouves : $CHAPITRES"
+
+  compiler_tous:
+    name: "Compiler : ${{ matrix.chapitre.dossier }}"
+    needs: lister_chapitres
+    if: ${{ inputs.mode == 'Tout un niveau' }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chapitre: ${{ fromJson(needs.lister_chapitres.outputs.chapitres) }}
+      fail-fast: false # Si un chapitre échoue, les autres continuent
+
+    steps:
+      - name: Récupérer les fichiers du dépôt
+        uses: actions/checkout@v4
+
+      - name: Compiler ${{ matrix.chapitre.fichier }}
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: "${{ matrix.chapitre.dossier }}"
+          root_file: "${{ matrix.chapitre.fichier }}"
+
+      - name: Vérifier que le PDF a bien été généré
+        run: |
+          NOM_BASE=$(basename "${{ matrix.chapitre.fichier }}" .tex)
+          PDF_SOURCE="${{ matrix.chapitre.dossier }}/${NOM_BASE}.pdf"
+          if [ ! -f "$PDF_SOURCE" ]; then
+            echo "❌ ERREUR : Le PDF '$PDF_SOURCE' est introuvable."
+            exit 1
+          fi
+          echo "✅ PDF généré : $PDF_SOURCE"
+
+      - name: Uploader le PDF comme artifact temporaire
+        uses: actions/upload-artifact@v4
+        with:
+          name: "pdf-${{ matrix.chapitre.fichier }}"
+          path: "${{ matrix.chapitre.dossier }}/*.pdf"
+          retention-days: 1
+
+  rassembler_pdfs:
+    name: "Rassembler et enregistrer tous les PDF"
+    needs: compiler_tous
+    if: ${{ inputs.mode == 'Tout un niveau' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer les fichiers du dépôt
+        uses: actions/checkout@v4
+
+      - name: Télécharger tous les PDF compilés
+        uses: actions/download-artifact@v4
+        with:
+          path: pdfs_temp/
+
+      - name: Organiser et enregistrer les PDF
+        run: |
+          mkdir -p pdf
+          NIVEAU=$(echo "${{ inputs.niveau }}" | sed 's/^[0-9]\{2\} - [0-9]\{2\} //')
+
+          for fichier in pdfs_temp/**/*.pdf; do
+            NOM_BASE=$(basename "$fichier")
+            cp "$fichier" "pdf/${NIVEAU}_${NOM_BASE}"
+            echo "✅ Copié : pdf/${NIVEAU}_${NOM_BASE}"
+          done
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add pdf/
+          git commit -m "📚 Compilation complète : ${NIVEAU}" || echo "Aucune modification détectée"
+          git pushname: Compile LaTeX Document
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mode de compilation'
+        required: true
+        type: choice
+        options:
+          - 'Un seul chapitre'
+          - 'Tout un niveau'
+      niveau:
+        description: 'Dossier du niveau (ex: 25 - 26 6ème)'
+        required: true
+        type: string
+      dossier_chapitre:
+        description: '[Mode chapitre uniquement] Nom du sous-dossier (ex: 07- Les fractions)'
+        required: false
+        type: string
+      fichier:
+        description: '[Mode chapitre uniquement] Nom du fichier .tex (ex: Fractions.tex)'
+        required: false
+        type: string
+
+permissions:
+  contents: write # Autorise le robot à enregistrer les PDF dans tes fichiers
+
+jobs:
+
+  # ============================================================
+  # MODE 1 : Compiler un seul chapitre
+  # ============================================================
+  compile_un_chapitre:
+    name: "Compiler un chapitre"
+    if: ${{ inputs.mode == 'Un seul chapitre' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer les fichiers du dépôt
+        uses: actions/checkout@v4
+
+      - name: Compiler le document LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: "${{ inputs.niveau }}/${{ inputs.dossier_chapitre }}"
+          root_file: "${{ inputs.fichier }}"
+
+      - name: Vérifier que le PDF a bien été généré
+        run: |
+          NOM_BASE=$(basename "${{ inputs.fichier }}" .tex)
+          PDF_SOURCE="${{ inputs.niveau }}/${{ inputs.dossier_chapitre }}/${NOM_BASE}.pdf"
+          if [ ! -f "$PDF_SOURCE" ]; then
+            echo "❌ ERREUR : Le PDF '$PDF_SOURCE' est introuvable. La compilation a échoué."
+            exit 1
+          fi
+          echo "✅ PDF généré avec succès : $PDF_SOURCE"
+
+      - name: Organiser, renommer et enregistrer le PDF
+        run: |
+          mkdir -p pdf
+
+          # Extraction du niveau depuis le nom du dossier (tout ce qui suit "XX - XX ")
+          # Fonctionne pour n'importe quelle année (25-26, 26-27, etc.)
+          NIVEAU=$(echo "${{ inputs.niveau }}" | sed 's/^[0-9]\{2\} - [0-9]\{2\} //')
+
+          NOM_BASE=$(basename "${{ inputs.fichier }}" .tex)
+          FICHIER_FINAL="pdf/${NIVEAU}_${NOM_BASE}.pdf"
+
+          cp "${{ inputs.niveau }}/${{ inputs.dossier_chapitre }}/${NOM_BASE}.pdf" "$FICHIER_FINAL"
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add pdf/
+          git commit -m "📄 Compilation : ${NIVEAU}_${NOM_BASE}.pdf" || echo "Aucune modification détectée"
+          git push
+
+
+  # ============================================================
+  # MODE 2 : Compiler tous les chapitres d'un niveau
+  # ============================================================
+  lister_chapitres:
+    name: "Lister les chapitres à compiler"
+    if: ${{ inputs.mode == 'Tout un niveau' }}
+    runs-on: ubuntu-latest
+    outputs:
+      chapitres: ${{ steps.liste.outputs.chapitres }}
+
+    steps:
+      - name: Récupérer les fichiers du dépôt
+        uses: actions/checkout@v4
+
       - name: Lister les chapitres (dossiers 01 et au-delà)
         id: liste
         run: |
