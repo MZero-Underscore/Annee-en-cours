@@ -1,0 +1,19 @@
+name: Compile LaTeX Document
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: last.tex # <-- Remplace par le nom de ton fichier principal s'il est différent
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF-Document
+          path: last.pdf # <-- Remplace par le nom de ton PDF généré.
