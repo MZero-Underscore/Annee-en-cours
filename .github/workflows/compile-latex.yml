@@ -1,5 +1,8 @@
 name: Compile LaTeX Document
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -10,8 +13,8 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          working_directory: '25 - 26 6ème/15 - Figures usuelles et aires' # Le robot se place ici
-          root_file: FiguresUsuelles_Aires.tex # Plus d'espaces dans ce nom, le robot est content !
+          working_directory: '25 - 26 6ème/15 - Figures usuelles et aires'
+          root_file: FiguresUsuelles_Aires.tex
 
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
