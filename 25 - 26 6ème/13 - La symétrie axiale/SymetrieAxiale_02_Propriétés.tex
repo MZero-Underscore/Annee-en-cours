@@ -1,0 +1,88 @@
+\documentclass[a4paper]{book}
+
+% --- Chargement des préambules ---
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+% \input{../00 - Modules latex/Preambule_Math.tex} % Décommenter si le fichier existe
+
+\begin{document}
+\setcounter{chapter}{12}
+\renewcommand{\monTitre}{La symétrie axiale - propriétés}
+
+\enteteActivite{2}{\monTitre}{\thechapter}
+
+\section*{Activité : Le reflet sur le lac}
+
+    \textbf{Mission :} Lors d'une randonnée en montagne, un groupe observe un sentier rectiligne (marqué par les points $A$, $B$ et $C$) et un petit refuge de forme géométrique au bord d'un lac parfait. La surface de l'eau agit comme un miroir, représenté par l'axe $(d)$. Ton but est de construire le reflet de ce paysage pour en déduire les propriétés mathématiques du miroir !
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=0.5]
+        % Quadrillage de fond
+        \draw[lightgray, thin, step=1cm] (-7,-5) grid (7,5);
+        
+        % Axe de symétrie (Le bord du lac)
+        \draw[blue, ultra thick, dashed] (0,-5.5) -- (0,5.5) node[above] {$(d)$};
+        
+        % --- PARTIE 1 : Le Sentier (Points alignés) ---
+        \coordinate (A) at (-6, 3);
+        \coordinate (B) at (-4, 2);
+        \coordinate (C) at (-2, 1);
+        
+        \draw[thick] (A) -- (C);
+        \foreach \p in {A,B,C} {
+            \fill (\p) circle (3pt) node[above right] {$\p$};
+        }
+    
+        % --- PARTIE 2 : Le Refuge (Polygone) ---
+        \coordinate (P1) at (-5, -1);
+        \coordinate (P2) at (-2, -1);
+        \coordinate (P3) at (-2, -3);
+        \coordinate (P4) at (-3.5, -4.5); % La pointe
+        \coordinate (P5) at (-5, -3);
+        
+        \draw[thick, fill=orange!20] (P1) -- (P2) -- (P3) -- (P4) -- (P5) -- cycle;
+        
+        % Marquage de l'angle sur la pointe du refuge (P4)
+        \draw[thick] (-3.5, -4.5) ++(45:0.5) arc (45:135:0.5);
+        \node at (-3.5, -3.7) {$\alpha$};
+        
+    \end{tikzpicture}
+    \end{center}
+
+\subsection*{Partie 1 : Le sentier de randonnée}
+\begin{enumerate}
+    \item Sur le quadrillage ci-dessus, place les points $A'$, $B'$ et $C'$, qui sont les symétriques respectifs des points $A$, $B$ et $C$ par rapport à l'axe $(d)$.
+    \item Avec ta règle, que remarques-tu concernant la position des points $A'$, $B'$ et $C'$ ?
+    \begin{ZoneReponse}{1cm}
+    \end{ZoneReponse}
+    \item Mesure la longueur du segment $[AB]$, puis celle du segment $[A'B']$. Que constates-tu ?
+    \begin{ZoneReponse}{1cm}
+    \end{ZoneReponse}
+\end{enumerate}
+
+\subsection*{Partie 2 : Le refuge de montagne}
+    \begin{enumerate}
+        \item Trace le symétrique complet du refuge par rapport à l'axe $(d)$. 
+        \item Prends ton rapporteur. Mesure l'angle $\alpha$ sur la figure de départ, puis mesure l'angle correspondant sur la figure symétrique que tu viens de tracer. Que remarques-tu ?
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+        \item En comptant les carreaux ou en observant la figure, la surface (l'aire) du refuge a-t-elle changé en traversant le miroir ?
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+    \end{enumerate} 
+
+\subsection*{Bilan de la mission}
+    À l'aide de tes observations, complète la règle fondamentale : 
+    
+        \begin{ZoneReponse}{4.5cm}  
+            La symétrie axiale conserve :
+            \begin{itemize}[label=\textbullet]
+                \item \lignesPoints{1}
+                \item \lignesPoints{1}
+                \item \lignesPoints{1}
+                \item \lignesPoints{1}
+            \end{itemize}
+        \end{ZoneReponse}
+
+\end{document}

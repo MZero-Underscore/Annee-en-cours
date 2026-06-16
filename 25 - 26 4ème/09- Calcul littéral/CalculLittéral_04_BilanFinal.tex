@@ -1,0 +1,146 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Fiche bilan : Calcul littéral}
+
+\enteteActivite{4}{\monTitre}{\thechapter}
+    
+    \section{Évaluer et Simplifier}
+    
+    \begin{exercice}[Calculer une expression]
+    Calculer la valeur des expressions suivantes pour $x = 3$ puis pour $x = -2$ :
+    \begin{enumerate}
+        \item $A = 5x - 7$
+        \item $B = x^2 - 4x + 1$
+        \item $C = (x + 3)(2x - 5)$
+    \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}[Simplifier une écriture]
+    Simplifier les expressions suivantes en supprimant les signes $\times$ inutiles :
+    \begin{enumerate}
+        \item $D = 3 \times a + 4 \times 5$
+        \item $E = x \times x + 2 \times x \times y$
+        \item $F = 1 \times n - (4 + 2) \times b$
+        \item $G = 0 \times x + 7 \times (x + 3)$
+    \end{enumerate}
+    \end{exercice}
+    
+    \section{Réduction et Développement}
+    
+    \begin{exercice}[Réduire une expression]
+    Réduire le plus possible les expressions suivantes :
+    \begin{enumerate}
+        \item $H = 4x + 9 - 2x + 3$
+        \item $I = 5a^2 - 3a + 2 - 4a^2 + 8a$
+        \item $J = 7x - (3x + 4) + (2x - 5)$
+    \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}[Simple Distributivité]
+    Développer puis réduire les expressions suivantes :
+    \begin{enumerate}
+        \item $K = 3(x + 4)$
+        \item $L = -2(5x - 3)$
+        \item $M = x(2x + 7) - 3x^2$
+    \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}[Double Distributivité]
+    Développer et réduire les expressions suivantes :
+    \begin{enumerate}
+        \item $N = (x + 3)(x + 5)$
+        \item $O = (2x - 4)(3x + 1)$
+        \item $P = (5 - x)(2x - 3)$
+    \end{enumerate}
+    \end{exercice}
+
+
+\section{Factorisation et Défis}
+
+    
+    \begin{exercice}[Factoriser]
+    Factoriser les expressions suivantes en trouvant un facteur commun :
+    \begin{enumerate}
+        \item $Q = 5x + 15$
+        \item $R = 7a^2 - 3a$
+        \item $S = 4x^2 + 8x$
+    \end{enumerate}
+    \end{exercice}
+
+
+\newpage % Passage à la page 2
+     
+    \begin{exercice}[Pyramide de calcul]
+    Dans cette pyramide, chaque case est la somme des deux cases situées en dessous d'elle. Compléter la pyramide en réduisant les expressions :
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \draw (0,0) rectangle (2,1) node[pos=.5] {$2x$};
+        \draw (2,0) rectangle (4,1) node[pos=.5] {$3$};
+        \draw (4,0) rectangle (6,1) node[pos=.5] {$x-5$};
+        \draw (1,1) rectangle (3,2) node[pos=.5] {?};
+        \draw (3,1) rectangle (5,2) node[pos=.5] {?};
+        \draw (2,2) rectangle (4,3) node[pos=.5] {?};
+    \end{tikzpicture}
+    \end{center}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Défi : Aire d'une figure complexe]
+    On considère la figure ci-dessous (les longueurs sont en cm). La zone grise correspond au grand carré de côté $x+5$ auquel on a retiré un petit carré de côté $x+2$.
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=0.6]
+        % Grand carré (zone grise)
+        \draw[fill=gray!20, thick] (0,0) rectangle (5,5);
+        % Petit carré (zone blanche retirée)
+        \draw[fill=white, thick] (0,3) rectangle (2,5);
+        
+        % Cotes du grand carré
+        \draw[<->, >=latex] (0,-0.6) -- (5,-0.6) node[midway, below=2pt] {$x+5$};
+        \draw[<->, >=latex] (5.6,0) -- (5.6,5) node[midway, right=2pt] {$x+5$};
+        
+        % Cotes du petit carré
+        \draw[<->, >=latex] (0,5.6) -- (2,5.6) node[midway, above=2pt] {$x+2$}; % <--- Texte remonté ici
+        \draw[<->, >=latex] (-0.6,3) -- (-0.6,5) node[midway, left=2pt] {$x+2$};
+    \end{tikzpicture}
+    \end{center}
+    
+    \begin{enumerate}
+        \item Exprimer l'aire $\mathcal{A}_1$ du grand carré en fonction de $x$.
+        \item Exprimer l'aire $\mathcal{A}_2$ du petit carré en fonction de $x$.
+        \item En déduire l'aire de la partie restante (la zone grise) et montrer, après développement et réduction, que cette aire est égale à $6x + 21$.
+    \end{enumerate}
+    \end{exercice}
+
+    
+    \begin{exercice}[Programme de calcul et tableur]
+    On donne le programme de calcul suivant : 
+    
+    \begin{center}
+        \begin{minipage}{0.6\textwidth}
+            \begin{tcolorbox}[colback=gray!5, colframe=gray!30, arc=2mm, boxrule=0.5pt, left=10pt]
+                \begin{enumerate}[label=\color{blue!70!black}\faArrowRight, leftmargin=*]
+                    \item \textbf{Choisir} un nombre ;
+                    \item \textbf{Soustraire} 10.
+                    \item \textbf{Multiplier} la différence par 3 ;
+                \end{enumerate}
+            \end{tcolorbox}
+        \end{minipage}
+    \end{center}
+    
+    \begin{enumerate}
+        \item Appliquer ce programme au nombre 4 puis au nombre -3.
+        \item Si le nombre de départ est $n$, quelle expression littérale $R$ correspond à ce programme ? \\        
+        \item \textbf{Bonus :} Quelle valeur de $n$ faut-il choisir pour que le résultat donne -9 ?
+    \end{enumerate}
+    \end{exercice}
+
+
+\end{document}

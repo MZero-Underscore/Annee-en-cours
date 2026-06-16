@@ -1,0 +1,414 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{1}
+\renewcommand{\monTitre}{Règle et compas}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Point, droite, demi-droite et segment}
+\subsection{Le point}
+    \begin{definitionTitre}{Point}
+        \textbf{Un point} désigne un emplacement, il n'a aucune dimension (pas de longueur, pas d'aire...).\\
+        Au collège, on écrit toujours le nom d'un point en lettre majuscule. On représente usuellement un point par une croix.
+    \end{definitionTitre}
+
+    \begin{exemple}
+        Voici trois illustration.
+        \begin{center}
+            \includegraphics[scale=0.5]{images/points.png}
+        \end{center}
+    \end{exemple}
+    
+
+\subsection{La droite}
+    \begin{definitionTitre}{Droite}
+        \textbf{Une droite} est une ligne rectiligne illimitée des deux côtés. Elle se trace avec une règle.        
+    \end{definitionTitre}
+
+
+    \begin{notation}
+        On trouve trois notations pour une droite :
+        \begin{itemize}
+            \item La droite $d$ ou $(d)$: la lettre d ne désigne aucun point, c'est juste le nom de la droite.
+            \begin{center}
+                \includegraphics[scale=0.5]{images/droite1.png}
+            \end{center}
+            
+            \item La droite (AB) ou (BA) : les lettres A et B représentent deux points de la droite. On s'en sert pour nommer la droite.
+            \begin{center}
+                \includegraphics[scale=0.5]{images/droite2.png}
+            \end{center}
+            
+            \item La droite (xy) ou (yx) : ici, les lettres minuscules x et y désignent chacune une des extrémités de la partie de la droite qui est dessinée et ne sont pas des points.
+            \begin{center}
+                \includegraphics[scale=0.5]{images/droite3.png}
+            \end{center}
+        \end{itemize}
+    \end{notation}
+
+
+    \begin{propriete}
+        Par deux points distincts, il passe une unique droite.
+    \end{propriete}
+    
+
+\subsection{Le symbole \og appartient à \fg}
+    \begin{notation}
+        Quand on ajoute un point sur une figure ou que l'on veut décrire la situation d'un point, on utilise deux symboles particuliers. Prenons exemple sur la figure suivante :
+        \begin{center}
+            \includegraphics[scale=0.5]{images/SymboleAppartient.png}
+        \end{center}
+        \begin{itemize}
+            \item Le point M est sur la droite $d$. On dit que le point M appartient à la droite (d). On note $M \in (d)$.
+            \item Le point N n'est pas sur la droite $d$. On dit que le point N n'appartient pas à la droite (d). On note $N \notin (d)$.        
+        \end{itemize}
+    \end{notation}
+    
+
+        
+\subsection{Points-alignés}
+    \begin{definitionTitre}{Points alignés}
+        Lorsque trois points ou plus appartiennent à une même droite, on dit qu'ils sont \textbf{alignés}.   
+    \end{definitionTitre}
+    
+
+    \begin{exemple}
+        Indiquer si les points A, B et C sont alignés sur les figures suivantes.
+        
+        \begin{minipage}{0.3\linewidth}
+            a. \begin{center}
+                \includegraphics[scale=0.5]{images/PointsAlignés1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            b. \begin{center}
+                \includegraphics[scale=0.5]{images/PointsAlignés2.png}
+            \end{center}        
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            c. \begin{center}
+                \includegraphics[scale=0.5]{images/PointsAlignés3.png}
+            \end{center}        
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{La demi-droite}
+    \begin{definitionTitre}{Demi-droite}
+        Une \textbf{demi-droite} est une portion de droite limitée d'un seul côté par un point qu'on appelle \textbf{son origine}.
+    \end{definitionTitre}
+      
+
+    \begin{notation}
+        On trouve deux notations pour une demi-droite :
+        \begin{itemize}
+            \item La demi-droite $[AB)$ : l'origine est le point A et le point B est un autre point quelconque.
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DemiDroite1.png}
+            \end{center}
+            
+            \item La demi-droite $[Ax)$ : ici, la lettre x désigne l'extrémité de la demi-droite qui est illimitée.
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DemiDroite2.png}
+            \end{center}
+        \end{itemize}
+    \end{notation}
+
+
+    \begin{remarque}
+        \begin{minipage}{0.5\linewidth}
+            \textbf{Piège}
+
+            À l’aide du schéma suivant, on peut très bien parler de :
+            \begin{itemize}
+                \item la demi-droite $[AB)$;
+                \item la demi-droite $[BA)$;
+                \item ou de la droite $(AB)$.
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/Droite-DemiDroite.png}
+            \end{center}
+        \end{minipage}   
+    \end{remarque}
+
+
+    \begin{exemple}
+        \begin{tabular}{lp{1cm}c}
+            1. Colorier en rouge la demi-droite \([SR)\); &  & \includegraphics[scale=0.4]{images/Exemple03.png} \\
+            \\ \hline
+             
+            \\
+            2. Colorier en bleu la demi-droite \([RT)\); &  & \includegraphics[scale=0.4]{images/Exemple03.png} \\ 
+            \\ \hline
+
+            \\
+            3. Colorier en vert la demi-droite \([TS)\);  & & \includegraphics[scale=0.4]{images/Exemple03.png} \\
+            \\ \hline
+
+            \\
+            4. Colorier en noir la demi-droite \([ST)\). & & \includegraphics[scale=0.4]{images/Exemple03.png}
+        \end{tabular}
+    \end{exemple}
+
+
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            Sur la figure ci-contre, on donne deux droite $d_1$ et $d_2$.
+    
+            Placer les points A, B, C et D sur la figure sachant que :
+            \begin{itemize}
+                \item $A\in d_1$ et $A\notin d_2$.
+                \item $B\notin d_1$ et $B\in d_2$.
+                \item $C\notin d_1$ et $C\notin d_2$.
+                \item $D\in d_1$ et $A\in d_2$.
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/Exemple04.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+    
+
+\subsection{Le segment}
+    \begin{definitionTitre}{Segment}
+        Un \textbf{segment} est une portion de droite délimitée par deux points. Ces points s'appellent les \textbf{extrémités} du segment.
+
+        \begin{center}
+            \includegraphics[scale=0.4]{images/Segment.png}
+        \end{center}
+    \end{definitionTitre}
+
+
+    \begin{notation}
+        Le segment d'extrémités A et B se note [AB] ou [BA]. 
+        On peut mesurer un segment (à l'aide d'une règle par exemple). La longueur du segment [AB] se note AB.
+    \end{notation}
+    
+
+\newpage
+
+    
+\section{Distance entre deux points}
+    \begin{propriete}
+        Le segment [AB] est le plus court chemin allant du point A au point B.
+    \end{propriete}
+
+    
+    \begin{definitionTitre}{Distance entre deux points}
+        La \textbf{distance entre deux points} A et B est la \textbf{longueur du segment} [AB]. Cette longueur est notée AB. 
+    \end{definitionTitre}
+
+
+    \begin{proprieteTitre}{Inégalité triangulaire}
+        \begin{minipage}{0.5\linewidth}
+            Soit A, B et C trois points quelconques du plan.
+            \begin{itemize}
+                \item On a toujours l'inégalité $AB+BC \geq AC$.
+    
+                \item De plus, $AC+CB=AB$ si, et seulement si, $C\in[AB]$.
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/InegalitéTriangulaire.png}
+            \end{center}
+        \end{minipage}        
+    \end{proprieteTitre}
+
+
+    
+    \begin{exemple}
+
+
+        \begin{minipage}{0.5\linewidth}
+            On considère la figure ci-contre.
+
+            \begin{enumerate}
+                \item Compléter.
+
+                AC = \points[2] cm \quad CB = \points[2] cm \\
+                AD = \points[2] cm \quad DB = \points[2] cm \\
+
+                \item Compléter avec le bon symbole parmi <, > ou =.
+                
+                $AC+CB \points[2] AB$ \quad\quad $AD+DB \points[2] AB$
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/Exemple05.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{definitionTitre}{Milieu d'un segment}
+        \begin{minipage}{0.7\linewidth}
+            Le \textbf{milieu d'un segment} est le point qui appartient à ce segment et qui le partage en deux segments de même longueur.
+   
+            \small{\textit{Sur cette figure, C est le milieu du segment $[AB]$. \\
+            On a ajouté des codages pour dire que les segments $[AC]$ et $[CB]$ sont de même longueur}}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/Milieu.png}
+            \end{center}
+        \end{minipage}
+    \end{definitionTitre}
+
+
+    \begin{remarque}
+        On dit que le milieu du segment est \textbf{équidistant} des extrémités du segment.
+    \end{remarque}
+
+
+\section{Cercle et disque}
+\subsection{Le cercle}
+
+    \begin{definitionTitre}{Cercle}
+        Un \textbf{cercle} est l'ensemble de tous les points situés à une \textbf{\underline{même distance}} d'un même point appelé \textbf{le centre}. Cette distance est appelée le \textbf{rayon} du cercle.
+
+        \begin{minipage}{0.7\linewidth}
+            \begin{itemize}
+                \item Un \textbf{rayon} est un segment reliant le centre à un point du cercle.
+    
+                \item Un \textbf{diamètre} est un segment reliant deux points du cercle et passant par le centre du cercle.
+    
+                \item Une \textbf{corde} est un segment reliant deux points distincts du cercle.
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.6]{images/Cercle.png}
+            \end{center}
+        \end{minipage}
+    \end{definitionTitre}
+
+
+    \begin{remarque}
+        Les mots \og rayon \fg et \og diamètre \fg désignent à la fois un segment et une longueur.
+    \end{remarque}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Construire un cercle $\mathcal{C}$ de centre F et de rayon 6cm.
+            \item Tracer en rouge un rayon de ce cercle.
+            \item Tracer en vert un diamètre de ce cercle puis tracer en noir une corde qui n'est pas un diamètre de ce cercle.
+        \end{enumerate}        
+    \end{exemple}
+    
+
+    \begin{minipage}{0.5\linewidth}
+         \begin{exemple}
+            Soit $\mathcal{C}_1$ le cercle de centre L $\mathcal{C}_2$ le cercle de centre A. 
+            
+            Compléter avec les symbole $\in$ ou $\notin$.
+
+            \compare{D}{$\mathcal{C}_2$} \quad\quad \compare{A}{$\mathcal{C}_2$} 
+            
+            \compare{B}{$\mathcal{C}_1$} \quad\quad \compare{E}{$\mathcal{C}_2$} 
+            
+            \compare{F}{$\mathcal{C}_1$} \quad\quad \compare{L}{$\mathcal{C}_2$} 
+
+            \begin{center}
+                \includegraphics[scale=0.5]{images/Cercle_Exercice01.png}
+            \end{center}
+        \end{exemple}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\linewidth}
+        \begin{exemple}
+            On donne AB=3 cm.
+                
+            Écrire la consigne d'un exercice qui a permis d'obtenir la figure suivante.
+
+            \begin{center}
+                \includegraphics[scale=0.5]{images/Cercle_Exercice03.png}
+            \end{center}
+        \end{exemple}
+    \end{minipage}
+
+
+    \begin{propriete}
+        La longueur d'un diamètre correspond à deux fois celle du rayon. Elle est toujours supérieure ou égale à la longueur d'une corde.
+
+        \hspace{7cm}\textbf{Diamètre} $= 2 \times$ \textbf{Rayon}
+    \end{propriete}
+
+
+    \begin{exemple}
+        Construire un cercle $\mathcal{C}$ de diamètre 6 cm.      
+    \end{exemple}
+
+
+\subsection{Le disque}
+    \begin{definitionTitre}{Disque}
+        \begin{minipage}{0.5\linewidth}
+            Le \textbf{disque de centre O et de rayon r} est l'\textbf{ensemble de tous les points situés à une distance de O inférieure ou égale à r}. Il s'agit de la surface délimitée par le cercle de même centre et de même rayon.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.6]{images/Disque.png}
+            \end{center}
+        \end{minipage}
+    \end{definitionTitre} 
+
+
+    \begin{exemple}
+        \begin{minipage}{0.7\linewidth}
+            On a représenté le cercle de centre K et de rayon 3,6 cm. 
+            
+            Compléter avec les symboles <, = ou >.
+
+            \compare{KA}{3,6} \quad\quad \compare{KB}{3,6} \quad\quad \compare{KC}{3,6} 
+
+            \compare{KD}{3,6} \quad\quad \compare{KE}{3,6} \quad\quad \compare{KF}{3,6} 
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/Disque_Exercice01.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item 
+            \begin{enumerate}
+                \item Construire un segment [AB] de longueur 5 cm.
+                \item Construire un cercle $\mathcal{C}_1$ de centre A tel que B n'appartienne pas au disque délimité par $\mathcal{C}_1$.
+                \item Construire un cercle $\mathcal{C}_2$ de centre B tel que A appartienne au disque délimité par $\mathcal{C}_2$.
+            \end{enumerate}
+            \item Colorier l'ensemble des points appartenant aux deux disques délimités par $\mathcal{C}_1$ et $\mathcal{C}_2$.
+        \end{enumerate}
+    \end{exemple}
+
+    
+\end{document}

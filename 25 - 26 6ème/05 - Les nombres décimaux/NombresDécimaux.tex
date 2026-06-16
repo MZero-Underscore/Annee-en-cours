@@ -1,0 +1,342 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{4}
+\newcommand{\monTitre}{Les nombres décimaux}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+    \begin{center}
+        \includegraphics[scale=0.5]{images/TableauDécimaux.png}
+    \end{center}
+
+
+\section{Définitions et écritures}
+
+    \begin{definition}
+        Un \textbf{nombre décimal} est un nombre qui peut s'écrire sous la forme d'une fraction décimale, c'est à dire une fraction dont le numérateur est un nombre entier et le dénominateur est 1, 10, 100, \np{1000}, \ldots.
+
+        \medskip
+
+        L'écriture d'un nombre décimal avec une \textbf{virgule} est appelée \textbf{écriture décimale}. \textbf{La valeur de chaque chiffre dépend alors de sa position dans le nombre}.
+    \end{definition}
+
+
+    \begin{exemple}
+        Entourer les nombres décimaux présents dans la liste suivante.
+
+        \medskip
+
+        $\dfrac{45}{10} \quad\quad  5+\dfrac{3}{10} \quad\quad 
+        \dfrac{5}{7} \quad\quad \dfrac{\np{4521}}{\np{1000}} \quad\quad
+        45 \quad\quad \dfrac{8}{3} \quad\quad
+        \pi \quad\quad 3,54$
+    \end{exemple}
+
+
+    \begin{exemple}
+        Dans le nombre $694,81$, indiquer :
+        \begin{itemize}
+            \item Le chiffre des dizaines : \points[3]
+            \item Le nombre de dizaines : \points[3]
+            \item Le chiffre des dixièmes : \points[3]
+            \item Le nombre de dixièmes : \points[3]
+        \end{itemize}     
+    \end{exemple}
+
+
+    \begin{definition}
+        Écrire un nombre décimal sous forme de \textbf{nombre mixte}, c'est l'écrire comme la somme d'un nombre entier et d'une fraction décimale strictement inférieure à 1. Cette écriture est unique.
+
+        \begin{itemize}
+            \item L'entier trouvé s'appelle \textbf{la partie entière};
+            \item la fraction décimale trouvée s'appelle \textbf{la partie décimale}.
+        \end{itemize}
+    \end{definition}
+
+
+    \begin{exemple}
+        Écrire les nombres décimaux suivants sous forme d'un nombre mixte.
+        
+        \medskip
+
+        \begin{minipage}{0.30\linewidth}
+            $\dfrac{\np{32541}}{\np{1000}}$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $\dfrac{186}{10}$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $\dfrac{25}{100}$
+            
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\section{Repérage et encadrement}
+\subsection{Repérer}
+    \begin{definition}
+        Une \textbf{demi-droite graduée} est une demi droite pour laquelle on choisit une unité de longueur que l'on reporte régulièrement à partir de l'origine (souvent appelée O).
+    \end{definition}
+    
+
+    \begin{exemple}
+        Construire une demi-droite graduée en choisissant 10 cm comme unité. Graduée alors cette demi-droite en dixième.
+
+        \vspace{1cm}
+    \end{exemple}
+
+
+    \begin{proprieteTitre}{Repérer}
+        \begin{itemize}
+            \item Tout point d'une demi-droite graduée peut se repérer à l'aide d'un unique nombre que l'on appelle son \textbf{abscisse}.
+
+            \item Réciproquement, à tout nombre positif, on peut associer un unique point sur une demi-droite graduée.
+        \end{itemize}
+
+        Notation : \boxed{\text{Pour dire que le point A a pour abscisse le nombre 4, on écrit } $A(4)$.}
+    \end{proprieteTitre}
+
+
+    \begin{exemple}
+        Sur la demi-droite graduée, placer les points suivants : A(1,2); B(0,6); C($1+\dfrac{7}{10}$); D($\dfrac{5}{10}+\dfrac{5}{100}$); E($\dfrac{5}{100}$).
+    
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[gray](0,0)grid(17,0);
+                \draw[-stealth]|-(8.5,0)node[above]{};
+                \foreach \x in {0,...,17} \draw (\x,-.1)node[below]{\fpeval{\x / 10}} -- (\x,0);
+                \draw (0, 0.3) node {O};
+                \draw (10, 0.3) node {I};
+            \end{tikzpicture}   
+        \end{center}     
+    \end{exemple}
+
+
+\subsection{Encadrer}
+    \begin{definitionTitre}{Encadrer}
+        \textbf{Encadrer} un nombre, c'est trouver un nombre plus petit et un nombre plus grand.
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        On considère le nombre décimal $26,748$. Donner l'encadrement demande de ce nombre.
+
+        \medskip
+
+        \begin{minipage}{0.30\linewidth}
+            Au centième près.
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            Au dixième près.
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            À l'unité près
+            
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+        
+
+\newpage
+
+
+\section{Comparaison et arrondi}
+\subsection{Comparer}
+    \begin{proprieteTitre}{Comparer}
+        Pour \textbf{comparer} deux nombres décimaux, on compare d'abord leur partie entière :
+        \begin{itemize}
+            \item Si elles sont différentes, alors le nombre le plus grand est celui qui a la plus grande partie entière;
+            \item si elles sont égales, on compare les décimales de chaque nombre en commençant par les dixièmes, puis celui des centièmes, etc. On ajoute des zéro à la fin d'un des nombres si besoin.
+        \end{itemize}
+    \end{proprieteTitre}
+
+
+    \begin{exemple}
+        Comparer les nombres suivants.
+
+        \medskip
+
+        \begin{minipage}{0.30\linewidth}
+            $13,79$ et $11,21$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $11,24$ et $11,2$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $125,508$ et $125,584$
+            
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{Arrondir}
+    \begin{definition}
+        \textbf{Arrondir} un nombre à un rang donné, c'est trouvé le nombre le plus proche du nombre initial dont l'écriture s'arrête à ce rang. On utilise le symbole $\simeq$ entre le nombre et son arrondi.
+    \end{definition}
+
+
+    \begin{exemple}
+        Donner l'arrondi des nombres suivants.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $25,451$ à l'unité près.
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $145,24$ au dixième près.
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $145,28$ au dixième près.
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $\np{45321,45}$ à la centaine près.
+            
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+    
+
+\section{Addition et soustraction}
+    \begin{methode}
+        Pour poser l'addition ou la soustraction de deux nombres relatifs, 
+        \begin{itemize}
+            \item il faut penser à aligner les chiffres des unités les uns sous les autres;
+
+            \item on ajoute, si nécessaire des zéros sur la partie droite des nombres;
+
+            \item on utilise ensuite les mêmes méthodes que pour les nombres entiers.
+        \end{itemize}
+    \end{methode}
+
+
+    \begin{exemple}
+        Poser les additions et soustractions suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.30\linewidth}
+            $12,45+123,6$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $21,54+0,876$
+            
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $48,24-4,874$
+            
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\newpage
+
+
+\section{Multiplication}
+
+    \begin{methode}
+        \begin{itemize}
+            \item Une multiplication avec des nombres décimaux se pose comme une multiplication avec des nombres entiers.
+
+            \item A la fin, on additionne le nombre de chiffres après la virgule présents sur les deux facteurs. Ce nombre donne le nombre de chiffres après la virgule du résultat.
+        \end{itemize}
+    \end{methode}
+
+
+    \begin{exemple}
+        Poser les multiplications suivantes
+
+        \medskip
+
+        \begin{minipage}{0.30\linewidth}
+            $12,45\times3,5$
+            
+            \vspace{4cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $123,4\times0,5$
+            
+            \vspace{4cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.30\linewidth}
+            $\np{1452,78}\times0,31$
+            
+            \vspace{4cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\section{Résoudre des problèmes}
+
+    \begin{exemple}
+        \begin{minipage}{0.6\linewidth}
+            Patrick est un serveur maladroit. Il a mélangé les additions de trois tables du restaurant.
+    
+            \begin{itemize}
+                \item Table n\textdegree1 : 2 entrées, 4 plats, 1 dessert
+                \item Table n\textdegree2 : 1 entrée, 3 plats, 1 dessert
+                \item Table n\textdegree3 : 5 entrées, 2 plats, 5 desserts
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{05 - Les nombres décimaux/images/Probleme01a.png}
+            \end{center}
+        \end{minipage}
+
+        \begin{center}
+            \includegraphics[scale=0.5]{05 - Les nombres décimaux/images/Probleme01b.png}
+        \end{center}
+
+        Aider Patrick à associer chaque addition à la bonne table sans faire les calculs exacts. 
+    \end{exemple}
+
+    
+
+
+
+\end{document}

@@ -1,0 +1,244 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{2}
+\newcommand{\monTitre}{Le théorème de Pythagore \\ Partie 1}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+    \[\includegraphics[scale=0.8]{images/ActivitéDécouverte.png}\]
+
+\newpage
+ 
+   
+\section{Aire d'un carré, notion de racine carrée}
+\subsection{Aire d'un carré}
+
+    \begin{propriete} 
+        L'aire d'un carré de côté \( c \) se calcule à l'aide de la formule \( c \times c \) (ce qui se note aussi \( c^{2} \)).
+    \end{propriete}
+    
+    \begin{exemple}
+        Déterminer l'aire des carrés suivants.
+    
+        \begin{center}
+            \includegraphics[scale=0.45]{images/AiresCarrés.png}
+        \end{center}  
+    \end{exemple}
+    
+    \textbf{Tableau des carrés parfaits}
+    
+    \begin{tabular}{@{}|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|@{}}
+        \hline
+        \( c \) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\ \hline
+        \( c^{2} \) & & & & & & & & & & & & & & &  \\ \hline
+    \end{tabular}
+
+
+\subsection{Notion de racine carrée}
+
+    \textbf{Idée} : On note \( a \) l'aire d'un carré et on souhaite retrouver la longueur du côté de ce carré.
+    
+    \begin{definition} 
+        La racine carrée d'un nombre \textbf{positif} \( a \) est le nombre positif qui, multiplié par lui-même, vaut \( a \). On le note, par convention, \( \sqrt{a} \).
+    \end{definition}
+    
+    
+    \begin{exemple}
+        Donner les valeurs exactes des racines carrées suivantes.
+        
+        $\sqrt{36} \quad 
+        \sqrt{100} \quad 
+        \sqrt{1} \quad 
+        \sqrt{-5} $
+    \end{exemple}
+    
+    
+    \textbf{Utilisation de la calculatrice} : 
+        En général, la racine carrée d'un nombre positif est un nombre qui n'est pas décimal et il est difficile d'obtenir de tête une valeur approchée. On utilise la calculatrice pour trouver une valeur approchée.
+
+    \begin{exemple}
+        Donner les valeurs approchées des racines carrées avec la précision demandées.
+
+        $\sqrt{24}$ à $0,01$ près \quad $\sqrt{168}$ à $0,1$ près.
+    \end{exemple}
+
+
+\section{Calculer une longueur dans un triangle rectangle}
+\subsection{Le théorème de Pythagore}
+
+    \begin{theoremeTitre}{Théorème de Pythagore}
+        Si un triangle est rectangle alors le carré de la longueur de l'hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés.    
+    \end{theoremeTitre}
+
+
+    \textbf{Illustration} :
+        
+    \begin{center}
+    \begin{minipage}{0.5\linewidth}
+        \[\includegraphics[scale=0.6]{images/TriangleRectangle.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\linewidth}
+        Le triangle ABC est rectangle en A. On peut écrire :
+        \[
+        \mathrm{BC}^{2} = \mathrm{AC}^{2} + \mathrm{AB}^{2}
+        \]
+        
+        Mais également :
+        \[
+        \mathrm{AB}^{2} = \mathrm{BC}^{2} - \mathrm{AC}^{2}  \text{ et } 
+        \mathrm{AC}^{2} = \mathrm{BC}^{2} - \mathrm{AB}^{2}
+        \]
+    \end{minipage}
+    \end{center}
+
+    
+\subsection{Deux exemples de rédaction}
+\subsubsection{Calculer la longueur de l’hypoténuse}
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.7]{images/Pythagore1.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+
+        Dans le triangle \points[5] rectangle en \points[2]
+
+        \medskip
+
+        D'après le \points[20] :
+
+        \medskip
+
+        $BC^2 = \points[5]+\points[5]$ \\
+        $BC^2 = \points[5]+\points[5]$ \\
+        $BC^2 = \points[5]+\points[5]$ \\
+        $BC^2 = \points[10]$ 
+
+        \medskip
+
+        Donc $BC=\sqrt{\points[2]}=\points[2]$
+    \end{minipage}
+    
+
+\subsubsection{Calculer la longueur d'un côté de l'angle droit}
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.7]{images/Pythagore2.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+        Dans \points[20]
+
+        \medskip
+
+        D'après \points[22] :
+
+        \medskip
+
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        Donc $\points[5] = \points[10]$ 
+
+        \medskip
+
+        Donc $\points[2]=\sqrt{\points[2]}=\points[2]$
+    \end{minipage}
+
+
+\subsection{Savoir utiliser la calculatrice pour trouver une valeur approchée.}
+ 
+    \begin{minipage}{0.48\linewidth}
+        \subsubsection{Penser à réaliser une figure à main levée}
+        
+        $CAT$ est rectangle en $C$ tel que $CA = 40$ m et $AT = 42$ m. 
+        
+        Calculer $CT$ au mm près.
+
+        \begin{center}
+            \small{Figure à main levée}
+            
+            \begin{tikzpicture}
+                \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0);
+            \end{tikzpicture}
+        \end{center}
+            
+        Dans \points[18]
+
+        \medskip
+
+        D'après \points[18] :
+
+        \medskip
+
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[10]$ 
+
+        \medskip
+
+        Donc $\points[2]=\sqrt{\points[2]}=\points[2]$
+
+        \vspace{2.5cm}
+    \end{minipage}
+    \hfill
+    \vline
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        \subsubsection{En deux étapes}
+
+        Calculer TO en deux étapes.
+
+        \begin{center}
+            \includegraphics[scale=0.6]{images/Exemple03.png}
+        \end{center}
+        
+        i) Dans \points[18]
+
+        \medskip
+
+        D'après \points[18] :
+
+        \medskip
+
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[10]$ 
+
+        \medskip
+
+        Donc $CT^2=\points[5]$
+
+        \vspace{1cm}
+
+        ii) Dans \points[18]
+
+        \medskip
+
+        D'après \points[18] :
+
+        \medskip
+
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[5]+\points[5]$ \\
+        $\points[5] = \points[10]$ 
+
+        \medskip
+
+        Donc $TO=\points[5]=\points[5]$
+    \end{minipage}
+
+
+
+\end{document}

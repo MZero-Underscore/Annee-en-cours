@@ -1,0 +1,281 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{12} 
+\renewcommand{\monTitre}{La symétrie axiale}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+\section{Définition et constructions}
+
+    \begin{definition}
+        Deux figures sont \textbf{symétriques par rapport à une droite $(d)$} si elles se superposent exactement par pliage le long de cette droite. La droite $(d)$ est l'axe de symétrie.
+    \end{definition}
+    
+    
+    \begin{definition}
+        Le symétrique d'un point $M$ par rapport à une droite $(d)$ est le point $M'$ tel que :
+        \begin{itemize}
+            \item Si $M$ n'est pas sur $(d)$, alors $(d)$ est la \textbf{médiatrice} du segment $[MM']$.
+            \item Si $M$ est sur $(d)$, alors son symétrique est lui-même ($M = M'$).
+        \end{itemize}
+    \end{definition}
+    
+    
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[thick, red] (0,-1.5) -- (0,1.5) node[above] {$(d)$};
+            \coordinate (M) at (-2, 0.5);
+            \coordinate (Mp) at (2, 0.5);
+            \draw[dashed, gray] (M) -- (Mp);
+            \node at (M) {$\times$}; \node[left] at (M) {$M$};
+            \node at (Mp) {$\times$}; \node[right] at (Mp) {$M'$};
+            % Codage médiatrice
+            \draw[blue, thick] (0, 0.5) -- (0, 0.7) -- (-0.2, 0.7) -- (-0.2, 0.5);
+            \node[blue] at (-1, 0.5) {$/$};
+            \node[blue] at (1, 0.5) {$/$};
+        \end{tikzpicture}
+    \end{center}
+    
+    
+    \begin{exemple}[Construction sur quadrillage]
+        Construis le symétrique de la figure par rapport à l'axe rouge $(d)$.
+        \begin{ZoneReponse}{5cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.6]
+            \draw[help lines, color=gray!40] (-6,-3) grid (6,3);
+            \draw[red, ultra thick] (0,-3) -- (0,3) node[above] {$(d)$};
+            \draw[very thick, blue, fill=blue!10] (-4, 1) -- (-1, 2) -- (-1, -1) -- (-4, -1) -- cycle;
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+    
+    
+    \begin{exemple}[Construction sur papier blanc]
+        Construis le symétrique du point $A$ par rapport à la droite $(d)$ à l'équerre et au compas.
+        \begin{ZoneReponse}{4.5cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \draw[thick, red] (-2, -1) -- (2, 1) node[right] {$(d)$};
+            \coordinate (A) at (-1, 1.5);
+            \node at (A) {$\times$}; \node[above] at (A) {$A$};
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+    
+    
+    \begin{exemple}[Figure polygonale (Axe oblique)]
+        Construis le symétrique du triangle $ABC$ par rapport à la droite $(d)$. \\
+        \textit{Attention : l'axe n'est ni vertical, ni horizontal !}
+        \begin{ZoneReponse}{6.5cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Axe penché (oblique)
+            \draw[thick, red] (-4, -2) -- (4, 2) node[right] {$(d)$};
+            
+            % Triangle ABC placé de façon à ce que le symétrique rentre dans le cadre
+            \coordinate (A) at (-2.5, 1.5);
+            \coordinate (B) at (0, 3);
+            \coordinate (C) at (1, 1.5);
+            
+            \draw[thick, blue, fill=blue!5] (A) -- (B) -- (C) -- cycle;
+            \node[above] at (A) {$A$}; 
+            \node[above] at (B) {$B$}; 
+            \node[right] at (C) {$C$};
+            
+            % Points de repère invisibles pour vérifier que le symétrique rentre 
+            % (A' serait environ à (-1, -1.5), B' à (2, 0), C' à (2, 0))
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+    
+\section{Propriétés de la symétrie axiale}
+    
+    \begin{propriete}
+        La symétrie axiale conserve :
+        \begin{itemize}
+            \item \textbf{Les longueurs} (le symétrique d'un segment est un segment de même longueur).
+            \item \textbf{L'alignement} (les symétriques de points alignés sont alignés).
+            \item \textbf{Les angles} et \textbf{les aires}.
+        \end{itemize}
+    \end{propriete}
+    
+    
+    \begin{methodeTitre}{Exemple 4 : Utiliser les propriétés}
+        $EFGH$ est le symétrique de $ABCD$ par rapport à une droite. Si $AB = 5$ cm, quelle est la longueur de $[EF]$ ? Justifie.
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{methodeTitre}
+    
+    
+\section{Cas particuliers et figures complexes}
+    
+    \subsection{Symétrique d'un cercle}
+    \begin{propriete}
+        Le symétrique d'un cercle de centre $O$ et de rayon $r$ est un cercle de même rayon $r$, dont le centre $O'$ est le symétrique de $O$.
+    \end{propriete}
+    
+    \begin{center}
+        \begin{tikzpicture}[scale=0.6]
+            \draw[red, thick] (0,-2.5) -- (0,2.5) node[above] {$(d)$};
+            % Cercle 1
+            \draw[blue, thick] (-3,0) circle (1.5);
+            \node at (-3,0) {$\times$}; \node[below] at (-3,0) {$O$};
+            \draw[blue, <->] (-3,0) -- (-1.5,0) node[midway, above] {$r$};
+            % Cercle 2
+            \draw[blue, thick, dashed] (3,0) circle (1.5);
+            \node at (3,0) {$\times$}; \node[below] at (3,0) {$O'$};
+            \draw[dashed] (-3,0) -- (3,0);
+        \end{tikzpicture}
+    \end{center}
+    
+\subsection{Figure complexe}
+        Pour tracer le symétrique d'une figure complexe, on trace les symétriques de ses points stratégiques (sommets, centres de cercles).
+        
+    \begin{exemple}[Figure complexe]
+        Construis le symétrique de ce "vitrail" par rapport à l'axe oblique $(d)$. \\
+        \textit{Attention : la figure ne touche pas l'axe, il faut bien projeter chaque point perpendiculairement.}
+        \begin{ZoneReponse}{9cm} % Hauteur augmentée pour le confort de tracé
+        \begin{center}
+        \begin{tikzpicture}[scale=0.5]
+            % Grille étendue pour l'agrandissement
+            %\draw[help lines, color=gray!30] (-10,-9) grid (10,7);
+            
+            % Axe oblique décalé (y = -x - 1)
+            % On s'assure qu'il traverse bien la grille sans toucher la figure
+            \draw[red, ultra thick] (-8,7) -- (7,-8) node[right] {$(d)$};
+            
+            % La figure "Vitrail" agrandie et bien écartée de l'axe
+            % 1. Base polygonale (Pentagone)
+            \draw[very thick, blue] (-9,-3) -- (-6,0) -- (-3,-3) -- (-3,-8) -- (-9,-8) -- cycle;
+            
+            % 2. Partie arrondie : demi-cercle technique
+            % On utilise un rayon de 2.12 (correspondant à la diagonale de 1.5 carreaux)
+            \draw[very thick, blue] (-9,-3) arc (225:45:2.121);
+            
+            % 3. Détail interne : Losange complexe
+            \draw[blue, thick] (-6,-3.5) -- (-4.5,-5.5) -- (-6,-7.5) -- (-7.5,-5.5) -- cycle;
+            
+            % 4. Un petit hublot central pour ajouter un point de centre à symétriser
+            \draw[blue, thick] (-6, -5.5) circle (0.5);
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+    \begin{exemple}[Figure complexe traversée par l'axe]
+        Construis le symétrique de cette figure par rapport à l'axe $(d)$. \\
+        \textit{Attention : l'axe traverse la figure ! Une partie de ton tracé va se retrouver à gauche et l'autre à droite. Procède point par point.}
+        \begin{ZoneReponse}{10cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.6]
+            % Grille de même taille que la précédente
+            \draw[help lines, color=gray!30] (-10,-7) grid (8,9);
+            
+            % Axe vertical traversant
+            \draw[red, ultra thick] (-1,-7) -- (-1,8) node[above] {$(d)$};
+            
+            % Figure initiale (bleue) qui chevauche l'axe
+            % 1. Contour polygonal
+            \draw[very thick, blue] (-7, 4) -- (3, 7) -- (5, 1) -- (1, -6) -- (-8, -3) -- cycle;
+            
+            % 2. Détail rectangulaire à cheval sur l'axe
+            \draw[blue, thick] (-3, 1) rectangle (4, 3);
+            
+            % 3. Un élément circulaire dont le centre est sur l'axe (piège classique)
+            \draw[blue, thick] (0, -2) circle (2.5);
+            
+            % 4. Un petit triangle entièrement à droite de l'axe (pour forcer le croisement)
+            \draw[blue, thick] (2, -1) -- (4, -1) -- (3, 1) -- cycle;
+        
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\section{Rechercher des axes de symétrie}
+
+    \begin{definition}
+        On dit qu'une droite est un \textbf{axe de symétrie d'une figure} si, après pliage le long de cette droite, les deux parties de la figure se superposent parfaitement.
+    \end{definition}
+    
+    \begin{exemple}[Reconnaître un axe de symétrie (l'exemple de la banane)]
+        Pour savoir si une figure possède un axe de symétrie, on imagine le pliage.
+        \begin{itemize}
+            \item \textbf{Une figure symétrique :} Un masque ou un cœur possède un axe de symétrie. Les deux moitiés se superposent parfaitement.
+            \item \textbf{Une figure asymétrique :} Une \textbf{banane} est courbée sur le côté. Elle ne possède \textbf{aucun axe de symétrie} car si on la plie, la pointe ne tombe pas sur l'autre extrémité !
+        \end{itemize}
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.6]
+                % Figure 1 : Le masque/coeur (avec axe)
+                \begin{scope}[shift={(-4,0)}]
+                    \draw[thick, fill=purple!10] (0,-2) .. controls (-2,-0.5) and (-2,1.5) .. (0,0.5) .. controls (2,1.5) and (2,-0.5) .. (0,-2);
+                    \draw[dashed, red, very thick] (0,-2.5) -- (0,2) node[above] {Axe de symétrie};
+                    \node[below] at (0,-2.5) {1 axe de symétrie};
+                \end{scope}
+                
+                % Figure 2 : La banane / nanobanana (sans axe)
+                \begin{scope}[shift={(4,0)}]
+                    % Dessin d'une banane stylisée
+                    \draw[very thick, fill=yellow!50] (-1.5,-1) to[bend right=40] (1.5,1) to[bend left=50] (1.3,1.3) to[bend left=30] (-1.7,-0.7) -- cycle;
+                    % Petites lignes de détail sur la banane
+                    \draw[thick, brown] (-1.5,-1) to[bend right=35] (1.4,1.1);
+                    \node[below, font=\bfseries] at (0,-2.5) {La banane};
+                    \node[below=0.5cm, color=red!80!black] at (0,-2.5) {0 axe de symétrie (Asymétrique)};
+                \end{scope}
+            \end{tikzpicture}
+        \end{center}
+    \end{exemple}
+    
+    
+    \begin{propriete}
+        Certaines figures géométriques possèdent des axes de symétrie particuliers :
+        \begin{itemize}
+            \item Le \textbf{rectangle} possède 2 axes de symétrie (ses médiatrices).
+            \item Le \textbf{losange} possède 2 axes de symétrie (ses diagonales).
+            \item Le \textbf{carré} possède 4 axes de symétrie (médiatrices et diagonales).
+            \item Le \textbf{cercle} possède une infinité d'axes de symétrie (tous ses diamètres).
+        \end{itemize}
+    \end{propriete}
+    
+    
+    \begin{exemple}[Tracer des axes]
+        Trace, en rouge, tous les axes de symétrie possibles pour les figures suivantes :
+        \begin{ZoneReponse}{6cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % Un triangle isocèle
+            \draw[thick] (-5,0) -- (-3,0) -- (-4,2) -- cycle;
+            \node at (-4, -0.5) {Triangle isocèle};
+            
+            % Une croix
+            \draw[thick] (0,0) -- (1,0) -- (1,1) -- (2,1) -- (2,2) -- (1,2) -- (1,3) -- (0,3) -- (0,2) -- (-1,2) -- (-1,1) -- (0,1) -- cycle;
+            \node at (0.5, -0.5) {Croix};
+            
+            % Un hexagone régulier
+            \begin{scope}[shift={(5,1)}]
+                \foreach \a in {0,60,...,300} { \draw[thick] (\a:1.5) -- (\a+60:1.5); }
+            \end{scope}
+            \node at (5, -0.5) {Hexagone régulier};
+        \end{tikzpicture}
+        \end{center}
+        \end{ZoneReponse}
+    \end{exemple}
+    
+    
+    \begin{methodeTitre}{Astuce pour trouver l'axe}
+        Pour trouver l'axe de symétrie entre deux points $A$ et $A'$, il suffit de tracer la médiatrice du segment $[AA']$. Pour une figure, on peut essayer de faire de même avec deux sommets correspondants.
+    \end{methodeTitre}
+
+\end{document}

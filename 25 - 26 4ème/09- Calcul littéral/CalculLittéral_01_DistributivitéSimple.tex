@@ -1,0 +1,104 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Calcul littéral}
+
+\enteteActivite{1}{\monTitre}{\thechapter}
+
+    \begin{methodeTitre}{La distributivité simple}
+        Développer une expression, c'est transformer un produit en une somme ou une différence.
+        Pour tous nombres $k$, $a$ et $b$ :
+        \[ k \times (a + b) = k \times a + k \times b \]
+        \[ k \times (a - b) = k \times a - k \times b \]
+    \end{methodeTitre}
+    
+    \textit{Avant de développer, rappelons que dans $k(a+b)$, le nombre $k$ multiplie \textbf{tout} ce qui est dans la parenthèse.}
+    
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            Calculer de deux façons différentes :
+            $A = 5 \times (10 + 2)$
+            \begin{ZoneReponse}{4.5cm}
+            \textbf{Méthode 1 (Priorités) :} \\
+            $A = 5 \times 12 = \dots$
+
+            \vspace{1cm}
+            
+            \textbf{Méthode 2 (Distributivité) :} \\
+            $A = 5 \times 12 = 5 \times (10+2) = \dots$
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            Calculer astucieusement en développant : 
+            
+            $B = 7 \times 99$ (Indice : $99 = 100 - 1$)
+            \begin{ZoneReponse}{4cm}
+            $B = 7 \times (100 - 1)$ \\[2ex]
+            $B = \points[2] \times \points[2] - \points[2] \times \points[2]$ \\[2ex]
+            $B = \dots$
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+    
+    \textit{Développer et simplifier les expressions suivantes en utilisant la flèche de distributivité.}
+    
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            Développer les expressions :
+            \begin{enumerate} [label=\alph*)]
+                \item $C = 3(x + 4)$
+                \item $D = 5(2x - 3)$
+            \end{enumerate}
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            Attention aux signes négatifs :
+            \begin{enumerate} [label=\alph*)]
+                \item $E = -2(x + 7)$
+                \item $F = -4(3x - 5)$
+            \end{enumerate}
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+
+
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            Développer les expressions suivantes en distribuant le facteur à chaque terme :
+            
+            $G = 7x(x + 9)$ \; $H = 3(4x - 5x^2)$ \;  $I = -6x(2x + 3)$
+            \begin{ZoneReponse}{6cm}
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{exercice}
+            \textbf{Vers la réduction :} On peut additionner les termes d'une même "famille" en utilisant les formules de la distributivité de la droite vers la gauche. 
+            
+            Exemple : $3x + 2x = (3+2)x = 5x$.
+            
+            Réduire les expressions suivantes :
+            
+            $J = 8x + 5x$ \; $K = 10x - 4x$ \; $L = 3x + 7 + 2x - 4$
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{exercice}
+    \end{minipage}
+    
+
+\end{document}

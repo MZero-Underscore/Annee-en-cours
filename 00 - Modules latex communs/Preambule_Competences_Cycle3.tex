@@ -1,0 +1,152 @@
+% ==========================================
+% Domaine 1 : Chercher
+% ==========================================
+\newcommand{\CompetenceUn}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Prélever/organiser des informations nécessaires à la résolution de problèmes }{}
+    \ifthenelse{\equal{#1}{4}}
+        {Sélectionner les informations utiles}{}
+}
+
+
+% ==========================================
+% Domaine 2 : Modéliser
+% ==========================================
+\newcommand{\CompetenceDeux}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Utiliser les mathématiques pour résoudre quelques problèmes \ldots}{}
+    \ifthenelse{\equal{#1}{2}}
+        {Reconnaître et distinguer des problèmes relevant de situations de proportionnalité \ldots}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Traduire en langage mathématique une situation réelle en un modèle statistique}{}
+}
+
+
+% ==========================================
+% Domaine 3 : Représenter
+% ==========================================
+\newcommand{\CompetenceTrois}[1]{
+    \ifthenelse{\equal{#1}{2}}
+        {Produire et utiliser diverses représentations des fractions simples et des nombres décimaux}{}
+    \ifthenelse{\equal{#1}{3}}
+        {Analyser une figure plane}{}
+    \ifthenelse{\equal{#1}{6}}
+        {Produire et utiliser des représentations de figures géométriques}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Reconnaître, analyser et utiliser les éléments de codage d'une figure}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Produire et utiliser des outils pour représenter un problème (tableaux, graphiques ...)}{}
+    \ifthenelse{\equal{#1}{10}}
+        {Construire une figure géométrique à l'aide des outils}{}
+    \ifthenelse{\equal{#1}{11}}
+        {Mesurer et construire des angles avec un rapporteur}{}
+}
+
+
+% ==========================================
+% Domaine 4 : Raisonner
+% ==========================================
+\newcommand{\CompetenceQuatre}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Résoudre des problèmes}{}
+    \ifthenelse{\equal{#1}{2}}
+        {Raisonner, utiliser des propriétés}{}
+    \ifthenelse{\equal{#1}{8}}
+        {Résoudre des problèmes faisant appel aux 4 opérations sur les nombres entiers}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Résoudre des problèmes faisant appel aux 4 opérations sur les nombres décimaux}{}
+}
+
+
+% ==========================================
+% Domaine 5 : Calculer
+% ==========================================
+\newcommand{\CompetenceCinq}[1]{
+    \ifthenelse{\equal{#1}{4}}
+        {Effectuer des comparaisons, encadrer}{}
+    \ifthenelse{\equal{#1}{5}}
+        {Calculer avec des nombres entiers}{}
+    \ifthenelse{\equal{#1}{6}}
+        {Calculer avec des nombres décimaux}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Calculer un périmètre, une aire ou un volume}{}
+    \ifthenelse{\equal{#1}{8}}
+        {Calculer, manipuler des horaires et des durées}{}       
+}
+
+
+% ==========================================
+% Domaine 6 : Communiquer
+% ==========================================
+\newcommand{\CompetenceSix}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Utiliser et produire des figures géométriques}{}
+    \ifthenelse{\equal{#1}{2}}
+        {Fournir le travail attendu à la maison}{}
+    \ifthenelse{\equal{#1}{3}}
+        {S'impliquer dans le travail à la maison}{}
+    \ifthenelse{\equal{#1}{5}}
+        {Expliquer une démarche, justifier un choix}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Utiliser des indicateurs statistiques}{}
+}
+
+
+\newcommand{\CompetenceSept}{
+    Connaissances et savoir-faire liés au cours
+}
+
+\newcommand{\CompetenceHuit}{
+    Travail à la maison réalisé avec sérieux
+}
+
+% Les tableaux en haut des sujets
+\newcommand{\TableauCompetencesDeux}[2]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+              & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \small{#1} & & & & & \\ \hline
+            \small{#2} & & & &  &\\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}
+
+
+\newcommand{\TableauCompetencesTrois}[3]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+             & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \multicolumn{1}{|l||}{\small{#1}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#2}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#3}} & & & & & \\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}
+
+
+\newcommand{\TableauCompetencesQuatre}[4]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+             & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \multicolumn{1}{|l||}{\small{#1}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#2}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#3}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#4}} & & & & & \\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}

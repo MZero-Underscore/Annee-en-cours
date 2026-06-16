@@ -1,0 +1,93 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\renewcommand{\monTitre}{Correction détaillée : Approfondissement Calcul Littéral}
+\fancyhead[RO,LE]{\monTitre}
+
+\begin{center}
+    \huge \bfseries \monTitre
+\end{center}
+\vspace{0.5cm}
+
+\section{Défis de développement \& réduction}
+
+    \begin{exerciceTitre}{1. La pyramide de briques}
+        \begin{itemize}
+            \item \textbf{Étage 2 (gauche) :} $(2x+3) + (x-4) = \mathbf{3x-1}$
+            \item \textbf{Étage 2 (droite) :} $(x-4) + (5-3x) = \mathbf{-2x+1}$
+            \item \textbf{Sommet :} $(3x-1) + (-2x+1) = 3x - 2x - 1 + 1 = \mathbf{x}$
+        \end{itemize}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{2. Le carré magique (presque)}
+        $A = [(x \times 2x) + (x \times -1) + (3 \times 2x) + (3 \times -1)] - [(x \times 2x) + (x \times 5) + (-2 \times 2x) + (-2 \times 5)]$ \\
+        $A = [2x^2 - x + 6x - 3] - [2x^2 + 5x - 4x - 10]$ \\
+        $A = (2x^2 + 5x - 3) - (2x^2 + x - 10) = 2x^2 + 5x - 3 - 2x^2 - x + 10 = \mathbf{4x + 7}$
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{3. Calcul mental "Lycée"}
+        \begin{enumerate}
+            \item $101^2 = (100+1)(100+1) = 10\,000 + 100 + 100 + 1 = \mathbf{10\,201}$
+            \item $99^2 = (100-1)(100-1) = 10\,000 - 100 - 100 + 1 = \mathbf{9\,801}$
+            \item $101 \times 99 = (100+1)(100-1) = 10\,000 - 100 + 100 - 1 = \mathbf{9\,999}$
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{4. La forme la plus simple}
+        \begin{enumerate}
+            \item $E = (9x^2 - 12x + 4) - (3x^2 + 15x - 2x - 10) = 9x^2 - 12x + 4 - 3x^2 - 13x + 10 = \mathbf{6x^2 - 25x + 14}$
+            \item $E = (3x-2) \times [(3x-2) - (x+5)] = (3x-2)(2x-7)$
+            \item Pour $x = \frac{2}{3}$, on utilise la forme factorisée : $(3 \times \frac{2}{3} - 2)(\dots) = (2-2)(\dots) = \mathbf{0}$.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+\section{Géométrie et Modélisation}
+    
+    \begin{exerciceTitre}{5. L'allée du jardin}
+        Côté intérieur $= x - 4$. Aire $= (x-4)(x-4) = \mathbf{x^2 - 8x + 16}$. \\
+        Pour $x=10$, Aire $= 100 - 80 + 16 = \mathbf{36}$ m².
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{6. La boîte de conserve}
+        Augmentation $= 2\pi(r+3) - 2\pi r = 2\pi r + 6\pi - 2\pi r = \mathbf{6\pi} \approx 18,85$ cm.
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{7. Le rectangle d'or... presque}
+        \begin{enumerate}
+            \item Aire $= x^2 + 2x$
+            \item Périmètre $= x + x + x + 2 + x + 2 = \mathbf{4x + 4}$
+            \item $4x + 4 = 20 \Longrightarrow 4x = 16 \Longrightarrow \mathbf{x = 4}$
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+\section{Programmes et Démonstrations}
+    
+    \begin{exerciceTitre}{8. Le tour de magie}
+        $x \longrightarrow x+5 \longrightarrow x(x+5) \longrightarrow x^2+5x - x^2 = \mathbf{5x}$.
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{9. Nombres consécutifs}
+        $n(n+2)+1 = n^2+2n+1$ et $(n+1)^2 = n^2+2n+1$. Les deux expressions sont égales.
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{10. Carré se terminant par 5}
+        $(10n+5)^2 = 100n^2 + 100n + 25 = \mathbf{100[n(n+1)] + 25}$. \\
+        Exemple $35^2$ ($n=3$) : $100[3 \times 4] + 25 = 1200 + 25 = 1225$.
+    \end{exerciceTitre}
+    
+\section{Défis Experts}
+    
+    \begin{exerciceTitre}{11. Double distribution généralisée}
+        $Z = x^2(x-1) + x(x-1) + 1(x-1) = x^3 - x^2 + x^2 - x + x - 1 = \mathbf{x^3 - 1}$.
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{12. Défi de substitution}
+        $(a+b)^2 = a^2 + 2ab + b^2 \Longrightarrow 5^2 = a^2 + 2(3) + b^2 \Longrightarrow 25 - 6 = \mathbf{19}$.
+    \end{exerciceTitre}
+
+\end{document}

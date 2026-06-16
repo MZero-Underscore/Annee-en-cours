@@ -1,0 +1,94 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{8}
+\renewcommand{\monTitre}{Les angles}
+
+\enteteActivite{1}{\monTitre}{\thechapter}
+
+
+    \section*{Activité : Vers une nouvelle unité de mesure}
+
+    \begin{minipage}[c]{0.55\textwidth}
+        \textbf{Partie 1 : Fabrication de l'unité « G »} 
+
+        \begin{enumerate}[leftmargin=*]
+            \item Découper un disque de papier proprement.
+            \item Le plier en deux, puis encore en deux pour obtenir un angle droit.
+            \item Plier cet angle droit trois fois de suite en deux.
+            \item En dépliant, on obtient 8 parts égales dans chaque quart de disque.
+            \item Nous appellerons l'une de ces petites parts notre \textbf{unité G} (comme Gabarit).
+        \end{enumerate}        
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.4]
+            % Disque de base
+            \draw[thick] (0,0) circle (1.5);
+            
+            % Plis principaux (angle droit)
+            \draw[dashed, gray] (-1.5,0) -- (1.5,0);
+            \draw[dashed, gray] (0,-1.5) -- (0,1.5);
+            
+            % Plis intermédiaires (les 8 parts par quart)
+            \foreach \a in {11.25, 22.5, 33.75, 45, 56.25, 67.5, 78.75} {
+                \draw[dotted, gray] (0,0) -- (\a:1.5);
+                \draw[dotted, gray] (0,0) -- (-\a:1.5);
+                \draw[dotted, gray] (0,0) -- (180-\a:1.5);
+                \draw[dotted, gray] (0,0) -- (180+\a:1.5);
+            }
+            
+            % Mise en évidence de l'unité G
+            \fill[blue!20, opacity=0.6] (0,0) -- (0:1.5) arc (0:11.25:1.5) -- cycle;
+            \draw[blue, thick] (0,0) -- (0:1.5);
+            \draw[blue, thick] (0,0) -- (11.25:1.5);
+            \node[blue, font=\bfseries] at (25:1.9) {1 G};
+        \end{tikzpicture}
+    \end{minipage}
+
+    
+    \vspace{1cm}
+    
+    \textbf{Partie 2 : Mesurer avec le gabarit} \\
+    En utilisant votre gabarit « G » découpé, mesurez le plus précisément possible les angles suivants :
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=1.5]
+        % Angle A (environ 4 unités G)
+        \coordinate (O1) at (0,0);
+        \draw[thick] (O1) -- (3,0);
+        \draw[thick] (O1) -- (45:3);
+        \node at (1.5,-0.5) {$\widehat{A} \approx \points[3] \text{ unités G}$};
+    
+        % Angle B (environ 7 unités G)
+        \begin{scope}[xshift=7cm]
+            \coordinate (O2) at (0,0);
+            \draw[thick] (O2) -- (3,0);
+            \draw[thick] (O2) -- (78.75:3);
+            \node at (1.5,-0.5) {$\widehat{B} \approx \points[3] \text{ unités G}$};
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+    
+    \vspace{2cm}
+    
+    \textbf{Partie 3 : Construire avec le gabarit} \\
+    Dans le cadre ci-dessous, construire un angle $\widehat{XYZ}$ qui mesure exactement \textbf{5 unités G}.
+    
+    \begin{ZoneReponse}{6cm}
+    \end{ZoneReponse}
+    
+    \bigskip
+    
+    \textbf{Partie 4 : Bilan} \\
+    Pourquoi les mathématiciens n'utilisent-ils pas ce gabarit ? Quel instrument utilise-t-on d'habitude ?
+
+
+
+\end{document}

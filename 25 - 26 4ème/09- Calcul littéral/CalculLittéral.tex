@@ -1,0 +1,443 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{8}
+\renewcommand{\monTitre}{Calcul littéral}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+Le calcul littéral regroupe les règles de calcul permettant de manipuler les formules. On remplace certains nombres par \textbf{des lettres que l'on appelle des variables}. Certaines formules ont un sens et sont même célèbres. 
+
+\vspace{2cm}
+
+\section{Conventions de calcul littéral}
+    
+
+    \begin{convention}
+        On n'écrit pas le symbole de \textbf{multiplication} devant une lettre ou une parenthèse.
+    \end{convention}
+
+
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=3\times a$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=8\times a+5\times b$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=x\times 5$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=3\times (x+5)$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{convention}
+        On utilise la \textbf{notation puissance} pour indiquer qu'un même nombre se répète dans une même suite de multiplications. 
+    \end{convention}
+
+
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=x\times x\times x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=2x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=7\times x\times y \times x \times 3$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=x\times3+10\times x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{convention}
+        On n'écrit pas les \textbf{multiplications par 1 et par -1} devant une lettre ou une parenthèse.
+    \end{convention}
+    
+
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=5+1\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=10+1\times(5+x)$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=1\times x + 1 \times x^2$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=17-1\times(3x-6)$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}[Bilan]
+        Simplifier les écritures suivantes.
+        
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=x\times x\times2+x\times5$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=x\times5\times y-x\times5\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=1\times x \times x \times x - 5 \times x^2\times x^2$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=8-1\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \vfill
+
+\newpage 
+
+\section{Évaluer une expression littérale}
+    \begin{definitionTitre}{Évaluer}
+        \textbf{Évaluer} une expression littérale, c'est calculer sa valeur numérique en \textbf{remplaçant les variables} par leur valeur dans cette expression littérale.
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        Évaluer les expressions suivantes pour les valeurs demandées.
+
+        \medskip
+
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $A=3x^2-5x$
+
+            \medskip
+
+            Évaluer $A$ pour $x=5$ puis pour $x=-2$.
+
+            \vspace{5cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $B=5xy-8x+3y$
+
+            \medskip
+
+            Évaluer $B$ pour $x=7$ et $y=2$ puis pour $x=-2$ et $y=4$.
+
+            \vspace{5cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\section{Distributivité simple de la multiplication sur l'addition et ses applications}
+\subsection{Propriété}
+
+    \begin{proprieteTitre}{Distributivité simple de la multiplication}
+        \begin{minipage}{0.5\linewidth}
+            Pour tous nombres $a, b$ et $k$.
+    
+            \[k(a+b)=ka+kb \text{ et } k(a-b)=ka-kb\]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \includegraphics[scale=0.5]{images/Distributivité.png}
+        \end{minipage}
+    \end{proprieteTitre}
+
+
+\subsection{Application n°1 : Développer une expression littérale}
+    \begin{definitionTitre}{Développer}
+        \textbf{Développer} une expression littérale, c'est transformer les produits en somme algébrique.
+    \end{definitionTitre}
+    
+
+    \begin{exemple}
+        Développer et simplifier les expressions suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=10(5x-8)$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=3(2x^2+8)$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=4x(4-8x)$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=-2x(4-8x)$
+
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Application n°2 : Réduire une expression littérale}
+    \begin{definitionTitre}{Réduire}
+        \textbf{Réduire} une expression littérale, c'est l'écrire avec le moins de termes possibles.
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        Réduire les écritures suivantes.
+
+        \medskip
+        
+        \begin{minipage}{0.24\linewidth}
+            $A=8x+12x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=8x-5-6x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=4x-5x^2+17x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=14-3x-20+18x$
+
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+    
+
+\subsection{Application n°3 : Factoriser une expression littérale}
+    \begin{definitionTitre}{Factoriser}
+        \textbf{Factoriser} une expression littérale, c'est la transformer en produit.
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        Factoriser les écritures suivantes.
+
+        \medskip
+        
+        \begin{minipage}{0.24\linewidth}
+            $A=8x^2+12x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=4xy-8y$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=25x^2-15x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=25x^2+5x$
+
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\section{Double distributivité de la multiplication}
+\begin{proprieteTitre}{Distributivité double de la multiplication}
+        \begin{minipage}{0.5\linewidth}
+            Pour tous nombres $a, b, c$ et $d$.
+    
+            \[\Huge (a+b)(c+d)=ac+ad+bc+bd \]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \includegraphics[scale=0.5]{images/DoubleDistributivité.png}
+        \end{minipage}
+    \end{proprieteTitre}
+    
+
+    \demonstration
+    \begin{ZoneReponse}{4cm}\end{ZoneReponse}
+
+
+\newpage
+
+
+    \begin{exemple}
+        Développer, réduire et ordonner les expressions suivantes :
+
+        \medskip
+
+        \begin{minipage}{0.49\linewidth}
+            $A=(2x+6)(4x+5)$
+
+            \vspace{4cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.49\linewidth}
+            $B=(2x+8)(3x-5)$
+
+            \vspace{4cm}
+        \end{minipage}
+
+        \bigskip
+        
+        \begin{minipage}{0.49\linewidth}
+            $C=(4-8x)(-2x+8)$
+
+            \vspace{4cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.49\linewidth}
+            $D=(5x+7)(4-8x)$
+
+            \vspace{4cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}[Problème : Le défi des deux parcelles]
+        Un jardinier possède un terrain. Il décide de le séparer en deux parcelles de formes différentes pour tester deux types de cultures. Les dimensions sont exprimées en mètres ($m$) et $x$ désigne un nombre supérieur à 2.
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Parcelle 1 (Rectangle)
+            \draw[thick, fill=green!10] (0,0) rectangle (4,2.5);
+            \node at (2,1.25) {Parcelle 1};
+            \node[left] at (0,1.25) {$5$};
+            \node[above] at (2,2.5) {$x + 3$};
+            
+            % Parcelle 2 (Carré)
+            \draw[thick, fill=blue!10] (6,0) rectangle (8.5,2.5);
+            \node at (7.25,1.25) {Parcelle 2};
+            \node[below] at (7.25,0) {$x - 2$};
+            \node[right] at (8.5,1.25) {$x - 2$};
+        \end{tikzpicture}
+        \end{center}
+        
+        \hrule
+        \vspace{0.5cm}
+        
+        \subsection*{Partie A : Étude des aires (Développement et Réduction)}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Parcelle 1 :} C’est un rectangle de largeur $5$ et de longueur $(x + 3)$.\\
+            Exprimer l'aire $\mathcal{A}_1$ de cette parcelle en fonction de $x$, puis \textbf{développer et simplifier} l'expression obtenue.
+
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{Parcelle 2 :} C’est un carré de côté $(x - 2)$.\\
+            Exprimer l'aire $\mathcal{A}_2$ de cette parcelle en fonction de $x$ (sous forme d'un produit).
+
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item \textbf{Aire Totale :} En utilisant la double distributivité pour développer $\mathcal{A}_2$, \textbf{montrer} que l'aire totale du terrain $\mathcal{A}_{totale}~=~\mathcal{A}_1~+~\mathcal{A}_2$ peut s'écrire sous la forme réduite :
+            \[ \mathcal{A}_{totale} = x^2 + x + 19 \]
+            
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+        
+        \hrule
+        \vspace{0.5cm}
+        
+        \subsection*{Partie B : Test de valeurs (Substitution)}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Calcul de contrôle :} Si $x = 5$ m, calculer l'aire totale du terrain en utilisant la formule : $x^2 + x + 19$.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{Le raisonnement du jardinier :} Le jardinier affirme : \\
+            \textit{<< Si $x = 10$ m, la Parcelle 1 aura une aire exactement deux fois plus grande que la Parcelle 2. >>} \\\\
+            A-t-il raison ? \textbf{Justifier la réponse par des calculs.}
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+\end{document}

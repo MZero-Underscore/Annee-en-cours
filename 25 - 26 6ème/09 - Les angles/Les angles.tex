@@ -1,0 +1,394 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{8} % Le prochain chapitre sera le 8
+\renewcommand{\monTitre}{Les angles}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+\section{Vocabulaire et notations}
+    
+    \begin{definition}
+        Un \textbf{angle} est une portion de plan délimitée par deux demi-droites de même origine.
+        \begin{itemize}[label=\textbullet]
+            \item L'origine commune des deux demi-droites est appelée le \textbf{sommet} de l'angle.
+            \item Les deux demi-droites sont appelées les \textbf{côtés} de l'angle.
+        \end{itemize}
+    \end{definition}
+
+    
+    \begin{remarque}
+        On note un angle avec trois lettres surmontées d'un chapeau. La lettre du milieu désigne toujours le \textbf{sommet}. 
+        Les lettres aux extrémités désignent soit des points (lettres majuscules), soit le nom des demi-droites (lettres minuscules).
+    \end{remarque}
+    
+    
+    \begin{exemple}
+        \begin{center}
+            \begin{tabular}{cc}
+                \begin{tikzpicture}[scale=1, baseline=(current bounding box.center)]
+                    % Premier angle : avec des points (Majuscules)
+                    \draw[thick] (2.5,1.5) -- (0,0) node[left] {$A$} -- (3,0);
+                    \fill (2,1.2) circle (1.5pt) node[above left] {$C$};
+                    \fill (2.2,0) circle (1.5pt) node[below] {$B$};
+                    \draw[->,>=latex, green!55!black] (0.6,0) arc (0:31:0.6);
+                    \node at (3.5,0.7) {\textbf{Points :} $\widehat{BAC}$};
+                \end{tikzpicture} 
+                & 
+                \begin{tikzpicture}[scale=1, baseline=(current bounding box.center)]
+                    % Deuxième angle : avec des noms de demi-droites (minuscules)
+                    \draw[thick] (0,0) node[left] {$O$} -- (30:2.5) node[right] {$x$};
+                    \draw[thick] (0,0) -- (0:3) node[right] {$y$};
+                    \draw[->,>=latex, green!55!black] (0.6,0) arc (0:30:0.6);
+                    \node at (3.5,0.7) {\textbf{Directions :} $\widehat{xOy}$};
+                \end{tikzpicture} \\
+            \end{tabular}
+        \end{center}
+    \end{exemple}
+    
+    
+\section{Mesure et nature des angles}
+
+
+    \begin{definition}
+        Le \textbf{degré} est une unité de mesure d'angle. 
+
+        
+        Un angle plein (un tour complet) mesure \textbf{360 degrés}, ce que l'on note \textbf{360$^{\circ}$}.
+        
+        Un degré ($1^{\circ}$) représente donc $\frac{1}{360}$ d'un tour complet.
+    \end{definition}
+      
+    
+    \begin{exemple}
+        Visualisation du partage d'un tour complet :
+        \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            % Cercle complet en fond léger
+            \draw[gray!20, thin] (0,0) circle (2);
+            
+            % Marquage du centre
+            \fill (0,0) circle (1pt) node[below] {$O$};
+            
+            % Dessin de quelques secteurs de 1 degré (exagérés pour la visibilité ou très fins)
+            \foreach \a in {0,1,2,3,4,5} {
+                \draw[blue!70] (0,0) -- (\a:2);
+            }
+            
+            % Un secteur coloré pour montrer "1 part"
+            \fill[blue!20] (0,0) -- (0:2) arc (0:1:2) -- cycle;
+            
+            % Annotations
+            \draw[<->, >=latex] (2.2,0) arc (0:360:2.2);
+            \node at (2.8,1) {\small 1 tour = $360^{\circ}$};
+            
+            \draw[red, thick, <-] (0.5,0.02) -- (1.5,0.8) node[right, color=black] {Un petit écart vaut $1^{\circ}$};
+        \end{tikzpicture}
+        \end{center}
+    \end{exemple}
+
+
+    \begin{remarque}
+        L'instrument utilisé pour mesurer ou construire un angle en degrés est le \textbf{rapporteur}. 
+        La plupart des rapporteurs sont gradués de $0^{\circ}$ à $180^{\circ}$ (un demi-tour).
+    \end{remarque}
+    
+    
+    \begin{propriete}
+        On classe les angles selon leur mesure :
+        
+        \begin{center}
+        \renewcommand{\arraystretch}{2} % Pour aérer le tableau
+        \begin{tabularx}{\textwidth}{|X|c|c|}
+        \hline
+        \rowcolor{gray!10} \textbf{Nom de l'angle} & \textbf{Mesure} & \textbf{Représentation} \\ \hline
+        Angle \textbf{nul} & $0^{\circ}$ & 
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+            \draw[thick] (0,0) -- (1.5,0);
+            \draw[thick, red!85!white] (0.4,0) arc (0:0:0.4);
+        \end{tikzpicture} \\ \hline
+        Angle \textbf{aigu} & Entre $0^{\circ}$ et $90^{\circ}$ & 
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+            \draw[thick] (0,0) -- (1.2,0);
+            \draw[thick] (0,0) -- (40:1.2);
+            \draw[red!85!white] (0.4,0) arc (0:40:0.4);
+        \end{tikzpicture} \\ \hline
+        Angle \textbf{droit} & $90^{\circ}$ & 
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+            \draw[thick] (0,0) -- (1.2,0);
+            \draw[thick] (0,0) -- (0,1.2);
+            \draw[red!85!white] (0.3,0) -- (0.3,0.3) -- (0,0.3); % Codage angle droit
+        \end{tikzpicture} \\ \hline
+        Angle \textbf{obtus} & Entre $90^{\circ}$ et $180^{\circ}$ & 
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+            \draw[thick] (0,0) -- (1.2,0);
+            \draw[thick] (0,0) -- (130:1.2);
+            \draw[red!85!white] (0.3,0) arc (0:130:0.3);
+        \end{tikzpicture} \\ \hline
+        Angle \textbf{plat} & $180^{\circ}$ & 
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+            \draw[thick] (-1,0) -- (1,0);
+            \fill (0,0) circle (1pt);
+            \draw[red!85!white] (0.3,0) arc (0:180:0.3);
+        \end{tikzpicture} \\ \hline
+        \end{tabularx}
+        \end{center}
+    \end{propriete}
+    
+    
+    \begin{exemple}
+        Compléter le tableau suivant en associant chaque figure à son nom et à sa nature.
+        
+        \begin{center}
+        \renewcommand{\arraystretch}{4} % Hauteur des lignes augmentée
+        \begin{tabularx}{\textwidth}{|m{3.5cm}|*3{>{\centering\arraybackslash}X|}}
+            \hline
+            \rowcolor{gray!15} \textbf{Schéma} & \textbf{Nom} & \textbf{Mesure} & \textbf{Nature} \\ \hline
+            % Ligne 1 : On donne le dessin
+            \centering
+            \begin{tikzpicture}[baseline=(current bounding box.center), scale=0.7]
+                \draw[thick] (0,0) node[left]{$O$} -- (30:1.5) node[right]{$x$};
+                \draw[thick] (0,0) -- (0:1.5) node[right]{$y$};
+                \draw[green!55!black] (0.4,0) arc (0:30:0.4);
+            \end{tikzpicture} & \points[2] & \points[2] & \points[3] \\ \hline
+            % Ligne 2 : On donne le nom et la mesure (Case schéma vide)
+            \vspace{2.5cm} & $\widehat{ABC}$ & $90^{\circ}$ & \points[3] \\ \hline
+            % Ligne 3 : On donne le dessin (On garde l'obtus)
+            \centering
+            \begin{tikzpicture}[baseline=(current bounding box.center), scale=0.7]
+                \draw[thick] (1.5,0) node[right]{$L$} -- (0,0) node[left]{$K$} -- (135:1.5) node[above]{$M$};
+                \draw[green!55!black] (0.4,0) arc (0:135:0.4);
+            \end{tikzpicture} & \points[2] & $135^{\circ}$ & \points[3] \\ \hline
+            % Ligne 4 : Angle plat (Case schéma vide)
+            \vspace{2.5cm} & $\widehat{uOv}$ & $180^{\circ}$ & \points[3] \\ \hline
+        \end{tabularx}
+        \end{center}
+    \end{exemple}
+    
+    
+\section{Construction d'un angle}
+
+    
+    \begin{methode}
+        Pour construire un angle $\widehat{ABC}$ de $70^{\circ}$ :
+        \begin{enumerate}
+            \item On trace un premier côté $[BA)$.
+            \item On place le centre du rapporteur sur le sommet $B$.
+            \item On aligne le zéro du rapporteur avec le côté $[BA)$.
+            \item On fait une marque à $70^{\circ}$ et on trace la demi-droite $[BC)$.
+        \end{enumerate}
+    \end{methode}
+    
+    \begin{ZoneReponse}{4cm}
+    % Espace pour que l'élève s'exerce à tracer l'angle de la méthode ci-dessus
+    \end{ZoneReponse}
+
+
+    \begin{exemple}
+        Effectuer les tracés demandés dans la zone ci-dessous. Ne pas oublier pas de coder les sommets et de nommer les côtés.
+        
+        \begin{enumerate}[leftmargin=*]
+            \item Construire un angle aigu $\widehat{EFG}$ de mesure $54^{\circ}$.
+            \item Construire un angle obtus $\widehat{KLM}$ de mesure $125^{\circ}$.  
+        \end{enumerate}
+        
+        \begin{ZoneReponse}{6cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\section{La bissectrice d'un angle}
+
+
+    \begin{definition}
+        La \textbf{bissectrice} d'un angle est la demi-droite qui partage cet angle en deux angles de même mesure.
+        \begin{center}
+        \begin{tikzpicture}[scale=1.2]
+            % Les côtés de l'angle
+            \draw[thick] (0,0) node[left]{$A$} -- (3,0) node[right]{$B$};
+            \draw[thick] (0,0) -- (40:3) node[right]{$C$};
+            
+            % La bissectrice
+            \draw[thick, dashed, blue!85!white] (0,0) -- (20:3.5) node[right]{$d$};
+            
+            % Les arcs de codage (couleur de la boîte propriété pour le rappel de l'égalité)
+            \draw[red!85!white, thick] (0.8,0) arc (0:20:0.8);
+            \draw[red!85!white, thick] (20:0.8) arc (20:40:0.8);
+            
+            % Les symboles de codage (petits traits)
+            \node[red!85!white] at (10:0.8) {/};
+            \node[red!85!white] at (30:0.8) {/};
+            
+            \node[blue!85!white] at (2.5,0.5) {bissectrice};
+        \end{tikzpicture}
+        \end{center}
+
+        Il s'agit de \textbf{l'axe de symétrie de l'angle}.
+    \end{definition}
+    
+    
+    \begin{propriete}
+        \begin{minipage}[c]{0.55\textwidth}
+            Si la demi-droite $[Ad)$ est la bissectrice de l'angle $\widehat{BAC}$, alors elle partage l'angle en deux angles égaux :
+            \[ \widehat{BAd} = \widehat{dAC} = \widehat{BAC} \div 2 \]
+        
+            \textbf{Exemple de calcul :} \\
+            Si $\widehat{BAC} = 70^{\circ}$, alors : \\
+            $\widehat{BAd} = 70 \div 2 = \mathbf{35^{\circ}}$
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}[scale=1.1]
+                % Côtés
+                \draw[thick] (0,0) node[left]{$A$} -- (3,0) node[right]{$B$};
+                \draw[thick] (0,0) -- (50:3) node[above right]{$C$};
+                % Bissectrice
+                \draw[thick, dashed, blue!85!white] (0,0) -- (25:3.5) node[right]{$d$};
+                % Arcs et codages
+                \draw[red!85!white, thick] (0.7,0) arc (0:25:0.7) node[midway, right, xshift=2pt] {\small $35^{\circ}$};
+                \draw[red!85!white, thick] (25:0.7) arc (25:50:0.7) node[midway, above right] {\small $35^{\circ}$};
+                \node[red!85!white] at (12.5:0.7) {/};
+                \node[red!85!white] at (37.5:0.7) {/};
+            \end{tikzpicture}
+        \end{minipage}
+    \end{propriete}
+    
+    
+    \begin{methodeTitre}{Construction au compas}
+        Pour tracer la bissectrice de l'angle $\widehat{BAC}$ sans rapporteur :
+        \begin{enumerate}
+            \item On trace un arc de cercle de centre $A$ qui coupe les deux côtés de l'angle en deux points $M$ et $N$.
+            \item En gardant le même écartement (ou un autre), on trace deux arcs de cercle : l'un de centre $M$, l'autre de centre $N$, situés à l'intérieur de l'angle.
+            \item Ces deux arcs se coupent en un point $P$. 
+            \item La demi-droite $[AP)$ est la bissectrice de l'angle $\widehat{BAC}$.
+        \end{enumerate}
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}
+        Soit $\widehat{EFG} = 76^{\circ}$. Construire l'angle puis sa bissectrice :
+        \begin{enumerate}
+            \item à l'aide du rapporteur.
+            \item à l'aide du compas.
+        \end{enumerate}
+    \end{exemple}
+    
+    
+    \begin{ZoneReponse}{5cm}
+        \vspace{0.5cm}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}[scale=1.2, baseline=(current bounding box.north)]
+                % Sommet F
+                \coordinate (F) at (0,0);
+                % Tracé des côtés (mesure réelle de 76 degrés)
+                \draw[thick] (F) node[left] {$F$} -- (3,0) node[right] {$G$};
+                \draw[thick] (F) -- (76:3) node[above] {$E$};
+                
+                % Tracé de la bissectrice (76 / 2 = 38 degrés)
+                %\draw[thick, dashed, blue!85!white] (F) -- (38:3.5) node[right] {$[Fb)$};
+                
+                % Codage des deux angles de 38 degrés
+                %\draw[red!85!white, thick] (0.6,0) arc (0:38:0.6);
+                %\draw[red!85!white, thick] (38:0.6) arc (38:76:0.6);
+                
+                % Petits traits de codage
+                %\node[red!85!white, rotate=19] at (19:0.6) {/};
+                %\node[red!85!white, rotate=57] at (57:0.6) {/};
+                
+                % Indication de la mesure (optionnel pour la clarté)
+                %\node at (19:0.9) {\tiny $38^{\circ}$};
+                %\node at (57:0.9) {\tiny $38^{\circ}$};
+            \end{tikzpicture}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.5\textwidth}
+            \centering
+            \begin{tikzpicture}[scale=1.2, baseline=(current bounding box.north)]
+                % Sommet F
+                \coordinate (F) at (0,0);
+                % Tracé des côtés (mesure réelle de 76 degrés)
+                \draw[thick] (F) node[left] {$F$} -- (3,0) node[right] {$G$};
+                \draw[thick] (F) -- (76:3) node[above] {$E$};
+                
+                % Tracé de la bissectrice (76 / 2 = 38 degrés)
+                %\draw[thick, dashed, blue!85!white] (F) -- (38:3.5) node[right] {$[Fb)$};
+                
+                % Codage des deux angles de 38 degrés
+                %\draw[red!85!white, thick] (0.6,0) arc (0:38:0.6);
+                %\draw[red!85!white, thick] (38:0.6) arc (38:76:0.6);
+                
+                % Petits traits de codage
+                %\node[red!85!white, rotate=19] at (19:0.6) {/};
+                %\node[red!85!white, rotate=57] at (57:0.6) {/};
+                
+                % Indication de la mesure (optionnel pour la clarté)
+                %\node at (19:0.9) {\tiny $38^{\circ}$};
+                %\node at (57:0.9) {\tiny $38^{\circ}$};
+            \end{tikzpicture}
+        \end{minipage}
+    \end{ZoneReponse}
+
+
+    \section{Exercice bilan (À vos instruments !)}
+    
+    \begin{exercice}
+        \begin{minipage}[t]{0.48\textwidth}
+            \textbf{1. Analyse de figure} \\
+            Observer la figure ci-dessous :
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    \coordinate (O) at (0,0);
+                    \draw[thick] (-2,0) node[left] {$x$} -- (3,0) node[right] {$y$};
+                    \draw[thick] (O) -- (65:2.5) node[above] {$A$};
+                    \draw[thick] (O) -- (140:2.5) node[above left] {$B$};
+                    \fill (O) circle (1.5pt) node[below] {$O$};
+                    \draw[green!55!black] (0.4,0) arc (0:65:0.4);
+                    \draw[red!85!white] (0.6,0) arc (0:140:0.6);
+                \end{tikzpicture}
+            \end{center}
+            \begin{enumerate}
+                \item Nature de $\widehat{xOA}$ : \points[3]
+
+                \medskip
+                
+                \item Nature de $\widehat{xOy}$ : \points[3]
+
+                \medskip
+                
+                \item Mesurer $\widehat{AOB}$ : \points[2]
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \vrule
+        \hfill
+        \begin{minipage}[t]{0.48\textwidth}
+            \textbf{2. Construction et Bissectrice} \\
+            Sur la figure ci-dessous :
+            \begin{enumerate}
+                \item Mesurer l'angle $\widehat{uOv}$ : \points[2]
+                \item Tracer sa bissectrice en bleu au compas.
+                \item Calculer la mesure des deux nouveaux angles formés :
+                \points[10]
+            \end{enumerate}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \draw[thick] (0,0) node[left] {$O$} -- (3.5,0) node[right] {$v$};
+                    \draw[thick] (0,0) -- (115:3) node[above left] {$u$};
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+    \end{exercice}
+    
+    \begin{ZoneReponse}{3.5cm}
+        \centering \textit{\small Cadre réservé pour les éventuels calculs de l'exercice 2 ou remarques.}
+    \end{ZoneReponse}
+    
+
+\end{document}

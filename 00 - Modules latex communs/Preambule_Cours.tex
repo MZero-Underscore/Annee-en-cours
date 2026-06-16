@@ -1,0 +1,208 @@
+%% --- PACKAGES PROPRES AUX COURS ---
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[column=X]{cellspace}
+
+%% --- VARIABLES ---
+\newcommand{\monTitre}{Titre du cours} % À redéfinir dans chaque fichier : \renewcommand{\monTitre}{Mon titre}
+
+%% --- FORMAT DES TITRES (titlesec) ---
+
+\titleformat{\chapter}[frame]
+{\color{red!85!white}\normalsize}
+{\filright\sffamily\Large\enspace Chapitre \thechapter\enspace}
+{8pt}
+{\color{red!85!white}\rule{0pt}{30pt}\sffamily\Huge\bfseries\filcenter}
+\titlespacing{\chapter}{0pc}{0pc}{2pc}
+
+\titleformat{\section}
+{\color{green!55!black}\normalfont\Large\bfseries}
+{\thesection}
+{1em}
+{}
+
+% 3. Subsections (Cyan)
+% J'ai retiré le \hspace{1em} qui poussait le texte
+\titleformat{\subsection}[block]
+{\color{cyan!65!black}\normalfont\large\bfseries}
+{\thesubsection}
+{1em}
+{}
+% J'ai mis le premier paramètre à 0pt pour supprimer l'indentation de bloc
+\titlespacing{\subsection}{0pt}{1.5ex}{1ex}
+
+% 4. Subsubsections (Violet)
+\titleformat{\subsubsection}[block]
+{\color{violet}\normalfont\normalsize\bfseries}
+{\thesubsubsection}
+{1em}
+{}
+\titlespacing{\subsubsection}{0pt}{1ex}{1ex}
+
+%% --- NUMÉROTATION ---
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\arabic{subsection})}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\setcounter{secnumdepth}{3}
+
+%% --- EN-TÊTES ET PIEDS DE PAGE ---
+\pagestyle{fancy}
+\renewcommand\headrulewidth{1pt}
+\fancyhead[LO,RE]{\maClasse}
+\fancyhead[RO,LE]{\monTitre}
+\renewcommand\footrulewidth{1pt}
+\fancyfoot[LO,RE]{Année 2025-2026}
+\fancyfoot[RO,LE]{\textbf{Page \thepage/\pageref{LastPage}}}
+
+%% --- RÉGLAGES PARAGRAPHES ---
+\setlength{\cellspacebottomlimit}{4pt}
+\setlength{\cellspacetoplimit}{4pt}
+\setlength{\parindent}{2pt}
+\setlength{\tabcolsep}{0.5cm}
+
+%% --- COMPTEURS ET BOITES TCOLORBOX ---
+
+%% --- COMPTEURS AVEC RÉINITIALISATION À CHAQUE CHAPITRE ---
+
+% On ajoute [chapter] à la fin pour que le compteur reparte à 0 à chaque \chapter
+\newcounter{dfn}[chapter]
+\newcounter{thm}[chapter]
+\newcounter{cvn}[chapter]
+\newcounter{prp}[chapter]
+\newcounter{ex}[chapter]
+\newcounter{mtd}[chapter]
+\newcounter{rq}[chapter]
+\newcounter{demo}[chapter]
+\newcounter{appli}[chapter]
+\newcounter{exo}[chapter]
+\newcounter{lem}[chapter]
+
+%% --- BLOC COMPLET DES BOITES TCOLORBOX ---
+
+% --- DÉFINITIONS (Bleu) ---
+\newtcolorbox{definition}{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définition \thedfn, code={\stepcounter{dfn}}, arc=3mm}
+\newtcolorbox{definitionTitre}[1]{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définition \thedfn\ - #1, code={\stepcounter{dfn}}, arc=3mm}
+\newtcolorbox{definitions}{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définitions \thedfn, code={\stepcounter{dfn}}, arc=3mm}
+
+% --- PROPRIÉTÉS & THÉORÈMES (Rouge/Orange) ---
+\newtcolorbox{theoreme}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Théorème \thethm, code={\stepcounter{thm}}, arc=3mm}
+\newtcolorbox{theoremeTitre}[1]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Théorème \thethm\ - #1, code={\stepcounter{thm}}, arc=3mm}
+\newtcolorbox{propriete}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriété \theprp, code={\stepcounter{prp}}, arc=3mm}
+\newtcolorbox{proprieteTitre}[1]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriété \theprp\ - #1, code={\stepcounter{prp}}, arc=3mm}
+\newtcolorbox{proprietes}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriétés \theprp, code={\stepcounter{prp}}, arc=3mm}
+\newtcolorbox{lemme}{breakable,colback=red!6!white,colframe=orange!85!white,fonttitle=\bfseries,title=Lemme \theprp, code={\stepcounter{prp}}, arc=3mm}
+\newtcolorbox{convention}{breakable,colback=orange!6!white,colframe=orange!85!white,fonttitle=\bfseries,title=Convention \thecvn, code={\stepcounter{cvn}}, arc=3mm}
+
+% --- EXEMPLES (Vert) — argument optionnel pour le titre ---
+% Usage : \begin{exemple}             -> "Exemple 1"
+%         \begin{exemple}[Mon titre]  -> "Exemple 1 - Mon titre"
+\newtcolorbox{exemple}[1][]{
+  enhanced,
+  breakable,
+  nobeforeafter,
+  % --- ON FORCE TOUT À ZÉRO ---
+  boxrule=0pt,        % Épaisseur du cadre global à 0
+  titlerule=0pt,      % Supprime la ligne sous le titre
+  sharp corners,      % Important pour les coupures propres
+  % ----------------------------
+  colback=white,
+  colframe=white,     % On met le cadre en blanc (invisible) au cas où
+  frame empty,        % On cache le cadre
+  %
+  borderline west={0.5mm}{0mm}{green!55!black}, % Seule la barre verte reste
+  %
+  % Gestion de la coupure
+  toprule at break=0pt,
+  bottomrule at break=0pt,
+  %
+  title={Exemple \theex\ifx&#1&\else\ - #1\fi},
+  code={\stepcounter{ex}},
+  attach boxed title to top left = {xshift = -3mm},
+  boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}
+}
+
+% --- REMARQUES (Orange) ---
+\newtcolorbox{remarque}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarque \therq, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
+\newtcolorbox{remarques}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarques \therq, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
+\newtcolorbox{remarqueTitre}[1]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarque \therq\ - #1, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
+
+% --- MÉTHODES & APPLICATIONS (Bleu foncé) ---
+\newtcolorbox{methode}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthode \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
+\newtcolorbox{methodes}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthodes \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
+\newtcolorbox{methodeTitre}[1]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthode \themtd\ - #1, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
+\newtcolorbox{application}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!75!black}, title=Application \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!75!black,colframe=orange!75!black, arc=3mm}}
+
+% --- DIVERS (Exercices, Python, Conséquences) ---
+\newtcolorbox{exercice}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{green!55!black}, title=Exercice n°\theexo, colback=white, code={\stepcounter{exo}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}}
+\newtcolorbox{exerciceTitre}[1]{enhanced, breakable, frame empty, borderline west={0.5mm}{0mm}{green!55!black}, title=Exercice n°\theexo\ - #1, colback=white, code={\stepcounter{exo}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}}
+\newtcolorbox{consequences}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{ProcessBlue}, title=Conséquences, colback=white, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=ProcessBlue,colframe=ProcessBlue, arc=3mm}}
+\newtcolorbox{programme}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{gray!55!black}, title=Programme Python, colback=white, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=gray!55!black,colframe=gray!55!black, arc=3mm}}
+
+
+% Commande pour les démonstrations (incrémentation automatique)
+\newcommand{\demonstration}{%
+  \stepcounter{demo}%
+  \tcbox[enhanced, 
+         on line, 
+         arc=2mm, 
+         colback=gray!10!white, 
+         colframe=gray!50!black, 
+         size=small, 
+         fontupper=\bfseries]
+         {Démonstration \thedemo}%
+  \enspace % Ajoute un petit espace après la boîte
+}
+
+%% --- FIN DU BLOC DES BOITES ---
+
+% Activité (Numéro, Titre, Chapitre)
+\newcommand{\enteteActivite}[3]{
+    \noindent
+    \begin{tabularx}{\textwidth}{@{}p{2cm} >{\centering\arraybackslash}X p{2cm}@{}}
+        \textbf{Activité n°#1} & \textbf{#2} & \textbf{Chapitre #3} \\
+    \end{tabularx}
+}
+
+
+% --- Commande pour les blocs mémo personnalisés ---
+% Argument 1 : Couleur du cadre
+% Argument 2 : Titre du bloc
+% Argument 3 : Texte/Contenu
+\newcommand{\blocMemo}[3]{%
+    \begin{tcolorbox}[
+        enhanced,
+        breakable,
+        title=#2,
+        colback=#1!5,          % Fond très clair
+        colframe=#1!75!black,  % Bordure
+        fonttitle=\bfseries\sffamily,
+        colbacktitle=#1!75!black,
+        attach boxed title to top left={xshift=3mm, yshift=-3mm},
+        boxed title style={size=small, arc=2mm, colframe=#1!75!black},
+        arc=3mm,               % Bel arrondi
+        boxrule=0.6mm,         % Trait un peu plus épais
+        after skip=15pt,
+        before skip=10pt
+    ]
+        \vspace{2mm} % Petit espace pour ne pas coller au titre boxé
+        #3
+    \end{tcolorbox}
+}
+
+
+% --- Nouvel environnement Culture Maths ---
+\newtcolorbox{cultureMaths}{
+    enhanced, 
+    breakable, 
+    frame empty, 
+    nobeforeafter, 
+    borderline west={0.5mm}{0mm}{gray!60!black}, % Bordure grise comme ton "programme"
+    title=Le saviez-vous ?, 
+    colback=white, 
+    attach boxed title to top left = {xshift = -3mm}, 
+    boxed title style={size=small,colback=gray!60!black,colframe=gray!60!black, arc=3mm},
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    after skip=15pt,
+    before skip=10pt
+}

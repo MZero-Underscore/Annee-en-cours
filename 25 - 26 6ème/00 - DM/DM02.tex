@@ -1,0 +1,369 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+\begin{document}
+\setcounter{DM}{2}
+\newcommand{\maDate}{03/11}
+%\usetag{pronote}
+\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+\TableauCompetencesTrois
+            {\CompetenceTrois{6}}
+            {\CompetenceUn{1}}
+            {\CompetenceSix{2}}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.45\linewidth}
+            Zita est bénévole à la SPA (Société protectrice des animaux) et explique : 
+            
+            \og Dans le centre, on a 36 chats, dont la moitié sont des femelles, 4 cochons d’Inde femelles et 8 lapins mâles. 
+            
+            Il y a autant de chiens que de chiennes : 64 en tout. 
+            
+            Il y a 120 animaux au total dont 66 mâles. \fg
+
+            \medskip
+
+            Écrire ci-dessous les calculs permettant de remplir le tableau ci-contre.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{tabular}{l|l|l|l|}
+                \cline{2-4}
+                                                     & Mâles & femelles & Total \\ \hline
+                \multicolumn{1}{|l|}{Chiens}         &       &           &       \\ \hline
+                \multicolumn{1}{|l|}{Chats}          &       &           &       \\ \hline
+                \multicolumn{1}{|l|}{Lapins}         &       &           &       \\ \hline
+                \multicolumn{1}{|l|}{Cochons d'Inde} &       &           &       \\ \hline
+                \multicolumn{1}{|l|}{Total}          &       &           &       \\ \hline
+            \end{tabular}       
+        \end{minipage}
+
+        \bigskip
+
+        \points[220]    
+    \end{exercice}\stepcounter{exo}
+
+        
+    \begin{exercice}
+        En partant de la figure ci-contre : 
+        
+        \begin{minipage}{0.5\linewidth}
+            \begin{enumerate}[leftmargin=*, itemsep=0.5cm]
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer le cercle de centre M passant par N, puis le cercle de centre N passant par M.
+                    \item Ces deux cercles se coupent en S et T. Placer les points S et T.
+                \end{enumerate}
+            
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer la demi-droite [SM), elle coupe le cercle de centre M en A.
+                    \item Tracer la demi-droite [SN), elle coupe le cercle de centre N en B.
+                    \item Tracer l'arc de cercle de centre S et de rayon [SA] compris entre les points A et B.
+                \end{enumerate}
+            
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer la demi-droite [TM), elle coupe le cercle de centre M en C.
+                    \item Tracer la demi-droite [TN), elle coupe le cercle de centre N en D.
+                    \item Tracer l'arc de cercle de centre T et de rayon [TC] compris entre les points C et D.
+                \end{enumerate}
+            \end{enumerate}
+    
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM02_Exercice02.png}
+            \end{center}
+        \end{minipage}      
+    \end{exercice}\stepcounter{exo}
+
+
+\vfill
+\thepage/2 \hfill Tourner la page ! 
+
+
+    \begin{exercice}
+        \begin{minipage}{0.7\linewidth}
+            L'objectif est de remettre dans l'ordre un programme de construction pour la figure ci-contre.
+
+            \begin{itemize}
+                \item \boxed{\text{Construire, au compas, le point M tel que [AM] est une corde et AM=3,5 cm.}}
+
+                \medskip
+
+                \item \boxed{\text{Construire un cercle de centre O et de rayon 4,4cm.}}
+
+                \medskip
+                
+                \item \boxed{\text{Construire le point C sur la demi-droite [AM) tel que AC=7cm.}}
+
+                \medskip
+                
+                \item \boxed{\text{Placer deux points A et B tels que [AB] est un diamètre du cercle.}}      
+            \end{itemize}        
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.25]{images/DM02_Exercice03.png}
+            \end{center}
+        \end{minipage}   
+
+        
+        \bigskip
+
+        \begin{enumerate}
+            \item Remettre le programme de construction dans l'ordre.
+
+            \begin{enumerate}
+                \item \points[30]
+
+                \medskip
+
+                \item \points[30]
+
+                \medskip
+
+                \item \points[30]
+
+                \medskip
+
+                \item \points[30]
+            \end{enumerate}
+
+            \item Appliquer son programme de construction et construire la figure proposée en vraie grandeur.
+
+            \vspace{9cm}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exerciceTitre}{Construire un hexagone régulier}
+        \begin{enumerate}
+            \item Construire un cercle de rayon 3 cm.
+            
+            \item Placer un point A sur le cercle.
+            
+            \item Construire, au compas, le point B tel que 
+            
+            [AB] est une corde et AB=3 cm.
+            
+            \item Construire, au compas, le point C tel que 
+            
+            [BC] est une corde et BC=3 cm.
+            
+            \item Reproduire le procédé encore 3 fois 
+            
+            pour construire les points D, E et F 
+            
+            en partant du point C, puis du point D, \ldots.
+            
+            \item Construire alors l'hexagone ABCDEF.
+        \end{enumerate}  
+    \end{exerciceTitre}\stepcounter{exo}
+
+
+\vfill
+\thepage/2 \hfill \text{ }
+}
+
+
+\tagged{correction}{
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.45\linewidth}
+            Zita est bénévole à la SPA (Société protectrice des animaux) et explique : 
+            
+            \og Dans le centre, on a 36 chats, dont la moitié sont des femelles, 4 cochons d’Inde femelles et 8 lapins mâles. 
+            
+            Il y a autant de chiens que de chiennes : 64 en tout. 
+            
+            Il y a 120 animaux au total dont 66 mâles. \fg
+
+            \medskip
+
+            Écrire ci-dessous les calculs permettant de remplir le tableau ci-contre.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{tabular}{l|l|l|l|}
+                \cline{2-4}
+                                                     & Mâles & Femelles & Total \\ \hline
+                \multicolumn{1}{|l|}{Chiens}         & \textcolor{blue}{32}      
+                & \textcolor{blue}{32} & \textcolor{teal}{64}      \\ \hline
+                \multicolumn{1}{|l|}{Chats}          & \textcolor{blue}{18} 
+                & \textcolor{blue}{18} & \textcolor{teal}{36}      \\ \hline
+                \multicolumn{1}{|l|}{Lapins}         & \textcolor{teal}{8}
+                & \textcolor{purple}{0}  & \textcolor{purple}{8}      \\ \hline
+                \multicolumn{1}{|l|}{Cochons d'Inde} & \textcolor{red}{8}
+                & \textcolor{teal}{4}  & \textcolor{red}{12}      \\ \hline
+                \multicolumn{1}{|l|}{Total}          & \textcolor{teal}{66}
+                & \textcolor{orange}{54} & \textcolor{teal}{120}      \\ \hline
+            \end{tabular}       
+        \end{minipage}
+
+        \bigskip
+
+        Il y a 64 chiens et autant de mâles que de femelles donc 32 de chaque.
+
+        Même raisonnement pour les chats : $36\div2=18$.
+
+        Pour les cochons d'Inde mâles : $32+18+8=58$ puis $66-58=\textcolor{red}{8}$
+
+        On trouve ensuite le nombre total de cochons d'Inde : $8+4=\textcolor{red}{12}$
+
+        On peut trouver le nombre total de femelles : $120-66=\textcolor{orange}{54}$.
+
+        On peut ensuite trouver le nombre de femelles lapins : $32+18+4=54$ puis $54-54=\textcolor{purple}{0}$.
+
+        On trouve alors le total de lapins : \textcolor{purple}{8}.
+    \end{exercice}\stepcounter{exo}
+
+        
+    \begin{exercice}
+        En partant de la figure ci-contre : 
+        
+        \begin{minipage}{0.5\linewidth}
+            \begin{enumerate}[leftmargin=*, itemsep=0.5cm]
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer le cercle de centre M passant par N, puis le cercle de centre N passant par M.
+                    \item Ces deux cercles se coupent en S et T. Placer les points S et T.
+                \end{enumerate}
+            
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer la demi-droite [SM), elle coupe le cercle de centre M en A.
+                    \item Tracer la demi-droite [SN), elle coupe le cercle de centre N en B.
+                    \item Tracer l'arc de cercle de centre S et de rayon [SA] compris entre les points A et B.
+                \end{enumerate}
+            
+                \item
+                \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0.3cm]
+                    \item Tracer la demi-droite [TM), elle coupe le cercle de centre M en C.
+                    \item Tracer la demi-droite [TN), elle coupe le cercle de centre N en D.
+                    \item Tracer l'arc de cercle de centre T et de rayon [TC] compris entre les points C et D.
+                \end{enumerate}
+            \end{enumerate}
+    
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM02_Exercice02_Correction.png}
+            \end{center}
+        \end{minipage}      
+    \end{exercice}\stepcounter{exo}
+
+
+\vfill
+\thepage/2 \hfill Tourner la page ! 
+
+
+    \begin{exercice}
+        \begin{minipage}{0.7\linewidth}
+            L'objectif est de remettre dans l'ordre un programme de construction pour la figure ci-contre.
+
+            \begin{itemize}
+                \item \boxed{\text{Construire, au compas, le point M tel que [AM] est une corde et AM=3,5 cm.}}
+
+                \medskip
+
+                \item \boxed{\text{Construire un cercle de centre O et de rayon 4,4cm.}}
+
+                \medskip
+                
+                \item \boxed{\text{Construire le point C sur la demi-droite [AM) tel que AC=7cm.}}
+
+                \medskip
+                
+                \item \boxed{\text{Placer deux points A et B tels que [AB] est un diamètre du cercle.}}      
+            \end{itemize}        
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.25]{images/DM02_Exercice03.png}
+            \end{center}
+        \end{minipage}   
+
+        
+        \bigskip
+
+        \begin{enumerate}
+            \item Remettre le programme de construction dans l'ordre.
+
+            \begin{enumerate}
+                \item \boxed{\text{Construire un cercle de centre O et de rayon 4,4cm.}}
+
+                \medskip
+
+                \item \boxed{\text{Placer deux points A et B tels que [AB] est un diamètre du cercle.}} 
+
+                \medskip
+
+                \item \boxed{\text{Construire, au compas, le point M tel que [AM] est une corde et AM=3,5 cm.}}
+
+                \medskip
+
+                \item \boxed{\text{Construire le point C sur la demi-droite [AM) tel que AM=7cm.}}
+            \end{enumerate}
+
+            \item Appliquer son programme de construction et construire la figure proposée en vraie grandeur.
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exerciceTitre}{Construire un hexagone régulier}
+        \begin{minipage}{0.5\linewidth}
+            \begin{enumerate}
+                \item Construire un cercle de rayon 3 cm.
+                
+                \item Placer un point A sur le cercle.
+                
+                \item Construire, au compas, le point B tel que 
+                
+                [AB] est une corde et AB=3 cm.
+                
+                \item Construire, au compas, le point C tel que 
+                
+                [BC] est une corde et BC=3 cm.
+                
+                \item Reproduire le procédé encore 3 fois 
+                
+                pour construire les points D, E et F 
+                
+                en partant du point C, puis du point D, \ldots.
+                
+                \item Construire alors l'hexagone ABCDEF.
+            \end{enumerate}  
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \includegraphics[scale=0.5]{images/DM02_Exercice04_Correction.png}
+        \end{minipage}
+            
+    \end{exerciceTitre}\stepcounter{exo}
+
+
+\vfill
+\thepage/2 \hfill \text{ }
+}
+
+\end{document}

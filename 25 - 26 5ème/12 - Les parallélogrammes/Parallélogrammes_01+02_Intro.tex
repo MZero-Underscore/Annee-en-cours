@@ -1,0 +1,103 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11}
+\renewcommand{\monTitre}{Les parallélogrammes}
+
+% --- ACTIVITÉ 1 ---
+\enteteActivite{1}{Le croisement des routes (Découverte)}{\thechapter}
+
+    
+    \textbf{Consignes :}    
+    \begin{enumerate}
+        \item Sur le cadre blanc ci-dessous, construire deux rectangles de dimensions différentes de sorte que l'un \og traverse \fg  l'autre.
+        
+        \item A l'aide d'un stylo de couleur, tracer soigneusement le contour de la zone où les deux rectangles se superposent (à l'intersection).
+        
+        \item Observer la figure géométrique obtenue. Quelle définition peut-on donner à ce quadrilatère ?  Quel nom pourrait-on lui donner ?
+    \end{enumerate}
+    
+    
+    \begin{ZoneReponse}{5cm}
+    \end{ZoneReponse}
+    
+    \vspace{1cm}
+    
+    % --- ACTIVITÉ 2 ---
+    \enteteActivite{2}{Le secret du compas (Propriétés)}{\thechapter}
+    
+    
+    \textbf{Consignes :}
+    \begin{enumerate}
+        \item Tracer un triangle $ABC$ quelconque sur son cahier.
+        \item Placer le point $I$, le milieu du segment $[AC]$.
+        \item À l'aide du compas, construire le point $D$, symétrique du point $B$ par rapport au point $I$. 
+        \item Tracer le quadrilatère $ABCD$ au stylo vert.
+    \end{enumerate}
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=0.75]
+        % --- Définition des points principaux ---
+        \coordinate (I) at (0,0);
+        \coordinate (A) at (-1, -1.8);
+        \coordinate (C) at (1, 1.8);
+        \coordinate (B) at (3.5, -0.8);
+        \coordinate (D) at (-3.5, 0.8);
+        
+        % --- Diagonales ---
+        % Ligne de construction (BD) en pointillés gris
+        \draw[dashed, gray, thick] (D) -- (B);
+        % Diagonale initiale (AC) en trait plein
+        \draw[thick] (A) -- (C);
+        
+        % --- Quadrilatère ---
+        % Tracé du parallélogramme en vert
+        \draw[thick, green!50!black] (A) -- (B) -- (C) -- (D) -- cycle;
+        
+        % --- Noms des sommets ---
+        \node[below] at (A) {$A$};
+        \node[right] at (B) {$B$};
+        \node[above] at (C) {$C$};
+        \node[left] at (D) {$D$};
+        
+        % --- Point I (Centre) ---
+        % Croix pour marquer le point I
+        \node at (I) {$\times$};
+        \node[above right, inner sep=2pt] at (I) {$I$};
+        
+        % --- Codages des segments [AI] et [IC] ---
+        \coordinate (M1) at (-0.5, -0.9); % Milieu de AI
+        \coordinate (M2) at (0.5, 0.9);   % Milieu de IC
+        % Petits traits bleus obliques
+        \draw[blue, thick] (M1) ++(-0.15, 0.2) -- ++(0.3, -0.4);
+        \draw[blue, thick] (M2) ++(-0.15, 0.2) -- ++(0.3, -0.4);
+        
+        % --- Arc de compas en D ---
+        % C'est un vrai arc de cercle centré en I passant par D
+        % L'angle de départ et d'arrivée est calculé pour entourer le point D
+        \draw[gray, thick] (I) + (162:3.59) arc (162:174:3.59);
+        
+    \end{tikzpicture}
+    \end{center}
+
+    \textbf{Répondre aux questions suivantes} :
+    \begin{enumerate}[leftmargin=*]
+        \item Quelle est la nature du quadrilatère $ABCD$ que tu as tracé ?
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+
+        \item En utilisant la définition de la symétrie centrale, expliquer ce que représente le point $I$ pour le segment $[BD]$ puis pour le quadrilatère ABCD.
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+
+        \item Quelles propriétés possède alors ce quadrilatère ? 
+        \begin{ZoneReponse}{2cm}
+        \end{ZoneReponse}
+    \end{enumerate}
+
+
+\end{document}

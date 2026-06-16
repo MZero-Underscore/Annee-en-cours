@@ -1,0 +1,298 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{6}
+\newcommand{\monTitre}{Les divisions}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+\section{Arithmétique}    
+\textbf{L'arithmétique}, c'est l'étude des \textbf{nombres entiers} et uniquement des nombres entiers.  
+\subsection{La division euclidienne}
+
+    On parle de \textbf{division euclidienne} lorsque l'on veut \textbf{diviser un nombre entier par un nombre entier} (non nul) et que l'on souhaite obtenir \textbf{un quotient entier}. Il arrive alors que la division ne soit pas totale et que l'on trouve \textbf{un reste} (qui est également un nombre entier).
+
+    \begin{definition}
+        Effectuer la division euclidienne d'un nombre entier $a$ par un nombre entier non nul $b$ c'est trouver deux uniques entiers $q$ et $r$ tels que :
+        \[a=bq+r \text{ et } 0\leq r<b\]        
+    \end{definition}
+
+
+    \begin{remarque}
+        En cm2, on a plus l'habitude de voir la division posée :
+
+        \medskip
+
+        \begin{minipage}{0.3\linewidth}
+            $\begin{array}{cc|c }
+                 a & & b \\ \cline{3-3}
+                   & & q \\
+                   & r &   
+            \end{array}$
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\linewidth}
+            Le nombre $a$ s'appelle le \textbf{dividende} et le nombre $b$ s'appelle le \textbf{diviseur}.
+
+            \medskip
+            
+            Le nombre $q$ s'appelle le \textbf{quotient} et le nombre $r$ s'appelle le \textbf{reste}.
+        \end{minipage}
+    \end{remarque}
+
+
+    \begin{exemple}
+        Poser les divisions euclidiennes suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            325 par 7
+            
+            \vspace{4cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            770 par 11 
+             
+            \vspace{4cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            1085 par 9
+            
+            \vspace{4cm}
+        \end{minipage}
+                \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            \np{12456} par 14
+            
+            \vspace{4cm}
+        \end{minipage}
+    \end{exemple}
+    
+
+    \begin{exemple}
+        Un fleuriste a reçu 260 roses. Il prépare des corbeilles de 12 roses chacune. Combien de corbeilles peut-il préparer au maximum ?
+
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\newpage
+
+
+    \begin{exemple}
+        On donne plusieurs égalités, indiquer pour chacune d'elles les divisions qu'elles peuvent représenter. Justifier.
+
+        \begin{minipage}{0.24\linewidth}
+            $130=21\times6+4$
+            
+            \vspace{3cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            $271=17\times15+16$
+             
+            \vspace{3cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            $680=38\times17+34$
+            
+            \vspace{3cm}
+        \end{minipage}
+                \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            $104=5\times17+19$
+            
+            \vspace{3cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{Multiple et diviseur}
+    
+    \begin{definition}
+        Lorsque \textbf{le reste} de la division euclidienne de $a$ par $b$ \textbf{est nul} (vaut zéro). On dit que :
+
+        \begin{itemize}
+            \item $b$ est un \textbf{diviseur} de $a$.
+            \item $b$ \textbf{divise} $a$.
+            \item $a$ est un \textbf{multiple} de $b$.
+        \end{itemize}
+    \end{definition}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Poser les divisions euclidiennes de 77 par 5; 77 par 7; 105 par 5 puis 105 par 7.
+
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+
+            \item À l'aide des nombres 7; 5; 77 et 105 , écrire 4 phrases utilisant les mots \textbf{multiples}, \textbf{diviseurs} ou \textbf{divise}. Une de ces phrases doit utiliser une négation.
+    
+            \begin{minipage}{0.45\linewidth}  
+                \text{}
+                \vspace{3cm}
+            \end{minipage}
+            \hfill
+            \vline
+            \hfill
+            \begin{minipage}{0.45\linewidth}
+                \text{}
+                 
+                \vspace{3cm}
+            \end{minipage}
+        \end{enumerate}   
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Critères de divisibilité}
+    Il faut apprendre par cœur ces critères, ils permettent de gagner du temps dans plusieurs chapitres.
+
+    \begin{propriete}
+        Un nombre entier est \textbf{divisible par :}
+            \begin{itemize}
+                \item 2 si son chiffre des unités est 0; 2; 4; 6 ou 8;
+                \item 3 si la somme de ses chiffres est divisible par 3;
+                \item 4 si le nombre formé par les chiffres des dizaines et des unités est divisible par 4.
+                \item 5 si son chiffre des unités est 0 ou 5;
+                \item 9 si la somme de ses chiffres est divisible par 9.
+            \end{itemize}
+    \end{propriete}
+
+
+    \begin{exemple}
+    \end{exemple}
+    \begin{center}
+        \renewcommand{\arraystretch}{1.5} % Donne un peu d'air aux lignes
+        \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|}
+        \hline
+        \textbf{Le nombre...} & \textbf{...est divisible par 2} & \textbf{...est divisible par 3}  & \textbf{...est divisible par 4} & \textbf{...est divisible par 5}  & \textbf{...est divisible par 9} \\ \hline
+        2356       &                                &                                &                                &                                &                                \\ \hline
+        23 562     &                                &                                &                                &                                &                                \\ \hline
+        235 620    &                                &                                &                                &                                &                                \\ \hline
+        6531       &                                &                                &                                &                                &                                \\ \hline
+        16 524     &                                &                                &                                &                                &                                \\ \hline
+        6548       &                                &                                &                                &                                &                                \\ \hline
+        \end{tabularx}
+    \end{center}
+
+
+\section{La division décimale}
+    On traitera deux cas et \textbf{le diviseur restera entier}. 
+    \begin{itemize}
+        \item Le dividende est décimal (avec partie décimale non nulle)
+        \item Le dividende est entier mais on ne souhaite pas avoir de reste.
+    \end{itemize}
+    
+    \begin{methode}
+        \begin{itemize}
+            \item Dans les deux cas, on commence par diviser la partie entière du dividende comme pour une division euclidienne.
+
+            \medskip
+
+            \item \textbf{Dès que la division de la partie entière est terminée, il faut placer immédiatement une virgule au quotient.}
+
+            \medskip
+
+            \item Ensuite, on poursuit la division avec le chiffre des dixièmes puis des centièmes, \ldots jusqu'à essayer d'obtenir un reste nul. On ajoute des zéros \og inutiles \fg à la droite du dividende si besoin.
+        \end{itemize}
+    \end{methode}
+
+
+    \begin{remarque}
+        \textbf{\underline{Attention ! }} Certaines divisions décimales sont infinies, il faudra alors savoir arrêter les calculs.   
+    \end{remarque}
+
+
+\newpage
+
+
+    \begin{exemple}
+        Poser les divisions décimales suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $45,6$ par 3.
+            
+            \vspace{4cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            75 par 4.
+             
+            \vspace{4cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            2 par 5.
+            
+            \vspace{4cm}
+        \end{minipage}
+        \hfill
+        \vline
+        \hfill
+        \begin{minipage}{0.24\linewidth}
+            \np10 par 3
+            
+            \vspace{4cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}
+        Quatre amis vont déjeuner ensemble. L'addition totale est de \textbf{54,60 €}. Ils décident de partager la note équitablement. \\
+        \textbf{Combien chaque ami devra-t-il payer ?}
+
+        \begin{ZoneReponse}{2.5cm}\end{ZoneReponse}
+    \end{exemple}
+    
+    
+    \begin{exemple}
+        Une couturière possède un ruban de \textbf{15 mètres}. Elle souhaite le découper en \textbf{6 morceaux} de longueurs identiques. \\
+        \textbf{Quelle sera la longueur précise de chaque morceau ?}
+
+        \begin{ZoneReponse}{2.5cm}\end{ZoneReponse}
+    \end{exemple}
+
+
+    \begin{exemple}[Exercice de synthèse]
+        Les élèves de 6ème ont vendu des gâteaux pour financer un voyage. 
+        Le coût total des ingrédients est de \textbf{32,15 €}. 
+        La vente a rapporté \textbf{75,50 €}. 
+        Le bénéfice (Vente - Coût) est partagé équitablement entre les \textbf{5 classes} de 6ème. \\
+        \textbf{Quelle somme d'argent chaque classe recevra-t-elle ?}
+
+        \begin{ZoneReponse}{7cm}\end{ZoneReponse}
+    \end{exemple}
+\end{document}

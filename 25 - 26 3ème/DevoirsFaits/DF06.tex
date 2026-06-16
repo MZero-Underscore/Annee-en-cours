@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{center}
+    \Large \textbf{ÉVALUATION : Mise en équation et Géométrie}
+\end{center}
+\vspace{0.5cm}
+
+\noindent\textbf{Nom :} \dotfill \hfill \textbf{Prénom :} \dotfill \hfill \textbf{Classe :} \dotfill
+\vspace{1cm}
+
+% ================= EXERCICE 1 =================
+\subsubsection*{Exercice 1 : Le Carré et le Pentagone (Guidé)}
+
+On considère un segment $[AB]$ mesurant 10 cm. On place un point $C$ sur ce segment entre $A$ et $B$. On note $AC = x$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Les points de base
+    \coordinate (A) at (0,0);
+    \coordinate (C) at (4,0); % x correspond à 4 unités pour le dessin
+    \coordinate (B) at (10,0); % 10-x correspond à 6 unités
+
+    % Le carré
+    \draw[fill=gray!20, thick] (A) -- (C) -- ++(0,4) -- ++(-4,0) -- cycle;
+    
+    % Le pentagone régulier (tracé par angles successifs)
+    \draw[fill=gray!20, thick] (C) -- (B) -- ++(72:6) -- ++(144:6) -- ++(216:6) -- cycle;
+
+    % La droite de base
+    \draw[thick] (-0.5,0) -- (10.5,0);
+    
+    % Marquage des points
+    \draw[thick] (A) +(0,-0.15) -- +(0,0.15) node[above left] {$A$};
+    \draw[thick] (C) +(0,-0.15) -- +(0,0.15) node[above right] {$C$};
+    \draw[thick] (B) +(0,-0.15) -- +(0,0.15) node[above right] {$B$};
+
+    % Les cotes
+    \draw[<->, thick] (0,-0.6) -- (4,-0.6) node[midway, fill=white] {$x$};
+    \draw[<->, thick] (4,-0.6) -- (10,-0.6) node[midway, fill=white] {};
+    \draw[<->, thick] (0,-1.4) -- (10,-1.4) node[midway, fill=white] {$10 \text{ cm}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+    \item Du côté gauche, on construit un \textbf{carré} dont le côté est le segment $[AC]$.
+    \item Du côté droit, on construit un \textbf{pentagone régulier} (5 côtés de même longueur) dont le côté est $[CB]$.
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent \textbf{Questions :}
+\begin{enumerate}
+    \item Exprimer le périmètre du carré en fonction de $x$. \dotfill \\
+    \item Exprimer la longueur de $CB$, puis le périmètre du pentagone régulier en fonction de $x$. \dotfill \\
+    \item On souhaite que le carré et le pentagone aient \textbf{le même périmètre}. Écrire l'équation qui correspond à ce problème. \dotfill \\
+    \item Résoudre cette équation pour trouver à quelle distance du point $A$ il faut placer le point $C$. \\
+    \rule{\linewidth}{0.1pt} \\[-2mm]
+    \rule{\linewidth}{0.1pt} \\[-2mm]
+    \rule{\linewidth}{0.1pt} \\[-2mm]
+    \rule{\linewidth}{0.1pt}
+\end{enumerate}
+
+\vspace{1.5cm}
+
+% ================= EXERCICE 2 =================
+\subsubsection*{Exercice 2 : Le Triangle et le Losange (Autonomie)}
+
+On considère un segment $[EF]$ mesurant 12 cm. On place un point $G$ sur ce segment. On note $EG = x$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Les points de base
+    \coordinate (E) at (0,0);
+    \coordinate (G) at (5,0); % x correspond à 5 unités
+    \coordinate (F) at (11,0); % 12-x correspond à 6 unités
+
+    % Le triangle équilatéral
+    \draw[fill=gray!20, thick] (E) -- (G) -- ++(120:5) -- cycle;
+    
+    % Le losange
+    \draw[fill=gray!20, thick] (G) -- (F) -- ++(60:6) -- ++(180:6) -- cycle;
+
+    % La droite de base
+    \draw[thick] (-0.5,0) -- (11.5,0);
+    
+    % Marquage des points
+    \draw[thick] (E) +(0,-0.15) -- +(0,0.15) node[above left] {$E$};
+    \draw[thick] (G) +(0,-0.15) -- +(0,0.15) node[above right] {$G$};
+    \draw[thick] (F) +(0,-0.15) -- +(0,0.15) node[above right] {$F$};
+
+    % Les cotes
+    \draw[<->, thick] (0,-0.6) -- (5,-0.6) node[midway, fill=white] {$x$};
+    \draw[<->, thick] (5,-0.6) -- (11,-0.6) node[midway, fill=white] {$$};
+    \draw[<->, thick] (0,-1.4) -- (11,-1.4) node[midway, fill=white] {$12 \text{ cm}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+    \item Du côté gauche, on construit un \textbf{triangle équilatéral} de côté $[EG]$.
+    \item Du côté droit, on construit un \textbf{losange} de côté $[GF]$.
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent \textbf{Consigne :} \\
+Où doit-on placer le point $G$ pour que le périmètre du triangle soit \textbf{égal} au périmètre du losange ? \\
+\textit{Tu justifieras ta réponse en posant une équation, puis en détaillant sa résolution.} \\[0.5cm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt} \\[-2mm]
+\rule{\linewidth}{0.1pt}
+
+\end{document}

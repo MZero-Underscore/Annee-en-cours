@@ -1,0 +1,242 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{3}
+\newcommand{\monTitre}{Règle et équerre}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+\section{Les droites}
+\subsection{Rappels}
+    \begin{definition}
+        Soit A ,B et C trois points deux à deux distincts.
+        \begin{enumerate}
+            \item Les points A, B et C sont \textbf{alignés} si on peut tracer une droite passant par ces trois points.
+            \item La droite $(AB)$ est \textbf{l'ensemble de tous les points alignés} avec les points A et B.
+        \end{enumerate}
+    \end{definition}
+
+
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            Placer trois points A, B et C non alignés.
+
+            \vspace{2cm}
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            Placer trois points A, B et C alignés.
+
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{Positions relatives entre deux droites}
+
+    \begin{definition}
+        \begin{itemize}
+            \item Deux droites sont \textbf{sécantes} si elles se coupent en un unique point que l'on appelle $\textbf{le point d'intersection}$.
+
+            \item Deux droites sont \textbf{perpendiculaires} si elles sont sécantes \underline{et} qu'elles forment un \textbf{angle droit}.
+
+            \item Deux droites sont \textbf{parallèles} si elles ne sont pas sécantes.
+        \end{itemize}
+    \end{definition}
+
+
+    \begin{exemple}
+        \begin{minipage}{0.3\linewidth}
+            Construire deux droites $d_1$ et $d_2$ sécantes mais non perpendiculaires.
+
+            \vspace{4cm}
+
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            Construire deux droites $d_1$ et $d_2$ perpendiculaires.
+
+            Ajouter le codage de l'angle droit.
+
+            \vspace{3.5cm}
+        
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            Construire deux droites $d_1$ et $d_2$ parallèles.
+
+            \vspace{4cm}
+        
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{methode}
+        \begin{minipage}{0.5\linewidth}
+            \small{Tracer la droite perpendiculaire à la droite $d$ passant par le point A.}
+
+            \begin{center}
+                \includegraphics[scale=0.4]{images/Méthode01_Perpendiculaire.png}
+            \end{center}
+
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+        
+        \end{minipage}
+    \end{methode}
+
+
+\newpage
+
+
+    \begin{remarque}
+        Pour construire deux droites parallèles, on utilise souvent la propriété suivantes :
+
+        \og Si deux droites sont perpendiculaires à une même droite alors elles sont parallèles. \fg
+    \end{remarque}
+
+
+    \begin{methode}
+        \begin{minipage}{0.5\linewidth}
+            \small{Construire la droite parallèle à la droite $d$ passant par le point B.}
+
+            \begin{center}
+                \includegraphics[scale=0.35]{images/Méthode02_Parallèle.png}
+            \end{center}
+
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+        
+        \end{minipage}
+    \end{methode}
+
+
+\section{Médiatrice d'un segment}
+\subsection{Rappels}
+    \begin{definition}
+        Soit A et B deux points distincts.
+        \begin{itemize}
+            \item Le segment [AB] est la partie de la droite située entre les points A et B.
+            \item Le milieu du segment [AB] est le point du segment qui est situé à égale distance des points A et B.
+        \end{itemize}
+    \end{definition}
+
+
+    \begin{exemple}
+        Construire un segment [AB] tel que $AB=7$ cm puis construire son milieu qu'on appellera I.
+
+        \vspace{1cm}
+    \end{exemple}
+
+
+\subsection{Médiatrice d'un segment}
+    \begin{definition}
+        La $\textbf{médiatrice d'un segment}$ est la droite qui coupe ce segment en son milieu \underline{et} en formant un angle droit.
+    \end{definition}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Tracer un segment [AB] de longueur 3 cm, puis construire sa médiatrice à l'aide d'une règle graduée et d'une équerre.
+
+            \item Placer un point P sur cette médiatrice telle que AP = 2 cm à l'aide du compas. Quelle semble être la longueur BP ? 
+
+
+            \vspace{3cm}
+        \end{enumerate}
+    \end{exemple}
+
+
+    \begin{propriete}
+        La médiatrice d'un segment est l'ensemble des points équidistants des extrémités de ce segment.
+    \end{propriete}
+
+
+\newpage
+
+
+    \begin{exemple}
+         \begin{enumerate}
+             \item Construire un segment [AB] de longueur quelconque puis, à l'aide de la propriété 1 et du compas, construire sa médiatrice qu'on appellera $d$.
+
+            \item Placer un point C sur la médiatrice $d$. Quelle est la nature du triangle ABC ? Justifier.
+         \end{enumerate}
+    \end{exemple}
+
+
+    \begin{minipage}{0.4\linewidth}
+        \text{ }
+        
+        \vspace{5cm}
+    \end{minipage}
+    \vline
+    \hfill
+    \begin{minipage}{0.55\linewidth}
+    
+    \end{minipage}
+
+
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            \begin{enumerate}
+                \item Tracer un cercle de centre O et de rayon 3 cm.
+    
+                \item Placer deux points distincts A et B sur le cercle de sorte que [AB] ne soit pas un diamètre.
+    
+                \item Placer le point I, milieu de [AB].
+            \end{enumerate}
+
+            \vspace{1cm}
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.45\linewidth}
+        
+        \end{minipage}
+
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            
+            \item Que peut-on dire de la droite (OI) ? Justifier.
+
+            \points[82]
+        \end{enumerate}
+    \end{exemple}
+
+
+\section{Un exemple de problème utilisant les médiatrices}
+
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            Avant de disparaître, le pirate Drago cacha son fabuleux butin sur l’île  Montecristo, laissant à ses descendants un énigmatique message pour percer le secret de son emplacement:
+        
+            \begin{center}
+                \includegraphics[scale=0.25]{images/RegleCompas_Exemple07b.png}
+            \end{center}
+
+            Retrouver l'emplacement du trésor.
+
+        \end{minipage}
+        \vline
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.39]{images/RegleCompas_Exemple07.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+
+\end{document}

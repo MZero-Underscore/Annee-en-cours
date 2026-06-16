@@ -1,0 +1,446 @@
+\documentclass[a4paper]{book}
+
+% --- IMPORTATION DES MODULES ---
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\setcounter{chapter}{11} % Chapitre 12
+\renewcommand{\monTitre}{La notation puissance}
+\chapter{\monTitre}
+\thispagestyle{fancy} ²
+
+% =======================================================
+\section{Puissances à exposants positifs}
+% =======================================================
+
+    \begin{definitionTitre}{Exposant entier positif}
+        Soit $a$ un nombre relatif et $n$ un entier positif non nul.
+        La puissance $n$-ième de $a$, notée $a^n$, est le produit de $n$ facteurs égaux à $a$ :
+        $$a^n = \underbrace{a \times a \times \dots \times a}_{n \text{ facteurs}}$$
+
+        \textbf{Conventions : } $a^1 = a$ et si $a \neq 0$, $a^0 = 1$.
+    \end{definitionTitre}
+    
+    \begin{remarque}
+        \begin{itemize}
+            \item Le nombre $a$ est appelé la base et $n$ est l'exposant. 
+            
+            Ainsi, le nombre $5^3$ est une puissance de $5$ comme l'est $5^8$. Les exposants de ces deux puissances sont respectivement 3 et 8.
+            \item L'expression $a^n$ devrait se lire "$a$ exposant $n$" mais on retrouve souvent "$a$ puissance $n$".
+        \end{itemize} 
+    \end{remarque}
+    
+    
+    \begin{exemple}
+        Donner l'écriture décimale ou fractionnaire des expressions suivantes :
+        
+        \medskip
+        
+        \begin{minipage}{0.5\linewidth}.
+             \begin{itemize}[label=\textbullet]
+                \item $5^4 = \points[10]$
+                \medskip
+                \item $\left(\dfrac{2}{5}\right)^3 = \points[10]$
+                \medskip
+                \item $(-1)^{23}=\points[10]$
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+             \begin{itemize}[label=\textbullet]
+                \item $(-3)^4 = \points[10]$
+                \medskip
+                \item $-3^4 = \points[10]$
+                \bigskip
+                \item $2^{10}=\points[10]$
+            \end{itemize}
+        \end{minipage}
+    \end{exemple}
+    
+    
+    \begin{remarque}
+        \begin{itemize}
+            \item Dans l'écriture $(-3)^4$, la base est le nombre $-3$, il s'agit donc d'une puissance de $-3$.
+            \item Dans l'écriture $-3^4$, la base est le nombre $3$, il s'agit donc d'une puissance de $3$. Le symbole $-$ indique que l'on prend l'\textbf{opposé} de $3^4$.
+        \end{itemize}
+    \end{remarque}
+
+
+    % --- AJOUT PEMDAS ---
+    \begin{proprieteTitre}{Priorités opératoires (PEMDAS)}
+        \begin{minipage}[c]{0.35\textwidth}
+            L'apparition des puissances modifie l'ordre de priorité des calculs. 
+            
+            Pour se souvenir de l'ordre exact, on utilise l'acronyme \textbf{PEMDAS}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c]{0.6\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.9]
+                % Boîtes PEMDAS
+                \node[draw=red!70!black, rounded corners, fill=red!10, minimum width=4.5cm, inner sep=6pt] (P) at (0,0) {\textbf{P}arenthèses \quad $(\text{ } )$};
+                \node[draw=orange!70!black, rounded corners, fill=orange!10, minimum width=4.5cm, inner sep=6pt] (E) at (0,-1.2) {\textbf{E}xposants \quad $a^n$};
+                \node[draw=blue!70!black, rounded corners, fill=blue!10, minimum width=4.5cm, inner sep=6pt] (MD) at (0,-2.4) {\textbf{M}ult. et \textbf{D}iv. \quad $\times \div$};
+                \node[draw=green!70!black, rounded corners, fill=green!10, minimum width=4.5cm, inner sep=6pt] (AS) at (0,-3.6) {\textbf{A}dd. et \textbf{S}ous. \quad $+ -$};
+                
+                % Flèches
+                \draw[->, ultra thick, gray] (P) -- (E);
+                \draw[->, ultra thick, gray] (E) -- (MD);
+                \draw[->, ultra thick, gray] (MD) -- (AS);
+                
+                % Précisions "De gauche à droite"
+                \node[right, font=\footnotesize\itshape, text=gray!80!black] at (2.4, -2.4) {de gauche à droite};
+                \node[right, font=\footnotesize\itshape, text=gray!80!black] at (2.4, -3.6) {de gauche à droite};
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage} 
+    \end{proprieteTitre}
+
+
+\newpage
+                
+
+    \begin{exemple}
+        Calculer en respectant les priorités :
+        
+        \begin{minipage}{0.30\linewidth}
+            $A = 5 + 2 \times 3^2$
+
+            \vspace{3cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+            $B = (10 - 2^3) \times 4$
+
+            \vspace{3cm}
+        \end{minipage}     
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+             $C = 4 \times (-5)^2 - 3^2$ 
+
+             \vspace{3cm}
+        \end{minipage}     
+    \end{exemple}
+    
+
+% =======================================================
+\section{Puissances à exposants négatifs}
+% =======================================================
+
+    \begin{definitionTitre}{Exposant entier négatif}
+        Soit $a$ un nombre relatif \textbf{non nul} et $n$ un entier positif.
+        Le nombre $a^{-n}$ est \textbf{l'inverse} de $a^n$ :
+        $$a^{-n} = \frac{1}{a^n}$$
+    \end{definitionTitre}
+    
+    
+    \begin{exemple}
+        Donner l'écriture fractionnaire puis l'écriture décimale des nombres suivants :
+
+        \medskip
+    
+        \begin{minipage}{0.5\linewidth}
+            $\bullet 2^{-3} = \points[10]$
+
+            \bigskip
+
+            $\bullet 4^{-1} = \points[10]$
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            $\bullet 10^{-4} = \points[10]$
+
+            \bigskip
+
+            $\bullet \left(\dfrac{2}{3}\right)^{-3} = \points[10]$
+        \end{minipage}
+    \end{exemple}
+
+    
+    \begin{remarque}
+        Pour tout nombre $a$ non nul, l'\textbf{inverse} de $a$ se note $\dfrac{1}{a}$ ou $a^{-1}$.
+
+        \medskip
+
+        On retrouve souvent cette notation en physique où l'on note souvent $20 \text{km.h}^{-1}$ au lieu de $20 \text{km}/\text{h}$.
+    \end{remarque}
+
+
+    \begin{exemple}
+        Calculer en respectant les priorités. Donner le résultat sous forme d'une fraction irréductible.
+        
+        \begin{minipage}{0.30\linewidth}
+            $A = 5^3\times2^{-2}$
+
+            \vspace{3cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+            $B = 4^{-2}+3\times2^{-3}$
+
+            \vspace{3cm}
+        \end{minipage}     
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+             $C = \dfrac{1}{7}-5\div 7^2$ 
+
+             \vspace{4cm}
+        \end{minipage}     
+    \end{exemple}
+
+
+    \begin{exemple}
+        Donner le signe des produits suivants sans effectuer les calculs.
+        
+        \begin{minipage}{0.30\linewidth}
+            $A = (-5)^{13}\times4^{63}$
+
+            \vspace{3cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+            $B = (-5)^{-10}$
+
+            \vspace{3cm}
+        \end{minipage}     
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+             $C = \dfrac{5^{10}\times (-7)^{-13}}{(-12)^{-7}}$ 
+
+             \vspace{2.5cm}
+        \end{minipage}     
+    \end{exemple}
+
+
+% =======================================================
+\section{Cas particulier des puissances de 10}
+\subsection{Les puissances de 10 dans les calculs}
+% =======================================================
+
+    \begin{propriete}
+        Pour tout entier $n$ positif non nul :
+        \begin{center}
+            \quad $10^n = 1 \underbrace{00\dots 0}_{n \text{ zéros}}$ 
+            \hspace{2cm}
+            $10^{-n} = \dfrac{1}{10^n} = \underbrace{0,00\dots 0}_{n \text{ zéros}} 1$ \quad 
+        \end{center}
+    \end{propriete}
+    
+    
+    \vspace{0.5cm}
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % Puissances positives
+            \node[draw, rounded corners, fill=blue!10, minimum width=2cm, minimum height=1cm] (A) at (0,0) {\Large $10^3$};
+            \node[draw, rounded corners, fill=green!10, minimum width=2cm, minimum height=1cm] (B) at (6,0) {\Large $1000$};
+            \draw[->, ultra thick, color=green!50!black] (A) -- (B) node[midway, above] {$3$ zéros après le $1$};
+            
+            % Puissances négatives
+            \node[draw, rounded corners, fill=red!10, minimum width=2cm, minimum height=1cm] (C) at (0,-2.5) {\Large $10^{-3}$};
+            \node[draw, rounded corners, fill=orange!10, minimum width=2cm, minimum height=1cm] (D) at (6,-2.5) {\Large $0,001$};
+            \draw[->, ultra thick, color=red!50!black] (C) -- (D) node[midway, above] {$3$ chiffres après la virgule};
+            \draw[->, dashed, thick, color=gray] (A) -- (C) node[midway, left] {Inverse};
+        \end{tikzpicture}
+    \end{center}
+    \vspace{0.5cm}
+
+    
+    \begin{exemple}
+        \begin{enumerate}[leftmargin=*]
+            \item Écrire sous forme décimale :
+            
+            \begin{center}
+                $\bullet 10^5 = \points[15]$\hspace{4cm}
+                $\bullet 10^{-4} = \points[15]$
+            \end{center}
+
+            \item Écrire à l'aide d'une seule puissance de $10$.
+
+            \begin{minipage}{0.30\linewidth}
+                $A=10^6 \times 10^3$
+
+                \vspace{2cm}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.30\linewidth}
+                $B=10^4 \times 10^{-2}$
+
+                \vspace{2cm}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.30\linewidth}
+                $C=\dfrac{10^5}{10^8}$
+
+                \vspace{2cm}
+            \end{minipage}
+
+            \item Donner la valeur décimale des nombres suivants.
+            
+            \begin{minipage}{0.30\linewidth}
+                $A = 8\times10^4$
+    
+                \vspace{2cm}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.30\linewidth}
+                $B = 4\times10^{-4}$
+    
+                \vspace{2cm}
+            \end{minipage}     
+            \hfill \vline \hfill
+            \begin{minipage}{0.30\linewidth}
+                 $C = 45,98\times10^5$ 
+    
+                 \vspace{2cm}
+            \end{minipage}     
+        \end{enumerate}          
+    \end{exemple}
+
+
+    \begin{exemple}
+        Effectuer les calculs suivants.
+        
+        \begin{minipage}{0.30\linewidth}
+            $A = 5\times10^3+7\times10^{-1}$
+
+            \vspace{3cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+            $B = 10^2+10^{-3}$
+
+            \vspace{3cm}
+        \end{minipage}     
+        \hfill \vline \hfill
+        \begin{minipage}{0.30\linewidth}
+             $C = 12,37\times10^6$ 
+
+             \vspace{2.5cm}
+        \end{minipage}     
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Les préfixes du système métrique}
+
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aère les lignes du tableau
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{2cm}|c|>{\centering\arraybackslash}X|c|}
+        \hline
+        \rowcolor{gray!20} \textbf{Préfixe} & \textbf{Symbole} & \textbf{Écriture décimale} & \textbf{Puissance} \\ \hline
+        \textbf{Giga} & G & \np{1 000 000 000} & $10^9$ \\ \hline
+        \textbf{Méga} & M & \np{1 000 000} & $10^6$ \\ \hline
+        \textbf{Kilo} & k & \np{1 000} & $10^3$ \\ \hline
+        \textbf{Hecto} & h & $100$ & $10^2$ \\ \hline
+        \textbf{Déca} & da & $10$ & $10^1$ \\ \hline
+        \rowcolor{gray!5} \textit{(Unité de base)} & & $1$ & $10^0$ \\ \hline
+        \textbf{Déci} & d & $0,1$ & $10^{-1}$ \\ \hline
+        \textbf{Centi} & c & $0,01$ & $10^{-2}$ \\ \hline
+        \textbf{Milli} & m & $0,001$ & $10^{-3}$ \\ \hline
+        \textbf{Micro} & $\mu$ & $0,000\ 001$ & $10^{-6}$ \\ \hline
+        \textbf{Nano} & n & $0,000\ 000\ 001$ & $10^{-9}$ \\ \hline
+    \end{tabularx}
+    \end{center}
+
+    \begin{methodeTitre}{Utiliser les préfixes de conversion}
+        Pour exprimer une grandeur dans son unité de base (mètre, gramme, octet...), il suffit de remplacer la lettre du préfixe par la puissance de $10$ correspondante lue dans le tableau.
+    \end{methodeTitre}
+    
+    \begin{exemple}
+        Compléter les conversions suivantes pour exprimer chaque grandeur dans son unité de base.
+        
+        \begin{itemize}[label=\textbullet, itemsep=0.4cm]
+            \item \textbf{Taille d'installation d'un jeu vidéo :} $45$ \textbf{G}o (Gigaoctets) en octets. (1 octet = 1 nombre binaire de 8 chiffres) \\[2ex]
+            $45 \text{ Go} = \points[20]$
+            
+            \item \textbf{Épaisseur d'un cheveu :} $75$ \textbf{$\mu$}m (micromètres).\\[2ex]
+            $75 \text{ } \mu\text{m} = \points[20]$
+            
+            \item \textbf{Masse d'une baleine :} $30$ \textbf{M}g (Mégagrammes). \\[2ex]
+            $30 \text{ Mg} = \times \points[20]$
+        \end{itemize}
+    \end{exemple}
+    
+
+% =======================================================
+\section{Écriture scientifique}
+% =======================================================
+
+    \begin{definitionTitre}{Écriture scientifique}
+        L'écriture scientifique d'un nombre décimal positif est la seule écriture de la forme :
+        $$a \times 10^n$$
+        où $a$ est un nombre décimal tel que $1 \leqslant a < 10$ (un seul chiffre non nul avant la virgule) et $n$ est un entier relatif.
+    \end{definitionTitre}
+    
+    \begin{methodeTitre}{Déterminer l'écriture scientifique d'un nombre}
+        \begin{enumerate}
+            \item Déplacer la virgule pour obtenir un nombre $a$ compris entre $1$ (inclus) et $10$ (exclu).
+            \item Compter le nombre de rangs de déplacement de la virgule pour trouver l'exposant $n$.
+            \item Si le nombre de départ est plus grand que $10$, l'exposant est positif. S'il est plus petit que $1$, l'exposant est négatif.
+        \end{enumerate}
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}
+        Donner l'écriture scientifique des nombres suivants :
+
+        \begin{center}
+           $A = \np{45000} = \points[10] \quad B = 0,0073 = \points[10] \quad C = 12,4 \times 10^3 = \points[10]$ 
+        \end{center}
+    \end{exemple}
+
+
+    \vspace{2cm}
+    
+
+    \begin{methodeTitre}{Calculer avec des écritures scientifiques}
+        Pour calculer un produit ou un quotient comportant des puissances de 10, il est astucieux de regrouper les termes :
+        \begin{itemize}[label=\textbullet]
+            \item on calcule les nombres décimaux entre eux ;
+            \item on calcule les puissances de 10 entre elles.
+        \end{itemize}
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}
+        Calculer les expressions suivantes et donner le résultat en écriture scientifique :
+
+        \begin{minipage}[c]{0.45\textwidth}
+            $D = 4 \times 10^5 \times 2,5 \times 10^{-2}$
+
+            \vspace{5cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[c]{0.5\textwidth}
+            $E = \dfrac{3 \times 10^2 \times 1,2 \times 10^{5}}{15 \times 10^{8}}$
+
+            \vspace{5cm}
+        \end{minipage}   
+    \end{exemple}
+       
+    
+    \begin{remarqueTitre}{Utiliser sa calculatrice}
+        Pour saisir un nombre en écriture scientifique sur la calculatrice (par exemple $3,2 \times 10^{-4}$), on utilise la touche \fbox{$\times 10^x$} (sur Casio) ou \fbox{$\times 10^n$} (sur TI). \\
+        \textbf{Attention :} Il ne faut surtout pas taper le symbole de multiplication $\times$ avant d'appuyer sur cette touche !
+    \end{remarqueTitre}
+    
+    
+    \begin{exemple}
+        La lumière se déplace dans l'espace à la vitesse d'environ $3 \times 10^5$ km par seconde. \\
+        Calculer la distance parcourue par la lumière en une année (c'est ce qu'on appelle une \textit{année-lumière}), en km. Donner le résultat en écriture scientifique.
+
+        \begin{ZoneReponse}{4cm}
+        \end{ZoneReponse}
+    \end{exemple}
+    
+        
+    \begin{cultureMaths}
+        L'écriture scientifique est indispensable en physique-chimie et en astronomie ! Elle permet de manipuler facilement des nombres infiniment grands (comme la vitesse de la lumière : environ $3 \times 10^8$ m/s) ou infiniment petits (comme la taille d'un atome : environ $10^{-10}$ m).
+    \end{cultureMaths}
+
+\end{document}

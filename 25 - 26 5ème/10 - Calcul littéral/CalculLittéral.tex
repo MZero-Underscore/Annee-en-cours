@@ -1,0 +1,315 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Calcul littéral}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+\section{Expressions littérales}
+
+    \begin{definition}
+        Une \textbf{expression littérale} est une expression dans laquelle un ou plusieurs nombres sont remplacés par des \textbf{lettres}. Ces lettres désignent des nombres dont on ne connaît pas la valeur.
+        On les appelle des \textbf{variables}.
+    \end{definition}
+
+    
+    \begin{exemple}
+        Donner des exemples de formules connues ou \og célèbres \fg.
+        \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+    \end{exemple}
+    
+\subsection{Simplification d'écriture}
+    
+    \begin{convention}
+        Pour alléger les écritures, on peut \textbf{supprimer le signe $\times$} :
+        \begin{itemize}
+            \item Devant une \textbf{lettre} : $3 \times a$ s'écrit $3a$.
+            \item Devant une \textbf{parenthèse} : $5 \times (x + 2)$ s'écrit $5(x + 2)$.
+        \end{itemize}
+    \end{convention}
+    
+    
+    \begin{remarque}
+        \begin{itemize}
+            \item On ne supprime jamais le signe $\times$ entre deux nombres ($3 \times 5$ ne s'écrit pas $35$ !).
+            \item $1 \times x$ s'écrit simplement $x$.
+            \item $x \times x$ se note $x^2$ (se lit « $x$ au carré »).
+        \end{itemize}
+    \end{remarque}
+    
+    
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=3\times a$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=8\times a+5\times b$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=x\times 5$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=3\times (x+5)$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{convention}
+        Pour noter le produit d'un nombre par lui-même, on utilise la notation \textbf{puissance} :
+        \begin{itemize}
+            \item $x \times x$ se note \textbf{$x^2$} (et se lit « $x$ au carré »).
+            \item $x \times x \times x$ se note \textbf{$x^3$} (et se lit « $x$ au cube »).
+        \end{itemize}
+    \end{convention}
+    
+    
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=x\times x\times x \times 4$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=2x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=7\times x\times y \times x \times 3$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=x\times3+10\times x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+    
+    
+    \begin{remarque}
+        Attention à ne pas confondre $x + x$ et $x \times x$ :
+        \begin{itemize}
+            \item $x + x = 2x$ (c'est le double de $x$).
+            \item $x \times x = x^2$ (c'est le carré de $x$).
+        \end{itemize}
+    \end{remarque}
+    
+    
+\section{Utiliser une expression littérale}  
+\subsection{Évaluer une expression}
+    
+    \begin{definitionTitre}{Évaluer}
+        \textbf{Évaluer} une expression littérale, c'est calculer sa valeur numérique en \textbf{remplaçant les variables} par leur valeur dans cette expression littérale.
+    \end{definitionTitre}
+
+    
+    \begin{exemple}
+        Évaluer les expressions suivantes pour les valeurs demandées.
+
+        \smallskip
+
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $A=3x^2-5x$.
+
+            \smallskip
+
+            Évaluer $A$ pour $x=5$ puis pour $x=4$.
+
+            \vspace{4.5cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $B=5xy-8x+3y$.
+
+            \smallskip
+
+            Évaluer $B$ pour $x=7$ et $y=2$ puis pour $x=5$ et $y=0$.
+
+            \vspace{4.5cm}
+        \end{minipage}
+    \end{exemple}
+    
+    
+\subsection{Tester une égalité}
+    
+    \begin{definitionTitre}{Égalité}
+        Une \textbf{égalité} est constituée de deux membres séparés par un signe « $=$ ».
+    \end{definitionTitre}
+    
+    
+    \begin{methode}
+        Pour tester si une égalité est \textbf{vraie} pour des valeurs données :
+        \begin{enumerate}
+            \item On calcule le membre de gauche séparément.
+            \item On calcule le membre de droite séparément.
+            \item On compare les deux résultats.
+        \end{enumerate}
+    \end{methode}
+    
+    
+    \begin{exemple}
+        L'égalité $3x + 15 = 7 + 5x$ est-elle vraie pour $x = 2$ ? et pour $x = 4$ ?
+        \begin{ZoneReponse}{4cm}
+            
+        \end{ZoneReponse}
+    \end{exemple}
+    
+\section{Initiation à la distributivité}
+\subsection{Propriété}
+
+    \begin{proprieteTitre}{Distributivité simple}
+        Soient $k$, $a$ et $b$ trois nombres. On a l'égalité suivante :
+        \[ k \times (a + b) = k \times a + k \times b \]
+        
+        Lorsque l'on utilise la formule de la gauche vers la droite, on dit que l'on \textbf{distribue} le facteur $k$ aux termes $a$ et $b$.
+
+        \medskip
+
+        Lorsque l'on utilise la formule de la droite vers la gauche, on dit que l'on \textbf{factorise} les termes de la somme par le facteur $k$.
+    \end{proprieteTitre}
+    
+
+\subsection{Application n°1 : Développer}
+    \begin{definitionTitre}{Développer}
+        \textbf{Développer} une expression, c'est transformer un \textbf{produit} (avec des parenthèses) en une \textbf{somme} ou une \textbf{différence} (sans parenthèses).
+    \end{definitionTitre}
+    
+    
+    \begin{methodeTitre}{Développer une expression}
+        Pour développer l'expression $10(5x + 8)$ :
+        \begin{enumerate}
+            \item On identifie le facteur à distribuer : ici, c'est $10$.
+            \item On multiplie ce facteur par le premier terme dans la parenthèse ($5x$).
+            \item On multiplie ce facteur par le deuxième terme dans la parenthèse ($8$).
+            \item On simplifie les résultats obtenus.
+        \end{enumerate}
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}
+        Développer les expressions suivantes.
+
+        \medskip
+        
+        \begin{minipage}[t]{0.24\textwidth}
+            $A = 10(5x + 8)$ \\
+
+            \vspace{1.5cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.24\textwidth}
+            $B = 3(2x^2 + 8)$ \\
+
+            \vspace{1.5cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.24\textwidth}
+            $C = 4(4 + 8x)$ \\
+
+            \vspace{1.5cm}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.24\textwidth}
+            $D = 2x(3x + 5)$ \\
+
+            \vspace{1.5cm}
+        \end{minipage}
+        \vspace{0.5cm}
+    \end{exemple}
+
+
+\subsection{Application n°2 : Réduire une expression littérale}
+
+    \begin{definitionTitre}{Réduire une expression}
+        \textbf{Réduire} une expression littérale, c'est l'écrire avec le moins de termes possibles en regroupant les termes de la même « famille » ($x^2$ avec $x^2$, $x$ avec $x$, etc.).
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        Réduire les écritures suivantes.
+
+        \medskip
+        
+        \begin{minipage}{0.24\linewidth}
+            $A=8x+12x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=8x-5-6x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=4x-5x^2+17x$
+
+            \vspace{2cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=14-3x-20+18x$
+
+            \vspace{2cm}
+        \end{minipage}
+    \end{exemple}
+    
+
+%\section{Problème de synthèse}
+
+%    \begin{exerciceTitre}{Modéliser une situation}
+%        \begin{minipage}{0.6\textwidth}
+%            On considère la figure ci-contre composée d'un carré de côté $x$ et d'un rectangle de largeur 5.
+%            \begin{enumerate}
+%                \item Exprimer l'aire $\mathcal{A}$ de la figure totale en fonction de $x$ sous la forme d'un produit.
+%                \item Développer cette expression pour obtenir l'aire sous la forme d'une somme.
+%                \item Calculer cette aire pour $x = 4$ cm.
+%            \end{enumerate}
+%        \end{minipage}
+%        \begin{minipage}{0.35\textwidth}
+%            \centering
+%            \begin{tikzpicture}[scale=0.6]
+%                \draw[thick, fill=blue!5] (0,0) rectangle (2,2);
+%                \draw[thick, fill=green!5] (2,0) rectangle (4.5,2);
+%                \node at (1,-0.4) {$x$};
+%                \node at (3.25,-0.4) {$5$};
+%                \node at (-0.4,1) {$x$};
+%                \draw[dashed] (2,0) -- (2,2);
+%            \end{tikzpicture}
+%        \end{minipage}
+        
+%        \begin{ZoneReponse}{4.5cm}\end{ZoneReponse}
+%    \end{exerciceTitre}
+    
+
+\end{document}

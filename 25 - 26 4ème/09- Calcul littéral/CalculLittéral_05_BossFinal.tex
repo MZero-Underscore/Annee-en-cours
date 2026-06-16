@@ -1,0 +1,151 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Approfondissement : Le pouvoir des lettres}
+\enteteActivite{5}{\monTitre}{\thechapter}
+
+    \section{Défis de développement \& réduction}
+    
+    \begin{exerciceTitre}{La pyramide de briques}
+        Dans cette pyramide, chaque brique est égale à la somme des deux briques situées en dessous d'elle. Compléter la pyramide en fonction de $x$.
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \draw (0,0) rectangle (2,1) node[pos=.5] {$2x+3$};
+            \draw (2,0) rectangle (4,1) node[pos=.5] {$x-4$};
+            \draw (4,0) rectangle (6,1) node[pos=.5] {$5-3x$};
+            \draw (1,1) rectangle (3,2);
+            \draw (3,1) rectangle (5,2);
+            \draw (2,2) rectangle (4,3);
+        \end{tikzpicture}
+        \end{center}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{Le carré magique (presque)}
+        On considère l'expression $A = (x+3)(2x-1) - (x-2)(2x+5)$.
+        \begin{enumerate}
+            \item Développer et réduire l'expression $A$. (il y a un vrai piège avec le - entre les 2 produits)
+            \item Vérification : évaluer l'expression donnée et celle trouvée pour $x=0$ ?
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \section{Géométrie et Modélisation}
+    
+    \begin{exerciceTitre}{L'allée du jardin}
+        Un jardinier possède un terrain carré de $x$ mètres de côté. Il décide de construire une allée de 2 mètres de large tout autour, à l' \textbf{intérieur} du terrain.
+        \begin{enumerate}
+            \item Faire un schéma à main levée.
+            \item Exprimer, en fonction de $x$, l'aire de la partie centrale (le jardin restant).
+            \item Développer et réduire cette expression.
+            \item Tester la formule pour $x = 10$ m.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{La boîte de conserve}
+        On augmente le rayon $r$ d'un cercle de 3 cm. 
+        \begin{enumerate}
+            \item De combien augmente son périmètre ? (Donner la valeur exacte).
+            \item Est-ce que cette augmentation dépend du rayon de départ ? Justifier.
+        \end{enumerate}
+    \end{exerciceTitre}
+
+    \begin{exerciceTitre}{Calcul mental "Lycée"}
+        Sans calculatrice, et en utilisant le calcul littéral, calculer :
+        \begin{enumerate}
+            \item $101^2$ (Indice : $(100+1)^2 = (100+1)(100+1)$)
+            \item $99^2$ 
+            \item $101 \times 99$
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{La forme la plus simple}
+        On donne $E = (3x-2)^2 - (3x-2)(x+5)$.
+        \begin{enumerate}
+            \item Développer et réduire $E$.
+            \item Factoriser $E$ (en remarquant le facteur commun).
+            \item Calculer $E$ pour $x = \frac{2}{3}$ en choisissant la forme la plus adaptée.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+\newpage % Passage au Verso
+    
+    \section{Programmes de calcul et Démonstrations}
+    
+    \begin{exerciceTitre}{Le tour de magie}
+        Voici un programme de calcul :
+        \begin{itemize}[label=\textbullet]
+            \item Choisir un nombre.
+            \item Ajouter 5.
+            \item Multiplier le résultat par le nombre de départ.
+            \item Soustraire le carré du nombre de départ.
+        \end{itemize}
+        \begin{enumerate}
+            \item Tester ce programme avec 2, puis avec -3.
+            \item Quelle conjecture peut-on faire ?
+            \item Prouver cette conjecture en choisissant $x$ comme nombre de départ.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{Nombres consécutifs}
+        \begin{enumerate}
+            \item Choisir trois nombres entiers consécutifs (qui se suivent, ex : 4, 5, 6).
+            \item Calculer le produit du premier et du troisième, puis ajouter 1.
+            \item Comparer le résultat avec le carré du deuxième nombre.
+            \item Est-ce toujours vrai ? Prouver-le en utilisant $n$, $n+1$ et $n+2$.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \section{Le défi de l'expert}
+    
+    \begin{exerciceTitre}{La double distribution généralisée}
+        On sait que $(a+b)(c+d) = ac + ad + bc + bd$.
+        En s'inspirant de cette méthode, développer et réduire l'expression suivante :
+        \[ Z = (x^2 + x + 1)(x - 1) \]
+        \textit{Indice : Il faut distribuer chaque terme de la première parenthèse sur chaque terme de la deuxième.}
+    \end{exerciceTitre}
+
+
+    \section{Logique et Algorithme}
+
+    \begin{exerciceTitre}{Le carré d'un nombre se terminant par 5}
+        On veut prouver la règle suivante : "Pour calculer le carré d'un nombre finissant par 5 (ex: 35), on multiplie le chiffre des dizaines par son suivant ($3 \times 4 = 12$) et on écrit 25 derrière ($1225$)."
+        \begin{enumerate}
+            \item Vérifier pour $25^2$ et $45^2$.
+            \item Un nombre finissant par 5 s'écrit $10n + 5$. Développer $(10n+5)^2$.
+            \item Factoriser les deux premiers termes par 100 et prouver la conjecture.
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{Le rectangle d'or... ou presque}
+        \begin{minipage}{0.65\linewidth}
+            On considère la figure ci-contre composée d'un carré de côté $x$ et d'un rectangle de largeur 2.
+            \begin{enumerate}
+                \item Exprimer l'aire totale de la figure.
+                \item Exprimer le périmètre total de la figure.
+                \item Pour quelle valeur de $x$ le périmètre est-il égal à 20 ?
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            \begin{tikzpicture}
+                \draw[fill=blue!10] (0,0) rectangle (1.5,1.5);
+                \draw[fill=red!10] (1.5,0) rectangle (2.2,1.5);
+                \node at (0.75,-0.3) {$x$};
+                \node at (1.85,-0.3) {$2$};
+                \node at (-0.3,0.75) {$x$};
+            \end{tikzpicture}
+        \end{minipage}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{Défi de substitution}
+        Si $a + b = 5$ et $ab = 3$, calculer la valeur de $a^2 + b^2$. \\
+        \textit{Indice : Développer $(a+b)^2$}.
+    \end{exerciceTitre}
+    
+
+\end{document}

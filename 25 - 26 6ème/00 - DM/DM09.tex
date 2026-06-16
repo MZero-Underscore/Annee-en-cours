@@ -1,0 +1,359 @@
+\documentclass[a4paper]{book}
+
+% --- INCLUSION DES PRÉAMBULES ---
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+\begin{document}
+
+\setcounter{DM}{9}
+\newcommand{\maDate}{18/05}
+
+%\usetag{correction}
+\usetag{CorrectionFigures}
+
+% =================================================================
+% PARTIE 1 : SUJET DU DEVOIR (UNTAGGED CORRECTION)
+% =================================================================
+\untagged{correction}{
+    \NomPrenom
+    \enteteDM{\theDM}{\maDate}
+    \TableauCompetencesQuatre
+            {\CompetenceCinq{8}}
+            {\CompetenceTrois{9}}
+            {\CompetenceSix{5}}
+            {\CompetenceTrois{10}}
+
+    % EXERCICE 1
+    \begin{exercice}
+        \textbf{Calcul d'un horaire}
+        
+        Un train part de la gare de Lyon à Paris à \textbf{14\text{ h }36\text{ min}}. Le trajet jusqu'à sa destination finale dure \textbf{2\text{ h }47\text{ min}}. 
+        
+        À quelle heure exacte le train arrivera-t-f-il à destination ? \textit{Détaille tes étapes ou tes calculs.}
+        
+        \begin{ZoneReponse}{4cm}
+        \end{ZoneReponse}
+    \end{exercice}
+
+    % EXERCICE 2
+    \begin{exercice}
+        \textbf{Calcul d'une durée écoulée}
+        
+        Léa commence à regarder un film à \textbf{20\text{ h }50\text{ min}}. Le film se termine à \textbf{22\text{ h }15\text{ min}}. 
+        
+        Quelle a été la durée totale du film ? \textit{Détaille ton raisonnement (tu peux utiliser un schéma ou une ligne du temps).}
+        
+        \begin{ZoneReponse}{4cm}
+        \end{ZoneReponse}
+    \end{exercice}
+
+    % EXERCICE 3
+    \begin{exercice}
+        \textbf{Fractions : Partages et placement sur une demi-droite}
+        
+        \textbf{Partie A : Fraction comme partage}
+        
+        Pour chacune des figures ci-dessous, commence par la \textbf{partager en parts égales} à l'aide de ta règle, puis colorie la fraction demandée. 
+        
+        \medskip
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \textbf{Figure 1}\\
+            Colorier $\dfrac{3}{4}$ du rectangle\\
+            \vspace{0.3cm}
+            \begin{tikzpicture}
+                \draw[thick] (0,0) rectangle (4,2);
+            \end{tikzpicture}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \textbf{Figure 2}\\
+            Colorier $\dfrac{5}{6}$ de la bande\\
+            \vspace{0.3cm}
+            \begin{tikzpicture}
+                \draw[thick] (0,0) rectangle (6,1);
+            \end{tikzpicture}
+        \end{minipage}
+        
+\newpage
+        
+        \textbf{Partie B : Fraction comme un nombre}
+        
+        Sur la demi-droite graduée ci-dessous, l'unité est partagée en parts égales.
+        \begin{enumerate}
+            \item En combien de parts égales l'unité (entre $0$ et $1$) est-elle divisée ? \dotfill
+            \item Place précisément les points suivants : 
+            $$A\left(\dfrac{2}{5}\right) \qquad B\left(\dfrac{7}{5}\right) \qquad C\left(1 + \dfrac{4}{5}\right)$$
+        \end{enumerate}
+        
+        \vspace{0.4cm}
+        \noindent
+        \begin{tikzpicture}[xscale=2.5, yscale=1]
+            \draw[thick, ->] (0,0) -- (4.5,0);
+            \foreach \x in {0,1,2,3,4} {
+                \draw[thick] (\x,-0.2) -- (\x,0.2) node[below=10pt] {\textbf{\x}};
+            }
+            \foreach \x in {0,0.2,0.4,...,4.2} {
+                \draw (\x,-0.1) -- (\x,0.1);
+            }
+        \end{tikzpicture}
+    \end{exercice}
+
+
+    % EXERCICE 4
+    \begin{exercice}
+        \textbf{Opérations et conversions sur les durées}
+        
+        \textbf{Partie A : Opérations posées ou détaillées}
+        
+        Effectue les deux calculs de durées suivants.
+        
+        \medskip
+        1. \textbf{Addition :} $2\text{ h } 45\text{ min } 30\text{ s} + 1\text{ h } 30\text{ min } 45\text{ s}$
+        
+        2. \textbf{Soustraction :} $4\text{ h } 15\text{ min } 10\text{ s} - 1\text{ h } 40\text{ min } 30\text{ s}$
+        
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    
+        \textbf{Partie B : Conversions}
+        
+        Complète les égalités :
+        
+        \medskip
+        1. $54\text{ heures} = \points[2]\text{ jour(s) et }\quad \points[2]\text{ heure(s)}$
+    
+        2. $3\text{ h } 25\text{ min} = \points[2]\text{ minutes}$
+        
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{exercice}
+
+    % EXERCICE 5
+    \begin{exercice}
+        \begin{minipage}{0.7\linewidth}
+            \textbf{La constellation de Cassiopée (simplifiée)}
+            \begin{enumerate}[leftmargin=*]
+                \item Place un point $A$ et trace un segment $[AB]$ de longueur $5\text{ cm}$ horizontalement.
+                \item Trace $[Bx)$ telle que $\widehat{ABx} = 120^\circ$.
+                \item Place $C$ tel que $BC = 4\text{ cm}$.
+                \item Trace $[Cy)$ telle que $\widehat{BCy} = 70^\circ$.
+                \item Place $D$ tel que $CD = 4{,}5\text{ cm}$.
+                \item Trace $[Dz)$ telle que $\widehat{CDz} = 105^\circ$.
+                \item Place $E$ tel que $DE = 5\text{ cm}$.
+                \item Relie en pointillés $A$ à $C$, $B$ à $D$, et $C$ à $E$.
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.28\linewidth}
+            \begin{center}
+            \includegraphics[scale=0.5]{00 - DM/images/DM09_Cassopiée.png}    
+            \end{center}
+        \end{minipage}
+    \end{exercice}
+
+}
+
+% =================================================================
+% PARTIE 2 : CORRECTION (TAGGED CORRECTION)
+% =================================================================
+\tagged{correction}{
+    \enteteDMCorrection{\theDM}{\maDate}
+
+% CORRECTION EXO 1
+    \begin{exercice}
+        \textbf{Calcul d'un horaire}
+        
+        \textit{Énoncé : Un train part à 14 h 36 min. Le trajet dure 2 h 47 min. À quelle heure arrive-t-il ?}
+
+        \begin{tcolorbox}[colback=white, colframe=gray, title=Correction]
+            On additionne les heures et les minutes séparément :
+            \begin{itemize}
+                \item $14\text{ h } + 2\text{ h } = 16\text{ h}$
+                \item $36\text{ min } + 47\text{ min } = 83\text{ min}$
+            \end{itemize}
+            Comme $83\text{ min } = 1\text{ h } 23\text{ min}$, on ajoute cette heure au total :
+            $16\text{ h } + 1\text{ h } 23\text{ min } = 17\text{ h } 23\text{ min}$.\\
+            \textbf{Le train arrive à 17 h 23 min.}
+        \end{tcolorbox}
+    \end{exercice}
+
+    % CORRECTION EXO 2
+    \begin{exercice}
+        \textbf{Calcul d'une durée écoulée}
+        
+        \textit{Énoncé : Début du film à 20 h 50 min, fin à 22 h 15 min. Quelle est la durée du film ?}
+
+        \begin{tcolorbox}[colback=white, colframe=gray, title=Correction]
+            On utilise la méthode des compléments (ligne du temps) :
+            \begin{itemize}
+                \item De $20\text{ h } 50$ à $21\text{ h } 00$ : \textbf{$10\text{ min}$}
+                \item De $21\text{ h } 00$ à $22\text{ h } 00$ : \textbf{$1\text{ h}$}
+                \item De $22\text{ h } 00$ à $22\text{ h } 15$ : \textbf{$15\text{ min}$}
+            \end{itemize}
+            Total : $1\text{ h } + 10\text{ min } + 15\text{ min } = 1\text{ h } 25\text{ min}$.\\
+            \textbf{La durée du film est de 1 h 25 min.}
+        \end{tcolorbox}
+    \end{exercice}
+
+    % CORRECTION EXO 3
+    \begin{exercice}
+        \textbf{Fractions : Partages et placement}
+        
+        \textit{Énoncé : Partager les figures et placer les points $A(2/5)$, $B(7/5)$ et $C(1+4/5)$.}
+
+        \medskip
+        \begin{tikzpicture}[scale=0.8]
+            \fill[red!30] (0,0) rectangle (3,2);
+            \draw[dashed, red] (1,0)--(1,2); \draw[dashed, red] (2,0)--(2,2); \draw[dashed, red] (3,0)--(3,2);
+            \draw[thick] (0,0) rectangle (4,2);
+            \node at (2,-0.5) {\textbf{Figure 1 : $\dfrac{3}{4}$}};
+        \end{tikzpicture}
+        \hspace{1cm}
+        \begin{tikzpicture}[scale=0.8]
+            \fill[blue!30] (0,0) rectangle (5,1);
+            \draw[dashed, blue] (1,0)--(1,1); \draw[dashed, blue] (2,0)--(2,1); \draw[dashed, blue] (3,0)--(3,1); \draw[dashed, blue] (4,0)--(4,1); \draw[dashed, blue] (5,0)--(5,1);
+            \draw[thick] (0,0) rectangle (6,1);
+            \node at (3,-0.5) {\textbf{Figure 2 : $\dfrac{5}{6}$}};
+        \end{tikzpicture}
+
+        \medskip
+        \begin{tcolorbox}[colback=white, colframe=gray, title=Correction - Partie B]
+            1. L'unité est divisée en \textbf{5 parts égales}.\\
+            2. Placement des points sur la demi-droite :
+            
+            \begin{tikzpicture}[xscale=2.5, yscale=1]
+                \draw[thick, ->] (0,0) -- (2.5,0);
+                \foreach \x in {0,1,2} {
+                    \draw[thick] (\x,-0.2) -- (\x,0.2) node[below=10pt] {\textbf{\x}};
+                }
+                \foreach \x in {0,0.2,...,2.4} { \draw (\x,-0.1) -- (\x,0.1); }
+                
+                % Point A (0.4)
+                \node[red, above=8pt] at (0.4,0) {\textbf{A}}; \draw[red, thick] (0.4,-0.15) -- (0.4,0.15);
+                % Point B (1.4)
+                \node[blue, above=8pt] at (1.4,0) {\textbf{B}}; \draw[blue, thick] (1.4,-0.15) -- (1.4,0.15);
+                % Point C (1.8)
+                \node[green!60!black, above=8pt] at (1.8,0) {\textbf{C}}; \draw[green!60!black, thick] (1.8,-0.15) -- (1.8,0.15);
+            \end{tikzpicture}
+        \end{tcolorbox}
+    \end{exercice}
+
+\newpage
+
+    % CORRECTION EXO 4
+    \begin{exercice}
+        \textbf{Opérations et conversions sur les durées}
+        
+        \textit{Énoncé : Effectuer l'addition et la soustraction de durées, puis convertir 54 h en jours/heures et 3 h 25 min en minutes.}
+
+        \begin{minipage}{0.49\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=gray, title=Correction - Addition]
+                On additionne d'abord chaque unité séparément :
+                \begin{itemize}
+                    \item Secondes : $30\text{ s} + 45\text{ s} = 75\text{ s}$
+                    \item Minutes : $45\text{ min} + 30\text{ min} = 75\text{ min}$
+                    \item Heures : $2\text{ h} + 1\text{ h} = 3\text{ h}$
+                \end{itemize}
+                On convertit ensuite les dépassements (en commençant par les secondes) :
+                \begin{itemize}
+                    \item $75\text{ s} = 1\text{ min } 15\text{ s}$. On ajoute la minute aux $75\text{ min}$, ce qui donne $76\text{ min}$.
+                    \item $76\text{ min} = 1\text{ h } 16\text{ min}$. On ajoute l'heure aux $3\text{ h}$, ce qui donne $4\text{ h}$.
+                \end{itemize}
+                \textbf{Résultat final : $4\text{ h } 16\text{ min } 15\text{ s}$}
+            \end{tcolorbox}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=gray, title=Correction - Soustraction]
+                On ne peut pas soustraire $30\text{ s}$ à $10\text{ s}$, ni $40\text{ min}$ à $15\text{ min}$. On fait donc des emprunts :
+                \begin{itemize}
+                    \item On emprunte $1\text{ min}$ (soit $60\text{ s}$) aux $15\text{ min}$ : la durée devient $4\text{ h } 14\text{ min } 70\text{ s}$.
+                    \item On emprunte $1\text{ h}$ (soit $60\text{ min}$) aux $4\text{ h}$ : la durée devient $3\text{ h } 74\text{ min } 70\text{ s}$.
+                \end{itemize}
+                On peut maintenant soustraire terme à terme :
+                \begin{itemize}
+                    \item $70\text{ s} - 30\text{ s} = 40\text{ s}$
+                    \item $74\text{ min} - 40\text{ min} = 34\text{ min}$
+                    \item $3\text{ h} - 1\text{ h} = 2\text{ h}$
+                \end{itemize}
+                \textbf{Résultat final : $2\text{ h } 34\text{ min } 40\text{ s}$}
+            \end{tcolorbox}
+        \end{minipage}    
+
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=gray, title=Correction B1]
+                Un jour dure 24 heures. 
+                $2 \times 24 = 48\text{ heures}$. Il reste $54 - 48 = 6\text{ heures}$.\\
+                Donc $54\text{ heures} = \textbf{2}\text{ jours et }\textbf{6}\text{ heures}$.
+            \end{tcolorbox}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=gray, title=Correction B2]
+                Une heure dure 60 minutes. 
+                $3\text{ h} = 3 \times 60 = 180\text{ minutes}$.\\
+                On ajoute les minutes restantes : $180 + 25 = 205\text{ minutes}$.\\
+                Donc $3\text{ h } 25\text{ min} = \textbf{205}\text{ minutes}$.
+            \end{tcolorbox}
+        \end{minipage} 
+    \end{exercice}
+
+    % CORRECTION EXO 5 (Version corrigée sans boucle foreach)
+    \begin{exercice}
+        \textbf{Cassiopée (Correction)}
+        
+        \begin{tikzpicture}[scale=1]
+            % 1. Définition des coordonnées exactes par rapport aux angles
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,0);
+            
+            % Angle obtus de 120° depuis [BA) qui est à 180° -> direction 60°
+            \coordinate (C) at ($(B)+(60:4)$);
+            
+            % Angle de 70° vers l'intérieur depuis [CB) qui est à 240° -> direction 310°
+            \coordinate (D) at ($(C)+(310:4.5)$);
+            
+            % Angle de 105° depuis [DC) qui est à 130° -> direction 25°
+            \coordinate (E) at ($(D)+(25:5)$);
+    
+            % 2. Tracé des segments principaux
+            \draw[thick, blue] (A) -- (B) node[midway, below] {$5\text{ cm}$} 
+                               -- (C) node[midway, above left] {$4\text{ cm}$} 
+                               -- (D) node[midway, below left] {$4{,}5\text{ cm}$} 
+                               -- (E) node[midway, below right] {$5\text{ cm}$};
+    
+            % 3. Lignes de constellation en pointillés
+            \draw[dashed, gray] (A) -- (C);
+            \draw[dashed, gray] (B) -- (D);
+            \draw[dashed, gray] (C) -- (E);
+    
+            % 4. Marquage des 3 angles en rouge avec leurs valeurs
+            % Angle en B (120°)
+            \draw[red, thick] ($(B)+(180:0.5)$) arc (180:60:0.5);
+            \node[red] at ($(B)+(120:0.8)$) {$120^\circ$};
+    
+            % Angle en C (70°)
+            \draw[red, thick] ($(C)+(240:0.5)$) arc (240:310:0.5);
+            \node[red] at ($(C)+(275:0.8)$) {$70^\circ$};
+    
+            % Angle en D (105°)
+            \draw[red, thick] ($(D)+(25:0.5)$) arc (25:130:0.5);
+            \node[red] at ($(D)+(77.5:0.8)$) {$105^\circ$};
+    
+            % 5. Placement des étoiles et des noms des sommets
+            \foreach \p/\n/\pos in {A/A/below left, B/B/below, C/C/above, D/D/below, E/E/above right} {
+                \node[star, star points=5, star point ratio=2.2, fill=orange, minimum size=6pt, inner sep=0pt] at (\p) {};
+                \node[\pos, font=\bfseries] at (\p) {$\n$};
+            }
+        \end{tikzpicture}
+    \end{exercice}
+
+}
+
+\end{document}

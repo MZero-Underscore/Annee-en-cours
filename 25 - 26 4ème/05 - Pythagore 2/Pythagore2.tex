@@ -1,0 +1,254 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{4}
+\newcommand{\monTitre}{Le théorème de Pythagore \\ partie 2}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Notions de logique mathématique}
+\subsection{Différence entre propriété et proposition}
+
+    En mathématiques, une \textbf{proposition} est un énoncé qui est soit vrai soit faux. Par exemple, \og 10>4 \fg \, est une proposition, au même titre que \og $2\times5=11$ \fg. La première est vraie, la seconde est fausse.
+
+    À l'aide de ces propositions, on peut en écrire d'autres, plus complexes. On s'intéresse à celles qui s'écrivent sous la forme :
+    
+    \begin{center}
+        \og \textbf{Si} <proposition A> \textbf{alors} <proposition B>. \fg
+    \end{center}
+
+    Ces propositions, plus complexes, peuvent également être vraies ou fausses.
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Une proposition vraie : Si un quadrilatère possède 3 angles droits alors c'est un rectangle.
+
+            \medskip
+            
+            Pour affirmer qu'une proposition est vraie, il faut la démontrer.
+
+            \begin{minipage}{0.6\linewidth}
+    
+            \end{minipage}
+            \hfill
+            \vline
+            \begin{minipage}{0.39\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.4]{images/Reciproque_Illustration01.png}
+                \end{center}
+            \end{minipage}
+
+            \textbf{Une proposition démontrée s'appelle une propriété.}
+
+            \item Une proposition fausse : Si un nombre est un multiple de 3 alors c'est un multiple de 2.
+
+            \medskip
+
+            Pour affirmer qu'une proposition est fausse, il suffit de trouver un contre-exemple.
+
+            \points[40]
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Contraposée d'une proposition}
+
+    La \textbf{contraposition} de \og \textbf{Si} <proposition A> \textbf{alors} <proposition B>. \fg \, est \, \og \textbf{Si} <proposition B fausse> \textbf{alors} <proposition A fausse>\fg .
+
+    Dans les 2 cas, écrire la contraposée de la propriété énoncée et dire si elle est vraie ou fausse.
+
+    \medskip
+    
+    \begin{minipage}{0.48\linewidth}
+        Si <il pleut> alors <il y a des nuages>.
+
+        \vspace{3cm}
+    \end{minipage}
+    \vline
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        Si <il y a de la neige> alors <je peux skier>
+
+        \vspace{3cm}
+    \end{minipage}
+
+    \medskip
+
+    \boxed{\text{La contraposée d'une proposition vraie est également vraie.}}
+
+
+\newpage
+
+
+\subsection{Réciproque d'une proposition}
+
+    Pour écrire \textbf{la proposition réciproque} d'une proposition \og \textbf{Si} <proposition A> \textbf{alors} <proposition B>. \fg , on échange les places de la \og proposition A \fg et de la \og proposition B \fg .
+
+    \begin{center}
+        \og \textbf{Si} <proposition A> \textbf{alors} <proposition B>. \fg
+
+        devient 
+
+        \og \textbf{Si} <proposition B> \textbf{alors} <proposition A>. \fg
+    \end{center}
+
+    Dans les 2 cas, écrire la proposition réciproque de la propriété énoncée et dire si elle est vraie ou fausse.
+
+    \medskip
+    
+    \begin{minipage}{0.48\linewidth}
+        Si <il pleut> alors <il y a des nuages>.
+
+        \vspace{3cm}
+    \end{minipage}
+    \vline
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        Si <il y a de la neige> alors <je peux skier>
+
+        \vspace{3cm}
+    \end{minipage}
+
+    \medskip
+
+    \boxed{\text{La réciproque d'une proposition vraie n'est pas toujours vraie.}}
+
+
+\section{Démontrer qu'un triangle n'est pas rectangle}
+\subsection{La contraposée du théorème de Pythagore}
+
+    \textbf{Idée} : On utilise la contraposée du théorème de Pythagore.
+
+    \begin{proprieteTitre}{Contraposée du théorème de Pythagore} 
+        Dans un triangle,
+
+        si le carré de la longueur \textbf{du plus grand côté} \underline{n'est pas} égal à la somme des carrés des longueurs des 2 autres côtés alors le triangle \underline{n'est pas} rectangle .
+    \end{proprieteTitre}
+    
+    \underline{En pratique } : on va vérifier que l'égalité fournie par le théorème de Pythagore n'est pas vérifiée. Dans ce cas, on peut affirmer que le triangle n'est pas rectangle en utilisant la propriété ci-dessus. 
+
+
+\subsection{Exemple de rédaction}
+
+    \textbf{Le triangle ABC suivant est-il rectangle ?}
+
+    \medskip
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.6]{images/ContraposéePythagore1.png}\]
+    \end{minipage}
+    \vline
+    \hfill
+    \begin{minipage}{0.65\linewidth}
+        Dans le triangle \points[3], la plus grande longueur est \points[5]
+
+        \bigskip
+
+        \noindent $\left.\begin{array}{l}
+            \text{ D'une part, \points[10]}  \\ \\
+            \text{D'autre part, \points[10]} \\ 
+        \end{array}\right\}$
+        Donc \points[5]       
+
+        \bigskip
+
+        Donc, d'après \points[10], le triangle \points[10]
+
+        \medskip
+
+        \points[25]
+    \end{minipage}
+
+
+\newpage
+
+    
+\section{Démontrer qu'un triangle est rectangle}
+\subsection{La réciproque du théorème de Pythagore}
+
+    \begin{proprieteTitre}{Réciproque du théorème de Pythagore} 
+        Dans un triangle, 
+        
+        si le carré de la longueur \textbf{du plus grand côté} \underline{est} égal à la somme des carrés des 2 autres longueurs alors ce triangle \underline{est} rectangle.
+    \end{proprieteTitre}
+
+\subsection{Exemple de rédaction}
+    \textbf{Le triangle ABC suivant est-il rectangle ?}
+
+    \medskip
+    
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.65]{images/ReciproquePythagore1.png}\]
+    \end{minipage}
+    \vline
+    \hfill
+    \begin{minipage}{0.65\linewidth}
+        Dans le triangle \points[3], la plus grande longueur est \points[5]
+
+        \bigskip
+
+        \noindent $\left.\begin{array}{l}
+            \text{ D'une part, \points[10]}  \\ \\
+            \text{D'autre part, \points[10]} \\ 
+        \end{array}\right\}$
+        Donc \points[5]       
+
+        \bigskip
+
+        Donc, d'après \points[10], le triangle \points[10]
+
+        \medskip
+
+        \points[25]
+    \end{minipage}
+
+
+\section{Exemples de problèmes}
+
+    \begin{exemple}
+        Dans chaque cas, tracer une figure à main levée, repasser le plus grand côté en rouge puis justifier avec une rédaction complète si les triangles sont rectangles ou non.
+        \begin{enumerate}
+            \item EF=4,5cm ; FG=6cm et EG=7,5cm.
+            \item AB=3,6cm ; BC=7cm et CA=7cm.
+            \item NE=33mm, EZ=65mm et ZN=5,6cm.
+        \end{enumerate}
+    \end{exemple}
+
+
+    \begin{exemple} 
+        \begin{minipage}{0.6\linewidth}
+            Pour apprendre son métier, un apprenti maçon a monté un mur en briques de 0,90~m de hauteur. Son patron arrive pour vérifier son travail : il marque un point B sur le mur à 80~cm du sol et un point A à 60~cm du pied du mur. Il mesure alors la distance entre les points A et B et il obtient 1~m.
+
+            \medskip
+
+            On admet que le sol est bien horizontal. Le mur de l'apprenti est-il bien vertical ?
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{center}
+                \begin{center}
+                    \includegraphics[scale=0.4]{images/Reciproque_Exemple02.png}
+                \end{center}
+            \end{center}
+        \end{minipage}       
+    \end{exemple}
+
+
+    \begin{exemple}
+        ABC est un triangle rectangle en B tel que : AB = 5~cm et AC = 8~cm.
+
+        \begin{enumerate}[label=\textbf{\alph*.}]
+            \item Calculer BC (arrondis au mm).
+            \item D est un point tel que : CD = 20~cm et BD = 19~cm. D est-il unique ?
+            \item Montrer que le triangle BCD est rectangle. Précise en quel point.
+            \item En déduire que les points A, B et D sont alignés.
+        \end{enumerate}
+    \end{exemple}   
+
+ \end{document}

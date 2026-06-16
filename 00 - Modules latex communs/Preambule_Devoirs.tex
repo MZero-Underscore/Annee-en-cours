@@ -1,0 +1,98 @@
+% =================================================================
+% 1. COMPTEURS ET PACKAGES DE BASE
+% =================================================================
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage[most,skins,breakable]{tcolorbox}
+\usepackage[column=X]{cellspace}
+
+% Initialisation des compteurs (partent de 0 pour l'auto-incrément)
+\newcounter{DM} \newcounter{Interro} \newcounter{DS}
+\newcounter{exo} \newcounter{thm} \newcounter{prp} \newcounter{dfn}
+
+\setlength{\cellspacebottomlimit}{4pt}
+\setlength{\cellspacetoplimit}{4pt}
+\setlength{\parindent}{2pt}
+\setlength{\tabcolsep}{0.5cm}
+
+\pagestyle{empty} % Pas de numérotation pour les copies de devoirs
+
+% =================================================================
+% 2. BOITES TCOLORBOX (STYLE DEVOIRS)
+% =================================================================
+
+% Style générique pour les exercices de type "bordure gauche"
+\tcbset{styleExo/.style={
+    enhanced, breakable, frame empty, nobeforeafter,
+    boxrule=0pt, titlerule=0pt,
+    toprule at break=0pt, bottomrule at break=0pt,
+    colback=white, sharp corners,
+    borderline west={0.5mm}{0mm}{green!55!black},
+    attach boxed title to top left={xshift=-3mm},
+    boxed title style={size=small, colback=green!55!black, colframe=green!55!black, arc=3mm}
+}}
+
+% Exercice simple
+\newtcolorbox{exercice}{styleExo, 
+    title=Exercice n°\theexo, 
+    code={\stepcounter{exo}}}
+
+% Exercice avec titre personnalisé
+\newtcolorbox{exerciceTitre}[1]{styleExo, 
+    title=Exercice n°\theexo\ - #1, 
+    code={\stepcounter{exo}}}
+
+% Exercice noté (ex: Exercice 1 - 4 pts ou 2.5 pts)
+\newtcolorbox{exerciceNote}[1]{styleExo, 
+    title=Exercice n°\theexo\ \hfill (#1 pt\ifdim#1pt>1pt s\fi), 
+    code={\stepcounter{exo}}}
+
+% Théorème (cadre complet)
+\newtcolorbox{theoreme}{breakable, colback=red!6!white, colframe=red!85!white,
+    fonttitle=\bfseries, title=Théorème \thethm, 
+    code={\stepcounter{thm}}, arc=3mm}
+
+% Boite Titre (pour les cadres de notes ou consignes)
+\newtcolorbox{boiteTitre}[2][]{
+    enhanced, size=fbox, sharp corners,
+    colback=white, colframe=black,
+    colbacktitle=black, fonttitle=\bfseries,
+    attach boxed title to top left={yshift=-3mm, xshift=2mm},
+    boxed title style={size=small, left=2pt, right=2pt, sharp corners},
+    title=#2, #1}
+
+% =================================================================
+% 3. EN-TÊTES (DM, DS, INTERROS)
+% =================================================================
+
+% Macro générique pour éviter la répétition (interne)
+\newcommand{\layoutEntete}[3]{
+    \noindent
+    \begin{tabularx}{\textwidth}{@{}p{2cm} >{\centering\arraybackslash}X p{3cm}@{}}
+        \textbf{\maClasse} & {\huge \textbf{#1}} & #2 \\
+        & #3 & \\
+    \end{tabularx}
+    \vspace{0.4cm}
+}
+
+% Devoirs Maison
+\newcommand{\enteteDM}[2]{\layoutEntete{Devoir maison n°#1}{Pour le #2}{}}
+\newcommand{\enteteDMCorrection}[2]{\layoutEntete{Devoir maison n°#1}{Pour le #2}{\textit{Correction}}}
+\newcommand{\enteteDMIndex}{\layoutEntete{Contenu des DM}{}{}}
+
+% Interrogations
+\newcommand{\enteteInterro}[3]{\layoutEntete{Interrogation n°#1}{Le #2}{Sujet #3}}
+\newcommand{\enteteInterroUnique}[2]{\layoutEntete{Interrogation n°#1}{Le #2}{}}
+\newcommand{\enteteInterroUniqueCorrection}[2]{\layoutEntete{Interrogation n°#1}{Le #2}{\textit{Correction}}}
+\newcommand{\enteteInterroCorrection}[3]{\layoutEntete{Interrogation n°#1}{Le #2}{Sujet #3 - \textit{Correction}}}
+\newcommand{\enteteInterroIndex}{\layoutEntete{Contenu des interros}{}{}}
+
+% Devoirs Bilans (DS)
+\newcommand{\enteteDS}[2]{\layoutEntete{Devoir bilan n°#1}{Le #2}{}}
+\newcommand{\enteteDSCorrection}[2]{\layoutEntete{Devoir bilan n°#1}{Le #2}{\textit{Correction}}}
+\newcommand{\enteteDSAB}[3]{\layoutEntete{Devoir bilan n°#1}{Le #2}{Sujet #3}}
+\newcommand{\enteteDSABCorrection}[3]{\layoutEntete{Devoir bilan n°#1}{Le #2}{Sujet #3 - \textit{Correction}}}
+
+% Divers
+\newcommand{\NomPrenom}{
+    \noindent \textbf{Nom Prénom :} \dotfill \medskip
+}

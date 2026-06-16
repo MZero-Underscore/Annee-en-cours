@@ -1,0 +1,81 @@
+\documentclass[a4paper]{book}
+
+% --- Chargement des préambules ---
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+% \input{../00 - Modules latex/Preambule_Math.tex} % Décommenter si le fichier existe
+
+\begin{document}
+\setcounter{chapter}{12}
+\renewcommand{\monTitre}{La symétrie axiale}
+
+\enteteActivite{1}{\monTitre}{\thechapter}
+
+\section*{Activité d'introduction : Le blason perforé}
+    
+    \begin{tcolorbox}[colback=blue!5,colframe=blue!75!black,title=Matériel nécessaire]
+        Une feuille de papier, un compas (pour sa pointe), une règle graduée et une équerre.
+    \end{tcolorbox}
+    
+\subsection*{1. Manipulation et construction}
+    
+    On considère la figure ci-dessous représentant un axe $(d)$ et trois points $A$, $B$ et $C$ formant une partie d'un blason.
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        % L'axe de symétrie
+        \draw[thick, dashed] (0,-1) -- (0,7) node[above] {$(d)$};
+        
+        % Les points du blason
+        \coordinate (A) at (-2,5);
+        \coordinate (B) at (-4,3);
+        \coordinate (C) at (-1,1);
+        
+        \foreach \p in {A,B,C} {
+            \fill (\p) circle (2pt) node[left] {\p};
+        }
+        
+        \draw[very thick] (A) -- (B) -- (C) -- (A);
+        
+        % Indication de pliage
+        \node[draw, rounded corners, fill=gray!10, font=\small] at (3,3) {Zone de pliage};
+        \draw[->, >=latex, bend left] (2,2.5) to (-1,2.5);
+    \end{tikzpicture}
+    \end{center}
+    
+    \textbf{Consignes :}
+    \begin{enumerate}
+        \item \textbf{Plier} soigneusement votre feuille le long de la droite $(d)$.
+        \item À l'aide de la pointe de votre compas, \textbf{percer} la feuille pliée aux emplacements des points $A$, $B$ et $C$.
+        \item \textbf{Déplier} la feuille. Vous voyez apparaître trois nouveaux trous de l'autre côté de l'axe.
+        \item \textbf{Nommer} ces nouveaux points $A'$, $B'$ et $C'$ (symétriques respectifs de $A, B, C$).
+        \item \textbf{Relier} $A'$, $B'$ et $C'$ pour terminer le blason.
+    \end{enumerate}
+    
+\subsection*{2. Observations géométriques}
+    
+    Tracer les segments $[AA']$, $[BB']$ et $[CC']$, puis répondre aux questions suivantes :
+    
+    \begin{enumerate}
+        \item Que peut-on dire de la position de la droite $(d)$ par rapport au segment $[AA']$ ?
+        
+        \begin{ZoneReponse}{2cm}
+        % L'élève pourra noter la perpendicularité et le milieu
+        \end{ZoneReponse} 
+    
+        \item Utiliser l'équerre et la règle pour vérifier les observations pour les segments $[BB']$ et $[CC']$. Que remarque-t-on?
+        
+        \begin{ZoneReponse}{2cm}
+        \end{ZoneReponse} 
+    \end{enumerate}
+    
+\subsection*{3. Conclusion}
+    
+    \begin{ZoneReponse}{2cm}
+        \textbf{À retenir :} 
+        
+        Deux points sont symétriques par rapport à une droite $(d)$ si la droite $(d)$ coupe le segment qui les relie en son \points[10] et en formant un angle \points[10]. On dit que $(d)$ est la \textbf{médiatrice} du segment.
+    \end{ZoneReponse}
+
+\end{document}

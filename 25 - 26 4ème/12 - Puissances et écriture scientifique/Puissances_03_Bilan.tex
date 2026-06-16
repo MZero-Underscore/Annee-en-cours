@@ -1,0 +1,132 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{12} 
+\renewcommand{\monTitre}{La notation puissance - Bilan première partie}
+
+\enteteActivite{3}{\monTitre}{\thechapter}
+
+\vspace{0.5cm}
+
+    \begin{exercice}{Calculs de base et signes}
+    Donner l'écriture décimale des nombres suivants :
+    
+    \vspace{0.2cm}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabularx}{\textwidth}{XXXX}
+        $3^3 = \makebox[1.5cm]{\dotfill}$ & $(-4)^2 = \makebox[1.5cm]{\dotfill}$ & $-4^2 = \makebox[1.5cm]{\dotfill}$ & $2^4 = \makebox[1.5cm]{\dotfill}$ \\
+        $(-1)^{17} = \makebox[1.5cm]{\dotfill}$ & $1^{2026} = \makebox[1.5cm]{\dotfill}$ & $25^1 = \makebox[1.5cm]{\dotfill}$ & $145^0 = \makebox[1.5cm]{\dotfill}$ \\
+    \end{tabularx}
+    \renewcommand{\arraystretch}{1}
+    \end{exercice}
+    
+    \vspace{0.6cm}
+    
+    \begin{exercice}{Comprendre l'exposant négatif}
+    Compléter les égalités suivantes pour faire apparaître l'inverse, puis donner l'écriture décimale :
+    
+    \vspace{0.2cm}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{enumerate}
+        \item $2^{-3} = \dfrac{1}{2^{\dots}} = \dfrac{1}{\dots} = \makebox[2.5cm]{\dotfill}$ \medskip
+        \item $5^{-2} = \dfrac{1}{\dots\dots} = \makebox[3cm]{\dotfill}$ \medskip
+        \item $10^{-3} = \dfrac{1}{\dots\dots} = \makebox[3cm]{\dotfill}$ \medskip
+        \item $(-2)^{-4} = \dfrac{1}{\dots\dots} = \makebox[3cm]{\dotfill}$ \medskip
+        \item $(-5)^{-1} = \makebox[3cm]{\dotfill}$
+    \end{enumerate}
+    \renewcommand{\arraystretch}{1}
+    \end{exercice}
+    
+    \vspace{0.6cm}
+    
+    \begin{exercice}{Anticiper le signe d'un résultat}
+    Sans calculer, compléter le tableau suivant pour déterminer le signe de chaque nombre et justifier ce choix :
+    
+    \vspace{0.2cm}
+    \begin{center}
+    \renewcommand{\arraystretch}{2.3}
+    \begin{tabularx}{\textwidth}{|c|c|c|X|}
+    \hline
+    \textbf{Nombre} & \textbf{Positif} & \textbf{Négatif} & \textbf{Justification} \\
+    \hline
+    $(-6)^{15}$ & & & \\
+    \hline
+    $-7^8$ & & & \\
+    \hline
+    $(-2)^{12}$ & & & \\
+    \hline
+    $(-3)^{-5}$ & & & \\
+    \hline
+    $-(-4)^5$ & & & \\
+    \hline
+    \end{tabularx}
+    \renewcommand{\arraystretch}{1}
+    \end{center}
+    \end{exercice}
+    
+    \newpage
+    
+    \begin{exercice}{Priorités opératoires}
+    Calculer les expressions suivantes en détaillant les étapes (attention aux priorités opératoires !) :
+    
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        $A = 7 + 2 \times 3^2$ \\
+        \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        $B = (7 + 2) \times 3^2$ \\
+        \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+    \end{minipage}
+    
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        $C = \dfrac{4^2 - 1}{2^3 + 7}$ \\
+        \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        $D = (-3)^2 + (-2)^3 \times 5$ \\
+        \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+    \end{minipage}
+    \end{exercice}
+    
+    
+    \begin{exercice}{Le cas particulier des puissances de 10}
+        Cet exercice prépare la prochaine notion du cours : le cas particulier du nombre 10.
+        
+        \vspace{0.2cm}
+        \textbf{Partie A : Exposants positifs}
+        \begin{enumerate}
+            \item Calculer sous forme d'un nombre entier : \medskip
+            \begin{itemize}
+                \renewcommand{\itemsep}{0.2cm}
+                \item $10^1 = \makebox[3cm]{\dotfill}$ \hspace{2cm} $\bullet $ $10^3 = \makebox[3cm]{\dotfill}$
+                \item $10^2 = \makebox[3cm]{\dotfill}$ \hspace{2cm} $\bullet $ $10^4 = \makebox[3cm]{\dotfill}$
+            \end{itemize}
+            \item Que remarque-t-on concernant le lien entre l'exposant et le résultat ?
+            
+            \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+            \item En déduire, sans poser de calcul, l'écriture décimale de $10^9$ : \makebox[5cm]{\dotfill}
+        \end{enumerate}
+        
+        
+        \textbf{Partie B : Exposants négatifs}
+        \begin{enumerate}
+            \item Écrire sous forme de fraction décimale puis de nombre décimal : \medskip
+            \begin{itemize}
+                \renewcommand{\itemsep}{0.2cm}
+                \item $10^{-1} = \makebox[2cm]{\dotfill} = \makebox[2.5cm]{\dotfill}$ \hspace{2cm} $\bullet $ $10^{-3} = \makebox[3cm]{\dotfill}$ \medskip
+                \item $10^{-2} = \makebox[2cm]{\dotfill} = \makebox[2.5cm]{\dotfill}$ \hspace{2cm} $\bullet $ $10^{-4} = \makebox[3cm]{\dotfill}$
+            \end{itemize}
+            \item Que remarque-t-on concernant le lien entre l'exposant négatif et l'écriture décimale du résultat ?
+            
+            \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+            \item En déduire, sans poser de calcul, l'écriture décimale de $10^{-6}$ : \makebox[4cm]{\dotfill}
+        \end{enumerate}
+    \end{exercice}
+
+\end{document}

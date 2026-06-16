@@ -1,0 +1,81 @@
+% =================================================================
+% PREAMBULE MATH LYCÉE — ARCHIVÉ
+% Ce fichier n'est plus chargé dans les cours de collège.
+% À réutiliser si nécessaire pour des cours de lycée.
+% =================================================================
+
+% --- Ensembles (déjà dans Preambule_Commun.tex pour le collège) ---
+\newcommand{\N}{\ensuremath{\mathbf{N}}}
+\newcommand{\Z}{\ensuremath{\mathbf{Z}}}
+\newcommand{\D}{\ensuremath{\mathbf{D}}}
+\newcommand{\Q}{\ensuremath{\mathbf{Q}}}
+\newcommand{\R}{\ensuremath{\mathbf{R}}}
+\newcommand{\card}{\text{card}}
+
+\newcommand{\eq}{\Longleftrightarrow}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\renewcommand{\vec}{\overrightarrow}
+\newcommand{\norme}[1]{\left\lVert \vec{#1} \right\rVert}
+\DeclareMathOperator{\e}{e}
+
+% --- Vecteurs et coordonnées ---
+\newcommand{\ivec}{\vec{\imath}}
+\newcommand{\jvec}{\vec{\jmath}}
+\newcommand{\Oij}{\ensuremath{(O, \ivec, \jvec)}}
+\newcommand{\veccol}[3]{\vec{#1} = \begin{pmatrix} #2 \\ #3 \end{pmatrix}}
+\newcommand{\veccoo}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+
+% --- Intervalles (TikZ) ---
+\usepackage{ifthen}
+
+% Borne inf; ouverte/fermée (o/f); borne sup; ouverte/fermée (o/f)
+\newcommand{\intervalleborne}[4]{%
+\begin{tikzpicture}[baseline=-0.5ex]
+    \draw[->] (0,0) -- (5,0);
+    \draw[line width=1mm, green!50!black] (1,0) -- (4,0);
+    \node[below=5pt] at (1,0) {#1};
+    \node[below=5pt] at (4,0) {#3};
+    \node[green!50!black] at (1,0)
+        {\ifthenelse{\equal{\detokenize{#2}}{\detokenize{f}}}{$\bigg[$}{$\bigg]$}};
+    \node[green!50!black] at (4,0)
+        {\ifthenelse{\equal{\detokenize{#4}}{\detokenize{f}}}{$\bigg]$}{$\bigg[$}};
+\end{tikzpicture}}
+
+% Côté ouvert (-/+); borne réelle; ouverte/fermée (o/f)
+\newcommand{\intervallenonborne}[3]{%
+\begin{tikzpicture}[baseline=-0.5ex]
+    \draw[->] (0,0) -- (5,0);
+    \ifthenelse{\equal{\detokenize{#1}}{\detokenize{-}}}{%
+        \draw[line width=1mm, green!50!black] (0,0) -- (4,0);
+        \node[below=5pt] at (0,0) {$-\infty$};
+        \node[below=5pt] at (4,0) {#2};
+        \node[green!50!black] at (4,0)
+            {\ifthenelse{\equal{\detokenize{#3}}{\detokenize{f}}}{$\bigg]$}{$\bigg[$}};
+    }{%
+        \draw[line width=1mm, green!50!black] (1,0) -- (5,0);
+        \node[below=5pt] at (1,0) {#2};
+        \node[below=5pt] at (5,0) {$+\infty$};
+        \node[green!50!black] at (1,0)
+            {\ifthenelse{\equal{\detokenize{#3}}{\detokenize{f}}}{$\bigg[$}{$\bigg]$}};
+    }
+\end{tikzpicture}}
+
+% --- Segments et diagrammes ---
+\newcommand{\segmentlegende}[4]{%
+\begin{tikzpicture}[baseline=-0.5ex]
+    \draw[->] (0,0) -- (5,0);
+    \draw (1,-0.1) -- (1,0.1) node[above=5pt] {#1} node[below=5pt] {#2};
+    \draw (4,-0.1) -- (4,0.1) node[above=5pt] {#3} node[below=5pt] {#4};
+    \draw[<->] (1,0.8) -- node[above] {$AM = #4 - #2$} (4,0.8);
+\end{tikzpicture}}
+
+\newcommand{\diagrammedouble}[6]{%
+\begin{tikzpicture}[baseline=(B.base)]
+    \node(A) at (0,0) {#1}; \node(B) at (4,0) {#2}; \node(C) at (8,0) {#3};
+    \draw[->, dashed, line width=0.8mm, green!50!black]
+        (A) to[bend left=20] node[midway, above] {#4} (B);
+    \draw[->, dashed, line width=0.8mm, blue!50!black]
+        (B) to[bend left=20] node[midway, above] {#5} (C);
+    \draw[->, dashed, line width=0.8mm, red!50!black]
+        (A) to[bend right=25] node[midway, below] {#6} (C);
+\end{tikzpicture}}

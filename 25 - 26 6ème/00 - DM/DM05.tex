@@ -1,0 +1,648 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+\begin{document}
+\setcounter{DM}{5}
+\newcommand{\maDate}{29/01}
+%\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+\TableauCompetencesQuatre
+            {\CompetenceSept{}}
+            {\CompetenceCinq{4}}
+            {\CompetenceCinq{6}}
+            {\CompetenceCinq{7}}
+
+
+    \begin{exercice}
+        Sur la demi-droite graduée ci-dessous, l'unité est partagée en 10 parts égales.
+    
+        \vspace{0.5cm}
+        
+        % Dessin de la droite graduée simplifié en LaTeX (TikZ est idéal mais voici une version texte/astuce)
+        \begin{center}
+            \begin{tikzpicture}[x=2cm, y=1cm]
+    
+                % 1. On trace la ligne principale avec une flèche au bout
+                \draw[->, >=stealth, thick] (0,0) -- (5.5,0);
+            
+                % 2. On trace les petites graduations (les dixièmes)
+                % On boucle de 0 à 5 par pas de 0.1
+                \foreach \x in {0, 0.1, ..., 5} {
+                    \draw (\x, -0.05) -- (\x, 0.05);
+                }
+            
+                % 3. On trace les grandes graduations (les entiers) avec les chiffres
+                \foreach \x in {0, 1, 2, 3, 4, 5} {
+                    \draw[thick] (\x, -0.15) -- (\x, 0.15);
+                    \node[below=6pt] at (\x, 0) {\textbf{\x}};
+                }
+            
+                % 4. On place des points à lire (A, B, C)
+                % Point A à 0.6
+                \filldraw[red] (0.9,0) circle (2pt) node[above=8pt] {A};
+                % Point B à 2.3
+                \filldraw[blue] (2.9,0) circle (2pt) node[above=8pt] {B};
+                % Point C à 4.7
+                \filldraw[black!60!green] (1.7,0) circle (2pt) node[above=8pt] {C};
+            
+            \end{tikzpicture}
+        \end{center}
+        
+        \medskip
+        
+        \begin{enumerate}[leftmargin=*]
+            \item Donner l'abscisse des points placés sur la droite :
+            
+            L'abscisse du point $A$ est : \dotfill \quad \quad
+            L'abscisse du point $B$ est : \dotfill \quad \quad
+            L'abscisse du point $C$ est : \dotfill
+
+            \medskip
+    
+            \item Placer précisément les points : $D(\frac{17}{10})$ ; $E(4,2)$ ; $F(2 + \frac{5}{10})$.
+
+            \medskip
+    
+            \item Quel est le point le plus proche de l'unité 2 : le point A ou le point D ? \dotfill
+
+            \medskip
+            
+            \item Écrire l'abscisse du point E sous forme de fraction décimale : \dotfill
+        \end{enumerate}   
+    \end{exercice}\stepcounter{exo}
+    
+
+    \begin{exercice}
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Comparer et ranger}
+
+            \begin{enumerate}[leftmargin=*]
+                \item Compléter avec les symboles $<$ ou $>$ :
+                
+                    \begin{minipage}{0.45\linewidth}
+                        $14,6 \dots\dots 14,59$
+
+                        \medskip
+                        
+                        $3,04 \dots\dots 3,4$
+                    \end{minipage}
+                    \hfill \vline \hfill
+                    \begin{minipage}{0.45\linewidth}
+                        $0,205 \dots\dots 0,25$
+
+                        \medskip
+                        
+                        $21 \dots\dots 20,99$
+                    \end{minipage}
+
+                \medskip
+
+                \item Ranger les nombres suivants dans l'ordre décroissant (du plus grand au plus petit) :
+                \begin{center}
+                    $8,5 \quad ; \quad 8,05 \quad ; \quad 8,55 \quad ; \quad 8,055 \quad ; \quad 8,055$
+                \end{center}
+                
+                \begin{ZoneReponse}{2cm}
+                \end{ZoneReponse}
+            \end{enumerate}
+
+          
+            \item \textbf{Encadrer}
+    
+            \medskip
+                        
+            \begin{minipage}{0.45\linewidth}
+                (a) Encadrer chaque nombre entre deux nombres entiers consécutifs.
+
+                \medskip
+                
+                \begin{itemize}
+                    \item $\points[3] < 7,81 < \points[3]$
+    
+                    \bigskip
+                    
+                    \item $\points[3] < 0,42 < \points[3]$
+                \end{itemize}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\linewidth}
+                (b) Encadrer chaque nombre au dixième près.
+                
+                \medskip
+                
+                \begin{itemize}
+                    \item $\points[3] < 15,47 < \points[3]$
+    
+                    \bigskip
+                    
+                    \item $\points[3] < 8,96 < \points[3]$
+                \end{itemize}
+    
+                \vspace{0.5cm}
+            \end{minipage}
+
+\vfill \hfill Tourner la page !
+
+\newpage
+             
+        \item \textbf{Arrondir}
+
+            \medskip
+        
+            Compléter le tableau suivant.
+            
+            \begin{center}
+            \renewcommand{\arraystretch}{2}
+            \begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+                \hline
+                \centering \textbf{Nombre} & \centering \textbf{Arrondi à l'unité} & \centering \textbf{Arrondi au dixième} \cr
+                \hline
+                \centering $6,43$ & & \cr
+                \hline
+                \centering $12,75$ & & \cr
+                \hline
+                \centering $0,582$ & & \cr
+                \hline
+                \centering $8,97$ & & \cr
+                \hline
+            \end{tabular}
+            \end{center}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+    
+
+    \begin{exercice}
+        \begin{enumerate}
+            \item Poser les calculs suivants.
+
+            \medskip
+        
+            \begin{minipage}{0.33\linewidth}
+                \quad $54,129 + 87,93$
+                \vspace{4cm}
+            \end{minipage}
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $92,41 - 6,58$
+                \vspace{4cm}
+            \end{minipage}        
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $63,4 \times 0,73$
+                \vspace{4cm}
+            \end{minipage}
+
+            \item On sait que $234 \times 47 = \np{10998}$, compléter les égalités suivantes.
+
+            \medskip
+        
+            \begin{minipage}{0.33\linewidth}
+                $2,34 \times 47 = \dots$
+            \end{minipage}
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $234 \times 4700 = \dots$
+            \end{minipage}        
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                $23,4 \times 0,47 = \dots$
+            \end{minipage}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Calculer le périmètre de chacune des figures suivantes.
+        
+        \textbf{Attention :} Ne pas oublier pas d'écrire la formule, de détailler le calcul et de préciser l'unité. (On prendra $\pi \approx 3,14$).
+
+        \medskip
+
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 1 : Le Carré} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) rectangle (2,2);
+                \node at (1,-0.3) {4 cm};
+            \end{tikzpicture}
+            
+            \medskip
+            
+            \dotfill 
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 2 : Le Rectangle} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) rectangle (3,1.5);
+                \node at (1.5,-0.3) {7 cm};
+                \node at (3.6,0.75) {3 cm};
+            \end{tikzpicture}
+
+            \bigskip
+            
+            \dotfill 
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 3 : Le Cercle} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) circle (1.2);
+                \draw[dashed] (-1.2,0) -- (1.2,0);
+                \node at (0,0.3) {D = 6 cm};
+                \draw (0,0) node {$\times$};
+            \end{tikzpicture}
+            
+            \medskip
+            
+            \dotfill 
+        \end{minipage}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Calculer le périmètre de la figure suivante. Toutes les longueurs sont en cm.
+
+        \medskip
+
+        \begin{minipage}{0.5\linewidth}
+            \dotfill
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.5, every node/.style={scale=1.2}]
+                % Tracé du polygone "en escalier"
+                \draw[ultra thick, fill=gray!10] (0,0) -- (10,0) -- (10,4) -- (6,4) -- (6,7) -- (0,7) -- cycle;
+                
+                % Cotations
+                \node at (5,-0.5) {10 cm}; % Bas
+                \node at (10.8,2) {4 cm};  % Droite bas
+                \node at (8,4.5) {6 cm};   % Horizontal milieu
+                \node at (6.8,5.5) {3 cm}; % Vertical milieu
+                \node at (3,7.5) {?};      % Haut (à trouver : 10 - 6 = 4)
+                \node at (-0.8,3.5) {?};   % Gauche (à trouver : 4 + 3 = 7)
+            
+                % Codage angles droits
+                \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+                \draw (9.7,0) -- (9.7,0.3) -- (10,0.3);
+                \draw (10,3.7) -- (9.7,3.7) -- (9.7,4);
+                \draw (6.3,4) -- (6.3,4.3) -- (6,4.3);
+                \draw (6,6.7) -- (5.7,6.7) -- (5.7,7);
+                \draw (0,6.7) -- (0.3,6.7) -- (0.3,7);
+            \end{tikzpicture}
+        \end{minipage}
+    \end{exercice}
+
+}
+
+
+\tagged{correction}{
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exercice}
+        Sur la demi-droite graduée ci-dessous, l'unité est partagée en 10 parts égales.
+    
+        \vspace{0.5cm}
+        
+        % Dessin de la droite graduée simplifié en LaTeX (TikZ est idéal mais voici une version texte/astuce)
+        \begin{center}
+            \begin{tikzpicture}[x=2cm, y=1cm]
+    
+                % 1. On trace la ligne principale avec une flèche au bout
+                \draw[->, >=stealth, thick] (0,0) -- (5.5,0);
+            
+                % 2. On trace les petites graduations (les dixièmes)
+                % On boucle de 0 à 5 par pas de 0.1
+                \foreach \x in {0, 0.1, ..., 5} {
+                    \draw (\x, -0.05) -- (\x, 0.05);
+                }
+            
+                % 3. On trace les grandes graduations (les entiers) avec les chiffres
+                \foreach \x in {0, 1, 2, 3, 4, 5} {
+                    \draw[thick] (\x, -0.15) -- (\x, 0.15);
+                    \node[below=6pt] at (\x, 0) {\textbf{\x}};
+                }
+            
+                % 4. On place des points à lire (A, B, C)
+                % Point A à 0.6
+                \filldraw[red] (0.9,0) circle (2pt) node[above=8pt] {A};
+                % Point B à 2.3
+                \filldraw[blue] (2.9,0) circle (2pt) node[above=8pt] {B};
+                % Point C à 4.7
+                \filldraw[black!60!green] (1.7,0) circle (2pt) node[above=8pt] {C};
+
+                % Point D à 1,7
+                \filldraw[red] (1.7,0) circle (2pt) node[below=8pt] {D};
+                % Point E à 2.3
+                \filldraw[blue] (4.2,0) circle (2pt) node[above=8pt] {E};
+                % Point F à 2.5
+                \filldraw[black!60!green] (2.5,0) circle (2pt) node[above=8pt] {F};
+            
+            \end{tikzpicture}
+        \end{center}
+        
+        \medskip
+        
+        \begin{enumerate}[leftmargin=*]
+            \item Donner l'abscisse des points placés sur la droite :
+            
+            L'abscisse du point $A$ est : \textcolor{red}{0,9} \quad \quad
+            L'abscisse du point $B$ est : \textcolor{red}{2,9}  \quad \quad
+            L'abscisse du point $C$ est : \textcolor{red}{1,7} 
+
+            \medskip
+    
+            \item Placer précisément les points : $D(\frac{17}{10})$ ; $E(4,2)$ ; $F(2 + \frac{5}{10})$.
+
+            \medskip
+    
+            \item Quel est le point le plus proche de l'unité 2 : le point A ou le point D ? \textcolor{red}{Le point D.}
+
+            \medskip
+            
+            \item Écrire l'abscisse du point E sous forme de fraction décimale : \textcolor{red}{$\frac{42}{10}$}
+        \end{enumerate}   
+    \end{exercice}\stepcounter{exo}
+    
+
+    \begin{exercice}
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Comparer et ranger}
+
+            \begin{enumerate}[leftmargin=*]
+                \item Compléter avec les symboles $<$ ou $>$ :
+                
+                    \begin{minipage}{0.45\linewidth}
+                        $14,6 \textcolor{red}{>} 14,59$
+
+                        \medskip
+                        
+                        $3,04 \textcolor{red}{<} 3,4$
+                    \end{minipage}
+                    \hfill \vline \hfill
+                    \begin{minipage}{0.45\linewidth}
+                        $0,205 \textcolor{red}{<} 0,25$
+
+                        \medskip
+                        
+                        $21 \textcolor{red}{>} 20,99$
+                    \end{minipage}
+
+                \medskip
+
+                \item Ranger les nombres suivants dans l'ordre décroissant (du plus grand au plus petit) :
+                \begin{center}
+                    \[8,5 \quad ; \quad 8,05 \quad ; \quad 8,55 \quad ; \quad 8,055 \quad ; \quad 8,055\]
+                \end{center}
+                
+                \begin{ZoneReponse}{2cm}
+
+                \textcolor{red}{8,55>8,5>8,055>8,05}
+                \end{ZoneReponse}
+            \end{enumerate}
+
+          
+            \item \textbf{Encadrer}
+    
+            \medskip
+                        
+            \begin{minipage}{0.45\linewidth}
+                (a) Encadrer chaque nombre entre deux nombres entiers consécutifs.
+
+                \medskip
+                
+                \begin{itemize}
+                    \item $7 < 7,81 < 8$
+    
+                    \bigskip
+                    
+                    \item $0 < 0,42 < 1$
+                \end{itemize}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\linewidth}
+                (b) Encadrer chaque nombre au dixième près.
+                
+                \medskip
+                
+                \begin{itemize}
+                    \item $15,4 < 15,47 < 15,5$
+    
+                    \bigskip
+                    
+                    \item $8,9 < 8,96 < 9$
+                \end{itemize}
+    
+                \vspace{0.5cm}
+            \end{minipage}
+
+\vfill \hfill Tourner la page !
+
+\newpage
+             
+        \item \textbf{Arrondir}
+
+            \medskip
+        
+            Compléter le tableau suivant.
+            
+            \begin{center}
+            \renewcommand{\arraystretch}{2}
+            \begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+                \hline
+                \centering \textbf{Nombre} & \centering \textbf{Arrondi à l'unité} & \centering \textbf{Arrondi au dixième} \cr
+                \hline
+                \centering $6,43$ & \textcolor{red}{6}& \textcolor{red}{6,4} \cr
+                \hline
+                \centering $12,75$ & \textcolor{red}{13} & \textcolor{red}{12,8}\cr
+                \hline
+                \centering $0,582$ & \textcolor{red}{1} & \textcolor{red}{0,6} \cr
+                \hline
+                \centering $8,97$ & \textcolor{red}{9} & \textcolor{red}{9}\cr
+                \hline
+            \end{tabular}
+            \end{center}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+    
+
+    \begin{exercice}
+        \begin{enumerate}
+            \item Poser les calculs suivants.
+
+            \medskip
+        
+            \begin{minipage}{0.33\linewidth}
+                \quad $54,129 + 87,93$
+
+                \Addition[Solution]{54,129}{87,93}    
+            \end{minipage}
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $92,41 - 6,58$
+
+                \Soustraction[Solution]{92,41}{6,58}
+            \end{minipage}        
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $63,4 \times 0,73$
+
+                \Multiplication[Solution]{63,4}{0,73}
+            \end{minipage}
+
+            \item On sait que $234 \times 47 = \np{10998}$, compléter les égalités suivantes.
+
+            \medskip
+        
+            \begin{minipage}{0.33\linewidth}
+                $2,34 \times 47 = \np{109,98}$
+            \end{minipage}
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                \quad $234 \times 4700 = \np{1099800}$
+            \end{minipage}        
+            \hfill\vline\hfill
+            \begin{minipage}{0.33\linewidth}
+                $23,4 \times 0,47 = \np{10,998}$
+            \end{minipage}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Calculer le périmètre de chacune des figures suivantes.
+        
+        \textbf{Attention :} Ne pas oublier pas d'écrire la formule, de détailler le calcul et de préciser l'unité. (On prendra $\pi \approx 3,14$).
+
+        \medskip
+
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 1 : Le Carré} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) rectangle (2,2);
+                \node at (1,-0.3) {4 cm};
+            \end{tikzpicture}
+            
+            \medskip
+            \raggedright
+            
+            $P=4\times\text{côté}$\\
+            $p=4\times4$\\
+            $P=16$ cm
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 2 : Le Rectangle} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) rectangle (3,1.5);
+                \node at (1.5,-0.3) {7 cm};
+                \node at (3.6,0.75) {3 cm};
+            \end{tikzpicture}
+
+            \medskip
+            \raggedright
+            
+            $P=2\times\text{longueur}+2\times{largeur}$\\
+            $P=2\times7+2\times3$\\
+            $P=14+6$\\
+            $P=20$  cm
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \centering
+            \textbf{Figure 3 : Le Cercle} \\
+            \vspace{0.3cm}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) circle (1.2);
+                \draw[dashed] (-1.2,0) -- (1.2,0);
+                \node at (0,0.3) {D = 6 cm};
+                \draw (0,0) node {$\times$};
+            \end{tikzpicture}
+            
+            \medskip
+            \raggedright
+            
+            $P=\pi\times\text{diamètre}$\\
+            $P=\pi\times6$\\
+            $P\simeq18,8$ cm (arrondi au mm)
+        \end{minipage}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Calculer le périmètre de la figure suivante. Toutes les longueurs sont en cm.
+
+        \medskip
+
+        \begin{minipage}{0.5\linewidth}
+            \begin{itemize}
+                \item Calcul de EF : $EF=10-6=4cm$
+
+                \item Calcul de FA : $AF=4+3=7 cm$
+
+                \item Bilan : 
+
+                $P=\underline{10+4+6}+\underline{3+4+7}$\\
+                $P=20+14$\\
+                $P=34$ cm
+            \end{itemize}
+            
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.5, every node/.style={scale=1.2}]
+                % Tracé du polygone "en escalier"
+                \draw[ultra thick, fill=gray!10] (0,0) -- (10,0) -- (10,4) -- (6,4) -- (6,7) -- (0,7) -- cycle;
+                
+                % Cotations
+                \node at (5,-0.5) {10 cm}; % Bas
+                \node at (11,2) {4 cm};  % Droite bas
+                \node at (8,4.5) {6 cm};   % Horizontal milieu
+                \node at (7,5.5) {3 cm}; % Vertical milieu
+                \node at (3,7.5) {?};      % Haut (à trouver : 10 - 6 = 4)
+                \node at (-0.8,3.5) {?};   % Gauche (à trouver : 4 + 3 = 7)
+            
+                % Codage angles droits
+                \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+                \draw (9.7,0) -- (9.7,0.3) -- (10,0.3);
+                \draw (10,3.7) -- (9.7,3.7) -- (9.7,4);
+                \draw (6.3,4) -- (6.3,4.3) -- (6,4.3);
+                \draw (6,6.7) -- (5.7,6.7) -- (5.7,7);
+                \draw (0,6.7) -- (0.3,6.7) -- (0.3,7);
+
+                \node at (-0.5,0) {A};
+                \node at (10.4,0) {B};
+                \node at (10.4,4) {C};
+                \node at (5.5,4) {D};
+                \node at (6.5,7) {E};
+                \node at (-0.5,7) {F};
+            \end{tikzpicture}
+        \end{minipage}
+    \end{exercice}
+
+}
+
+
+\end{document}

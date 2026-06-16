@@ -1,0 +1,87 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11}
+\renewcommand{\monTitre}{Les parallélogrammes}
+
+\enteteActivite{5}{Aire du parallélogramme}{\thechapter}
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!75!black, title=Objectif de l'activité]
+    Comprendre comment calculer l'aire d'un parallélogramme en le transformant par manipulation.
+\end{tcolorbox}
+
+\section*{1. Manipulation : Du parallélogramme au...}
+    \noindent
+    \begin{minipage}[t]{0.45\textwidth}
+        \textbf{Le modèle à construire :}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.65]
+            % Parallélogramme original
+            \draw[thick, fill=gray!10] (0,0) -- (8,0) -- (11,4) -- (3,4) -- cycle;
+            
+            % Hauteur DH
+            \draw[dashed, red, thick] (3,4) -- (3,0);
+            \draw[red, thick] (3,0.2) -- (3.2,0.2) -- (3.2,0);
+            
+            % Points
+            \node[below left] at (0,0) {$A$};
+            \node[below right] at (8,0) {$B$};
+            \node[above right] at (11,4) {$C$};
+            \node[above left] at (3,4) {$D$};
+            \node[below] at (3,0) {$H$};
+            
+            % Dimensions pour la construction
+            \draw[<->] (0,-0.6) -- (8,-0.6) node[midway, below] {$8$ cm};
+            \draw[<->, red] (2.8,0) -- (2.8,4) node[midway, left] {$4$ cm};
+            \node[above left] at (1.5,2) {$5$ cm}; % Hypothénuse AD = 5cm
+            \node[below] at (1.5,0) {$3$ cm}; % AH = 3cm
+        \end{tikzpicture}
+        \end{center}
+        \vspace{0.2cm}
+        \textit{\textbf{Aide pour la construction :}} \\ Commence par tracer le triangle rectangle $AHD$. Tu pourras ensuite compléter le parallélogramme !
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.52\textwidth}
+        \textbf{Instructions :}
+        \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*/}]
+            \item Reproduire ce parallélogramme en vraie grandeur sur une feuille blanche.
+            \item Le découper proprement, puis découper le long de la hauteur rouge $[DH]$.
+            \item Replacer les deux pièces du puzzle de façon à obtenir un quadrilatère bien connu depuis le primaire.
+            \item Coller la figure finale obtenue dans le cadre ci-dessous :
+        \end{enumerate}
+        \vspace{0.2cm}
+        \begin{ZoneReponse}{5cm}
+            \vspace{2.2cm}
+            \begin{center}
+                \textcolor{gray}{\textit{Colle ta nouvelle figure ici}}
+            \end{center}
+        \end{ZoneReponse}
+    \end{minipage}
+    
+    
+\section*{2. Conclusion sur le calcul de l'aire}
+    \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*/}, itemsep=0.2cm]
+        \item Quelle est la nature de la nouvelle figure que tu as collée ? \dotfill
+        \item L'aire du parallélogramme de départ a-t-elle changé lors du découpage ? \dotfill
+        \item Quelles sont les dimensions de ta figure collée ? \quad Longueur = \dotfill \quad Largeur = \dotfill
+        \item Calcule l'aire de cette figure : \dotfill
+        \item En déduire l'aire du parallélogramme de départ : \dotfill
+        \item \textbf{Bilan :} Pour calculer l'aire d'un parallélogramme de base $b$ et de hauteur $h$, la formule est donc :
+        \begin{center}
+            \Large $\mathcal{A} = \dots\dots\dots \times \dots\dots\dots$
+        \end{center}
+    \end{enumerate}
+    
+\section*{3. Application}
+    
+    \begin{exercice}
+        Calculer l'aire d'un parallélogramme dont une base mesure $7,5$~cm et dont la hauteur correspondante mesure $4$~cm.
+        \begin{ZoneReponse}{2.5cm}
+        \end{ZoneReponse}
+    \end{exercice}
+
+\end{document}

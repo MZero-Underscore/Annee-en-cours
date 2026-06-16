@@ -1,0 +1,264 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{10}
+\renewcommand{\monTitre}{Statistiques}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+\section{Recueillir et organiser des données}
+    
+    \begin{definition}
+        On appelle \textbf{donnée} une information collectée (nombre, mot, couleur). Pour les analyser, on les regroupe souvent dans un \textbf{tableau} ou on les représente par un \textbf{graphique}. 
+    \end{definition}
+    
+    
+    \begin{exemple}[Exploitation de données (Calcul mental)]
+        Voici les notes obtenues par une classe de 5ème lors d'un test : \\
+        \textbf{12 ; 15 ; 8 ; 12 ; 10 ; 15 ; 12 ; 8 ; 10 ; 12.}
+    
+        \begin{enumerate}[label=\arabic*/]
+            \item \textbf{Organiser les données dans le tableau suivant :}
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|c|c|}
+                \hline
+                \textbf{Note} & 8 & 10 & 12 & 15 & \textbf{Total} \\ \hline
+                \textbf{Nombre d'élèves (Effectif)} & \points[2] & \points[2] & \points[2] & \points[2] & \points[2] \\ \hline
+            \end{tabular}
+            \end{center}
+    
+            \item \textbf{Représenter ces résultats par un diagramme en bâtons :}
+            \begin{ZoneReponse}{6cm}
+                \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    % Grille de lecture grise et légère
+                    \draw[step=0.5cm, gray!20, very thin] (0,0) grid (9,5);
+                    
+                    % Axe des ordonnées (Effectifs)
+                    % On monte jusqu'à 5 car l'effectif max est 4
+                    \draw[->,>=latex,thick] (0,0) -- (0,5) node[above] {Nombre d'élèves (Effectif)};
+                    \foreach \y in {0,1,2,3,4} {
+                        \draw (0.1,\y) -- (-0.1,\y) node[left] {\y};
+                    }
+                
+                    % Axe des abscisses (Notes)
+                    \draw[->,>=latex,thick] (0,0) -- (9,0) node[right] {Notes};
+                    
+                    % Graduation des notes (8, 10, 12, 15)
+                    % On les place à 1cm, 3cm, 5cm et 7cm pour laisser de la place aux bâtons
+                    \foreach \x/\n in {1/8, 3/10, 5/12, 7/15} {
+                        \draw (\x,0.1) -- (\x,-0.1) node[below] {\n};
+                    }
+                    
+                    % Optionnel : Un petit commentaire pour les élèves
+                    \node[blue, font=\itshape] at (4.5, -1.2) {Trace des bâtons d'une largeur de 1 cm (ou un simple trait épais).};
+                
+                \end{tikzpicture}
+                \end{center}
+            \end{ZoneReponse}
+    
+            \item \textbf{Représenter la répartition des notes par un diagramme semi-circulaire :}
+            \textit{Aide : L'effectif total est de 10 élèves pour un angle total de $180^\circ$.}
+            
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|c|c|}
+                \hline
+                \textbf{Note} & 8 & 10 & 12 & 15 & \textbf{Total} \\ \hline
+                \textbf{Nombre d'élèves (Effectif)} & \points[2] & \points[2] & \points[2] & \points[2] & \points[2] \\ \hline
+                \textbf{Angle ($^\circ$)} & \points[2] & \points[2] & \points[2] & \points[2] & $180^\circ$ \\ \hline
+            \end{tabular}
+            \end{center}
+            
+            \begin{ZoneReponse}{5cm}
+                \begin{center}
+                \begin{tikzpicture}
+                    % Tracé du demi-cercle
+                    \draw[thick] (4,0) arc (0:180:4);
+                    \draw[thick] (-4,0) -- (4,0);
+                    
+                    % Marquage du centre pour le rapporteur
+                    \draw[thick] (0,0.2) -- (0,-0.2);
+                    \node[below] at (0,0) {Centre (O)};
+                    
+                    % Ligne de départ (0°)
+                    \draw[dashed, gray] (0,0) -- (4,0);
+                    \node[right] at (4,0) {0°};
+                \end{tikzpicture}
+                \end{center}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+    
+    
+\section{Effectifs et Fréquences}
+    
+    \begin{definition}
+        \begin{itemize}
+            \item L'\textbf{effectif} d'une donnée est le nombre de fois où cette donnée apparaît. 
+            \item L'\textbf{effectif total} est la somme de tous les effectifs (le nombre total de données). 
+            \item La \textbf{fréquence} est le quotient de l'effectif par l'effectif total : $ \text{Fréquence} = \frac{\text{Effectif}}{\text{Effectif total}} $. 
+        \end{itemize}
+    \end{definition}
+    
+    
+    \begin{methodeTitre}{Lire une fréquence en pourcentage}
+        Pour obtenir la fréquence en pourcentage, on peut écrire la fréquence sous forme décimale et **lire le nombre à partir du chiffre des centièmes comme unité**.
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}
+        \begin{minipage}{0.45\linewidth}
+            Dans une classe de 20 élèves, 3 élèves portent des lunettes.
+            \begin{itemize}
+                \item La fréquence est : $\frac{3}{20} = 0,15 = \dfrac{15}{100}$. 
+                \item On lit « 15 centièmes », \\
+                \text{ } \hfill ce qui correspond à **15 \%**.
+            \end{itemize}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.45\linewidth}
+            Autre cas : si la fréquence est $0,4$.
+            \begin{itemize}
+                \item On peut écrire $0,4 = 0,40 = \dfrac{40}{100}$.
+                \item On lit « 40 centièmes », \\
+                \text{ } \hfill ce qui correspond à **40 \%**.
+            \end{itemize}
+        \end{minipage}
+    \end{exemple}
+    
+    
+    \begin{remarque}
+        Cette méthode souligne que « pour-cent » signifie littéralement « pour cent ». Si on a $0,125$; on lit $12,5$ centièmes, soit $12,5\%$. 
+    \end{remarque}
+
+
+    \begin{exemple}[Enquête sur les transports]
+        On a interrogé les élèves d'une classe de 5ème sur leur mode de transport pour venir au collège. Les résultats sont représentés par le graphique ci-dessous :
+    
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Grille ajustée à la hauteur du bus (8)
+            \draw[step=0.5cm, gray!15, very thin] (0,0) grid (10,9);
+            \draw[->,>=latex,thick] (0,0) -- (0,9) node[above] {Nombre d'élèves};
+            \draw[->,>=latex,thick] (0,0) -- (10,0) node[right] {Mode};
+            
+            % Graduation jusqu'à 8
+            \foreach \y in {0,1,2,3,4,5,6,7,8} { \draw (0.1,\y) -- (-0.1,\y) node[left] {\y}; }
+    
+            % Bâtons (Pied=5, Vélo=3, Bus=8, Voiture=4)
+            \draw[fill=blue!40] (1,0) rectangle (2,5);  
+            \draw[fill=green!40] (3,0) rectangle (4,3); 
+            \draw[fill=orange!40] (5,0) rectangle (6,8); 
+            \draw[fill=red!40] (7,0) rectangle (8,4); 
+            
+            % Étiquettes corrigées (on descend le point d'ancrage)
+            \node[rotate=45, anchor=north east, xshift=2mm, yshift=-1mm] at (1.5,0) {À pied};
+            \node[rotate=45, anchor=north east, xshift=2mm, yshift=-1mm] at (3.5,0) {Vélo};
+            \node[rotate=45, anchor=north east, xshift=2mm, yshift=-1mm] at (5.5,0) {Bus};
+            \node[rotate=45, anchor=north east, xshift=2mm, yshift=-1mm] at (7.5,0) {Voiture};
+        \end{tikzpicture}
+        \end{center}
+    
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Compléter le tableau statistique suivant :}
+            \begin{center}
+            \begin{tabularx}{\textwidth}{|l|*5{>{\centering\arraybackslash}X|}}
+                \hline
+                \textbf{Mode} & À pied & Vélo & Bus & Voiture & \textbf{TOTAL} \\ \hline
+                \textbf{Effectif} & \points[1] & \points[1] & \points[1] & \points[1] & \points[1] \\ \hline
+                \textbf{Fréquence (décimale)} & \points[1] & \points[1] & \points[1] & \points[1] & \points[1] \\ \hline
+                \textbf{Fréquence (en \%)} & \points[1] & \points[1] & \points[1] & \points[1] & \points[1] \\ \hline
+            \end{tabularx}
+            \end{center}
+    
+            \item \textbf{Analyse des données :}
+            \begin{itemize}
+                \item Quel est le mode de transport le plus utilisé ? \points[3]
+            \end{itemize}
+            
+            \item Quel pourcentage des élèves utilise un mode de transport \textbf{écologique} (pied ou vélo) ? Justifier la réponse.
+            
+            \begin{ZoneReponse}{2cm}
+                % Utilise l'underlay avec les lignes pointillées définies dans ton préambule 
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    
+\section{Moyenne et moyenne pondérée}
+
+    \begin{definition}
+        La \textbf{moyenne} d'une série est le nombre obtenu en additionnant toutes les données et en divisant le résultat par l'effectif total.
+    \end{definition}
+    
+    
+    \begin{theoremeTitre}{Calcul avec les effectifs (Moyenne pondérée)}
+        Pour calculer une moyenne à partir d'un tableau, on additionne les produits de chaque donnée par son effectif, puis on divise par l'effectif total :
+        \[ \text{Moyenne} = \frac{\text{Somme des (Valeur $\times$ Effectif)}}{\text{Effectif Total}} \]
+    \end{theoremeTitre}
+    
+    
+    \begin{exemple}
+        Reprenons les notes du test de calcul mental du début de chapitre :
+        \begin{center}
+        \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Note} & 8 & 10 & 12 & 15 & \textbf{Total} \\ \hline
+        \textbf{Effectif} & 2 & 2 & 4 & 2 & \textbf{10} \\ \hline
+        \end{tabular}
+        \end{center}
+    
+        \textbf{Calcul de la moyenne :}
+        \[ M = \frac{8 \times \points[1] + 10 \times \points[1] + 12 \times \points[1] + 15 \times \points[1]}{10} \]
+        \[ M = \frac{\points[1] + \points[1] + \points[1] + \points[1]}{10} = \frac{\points[2]}{10} = \points[2] \]
+        
+        
+        La moyenne de la classe à ce test est de \points[2] / 20.
+    \end{exemple}
+    
+    \begin{remarque}
+        La moyenne pondérée donne le même résultat que si on additionnait les 10 notes une par une, mais le calcul est plus rapide et mieux organisé.
+    \end{remarque}
+
+    \vfill % Pour équilibrer l'espace blanc
+    
+    \begin{center}
+        \Large \bfseries \color{ProcessBlue} \faLightbulb\ L'essentiel du chapitre !
+    \end{center}
+    
+    \begin{minipage}{0.48\linewidth}
+        \blocMemo{orange}{Mémo : Fréquences}{
+            \begin{itemize}[leftmargin=*]
+                \item \textbf{Total :} Somme des effectifs.
+                \item \textbf{Division :} $\dfrac{\text{Effectif}}{\text{Total}}$.
+                \item \textbf{En pourcentage :} Centièmes $\rightarrow$ \%.
+            \end{itemize}
+            \textit{Exemple : $0,25 \rightarrow 25\%$}
+        }
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        \blocMemo{blue}{Mémo : Moyenne}{
+            \begin{itemize}[leftmargin=*]
+                \item \textbf{Produits :} Valeur $\times$ Effectif.
+                \item \textbf{Somme :} Additionner les produits.
+                \item \textbf{Division :} Diviser par le total.
+            \end{itemize}
+            \textit{Exemple : $\frac{120}{10} = 12$}
+        }
+    \end{minipage}
+    
+        
+    \begin{cultureMaths}
+        Le mot \textbf{« Statistique »} tire son origine du latin \textit{status}, qui signifie « état ». À l'origine, cette discipline n'était pas une branche des mathématiques, mais un \textbf{\textit{instrument de gouvernance}} au service des souverains.
+        
+        Il servait avant tout à \textbf{dénombrer} les sujets, les récoltes et les armées afin d'administrer le pays avec précision. Ce n'est qu'à partir du \textbf{XVII\textsuperscript{e} siècle} que la rencontre entre ces inventaires et le \textit{\textbf{calcul des probabilités}} a donné naissance à la science que nous étudions aujourd'hui : une méthode pour transformer des données brutes en \textbf{prévisions fiables}.
+    \end{cultureMaths}
+
+
+\end{document}

@@ -1,0 +1,245 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{2}
+\newcommand{\monTitre}{Les nombres entiers \\ Partie 1}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Écrire les nombres entiers}    
+    \begin{theoreme}
+        Pour écrire un nombre \textbf{entier} dans le système \textbf{décimal}, on utilise \textbf{dix symboles} qu'on appelle les \textbf{chiffres}.
+
+        \medskip
+        
+        Les chiffres sont 0; 1; 2; 3; 4; 5; 6; 7; 8 et 9.
+
+        \medskip
+
+        \textbf{La valeur d'un chiffre dépend de sa position}. Chaque décalage vers la gauche multiplie cette valeur par 10.  
+
+        \medskip
+
+        \begin{center}
+            \includegraphics[scale=0.5]{images/EcritureNombresEntiers.png}
+        \end{center}
+    \end{theoreme}
+
+
+    \begin{remarque}
+        \textbf{Un nombre représente une quantité.}
+
+        \begin{itemize}
+            \item Dans la phrase : \og Léa a 6 nouvelles cartes pokémon. \fg, \og 6 \fg est un nombre qui s'écrit à l'aide d'un seul chiffre : le six. Il indique la quantité de nouvelles cartes de Léa.
+
+            \item  Dans la phrase : \og Il me faut trente-cinq minutes pour venir au collège de chez moi. \fg, \; 35 est un nombre qui s'écrit à l'aide de deux chiffres : le trois et le cinq. Il indique la quantité de temps nécessaire pour se déplacer.
+        \end{itemize}
+    \end{remarque}
+
+
+    \begin{exemple}
+        Écrire une courte phrase utilisant un nombre à un chiffre puis une autre phrase avec un nombre à plusieurs chiffres.
+
+        \points[40] 
+        
+        \medskip
+
+        \points[40] 
+    \end{exemple}
+
+
+    \begin{definition}
+        \begin{itemize}
+            \item Un \textbf{millier} est égal à mille \textbf{unités}.
+            
+            \item Un \textbf{million} est égal à mille \textbf{milliers}.
+
+            \item Un \textbf{milliard} est égal à mille \textbf{millions}.
+        \end{itemize}    
+    \end{definition}
+
+
+    \begin{remarque}
+        En pratique, \textbf{au moindre doute}, on utilisera le tableau suivant.
+        \begin{center}
+            \newcolumntype{C}{>{\raggedright\footnotesize\arraybackslash}c}
+            \begin{tabularx}{16.35cm}{|*{3}{@{}C@{}|}|*{3}{@{}C@{}|}|*{3}{@{}C@{}|}|*{3}{@{}C@{}|}}
+                \hline
+                \multicolumn{3}{|>{\hsize=\dimexpr3\hsize+4\tabcolsep+2\arrayrulewidth\relax}X||}{\centering\textbf{Classe des milliards}} 
+                & \multicolumn{3}{>{\hsize=\dimexpr3\hsize+4\tabcolsep+2\arrayrulewidth\relax}X||}{\centering\textbf{Classe des millions}} 
+                & \multicolumn{3}{>{\hsize=\dimexpr3\hsize+4\tabcolsep+2\arrayrulewidth\relax}X||}{\centering\textbf{Classe des milliers}}
+                & \multicolumn{3}{>{\hsize=\dimexpr3\hsize+4\tabcolsep+2\arrayrulewidth\relax}X|}{\centering\textbf{Classe des unités}} \\
+                \hline
+                Centaines & Dizaines & Unités & Centaines & Dizaines & Unités & Centaines & Dizaines & Unités & Centaines & Dizaines & Unités \\
+                de milliards & de milliards & de milliards & de millions & de millions & de millions & de mille & de mille & de mille & & & \\\hline
+                & & & & & & & & & & & \\\hline
+                & & & & & & & & & & & \\\hline
+                & & & & & & & & & & & \\\hline
+                & & & & & & & & & & & \\\hline
+            \end{tabularx}
+        \end{center}
+    \end{remarque}
+
+
+\newpage
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Placer le nombre \np{3 564 927 614} dans le tableau précédent puis répondre aux questions.
+            \begin{enumerate}
+                \item Indiquer la quantité représentée par le chiffre 9.
+
+                \points[38] 
+        
+                \item Faire de même avec les chiffres 6.
+
+                \points[38] 
+                
+                \item \underline{Piège !} Indiquer le chiffre des dizaines de millions puis le nombre de dizaines de millions.
+
+                \points[38]
+            \end{enumerate}
+
+            \item Placer dans le tableau le nombre : \\
+            treize-milliards-cent-vingt-sept-millions-huit-cent-six-mille-deux-cent-quatre-vingts.
+
+            \item En s'aidant du tableau, écrire en chiffres le nombre neuf-cent-dix-milles-quatre-cent-cinq.
+
+            \points[40]
+        \end{enumerate}
+    \end{exemple}
+
+
+    \begin{convention}
+        Pour faciliter la lecture des grands nombres, on regroupe les chiffres par trois à partie de la droite. 
+
+        \medskip
+        
+        Par exemple, Le nombre $1544138652$ s'écrit $1 \, 544 \, 138 \, 652$.
+    \end{convention}
+
+
+    \begin{convention}
+        \textbf{Règles d'orthographe pour l'écriture des nombres en lettres}
+        \begin{itemize}
+            \item Si un nombre s'écrit en plusieurs mots, on met un trait d'union entre chaque mot.
+            \item Les mots \og vingt \fg\, et \og cent \fg\, se terminent par un \og s \fg\, s'ils sont le dernier mot du nombre et qu'ils sont multipliés (six-cents, quatre-vingts, mais six-cent-dix et quatre-vingt-cinq).
+            \item Le mot \og mille \fg\, est \textbf{invariable}, il ne prend jamais de \og s \fg\,.
+            \item Les mots \og millier \fg\,, \og million \fg\, et \og milliard \fg\, s'accordent au pluriel.
+        \end{itemize}
+    \end{convention}
+
+
+    \begin{exemple}
+        Écrire les nombres soulignés en toutes lettres.
+
+        \begin{enumerate}
+            \item Le 20 décembre 2024, la Chine comptait \underline{\np{1 473 819 212}} habitants.
+
+            \points[38]
+
+            \item En 2024, le musée du Louvre a accueilli \underline{\np{8 807 568}} visiteurs.
+
+            \points[38]
+
+            \item D'après des estimations moyennes, sur Terre, en 2030, il devrait y avoir \underline{\np{8 548 487 000}} habitants.
+
+            \points[38]
+        \end{enumerate}
+    \end{exemple}
+
+
+\section{Comparer des nombres entiers}
+\subsection{Comparer des nombres entiers}
+
+    \begin{definitionTitre}{Comparer}
+        \begin{itemize}
+            \item \textbf{Comparer deux nombres}, c'est dire lequel est le plus grand, lequel est le plus petit, ou s'ils sont égaux.
+
+            \item Ranger des nombres dans l'\textbf{ordre croissant}, c'est les ordonner du plus petit au plus grand.
+
+            \item Ranger des nombres dans l'\textbf{ordre décroissant}, c'est les ordonner du plus grand au plus petit.
+        \end{itemize}
+    \end{definitionTitre}
+
+
+    \begin{notation}
+        Pour comparer deux nombres, on utilise les symboles suivants.
+
+        \begin{itemize}
+            \item \textbf{Égalité} : le symbole \( = \) signifie « est égal à ».
+            \item \textbf{Inégalités strictes} : le symbole \( < \) signifie « est strictement inférieur à » et le symbole \( > \) signifie « est strictement supérieur à ».
+            \item \textbf{Inégalités larges} : le symbole \( \leq \) signifie « est inférieur ou égal à » et le symbole \( \geq \) signifie « est supérieur ou égal à ».
+        \end{itemize}
+    \end{notation}
+
+
+    \begin{exemple}
+        Comparer les nombres suivants.
+        \[\compare{102}{120}  \hspace{0.5cm} \vline \hspace{0.5cm} 
+        \compare{973}{897} \hspace{0.5cm} \vline \hspace{0.5cm} 
+        \compare{\np{1327}}{\np{1349}} \hspace{0.5cm} \vline \hspace{0.5cm} 
+        \compare[0.5]{\np{132999999}}{\np{133000000}}\]
+    \end{exemple}
+
+
+\subsection{Encadrer un nombre entier}
+    \begin{definitionTitre}{Encadrement}
+        \textbf{Encadrer un nombre}, c'est trouver un nombre qui lui est inférieur et un nombre qui lui est supérieur.
+    \end{definitionTitre}
+
+
+    \begin{remarque}
+        On peut donner un encadrement à l'unité près, à la dizaine près, \ldots, au millier près, \ldots.
+    \end{remarque}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Encadrer chacun des nombres par le nombre entier qui le précède et celui qui le suit.
+            
+            $\encadre{\np{1389}}$ \hspace{0.5cm} \vline \hspace{0.5cm} 
+            $\encadre{\np{39}}$
+
+            \item Donner l'encadrement à la dizaine près des nombres suivants.
+            
+            $\encadre[1.8]{\np{652 176}}$ \hspace{0.5cm} \vline \hspace{0.5cm} 
+            $\encadre{\np{857}}$
+
+            \item Donner l'encadrement à la dizaine de mille près des nombres suivants.
+            
+            $\encadre[1.8]{\np{47 349}}$ \hspace{0.5cm} \vline \hspace{0.5cm} 
+            $\encadre[2]{\np{451 127}}$
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Ordre de grandeur d'un nombre entier.}
+    \begin{definitionTitre}{Ordre de grandeur}
+        Un \textbf{ordre de grandeur} d'un nombre est une valeur qui est proche de ce nombre mais qui est moins précise.
+
+        L'ordre de grandeur n'est pas unique. (Plusieurs réponses sont acceptables).
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Donner un ordre de grandeur de \np{124 652} à la centaine près.
+
+            \points[38]
+
+            \item Donner un ordre de grandeur de \np{45 635 256} à la dizaine de mille près.
+
+            \points[38]
+        \end{enumerate}
+    \end{exemple}
+
+
+\end{document}

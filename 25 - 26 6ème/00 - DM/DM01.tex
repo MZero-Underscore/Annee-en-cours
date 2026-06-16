@@ -1,0 +1,186 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+\begin{document}
+\setcounter{DM}{1}
+\newcommand{\maDate}{06/10}
+\usetag{pronote}
+\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+\TableauCompetencesTrois
+            {\CompetenceTrois{6}}
+            {\CompetenceUn{1}}
+            {\CompetenceSix{2}}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.5\linewidth}
+            Compléter avec le symbole $\in$ ou $\notin$.
+
+            \medskip
+
+            1. X \points[1] (QM) \quad 2. X \points[1] [QM] \quad 3. Q \points[1] [XM]
+
+            \medskip
+
+            4. X \points[1] [QM) \quad 5. Q \points[1] [QM] \quad 6. Q \points[1] [OZ]
+
+            \medskip
+
+            7. O \points[1] [LX] \quad 8. L \points[1] [XO] \quad 9. Q \points[1] [XO)
+
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM01_Exercice01.png}
+            \end{center}
+        \end{minipage}     
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.5\linewidth}
+            En s'aidant des points déjà marqués, placer les points \\
+            H, I, L et M à l'aide des informations suivantes :
+
+            \begin{enumerate}
+                \item $H \in [AB)  et H \in [ED] $
+                \item $I \in [CB)  et I \in [ED] $
+                \item $L \in [BD]  et L \in [CH] $
+                \item $M \in [AI)  et M \in [DH)$
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM01_Exercice02.png}
+            \end{center}
+        \end{minipage}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Aux jeux olympiques d'Athènes, en 2004, les États-Unis et la Chine ont obtenu à eux deux 166 médailles, dont 67 d'or et 56 d'argent. Les États-Unis ont obtenu 103 médailles. La Chine a obtenu 32 médailles d'or et 14 médailles de bronze. Compléter le tableau suivant :
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                Médailles / Pays & États-Unis & Chine & Total \\
+                \hline
+                Or & & & \\
+                \hline
+                Argent & & & \\
+                \hline
+                Bronze & & & \\
+                \hline
+                Total & & & \textbf{166} \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        Calculs : 
+
+        \points[40] \\ \points[40] \\ \points[40] \\ \points[40] \\ \points[40] \\ \points[40]
+    \end{exercice}  
+
+}
+
+
+\tagged{correction}{
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.5\linewidth}
+            Compléter avec le symbole $\in$ ou $\notin$.
+
+            \medskip
+
+            1. X $\in$ (QM) \quad 2. X $\in$ [QM] \quad 3. Q $\notin$ [XM]
+
+            \medskip
+
+            4. X $\in$ [QM) \quad 5. Q $\in$ [QM] \quad 6. Q $\notin$ [OZ]
+
+            \medskip
+
+            7. O $\in$ [LX] \quad 8. L $\notin$ [XO] \quad 9. Q $\notin$ [XO)
+
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM01_Exercice01.png}
+            \end{center}
+        \end{minipage}     
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.5\linewidth}
+            En s'aidant des points déjà marqués, placer les points \\
+            H, I, L et M à l'aide des informations suivantes :
+
+            \begin{enumerate}
+                \item $H \in [AB)  et H \in [ED] $
+                \item $I \in [CB)  et I \in [ED] $
+                \item $L \in [BD]  et L \in [CH] $
+                \item $M \in [AI)  et M \in [DH)$
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DM01_Exercice02_Correction.png}
+            \end{center}
+        \end{minipage}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Aux jeux olympiques d'Athènes, en 2004, les États-Unis et la Chine ont obtenu à eux deux 166 médailles, dont 67 d'or et 56 d'argent. Les États-Unis ont obtenu 103 médailles. La Chine a obtenu 32 médailles d'or et 14 médailles de bronze. Compléter le tableau suivant :
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                Médailles / Pays & États-Unis & Chine & Total \\
+                \hline
+                Or & \textcolor{red}{35} & \textcolor{teal}{32} & \textcolor{teal}{67} \\
+                \hline
+                Argent & \textcolor{cyan}{39} & \textcolor{violet}{17} & \textcolor{teal}{56}\\
+                \hline
+                Bronze & \textcolor{orange}{29} & \textcolor{teal}{14} & \textcolor{red}{43}\\
+                \hline
+                Total & \textcolor{teal}{103} & \textcolor{orange}{63} & \textbf{166} \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        Calculs : 
+
+        $\bullet$ Or États-unis : $67-32=\textcolor{red}{35}$ \quad $\bullet$ Bronze total : $67+56=123$ puis $166-123=\textcolor{red}{43}$
+
+        $\bullet$ Bronze États-unis : $43-14=\textcolor{orange}{29}$ \quad $\bullet$ Total Chine : $166-103=\textcolor{orange}{63}$
+        
+        $\bullet$ Argent États-unis : $35+29=64$ puis $103-65=\textcolor{cyan}{39}$
+
+        $\bullet$ Pour la dernière case, on peut remplir en lignes ou en colonne, les deux raisonnements aboutissent au même nombre (sinon, il y a une erreur).
+
+        $\bullet$ Chine argent : $65-39=\textcolor{violet}{17}$ 
+    \end{exercice}  
+
+}
+
+
+\end{document}

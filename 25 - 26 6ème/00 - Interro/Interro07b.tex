@@ -1,0 +1,428 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+
+\begin{document}
+\setcounter{Interro}{7}
+\newcommand{\maDate}{09/03}
+\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteInterro{\theInterro}{\maDate}{B}
+
+\TableauCompetencesQuatre
+            {\CompetenceSept{}}
+            {\CompetenceCinq{5}}
+            {\CompetenceCinq{6}}
+            {\CompetenceDeux{1}}
+
+
+\raggedright
+\section*{Partie 1 : Travailler avec des nombres entiers}
+Dans cette partie, on ne travaille qu'avec des nombres entiers. Aucun résultat ne doit être donné sous forme d'un nombre décimal.
+
+    \begin{exerciceNote}{3}
+        Poser les divisions \textbf{euclidiennes} suivantes et donner l'égalité correspondante.
+
+        \medskip
+
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division{43627}{8}
+
+            \[\np{43627}=8\times\points[3]+\points[2]\]
+    
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division{9254}{14}
+
+            \[\np{9254}=14\times\points[3]+\points[2]\]
+            
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division{7543}{3}
+            
+            \[\np{7543}=3\times\points[3]+\points[2]\]
+
+        \end{minipage}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{5}
+        \begin{enumerate}[leftmargin=*]
+            \item Compléter les phrases suivantes :
+            \begin{itemize}
+                \item Un nombre entier est divisible par 5 si \dotfill
+
+                \medskip
+                
+                \item Un nombre entier est divisible par 9 si \dotfill
+
+                \medskip
+
+                \dotfill
+            \end{itemize}
+
+            \item On sait que $156=6\times26$ et que $80=16\times5$. \\
+            Écrire 4 phrases utilisant les mots \textbf{multiple, diviseur, divisible} et \textbf{divise}. Chaque mot doit être utilisé une fois et une seule.
+
+            \begin{ZoneReponse}{3cm}
+            \end{ZoneReponse}
+
+            \item Entourer les divisions euclidiennes qui ont pu être posées pour obtenir chacune des égalités suivantes. Expliquer quel est le problème sur les égalités non entourées.
+
+            \begin{minipage}{0.45\linewidth}
+                \[258 = 18 \times 14 + 6\]
+
+                \begin{center}
+                    division de 258 par 18 \quad \quad division de 258 par 6
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.45\linewidth}
+                \[485 = 32 \times 14 + 37\]
+
+                division de 485 par 32 \quad \quad division de 485 par 14
+            \end{minipage} 
+
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+\newpage
+
+
+    \begin{exerciceNote}{3}
+        \begin{enumerate}[leftmargin=*]
+            \item Cocher les bonnes cases.
+            
+            Pour les multiples de 3 et de 9, écrire les calculs dans la case du tableau.
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5} 
+                \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|}
+                    \hline
+                    \textbf{Le nombre...} & \textbf{...est divisible par 2} & \textbf{...est divisible par 3}  & \textbf{...est divisible par 5}  & \textbf{...est divisible par 9} & \textbf{...est divisible par 10}\\ \hline
+                    & & & & & \\
+                    \np{2574}       &                                &                                &                                &                                &                                \\
+                    & & & & & \\ \hline
+                    & & & & & \\
+                    \np{413 050}     &                                &                                &                                &                                &                                \\ 
+                    & & & & & \\ \hline
+                    & & & & & \\
+                    \np{413 005}    &                                &                                &                                &                                &                                \\ 
+                    & & & & & \\ \hline
+                \end{tabularx}
+            \end{center}
+
+        \item \begin{enumerate}[leftmargin=*]
+            \item Écrire un nombre à 5 chiffres qui soit divisible par 2 et par 9 mais pas par 5 et par 10. Justifier.
+
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+    
+            \item Sans justifier, donner le plus grand nombre à 5 chiffres qui vérifie ces conditions puis le plus petit.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            \end{enumerate}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Une association dispose de \textbf{514 autocollants} et de \textbf{428 porte-clés}.
+
+        \begin{enumerate}[leftmargin=*]
+            \item Ils décident de faire des lots contenant chacun \textbf{14 autocollants}.
+            \begin{enumerate}[leftmargin=*]
+                \item Combien de lots complets peuvent-ils préparer ?
+                \item Combien d'autocollants restera-t-il après la préparation ?
+
+                \begin{ZoneReponse}{3cm}
+                \end{ZoneReponse}
+            \end{enumerate}
+            \item Pour les porte-clés, ils veulent préparer \textbf{12 cartons identiques}.
+            \begin{enumerate}[leftmargin=*]
+                \item Combien de porte-clés y aura-t-il dans chaque carton ?
+                \item Combien en manque-t-il pour pouvoir en mettre un de plus dans chaque carton ?
+
+                \begin{ZoneReponse}{3cm}
+                \end{ZoneReponse}
+            \end{enumerate}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+\newpage
+
+
+\raggedright
+\section*{Partie 2 : Travailler avec des nombres décimaux}
+Dans cette partie, on peut utiliser les nombres décimaux.
+
+    
+    \begin{exerciceNote}{3}
+        Poser les divisions \textbf{décimales} suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.45\linewidth}
+            \quad \DivisionD{2451}{4}
+    
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.45\linewidth}
+            \quad \DivisionD{843}{6}
+            
+        \end{minipage}        
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Yanis organise une sortie vélo. Il dispose d'un budget de \textbf{60 €} pour le pique-nique.
+
+        \subsection*{1. La liste de courses}
+        À l'aide des informations ci-dessous, calculer le montant total des achats de Yanis :
+        \begin{itemize}
+            \item \textbf{4 packs} d'eau à \textbf{3,15 €} l'unité ;
+            \item \textbf{3 paquets} de chips à \textbf{1,68 €} l'unité ;
+            \item \textbf{1,2 kg} de tomates cerises vendues à \textbf{7,50 €} le kilogramme ;
+            \item Un assortiment de sandwichs à \textbf{22,40 €}.
+        \end{itemize}
+        
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+        
+        \subsection*{2. À la caisse}
+        Yanis paye avec son billet de \textbf{60 €}. 
+        \\ \textbf{Question :} Quelle somme la caissière doit-elle lui rendre ?
+
+        \begin{ZoneReponse}{1.5cm}
+        \end{ZoneReponse}
+        
+        \subsection*{3. Le partage des frais}
+        Le coût total du pique-nique est réparti équitablement entre les \textbf{6 participants}.
+        \\ \textbf{Question :} Quel est le prix de revient de la sortie pour un seul participant ? (on arrondira au centime)
+                \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+}
+
+
+\tagged{correction}{
+\enteteInterroCorrection{\theInterro}{\maDate}{B}
+
+\raggedright
+\section*{Partie 1 : Travailler avec des nombres entiers}
+Dans cette partie, on ne travaille qu'avec des nombres entiers. Aucun résultat ne doit être donné sous forme d'un nombre décimal.
+
+    \begin{exerciceNote}{3}
+        Poser les divisions \textbf{euclidiennes} suivantes et donner l'égalité correspondante.
+
+        \medskip
+
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division[Solution]{43627}{8}
+
+            \[\np{43627}=8\times\mathbf{5453}+\mathbf{3}\]
+    
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division[Solution]{9254}{14}
+
+            \[\np{9254}=14\times\mathbf{661}+\mathbf{0}\]
+            
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.33\linewidth}
+            \quad \Division[Solution]{7543}{3}
+            
+            \[\np{7543}=3\times\mathbf{2514}+\mathbf{1}\]
+
+        \end{minipage}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{5}
+        \begin{enumerate}[leftmargin=*]
+            \item Compléter les phrases suivantes :
+            \begin{itemize}
+                \item Un nombre entier est divisible par 5 si \textbf{son chiffre des unités est 0 ou 5.}
+
+                \medskip
+                
+                \item Un nombre entier est divisible par 9 si \textbf{la somme de ses chiffres est un multiple de 9.}
+
+                \medskip
+
+                \textbf{Un nombre entier est divisible par 2 si son chiffre des unités est 0, 2, 4, 6 ou 8.}
+            \end{itemize}
+
+            \item On sait que $156=6\times26$ et que $80=16\times5$. \\
+            Écrire 4 phrases utilisant les mots \textbf{multiple, diviseur, divisible} et \textbf{divise}. Chaque mot doit être utilisé une fois et une seule.
+
+            \begin{ZoneReponse}{3cm}
+                \begin{itemize}
+                    \item 156 est un \textbf{multiple} de 6 (ou de 26).
+                    \item 16 est un \textbf{diviseur} de 80.
+                    \item 80 est \textbf{divisible} par 5 (ou par 16).
+                    \item 6 \textbf{divise} 156.
+                \end{itemize}
+            \end{ZoneReponse}
+
+            \item Entourer les divisions euclidiennes qui ont pu être posées.
+
+            \begin{minipage}{0.45\linewidth}
+                \[258 = 18 \times 14 + 6\]
+
+                \begin{center}
+                    \fbox{division de 258 par 18} \quad \quad $\cancel{\text{division de 258 par 6}}$
+                    \\ (car $6 < 18$) \vfill
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.45\linewidth}
+                \[485 = 32 \times 14 + 37\]
+
+                $\cancel{\text{division de 485 par 32}}$ \quad $\cancel{\text{division de 485 par 14}}$
+            \end{minipage} 
+
+            \begin{ZoneReponse}{1.8cm}
+                Pour la division de 258 par 6, ce n'est pas la bonne écriture, ici 6 joue le rôle du reste.
+                
+                Pour les deux dernières, le reste (37) est plus grand que les diviseurs (32 et 14). Le reste doit toujours être strictement inférieur au diviseur.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+\newpage
+
+    \begin{exerciceNote}{3}
+        \begin{enumerate}[leftmargin=*]
+            \item Cocher les bonnes cases.
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5} 
+                \begin{tabularx}{\textwidth}{|l|c|X|c|X|c|}
+                    \hline
+                    \textbf{Le nombre...} & \textbf{/ 2} & \textbf{/ 3}  & \textbf{/ 5}  & \textbf{/ 9} & \textbf{/ 10}\\ \hline
+                    \np{2574} & \textbf{Oui} & \textbf{Oui} ($2+5+7+4=18$) & Non & \textbf{Oui} ($18$ est /9) & Non \\ \hline
+                    \np{413050} & \textbf{Oui} & Non ($4+1+3+5=13$) & \textbf{Oui} & Non & \textbf{Oui} \\ \hline
+                    \np{413005} & Non & Non ($4+1+3+5=13$) & \textbf{Oui} & Non & Non \\ \hline
+                \end{tabularx}
+            \end{center}
+
+        \item \begin{enumerate}[leftmargin=*]
+            \item Écrire un nombre à 5 chiffres divisible par 2 et 9 mais pas par 5 et 10.
+                \begin{ZoneReponse}{1.5cm}
+                    Exemple : \textbf{10 008}.
+                    Justification : Il finit par 8 (donc /2 mais pas /5 ni /10). La somme $1+0+0+0+8=9$ (donc /9).
+                \end{ZoneReponse}
+    
+            \item Plus grand : \textbf{99 972}. Plus petit : \textbf{10 008}.
+            \end{enumerate}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Une association dispose de \textbf{514 autocollants} et de \textbf{428 porte-clés}.
+
+        \begin{enumerate}[leftmargin=*]
+            \item Ils décident de faire des lots contenant chacun \textbf{14 autocollants}.
+            \begin{enumerate}[leftmargin=*]
+                \item Combien de lots complets peuvent-ils préparer ?
+                \item Combien d'autocollants restera-t-il après la préparation ?
+
+                \begin{ZoneReponse}{3cm}
+                    On pose la division euclidienne : $514 = 14 \times 36 + 10$.\\
+                    a) Ils peuvent préparer \textbf{36 lots} complets.\\
+                    b) Il restera \textbf{10 autocollants}.
+                \end{ZoneReponse}
+            \end{enumerate}
+            \item Pour les porte-clés, ils veulent préparer \textbf{12 cartons identiques}.
+            \begin{enumerate}[leftmargin=*]
+                \item Combien de porte-clés y aura-t-il dans chaque carton ?
+                \item Combien en manque-t-il pour pouvoir en mettre un de plus dans chaque carton ?
+
+                \begin{ZoneReponse}{3cm}
+                    On pose la division euclidienne : $428 = 12 \times 35 + 8$.\\
+                    a) Il y aura \textbf{35 porte-clés} dans chaque carton.\\
+                    b) Il reste 8 porte-clés. Pour arriver à 12 (un de plus), il en manque $12 - 8 = \mathbf{4}$.
+                \end{ZoneReponse}
+            \end{enumerate}
+        \end{enumerate}
+    \end{exerciceNote}
+    
+
+\newpage
+
+\section*{Partie 2 : Travailler avec des nombres décimaux}
+
+    \begin{exerciceNote}{3}
+        Poser les divisions \textbf{décimales} suivantes.
+        
+        \begin{minipage}{0.45\linewidth}
+            \quad \DivisionD[Solution]{2451}{4} \quad $\rightarrow$ \textbf{612,75}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.45\linewidth}
+            \quad \DivisionD[Solution]{843}{6} \quad $\rightarrow$ \textbf{140,5}
+        \end{minipage}        
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Yanis organise une sortie vélo. Il dispose d'un budget de \textbf{60 €} pour le pique-nique.
+
+        \subsection*{1. La liste de courses}
+        À l'aide des informations ci-dessous, calculer le montant total des achats de Yanis :
+        \begin{itemize}
+            \item \textbf{4 packs} d'eau à \textbf{3,15 €} l'unité ;
+            \item \textbf{3 paquets} de chips à \textbf{1,68 €} l'unité ;
+            \item \textbf{1,2 kg} de tomates cerises vendues à \textbf{7,50 €} le kilogramme ;
+            \item Un assortiment de sandwichs à \textbf{22,40 €}.
+        \end{itemize}
+        
+        \begin{ZoneReponse}{3cm}
+            \begin{itemize}
+                \item Eaux : $4 \times 3,15 = 12,60$ \euro
+                \item Chips : $3 \times 1,68 = 5,04$ \euro
+                \item Tomates : $1,2 \times 7,50 = 9,00$ \euro
+                \item Sandwichs : 22,40 \euro
+            \end{itemize}
+            Total : $12,60 + 5,04 + 9,00 + 22,40 = \mathbf{49,04}$ \textbf{\euro}.
+        \end{ZoneReponse}
+        
+        \subsection*{2. À la caisse}
+        Yanis paye avec son billet de \textbf{60 €}. 
+        \\ \textbf{Question :} Quelle somme la caissière doit-elle lui rendre ?
+
+        \begin{ZoneReponse}{1.5cm}
+            $60 - 49,04 = \mathbf{10,96}$ \textbf{\euro}. La caissière doit lui rendre 10,96 \euro.
+        \end{ZoneReponse}
+        
+        \subsection*{3. Le partage des frais}
+        Le coût total du pique-nique est réparti équitablement entre les \textbf{6 participants}.
+        \\ \textbf{Question :} Quel est le prix de revient de la sortie pour un seul participant ? (on arrondira au centime)
+        
+        \begin{ZoneReponse}{3cm}
+            $49,04 \div 6 \approx 8,17333...$ \\
+            Le prix de revient par participant est d'environ \textbf{8,17 \euro}.
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+}
+
+
+\end{document}

@@ -1,0 +1,272 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{0}
+\renewcommand{\monTitre}{Les symétries}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+\section{La symétrie axiale}
+\subsection{Médiatrice d'un segment}
+    \begin{definition}
+        \begin{minipage}{0.5\linewidth}
+            La médiatrice du segment $[AB]$ est la droite qui le coupe \textbf{perpendiculairement} et \textbf{en son milieu}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[\includegraphics[scale=0.2]{images/SymétrieMédiatrice.png}\]        
+        \end{minipage}
+    \end{definition}
+
+
+    \begin{exemple}
+        Dans les deux cas suivants, construire la médiatrice du segment proposé.
+
+        \begin{minipage}{0.5\linewidth}
+            \[\includegraphics[scale=0.6]{images/SymétrieMédiatrice_Exemple2.png}\]        
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[\includegraphics[scale=0.5]{images/SymétrieMédiatrice_Exemple1.png}\]        
+        \end{minipage}
+    \end{exemple}
+
+    
+\subsection{Définitions}
+    \begin{definition}
+
+        \begin{minipage}{0.5\linewidth}
+            La symétrie axiale est la transformation du plan qui reproduit l'effet d'un pliage le long d'une droite que l'on appelle l~'~\textbf{axe~de~symétrie}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[\includegraphics[scale=0.4]{images/SymétrieAxiale_Exemple.png}\]
+        \end{minipage}
+    \end{definition}
+
+    En pratique, on se sert de la définition suivante pour effectuer les constructions.  
+
+    \begin{definition}
+        On dit que le point \( A' \) est le symétrique du point \( A \) par rapport à la droite $d$ si \( d \) est la médiatrice du segment \([AA']\).
+    \end{definition}
+
+    \begin{exemple}
+        Placer un point A et une droite $d$ telle que $A\notin d$.
+
+        Construire A' le symétrique de A par rapport à $d$.
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Méthodes de construction}
+
+    De la définition n°2, on obtient les propriétés suivantes.
+    \begin{propriete}
+        Par une symétrie axiale : 
+        \begin{itemize}
+            \item le symétrique d'un segment est un segment de même longueur;
+            \item le symétrique d'une droite est une droite;
+            \item le symétrique d'un angle est un angle de même mesure;
+            \item les symétriques de deux droites parallèles sont deux droites parallèles. 
+            \item plus généralement, le symétrique d'une figure est une figure superposable.
+        \end{itemize}
+    \end{propriete}
+
+
+   \begin{exemple}
+        \begin{enumerate}
+            \item Constructions sur une feuille blanche
+            \begin{enumerate}
+                \item Construire un segment $[AB]$ de longueur 5 cm et une droite $d$ qui ne coupe pas $[AB]$ puis construire le symétrique de $[AB]$ par rapport à $d$.
+
+                \item Construire deux droites $\Delta$ et $d$ sécantes puis puis construire le symétrique de $\Delta$ par rapport à $d$.
+
+                \item Construire un cercle $\mathcal{C}$ de centre A et de rayon 4 cm puis construire une droite $d$ qui coupe deux fois ce cercle sans passer par son centre. Construire ensuite le symétrique du cercle par rapport à $d$.
+                
+                \item Tracer un triangle \( ABC \) tel que \( AB = 6 \, \text{cm} \), \( BC = 5 \, \text{cm} \) et \( \widehat{ABC} = 110^\circ \). Construire une droite \( d \) à l'extérieur de \( ABC \) puis tracer son symétrique par rapport à \( d \).
+
+                \item Tracer un triangle \( NEZ \) isocèle en \( Z \) tel que \( EZ = 4 \, \text{cm} \) et \( \widehat{EZN} = 50^\circ \). Construire une droite \( d \) qui coupe le triangle \( NEZ \) puis tracer son symétrique par rapport à \( d \).
+            \end{enumerate}
+
+            \item Construction sur un quadrillage
+
+            Construire le symétrique de la figure suivante par rapport à la droite.
+
+            \[\includegraphics[scale=0.6]{images/SymétrieAxiale_ExempleQuadrillage.png}\]
+        \end{enumerate}
+    \end{exemple}
+
+\subsection{Propriétés de la symétrie axiale}
+
+    On peut aussi utiliser la symétrie axiale pour retrouver des propriétés sur les figures.
+    
+    \begin{propriete}
+        La symétrie axiale conserve :
+        \begin{tabular}{ll}
+            $\bullet$ les longueurs,
+            & $\bullet$ les angles, \\
+            
+            $\bullet$ les périmètres et aires, 
+            & $\bullet$ le parallélisme, etc.
+        \end{tabular}
+    \end{propriete}
+
+
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            Les deux figures ci-contre sont symétriques par rapport à \( d \).
+    
+            \begin{enumerate}
+                \item Indiquer le symétrique par rapport à \( d \) de chacun des sommets de \( ABCDEFGH \).
+                \item Déterminer la nature du triangle E'F'G' en justifiant.
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[\includegraphics[scale=0.6]{images/SymétrieAxiale_ExempleProprietes.png}\]
+        \end{minipage}
+    \end{exemple}
+
+\subsection{Figure admettant un centre de symétrie}
+    \begin{definition}
+        Une figure admet un axe de symétrie si son symétrique par rapport à cette droite est la figure elle-même.
+    \end{definition}
+
+    \begin{exemple}
+        Indiquer si les figures suivantes admettent un axe de symétrie ou non.
+
+        \[\includegraphics[scale=0.6]{images/SymétrieCentrale_ExempleCentreSymétrie.png}\]
+    \end{exemple}
+
+
+
+\section{La symétrie centrale}
+\subsection{Définitions}
+    \begin{definition}
+        \begin{minipage}{0.5\linewidth}
+            La symétrie centrale est la transformation du plan qui fait effectuer un demi-tour à une figure par rapport à un point qu'on appelle le \textbf{centre de symétrie}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}      
+            \[\includegraphics[scale=0.4]{images/SymétrieCentrale_Exemple.png}\]
+        \end{minipage}
+    
+
+    \end{definition}
+
+    En pratique, on se sert de la définition suivante pour effectuer les constructions.
+   
+    \begin{definition}
+        \begin{minipage}{0.4\linewidth}
+            On dit que le point \( A' \) est le symétrique du point \( A \) par rapport au point \( O \) si \( O \) est le milieu de \([AA']\).
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.59\linewidth}
+            \[\includegraphics[scale=0.4]{images/SymétrieCentrale_Exemple2.png}\]
+        \end{minipage}
+    \end{definition}
+
+    \begin{exemple}
+        Placer un point A et un point O distinct de A.
+
+        Construire A' le symétrique de A par rapport à O.
+    \end{exemple}
+    
+\subsection{Méthodes de construction}
+
+    De la définition n°5, on obtient les propriétés suivantes.
+    \begin{propriete}
+        Par une symétrie centrale : 
+        \begin{itemize}
+            \item le symétrique d'un segment est un segment de même longueur;
+            \item le symétrique d'une droite est une droite qui lui est parallèle;
+            \item le symétrique d'un angle est un angle de même mesure;
+            \item les symétriques de deux droites parallèles sont deux droites parallèles. 
+            \item plus généralement, le symétrique d'une figure est une figure superposable.
+        \end{itemize}
+    \end{propriete}
+    
+    \begin{exemple}
+        \begin{enumerate}
+            \item Constructions sur une feuille blanche
+            \begin{enumerate}
+                \item Construire un segment [AB] de longueur 5 cm, placer un point $O$ en dehors de la droite $(AB)$ puis construire le symétrique de $[AB]$ par rapport à $O$.
+
+                \item Construire une droite $d$ placer un point O en dehors de cette droite puis construire le symétrique de $d$ par rapport à $O$.
+
+                \item Construire un cercle $\mathcal{C}$ de centre A et de rayon 4 cm puis placer un point $O$ à l'extérieur du cercle. Construire ensuite le symétrique du cercle par rapport à $O$.
+                
+                \item Tracer un triangle \( ABC \) tel que \( AB = 6 \, \text{cm} \), \( BC = 5 \, \text{cm} \) et \( \widehat{ABC} = 110^\circ \). Placer un point \( G \) à l'extérieur de \( ABC \) puis tracer son symétrique par rapport à \( G \).
+
+                \item Tracer un triangle \( NEZ \) isocèle en \( Z \) tel que \( EZ = 4 \, \text{cm} \) et \( \widehat{EZN} = 50^\circ \). Placer un point \( H \) à l'intérieur de \( NEZ \) puis tracer son symétrique par rapport à \( H \).
+            \end{enumerate}
+
+            \item 
+            \begin{minipage}{0.5\linewidth}
+                Construction sur un quadrillage
+    
+                Reproduire la figure puis construire le symétrique de la figure par rapport au point H.
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.49\linewidth}
+                \[\includegraphics[scale=0.6]{images/SymétrieCentrale_ExempleQuadrillage.png}\]
+            \end{minipage}      
+        \end{enumerate}
+    \end{exemple}
+    
+
+\subsection{Propriétés de la symétrie centrale}
+
+    On peut aussi utiliser la symétrie centrale pour retrouver des propriétés sur les figures.
+    
+    \begin{propriete}
+        La symétrie centrale conserve :
+
+        \begin{tabular}{ll}
+            $\bullet$ les longueurs,
+            & $\bullet$ les angles, \\
+            
+            $\bullet$ les périmètres et aires, 
+            & $\bullet$ le parallélisme, etc.
+        \end{tabular}
+    \end{propriete}
+
+    
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            Les deux figures ci-contre sont symétriques par rapport à \( O \).
+    
+            \begin{enumerate}
+                \item Indiquer le symétrique par rapport à \( O \) de chacun des sommets de \( ABCDE \).
+                \item Déterminer \( PK \) puis \( \widehat{NPK} \) en justifiant.
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[\includegraphics[scale=0.6]{images/SymétrieCentrale_ExempleProprietes.png}\]
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{Figure admettant un centre de symétrie}
+    \begin{definition}
+        Une figure admet un centre de symétrie si son symétrique par rapport à ce centre est la figure elle-même.
+    \end{definition}
+
+    \begin{exemple}
+        Indiquer si les figures suivantes admettent un centre de symétrie ou non.
+
+        \[\includegraphics[scale=0.6]{images/SymétrieCentrale_ExempleCentreSymétrie.png}\]
+    \end{exemple}
+
+    
+    
+
+\end{document}

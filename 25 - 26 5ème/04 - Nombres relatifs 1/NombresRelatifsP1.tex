@@ -1,0 +1,178 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{3}
+\renewcommand{\monTitre}{Découverte des nombres relatifs}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+\section{Définition}
+
+    \begin{definitionTitre}{Nombre relatif}
+        Un \textbf{nombre relatif} est un nombre qui est soit positif, soit négatif.
+        \begin{itemize}
+            \item Les nombres positifs sont supérieurs à 0.
+            \item Les nombres négatifs sont inférieurs à 0. On les écrit avec un signe \og - \fg.
+        \end{itemize}
+    \end{definitionTitre}
+
+
+    \begin{remarque}
+        \begin{itemize}
+            \item En toute rigueur, il faudrait écrire les nombres positifs avec un signe \og + \fg devant eux mais par usage on ne le fait que rarement.
+    
+            Ainsi, on verra rarement écrit +5 mais juste 5.
+
+            \item \textbf{Le cas particulier du zéro.}
+
+            Le nombre zéro est le seul nombre qui est à la fois positif et négatif.
+        \end{itemize}   
+    \end{remarque}
+
+
+\section{Repérer un point sur une droite graduée}
+
+    \begin{definitionTitre}{Droite graduée} 
+        Une droite graduée est une droite sur laquelle on a choisi :
+        \begin{itemize}
+            \item Une origine (un point),
+            \item Un sens (représenté par une flèche),
+            \item Une unité (qui permet d'obtenir les graduations).
+        \end{itemize}
+    \end{definitionTitre}
+
+
+    \begin{remarque}
+        Usuellement, on appelle : 
+        \begin{itemize}
+            \item O le point qui est l'origine du repère.
+            \item I le point \textbf{d'abscisse 1}.
+        \end{itemize}
+    \end{remarque}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[gray](-5.5,0)grid(4.5,0);
+            \draw[-stealth]|-(4.5,0)node[above]{};
+            \foreach \x in {-5,...,4} \draw (\x,-.1)node[below]{\x} -- (\x,0);
+            \draw (0, 0.3) node {O};
+            \draw (1, 0.3) node {I};
+        \end{tikzpicture}   
+    \end{center}
+    
+
+    \begin{propriete}
+        \begin{itemize}
+            \item Tout point d'une droite graduée peut se repérer à l'aide d'un unique nombre relatif que l'on appelle son \textbf{abscisse}.
+
+            \item Réciproquement, à tout nombre relatif, on peut associer un unique point sur une droite graduée.
+        \end{itemize}
+
+        Notation : \boxed{\text{Pour dire que le point A a pour abscisse le nombre -4, on écrit } $A(-4)$.}
+    \end{propriete}
+
+    \begin{exemple}
+        Sur la droite graduée, placer les points suivants : A(-4); B(6); C(-6,5); D(-2,25); E(-1).
+    
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[gray](-7.5,0)grid(8.5,0);
+                \draw[-stealth]|-(8.5,0)node[above]{};
+                \foreach \x in {-7,...,8} \draw (\x,-.1)node[below]{\x} -- (\x,0);
+                \draw (0, 0.3) node {O};
+                \draw (1, 0.3) node {I};
+            \end{tikzpicture}   
+        \end{center}     
+    \end{exemple}
+
+
+\newpage
+    
+
+    \begin{definition}
+        La distance à zéro d'un nombre relatif \( a \) est la distance \( OA \) où \( A \) est le point d'abscisse \( a \) et \( O \) l'origine de la droite graduée.
+    \end{definition}
+
+
+    \begin{exemple}
+        Donner les distances à zéro des nombres suivants.
+
+        \medskip
+
+        \begin{tabular}{l|c|c|c|c|c|}
+            Nombre          & 3 & -7 & -6,5 & 0 \\ \hline
+            Distance à zéro &   &    &      &   \\ 
+        \end{tabular} 
+    \end{exemple}
+
+    
+\section{Comparer}
+
+    \begin{propriete}
+        \begin{itemize}
+            \item Si les deux nombres sont positifs, le plus grand est celui qui a la plus grande distance à zéro.
+            \item Un nombre positif est plus grand qu'un nombre négatif.
+            \item \boxed{\text{Si les deux nombres sont négatifs, le plus grand est celui qui a la plus petite distance à zéro.}}
+        \end{itemize}
+    \end{propriete}
+
+
+    \begin{exemple}
+        Comparer les couples de nombres suivants.
+
+        $\compare{5}{-4} \hspace{0.5cm} \vline \hspace{0.5cm} 
+        \compare{-2}{-7} \hspace{0.5cm} \vline \hspace{0.5cm}
+        \compare{-4,5}{-4,6} \hspace{0.5cm} \vline \hspace{0.5cm}
+        \compare{5,42}{5,7} \hspace{0.5cm} \vline \hspace{0.5cm}
+        \compare{-9,05}{-9,154}$
+    \end{exemple}
+    
+    
+\section{Repérer un point dans le plan}
+    \begin{propriete}
+        \begin{itemize}
+            \item Tout point d'un plan peut être repéré à l'aide de deux nombres relatifs que l'on appelle les \textbf{coordonnées} du point. 
+         
+            Le premier s'appelle son \textbf{abscisse} et le second son \textbf{ordonnée}.     
+
+            \item Réciproquement, à tout couple de deux nombres relatifs, on peut associer un unique point d'un plan repéré.
+
+            Notation : \boxed{\text{Pour dire que le point A a pour abscisse -4 et pour ordonnée 3, on écrit } $A(-4;3)$.}
+        \end{itemize}      
+    \end{propriete}
+
+
+    \begin{exemple}
+        \begin{minipage}[t]{0.4\linewidth}
+
+            Dans le plan, placer les points $A(4; -1); B(-2; 3); C(3; 4)$ et $D(-4; -3)$.
+
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.50\linewidth}
+            \begin{tikzpicture}[scale=1]
+                \draw[->,thick] (-4.5,0) -- (4.5,0) node[right]{};
+                \draw[->,thick] (0,-4.5) -- (0,4.5) node[above]{};
+                \foreach \x in {-4,...,4}
+                   \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+                \foreach \x in {-4,...,4}
+                   \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below]
+                        {$\x$};
+                \foreach \y in {-4,...,4}
+                   \draw[shift={(0,\y)},color=black] (3pt,0pt) -- (-3pt,0pt);
+                \foreach \y in {-4,...,4}
+                   \draw[shift={(0,\y)},color=black] (0pt,0pt) -- (-3pt,0pt) node[left]
+                        {$\y$};
+                \draw[color=black] (0,0) node[below right] {$O$};
+                \filldraw[black] (1,1) circle (1.5pt) node[above right] {$A(1,1)$};
+            \end{tikzpicture}
+        \end{minipage}          
+    \end{exemple}
+
+    
+\end{document}

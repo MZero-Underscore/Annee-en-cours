@@ -1,0 +1,192 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+\begin{document}
+\setcounter{DM}{8}
+\newcommand{\maDate}{20/04}
+\usetag{correction}
+
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+\TableauCompetencesQuatre
+        {\CompetenceCinq{6}}
+        {\CompetenceDeux{2}}
+        {\CompetenceTrois{11}}
+        {\CompetenceTrois{10}}
+
+
+    \begin{exerciceTitre}{Opérations posées}
+        Poser et effectuer les calculs suivants dans le cadre ci-dessous :
+        \begin{center}
+            $1\,245,7 + 384,12$ \quad \quad $945,1 - 67,38$ \quad \quad $4,52 \times 36$ \quad \quad $749 \div 5$ (division décimale)
+        \end{center}
+        \begin{ZoneReponse}{4cm} 
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Voyage vers Mars}
+        Pour envoyer un message vers une sonde spatiale, le coût dépend du volume de données envoyées.
+        \begin{enumerate}
+            \item Compléter le tableau de proportionnalité suivant (vous pouvez tracer des flèches d'opérations pour expliquer votre raisonnement) :
+            
+            \vspace{0.8cm} % Espace pour les flèches au-dessus
+            \begin{center}
+            \renewcommand{\arraystretch}{1.5} % Agrandit un peu les cases
+            \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            Volume de données (en Mo) & 10 & 20 & 50 & \dots \\ \hline
+            Prix (en \euro) & 15 & \dots & \dots & 150 \\ \hline
+            \end{tabular}
+            \end{center}
+            \vspace{0.8cm} % Espace pour les flèches en-dessous
+            
+            \item Une photo de la planète Mars pèse 12 Mo. Quel sera le prix pour envoyer cette photo ?
+        \end{enumerate}
+        \begin{ZoneReponse}{3.5cm} 
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Mesurer et construire des angles}
+        \begin{minipage}{0.45\textwidth}
+            1. À l'aide de ton rapporteur, mesure les deux angles tracés ci-contre :
+            \begin{itemize}
+                \item $\widehat{BAC} = \dots\dots\dots^\circ$
+                \item $\widehat{EDF} = \dots\dots\dots^\circ$
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.9]
+                % Angle BAC = 50° (incliné de 15°)
+                \coordinate (A) at (0,0);
+                \coordinate (B) at ({3.5*cos(15)},{3.5*sin(15)});
+                \coordinate (C) at ({3.5*cos(65)},{3.5*sin(65)});
+                \draw[thick] (B) node[right]{$B$} -- (A) node[below left]{$A$} -- (C) node[above]{$C$};
+                \draw[red] (0.5,0.13) arc (15:65:0.5);
+                
+                % Angle EDF = 120° (incliné de -10°)
+                \begin{scope}[shift={(4.5,1)}]
+                    \coordinate (D) at (0,0);
+                    \coordinate (E) at ({3*cos(-10)},{3*sin(-10)});
+                    \coordinate (F) at ({3*cos(110)},{3*sin(110)});
+                    \draw[thick] (E) node[right]{$E$} -- (D) node[below]{$D$} -- (F) node[above left]{$F$};
+                    \draw[blue] (0.4,-0.07) arc (-10:110:0.4);
+                \end{scope}
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+
+        \vspace{0.5cm}
+        2. Dans le cadre ci-dessous, construire un angle $\widehat{MON}$ mesurant $45^\circ$ et un angle $\widehat{PRQ}$ mesurant $135^\circ$.
+        \begin{ZoneReponse}{5cm} 
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+
+    
+    \begin{exerciceTitre}{Dessiner les étoiles : La Grande Ourse}
+        Ci-dessous se trouve la carte d'une constellation très célèbre (Je vous laisse trouver son nom !). 
+        
+        \textbf{Mission :} Reproduire \textbf{exactement} cette même figure dans le grand cadre vide ci-dessous (ou sur une feuille blanche annexe) à l'aide des informations portées sur le modèle.
+                
+        \begin{center}
+            \includegraphics[width=9cm]{images/DM08_ConstellationGrandeOurse.png} \\
+            \vspace{0.2cm}
+            \textit{Modèle à reproduire}
+        \end{center}
+        
+        \begin{ZoneReponse}{7.5cm}
+            % Grande zone pour tracer à l'aise
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+
+}
+
+
+\tagged{correction}{
+
+
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exerciceTitre}{Opérations posées}
+        Poser et effectuer les calculs suivants :
+        \begin{center}
+            \textcolor{red}{$1\,245,7 + 384,12 \mathbf{ = 1\,629,82}$} \hfill 
+            \textcolor{red}{$945,1 - 67,38 \mathbf{ = 877,72}$} \hfill 
+            \textcolor{red}{$4,52 \times 36 \mathbf{ = 162,72}$} \hfill 
+            \textcolor{red}{$745 \div 5 \rightarrow \mathbf{Q = 149 \text{ et } R = 0}$}
+        \end{center}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Voyage vers Mars}
+        \begin{enumerate}
+            \item Compléter le tableau de proportionnalité suivant :
+            
+            \begin{center}
+            \renewcommand{\arraystretch}{1.5}
+            \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            Volume de données (en Mo) & 10 & 20 & 50 & \textcolor{red}{\textbf{100}} \\ \hline
+            Prix (en \euro) & 15 & \textcolor{red}{\textbf{30}} & \textcolor{red}{\textbf{75}} & 150 \\ \hline
+            \end{tabular}
+            \end{center}
+            \textcolor{red}{\textit{Explications possibles : } \\
+            - Pour passer de la ligne du haut à celle du bas, on multiplie par 1,5 (Coefficient de proportionnalité).\\
+            - Pour 20 Mo : c'est le double de 10 Mo, donc $15 \times 2 = 30$ \euro.\\
+            - Pour 50 Mo : c'est 5 fois 10 Mo, donc $15 \times 5 = 75$ \euro.\\
+            - Pour 150 \euro : c'est 10 fois 15 \euro, donc $10 \times 10 = 100$ Mo.}
+            
+            \vspace{0.3cm}
+            \item Une photo de la planète Mars pèse 12 Mo. Quel sera le prix pour envoyer cette photo ? \\
+            \textcolor{red}{\textbf{Réponse :} On utilise le coefficient de proportionnalité : $12 \times 1,5 = \mathbf{18 \text{ \euro}}$. \\
+            (Ou on peut décomposer : 10 Mo = 15 \euro{} et 2 Mo = 3 \euro, donc $15 + 3 = 18$ \euro).}
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Mesurer des angles}
+        \begin{minipage}{0.45\textwidth}
+            1. À l'aide de ton rapporteur, mesure les deux angles tracés ci-contre :
+            \begin{itemize}
+                \item $\widehat{BAC} = \textcolor{red}{\mathbf{50^\circ}}$
+                \item $\widehat{EDF} = \textcolor{red}{\mathbf{120^\circ}}$
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.9]
+                % Angle BAC = 50°
+                \coordinate (A) at (0,0);
+                \coordinate (B) at ({3.5*cos(15)},{3.5*sin(15)});
+                \coordinate (C) at ({3.5*cos(65)},{3.5*sin(65)});
+                \draw[thick] (B) node[right]{$B$} -- (A) node[below left]{$A$} -- (C) node[above]{$C$};
+                \draw[red] (0.5,0.13) arc (15:65:0.5);
+                
+                % Angle EDF = 120°
+                \begin{scope}[shift={(4.5,1)}]
+                    \coordinate (D) at (0,0);
+                    \coordinate (E) at ({3*cos(-10)},{3*sin(-10)});
+                    \coordinate (F) at ({3*cos(110)},{3*sin(110)});
+                    \draw[thick] (E) node[right]{$E$} -- (D) node[below]{$D$} -- (F) node[above left]{$F$};
+                    \draw[blue] (0.4,-0.07) arc (-10:110:0.4);
+                \end{scope}
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+    \end{exerciceTitre}
+
+}
+
+\end{document}

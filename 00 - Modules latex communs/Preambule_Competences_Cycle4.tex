@@ -1,0 +1,156 @@
+\newcommand{\CompetenceUn}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Prélever/organiser des informations nécessaires à la résolution de problèmes }{}
+    \ifthenelse{\equal{#1}{7}}
+        {S'engager dans une démarche de recherche et de résolution }{}
+    \ifthenelse{\equal{#1}{8}}
+        {Extraire et organiser l'information}{}
+}
+
+
+\newcommand{\CompetenceDeux}[1]{
+    \ifthenelse{\equal{#1}{2}}
+        {Reconnaître et distinguer des problèmes relevant de situations additives, multiplicatives, \ldots}{}
+    \ifthenelse{\equal{#1}{6}}
+        {Traduire en langage mathématique une situation réelle en modèle algébrique}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Traduire en langage mathématique une situation réelle en un modèle statistique}{}
+    \ifthenelse{\equal{#1}{8}}
+        {Reconnaître/utiliser une situation de proportionnalité}{}
+}
+
+
+\newcommand{\CompetenceTrois}[1]{
+    \ifthenelse{\equal{#1}{6}}
+        {Produire et utiliser des représentations des nombres}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Produire et utiliser des représentations de séries statistiques}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Construire une figure géométrique à l'aide des outils}{}
+}
+
+
+\newcommand{\CompetenceQuatre}[1]{    
+    \ifthenelse{\equal{#1}{0}}
+        {Raisonner}{}  
+    \ifthenelse{\equal{#1}{3}}
+        {Démontrer : utiliser un raisonnement logique, des théorèmes pour parvenir à une conclusion}{} 
+    \ifthenelse{\equal{#1}{5}}
+        {Résoudre des problèmes impliquant des grandeurs variées}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Reconnaître une situation faisant appel à un des théorèmes de Pythagore}{}      
+    \ifthenelse{\equal{#1}{8}}
+        {Résoudre des problèmes de proportionnalité}{}
+      
+}
+
+
+\newcommand{\CompetenceCinq}[1]{
+    \ifthenelse{\equal{#1}{4}}
+        {Savoir mener un calcul en respectant les règles }{}
+    \ifthenelse{\equal{#1}{6}}
+        {Calculer dans le cadre d'une résolution de problème}{}
+    \ifthenelse{\equal {#1}{8}}
+        {Additionner/soustraire des nombres relatifs}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Transformer une expression littérale  : développer et réduire}{}
+    \ifthenelse{\equal{#1}{11}}
+        {Maîtriser les nombres et le calcul symbolique}{}
+}
+
+
+\newcommand{\CompetenceSix}[1]{
+    \ifthenelse{\equal{#1}{1}}
+        {Utiliser et produire des figures géométriques}{}
+    \ifthenelse{\equal{#1}{3}}
+        {S'impliquer dans le travail à la maison}{}
+    \ifthenelse{\equal{#1}{5}}
+        {Comprendre l'effet d'une transformation géométrique}{}
+    \ifthenelse{\equal{#1}{7}}
+        {Connaître le vocabulaire et savoir réciter les points importants du cours}{}
+    \ifthenelse{\equal{#1}{8}}
+        {Justifier une démarche et vérifier une égalité}{}
+    \ifthenelse{\equal{#1}{9}}
+        {Utiliser des indicateurs statistiques}{}
+}
+
+
+\newcommand{\CompetenceSept}{
+    Connaissance et savoir-faire liés au cours
+}
+
+
+\newcommand{\CompetenceNeuf}{
+    Connaissance et savoir-faire liés au cours
+}
+
+
+% Les tableaux en haut des sujets
+\newcommand{\TableauCompetencesDeux}[2]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+              & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \small{#1} & & & & & \\ \hline
+            \small{#2} & & & &  &\\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}
+
+
+\newcommand{\TableauCompetencesTrois}[3]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+             & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \multicolumn{1}{|l||}{\small{#1}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#2}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#3}} & & & & & \\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}
+
+
+\newcommand{\TableauCompetencesQuatre}[4]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+             & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \multicolumn{1}{|l||}{\small{#1}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#2}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#3}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#4}} & & & & & \\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}
+
+
+\newcommand{\TableauCompetencesCinq}[5]{
+    \begin{center}
+        \begin{tabular}{l|c||c||c|c||c|}
+            \cline{2-6}
+             & I & F & \multicolumn{2}{c||}{S} & TB \\ \hline
+            \multicolumn{1}{|l||}{\small{#1}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#2}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#3}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#4}} & & & & & \\ \hline
+            \multicolumn{1}{|l||}{\small{#5}} & & & & & \\ \hline
+        \end{tabular}
+
+        \medskip
+
+        \small{ I : maîtrise \textbf{I}nsuffisante \quad F : maîtrise \textbf{F}ragile \quad S : maîtrise \textbf{S}atisfaisante \quad TB : \textbf{T}rès \textbf{B}onne maîtrise}
+    \end{center}
+}

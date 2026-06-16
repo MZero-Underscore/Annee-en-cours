@@ -1,0 +1,145 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{0}
+\newcommand{\monTitre}{Gestion de données}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Utiliser/remplir un tableau de données}
+
+    Un tableau permet de regrouper et d’organiser des données. Il permet de retrouver facilement des
+    informations.
+
+    On retrouve deux types de tableaux.
+
+\subsection{Les tableaux simples}
+    On les trouve aussi bien présenter en lignes qu'en colonnes.
+    \begin{exemple}
+        Que signifient les nombres 727 et 35 présents dans les 2 tableaux ci-dessous ?
+        \begin{center}
+            \includegraphics[scale=0.5]{images/TableauSimple_Exemple1.png}
+        \end{center}
+    \end{exemple}
+
+
+\subsection{Les tableaux à double entrée}
+    Ils permettent de lire les informations en ligne et/ou en colonne.
+
+    \begin{exemple}
+        Un concessionnaire automobile a vendu ce mois-ci 85 véhicules de tous types.
+        En voici un descriptif partiel représenté dans un tableau.
+    
+        \begin{minipage}{0.6\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/Tableau2entrées_Exemple1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{itemize}
+                \item Dans la cellule \textbf{D4}, on lit que Henri a vendu 8 voitures \og routières \fg.
+
+                \item Dans la cellule \textbf{C7}, on lit que 31 voitures \og sportives \fg ont été vendues.
+            \end{itemize}
+        \end{minipage}
+
+        \begin{enumerate}
+            \item Combien de voitures Henri a-t-il vendues ?
+            \item Combien cette concession a-t-elle vendu de voitures citadines ?
+            \item Quel est le vendeur ou la vendeuse qui a vendu le plus de voitures sportives ?
+            \item Jessica est persuadée d'avoir vendu autant de sportives que de routières. A-t-il raison ?
+            \item Quel type de véhicule a été le plus vendu ce mois-ci ?
+        \end{enumerate}
+    \end{exemple}
+
+
+\newpage
+
+
+\section{Représenter graphiquement des données}
+\subsection{À l'aide d'une courbe}
+    \begin{methode}
+        Une courbe permet de représenter l’évolution d’une grandeur en fonction d’une autre.
+    \end{methode}
+
+
+    \begin{exemple}
+        La courbe suivante représente l'évolution de l'intensité sonore lors d'un concert en fonction de la distance par rapport aux enceintes.
+        
+        \begin{minipage}{0.4\linewidth}  
+            \begin{center}
+                \includegraphics[scale=0.55]{images/Courbe_Exemple1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.59\linewidth}
+            \begin{enumerate}
+                \item Si l'on se trouve à 5 mètres des enceintes, quelle est l'intensité sonore ?
+
+                \item À quelle distance faut-il se trouver pour que l'intensité sonore soit sous les 75 décibels ?
+
+            \end{enumerate}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{À l'aide d'un diagramme en bâtons (ou en  barres)}
+    \begin{methode}
+        Les diagrammes en bâtons permettent de représenter des données par des bâtons dont la hauteur est proportionnelle à l'effectif de ces valeurs.
+    \end{methode}
+
+
+    \begin{exemple}
+        Le diagramme suivant donne les cinq langues les plus parlées dans le monde.
+        
+        \begin{minipage}{0.4\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/DiagrammeBatons_Exemple1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.59\linewidth}
+            \begin{enumerate}
+                \item Quelles sont les langues parlées par plus d'un milliard de personnes ? 
+
+                \item Donner une estimation du nombre de personnes qui parlent le français.
+            \end{enumerate}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{À l'aide d'un diagramme circulaire ou semi-circulaire}
+    \begin{methode}
+        Les diagrammes circulaires et semi-circulaires permettent de représenter un petit nombre de données  par des angles au centre proportionnels à l'effectif de ces valeurs. 
+        
+        Ils apportent une présentation élégante mais peuvent manquer de précision.
+    \end{methode}
+
+
+    \begin{exemple}
+        On a indiqué les proportions des différentes pistes dans une grande station de ski.
+        
+        \begin{minipage}{0.4\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.6]{images/DiagrammeCirculaire_Exemple1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.59\linewidth}
+            \begin{enumerate}
+                \item Quelles sont les pistes les plus représentées ?
+
+                \item Un débutant qui n'ose pas aller au delà d'une piste bleue a-t-il accès à plus de la moitié des pistes de ce domaine ? 
+            \end{enumerate}
+        \end{minipage}
+    \end{exemple}
+
+
+\end{document}

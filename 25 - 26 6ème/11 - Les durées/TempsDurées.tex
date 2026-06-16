@@ -1,0 +1,199 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{10} 
+\renewcommand{\monTitre}{Calculer avec des horaires et des durées}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+%% --- PAGE 1 ---
+
+\section{Unités de temps et conversions}
+
+    \begin{definition}
+        Le temps se mesure avec différentes unités selon la durée étudiée :
+        \begin{itemize}
+            \item \textbf{1 millénaire} = 1000 ans \quad ; \quad \textbf{1 siècle} = 100 ans.
+            \item \textbf{1 année} = 365 ou 366 jours \quad ; \quad \textbf{1 mois} = 28, 29, 30 ou 31 jours.
+            \item \textbf{1 jour (j)} = \points[5] heures (h).
+            \item \textbf{1 heure (h)} = \points[5] minutes (min).
+            \item \textbf{1 minute (min)} = \points[5] secondes (s).
+        \end{itemize}
+    \end{definition}
+    
+    
+    \begin{methode}[Convertir des durées]
+        Pour passer d'une unité à une autre, on multiplie ou on divise en respectant le schéma suivant :
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=1, every node/.style={transform shape}]
+            % Les boîtes
+            \node[draw=blue!80!black, thick, rounded corners, fill=blue!10, inner sep=8pt] (J) at (0,0) {\textbf{Jours}};
+            \node[draw=blue!80!black, thick, rounded corners, fill=blue!10, inner sep=8pt] (H) at (3.5,0) {\textbf{Heures}};
+            \node[draw=blue!80!black, thick, rounded corners, fill=blue!10, inner sep=8pt] (M) at (7,0) {\textbf{Minutes}};
+            \node[draw=blue!80!black, thick, rounded corners, fill=blue!10, inner sep=8pt] (S) at (10.5,0) {\textbf{Secondes}};
+            
+            % Flèches du haut (Multiplication)
+            \draw[->, thick, red] (J.north) to[bend left=35] node[midway, above] {$\times 24$} (H.north);
+            \draw[->, thick, red] (H.north) to[bend left=35] node[midway, above] {$\times 60$} (M.north);
+            \draw[->, thick, red] (M.north) to[bend left=35] node[midway, above] {$\times 60$} (S.north);
+            
+            % Flèches du bas (Division)
+            \draw[->, thick, green!55!black] (S.south) to[bend left=35] node[midway, below] {$\div 60$} (M.south);
+            \draw[->, thick, green!55!black] (M.south) to[bend left=35] node[midway, below] {$\div 60$} (H.south);
+            \draw[->, thick, green!55!black] (H.south) to[bend left=35] node[midway, below] {$\div 24$} (J.south);
+        \end{tikzpicture}
+        \end{center}
+    \end{methode}
+    
+    
+    \begin{exemple}[Conversions]
+        Convertir les durées suivantes en détaillant le calcul :
+        $\bullet$ \textbf{En minutes :} 3 h 
+        \quad  $\bullet$ \textbf{En secondes :} 2 min 15 s
+        \quad $\bullet$ \textbf{En heures et minutes :} 150 min
+        
+        \begin{ZoneReponse}{2cm}
+            % Espace vide pour chercher et corriger ensemble au tableau
+        \end{ZoneReponse}
+    \end{exemple}
+    
+    
+\section{Lire l'heure sur un cadran}
+    
+    \begin{minipage}{0.6\textwidth}
+        Sur une horloge à aiguilles :
+        \begin{itemize}
+            \item La \textbf{petite aiguille} indique les \points[10] (en lisant les gros nombres de 1 à 12).
+            \item La \textbf{grande aiguille} indique les \points[10] (en comptant les petites graduations de 0 à 60).
+        \end{itemize}
+        \textit{Attention : L'après-midi, on ajoute 12 heures (ex: 3h de l'après-midi = 15h).}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\textwidth}
+        \begin{center}
+        \begin{tikzpicture}[scale=1.2]
+            % Le cadran
+            \draw[ultra thick, fill=gray!5] (0,0) circle (2cm);
+            % Graduations minutes
+            \foreach \a in {1,2,...,60} { \draw[thick] (90-\a*6:1.85) -- (90-\a*6:2); }
+            % Graduations heures et nombres
+            \foreach \a in {1,2,...,12} {
+                \draw[ultra thick] (90-\a*30:1.75) -- (90-\a*30:2);
+                \node[font=\bfseries] at (90-\a*30:1.5) {\a};
+            }
+            % Aiguilles (10h12)
+            \draw[->, ultra thick, blue] (0,0) -- (90-10*30-12*0.5:1.1); % Heures
+            \draw[->, thick, red] (0,0) -- (90-12*6:1.6); % Minutes
+            \fill (0,0) circle (2.5pt);
+        \end{tikzpicture}
+        
+        Il est \points[3] h \points[3] min.\\
+        \textit{(ou \points[3] h \points[3] le soir)}
+        \end{center}
+    \end{minipage}
+
+    
+\newpage 
+%% --- PAGE 2 ---
+    
+\section{Calculer une durée}
+    
+    Calculer une \textbf{durée}, c'est chercher le temps écoulé entre un instant de début et un instant de fin. 
+    \\[0.2cm]
+    \centerline{\textbf{Durée = Heure de fin $-$ Heure de début}}
+    
+    \begin{methode}[Le schéma par bonds]
+        Pour éviter les erreurs avec les retenues (car 1h = 60 min et non 100 !), la méthode la plus sûre est de faire un schéma en avançant \textbf{par étapes jusqu'aux heures pleines}.
+    \end{methode}
+    
+    \begin{exemple}[Calcul d'un temps de trajet]
+        Un train part de Paris à \textbf{8 h 45} et arrive à Lyon à \textbf{11 h 20}. Quelle est la durée du trajet ?
+        
+        \vspace{0.5cm}
+        \begin{center}
+        \begin{tikzpicture}[scale=1.2]
+            % Ligne du temps
+            \draw[thick, ->] (0,0) -- (10,0);
+            
+            % Points temporels
+            \draw[thick] (1,-0.15) -- (1,0.15) node[below=5pt] {\textbf{8h45}};
+            \draw[thick] (3,-0.15) -- (3,0.15) node[below=5pt] {\textbf{9h00}};
+            \draw[thick] (7,-0.15) -- (7,0.15) node[below=5pt] {\textbf{11h00}};
+            \draw[thick] (9,-0.15) -- (9,0.15) node[below=5pt] {\textbf{11h20}};
+            
+            % Sauts (Arcs)
+            \draw[->, thick, red] (1,0.3) to[bend left=30] node[midway, above] {\textbf{+ \dots\dots min}} (3,0.3);
+            \draw[->, thick, blue] (3,0.3) to[bend left=20] node[midway, above] {\textbf{+ \dots\dots h}} (7,0.3);
+            \draw[->, thick, red] (7,0.3) to[bend left=30] node[midway, above] {\textbf{+ \dots\dots min}} (9,0.3);
+        \end{tikzpicture}
+        \end{center}
+        
+        \textbf{Calcul final :} \\[1ex]
+        On additionne tous les bonds : \points[3] min + \points[3] h + \points[3] min = \points[3] h \points[3] min.\\[1ex]
+        La durée du trajet est de \points[15].
+    \end{exemple}
+    
+    \vspace{0.5cm}
+    
+\section{Calculer une heure de fin ou de début}
+    
+    \begin{methode}
+        \begin{itemize}
+            \item \textbf{Heure de fin} = Heure de début + Durée
+            \item \textbf{Heure de début} = Heure de fin $-$ Durée
+        \end{itemize}
+        On peut poser l'addition ou la soustraction en colonnes, \textbf{en séparant bien les heures des minutes}.
+    \end{methode}
+    
+    \begin{exemple}[Calculs en colonnes]
+        \begin{minipage}{0.48\textwidth}
+            \textbf{Cas 1 : L'addition}\\
+            Un film dure 1h45. Il commence à 20h30. À quelle heure se termine-t-il ?\\
+            
+            \begin{tabular}{r c c}
+                 & 20 h & 30 min \\
+               + &  1 h & 45 min \\
+               \hline
+                 & \dots h & \dots min
+            \end{tabular}
+            
+            \medskip
+            
+            \textit{Attention : \dots\dots min = 1 h et \dots\dots min.}\\[1ex]
+            Donc le film finit à \textbf{\dots\dots h \dots\dots}.
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.48\textwidth}
+            \textbf{Cas 2 : La soustraction}\\
+            Un gâteau doit cuire 40 min. Il doit être prêt à 19h15. À quelle heure faut-il l'enfourner ?\\
+            
+            \textit{On ne peut pas faire $15 - 40$. On "casse" une heure : 19h15 = 18h + 75min.}\\
+            
+            \begin{tabular}{r c c}
+                 & 18 h & 75 min \\
+               $-$ &  0 h & 40 min \\
+               \hline
+                 & \dots h & \dots min
+            \end{tabular}
+            
+            \medskip
+            
+            Il faut l'enfourner à \textbf{\dots\dots h \dots\dots}.
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}[Un petit défi pour finir !]
+        Un match de football dure 90 minutes. La mi-temps dure 15 minutes. \\
+        L'arbitre siffle le coup d'envoi à 20h45. À quelle heure le match va-t-il se terminer ?
+        \begin{ZoneReponse}{3.5cm}
+            % Parfait pour vérifier s'ils ont compris comment enchaîner conversion et addition de durées !
+        \end{ZoneReponse}
+    \end{exemple}
+
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11}
+\renewcommand{\monTitre}{Les fractions vues comme des nombres}
+
+\enteteActivite{2}{\monTitre}{\thechapter}
+
+
+    \begin{center}
+        \itshape Consigne : Pour chaque cas, partage le rectangle en parts égales comme demandé, puis pose le calcul permettant de trouver la longueur d'une part dans le cadre à droite.
+    \end{center}
+    
+   
+    % --- CAS 1 : PARTAGE EN 2 ---
+    \section*{1. Partage en 2 parts égales}
+    \noindent
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \draw[thick] (0,0) rectangle (10,1);
+            \node at (5,-0.3) {\small Longueur : 10 unités};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\textwidth}
+        \begin{ZoneReponse}{2.5cm}
+            \footnotesize \textbf{Calcul :}
+        \end{ZoneReponse}
+    \end{minipage}
+    
+    % --- CAS 2 : PARTAGE EN 4 ---
+    \section*{2. Partage en 4 parts égales}
+    \noindent
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \draw[thick] (0,0) rectangle (10,1);
+            \node at (5,-0.3) {\small Longueur : 10 unités};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\textwidth}
+        \begin{ZoneReponse}{2.5cm}
+            \footnotesize \textbf{Calcul :}
+        \end{ZoneReponse}
+    \end{minipage}
+
+    
+    % --- CAS 3 : PARTAGE EN 3 ---
+    \section*{3. Partage en 3 parts égales}
+    \noindent
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \draw[thick] (0,0) rectangle (10,1);
+            \node at (5,-0.3) {\small Longueur : 10 unités};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\textwidth}
+        \begin{ZoneReponse}{2.5cm}
+            \footnotesize \textbf{Calcul :}
+        \end{ZoneReponse}
+    \end{minipage}
+    
+    
+    \begin{exerciceTitre}{Bilan de l'expérience}
+        \begin{enumerate}
+            \item Pour les cas 1 et 2, as-tu réussi à écrire la longueur d'une part avec un nombre entier ou décimal ? 
+
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+            
+            \item Pour le cas 3, que se passe-t-il quand tu essaies de calculer $10 \div 3$ ? 
+            
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{Conclusion :} Puisqu'aucun nombre décimal ne peut représenter le partage de 10 par 3, on doit inventer une nouvelle écriture. 
+            
+            \begin{center}
+                La longueur exacte d'une bande de 10 unités coupées en 3 parts égales vaut : \points[3]
+            \end{center}
+
+            \item En t'aidant des trois cas, complète les 3 opérations à trous proposées.
+
+            \[2\times\points[2]=10 \quad \quad 4\times\points[2]=10 \quad \quad 3\times\points[2]=10 \]
+
+            \item Propose une définition pour ce nouveau nombre.
+
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item Complète alors les égalités demandées.
+
+            \[7\times\points[2]=10 \quad \quad 3\times\points[2]=7 \quad \quad 5\times\points[2]=8 \]
+            
+        \end{enumerate}
+    \end{exerciceTitre}
+    
+\end{document}

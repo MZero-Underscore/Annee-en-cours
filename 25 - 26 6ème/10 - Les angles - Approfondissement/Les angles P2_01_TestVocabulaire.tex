@@ -1,0 +1,110 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Les angles : Vocabulaire}
+
+% Si tu as défini \enteteActivite ailleurs, on le garde :
+\enteteActivite{1}{\monTitre}{\thechapter}
+
+    % --- EXERCICE 1 : VOCABULAIRE ---
+    \begin{exerciceTitre}{Reconnaître le vocabulaire visuellement}
+        Observez la figure ci-dessous où les droites $(AB)$ et $(CD)$ sont sécantes en $O$. La demi-droite $[OE)$ est également tracée.
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Droites sécantes
+            \draw[thick, blue] (-2,-1) node[below left] {$A$} -- (2,1) node[above right] {$B$};
+            \draw[thick, red] (-1.5,1.5) node[above left] {$C$} -- (1.5,-1.5) node[below right] {$D$};
+            % Demi-droite supplémentaire
+            \draw[thick, green!60!black] (0,0) -- (2,-0.5) node[right] {$E$};
+            
+            % Point O
+            \node at (0,-0.3) {$O$};
+            \filldraw (0,0) circle (1.5pt);
+        \end{tikzpicture}
+        \end{center}
+        
+        Complétez les phrases suivantes en utilisant les mots : \textbf{adjacents}, \textbf{opposés par le sommet}, et/ou \textbf{supplémentaires}.
+        
+        1. Les angles $\widehat{AOC}$ et $\widehat{BOD}$ sont \points[15] \\[2ex]
+        2. Les angles $\widehat{BOC}$ et $\widehat{BOD}$ sont \points[15] \\[2ex]
+        3. Les angles $\widehat{BOE}$ et $\widehat{EOD}$ sont \points[15] \\[2ex]
+        4. Les angles\points[3] et \points[3] sont un autre couple d'angles opposés par le sommet.
+
+    \end{exerciceTitre}
+    
+    
+    % --- EXERCICE 2 : ANGLES SUPPLÉMENTAIRES ---
+    \begin{exerciceTitre}{Calculer avec des angles supplémentaires}
+        Sur la figure ci-dessous, les points $R$, $S$ et $T$ sont alignés. 
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=0.6]
+            % Ligne droite
+            \draw[thick] (-3,0) node[below] {$R$} -- (3,0) node[below] {$T$};
+            % Demi-droite
+            \draw[thick] (0,0) -- (1.5,2) node[above] {$U$};
+            
+            % Point S
+            \node at (0,-0.3) {$S$};
+            \filldraw (0,0) circle (1.5pt);
+            
+            % Arc et angle
+            \draw[thick, blue] (0.8,0) arc (0:53.13:0.8);
+            \node[blue] at (1.2,0.4) {$55^\circ$};
+        \end{tikzpicture}
+        \end{center}
+        
+        Sachant que l'angle $\widehat{UST}$ mesure $55^\circ$, calculez la mesure de l'angle $\widehat{RSU}$. Détaillez votre calcul.
+        
+        \begin{ZoneReponse}{2cm}
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+    
+    
+    % --- EXERCICE 3 : MÉLANGE COMPLET ---
+    \begin{exerciceTitre}{Le grand calcul d'angles}
+        Les droites $(AB)$ et $(CD)$ sont sécantes en $M$. On sait que l'angle marqué en rouge mesure $40^\circ$.
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=0.6] % J'ai légèrement agrandi pour plus de lisibilité
+            % Droites (d1) et (d2)
+            \draw[thick] (-2.5,-1.25) -- (2.5,1.25);
+            \draw[thick] (-2,2) -- (2,-2);
+            
+            % Points sur la première droite (A et B)
+            \filldraw (-1.6,-0.8) circle (1pt) node[above left] {$A$};
+            \filldraw (1.6,0.8) circle (1pt) node[below right] {$B$};
+        
+            % Points sur la deuxième droite (C et D)
+            \filldraw (-1.2,1.2) circle (1pt) node[above right] {$C$};
+            \filldraw (1.2,-1.2) circle (1pt) node[below left] {$D$};
+            
+            % Point M
+            \node at (0,-0.25) {$M$};
+            \filldraw (0,0) circle (1.5pt);
+            
+            % Angle BMC (?)
+            \draw[thick, red, fill=red!10] (0.8,0.4) arc (26.56:135:0.89);
+            \node[red] at (0.15,0.65) {$?$};
+            
+            % Angle AMD (40°)
+            \draw[thick, red, fill=red!10] (-0.8,-0.4) arc (206.56:315:0.89);
+            \node[red] at (-0.15,-0.65) {$40^\circ$};
+        \end{tikzpicture}
+        \end{center}
+        
+        Déterminez, en justifiant brièvement à l'aide du vocabulaire du cours, la mesure des trois autres angles formés par ces deux droites.
+        
+        \begin{ZoneReponse}{3cm}
+        
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+
+\end{document}

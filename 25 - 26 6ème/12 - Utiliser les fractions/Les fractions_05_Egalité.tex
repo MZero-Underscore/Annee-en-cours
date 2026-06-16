@@ -1,0 +1,127 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11}
+\renewcommand{\monTitre}{Fractions égales : un même nombre, plusieurs écritures}
+
+\enteteActivite{4}{\monTitre}{\thechapter}
+
+    \begin{center}
+        \itshape Consigne : On s'intéresse à la partie coloriée de chaque rectangle. Bien que les découpages soient différents, la surface colorée reste la même.
+    \end{center}
+    
+    \section*{1. Observation visuelle}
+    
+    \noindent
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Rectangle A}\\ \vspace{0.2cm}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[thick] (0,0) rectangle (6,2);
+            \fill[gray!40] (0,0) rectangle (3,2);
+            \draw[thick] (3,0) -- (3,2);
+            \node at (3,-0.5) {Partagée en \textbf{2}};
+        \end{tikzpicture}
+        
+        \vspace{0.3cm}
+        Fraction coloriée : $\dfrac{\dots}{\dots}$
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Rectangle B}\\ \vspace{0.2cm}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[thick] (0,0) rectangle (6,2);
+            \fill[gray!40] (0,0) rectangle (3,2);
+            \draw[thick] (1.5,0) -- (1.5,2);
+            \draw[thick] (3,0) -- (3,2);
+            \draw[thick] (4.5,0) -- (4.5,2);
+            \node at (3,-0.5) {Partagée en \textbf{4}};
+        \end{tikzpicture}
+        
+        \vspace{0.3cm}
+        Fraction coloriée : $\dfrac{\dots}{\dots}$
+    \end{minipage}
+    
+    \noindent
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Rectangle C}\\ \vspace{0.2cm}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[thick] (0,0) rectangle (6,2);
+            \fill[gray!40] (0,0) rectangle (3,2);
+            \foreach \x in {1,2,3,4,5} \draw[thick] (\x,0) -- (\x,2);
+            \node at (3,-0.5) {Partagée en \textbf{6}};
+        \end{tikzpicture}
+        
+        \vspace{0.3cm}
+        Fraction coloriée : $\dfrac{\dots}{\dots}$
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Rectangle D}\\ \vspace{0.2cm}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[thick] (0,0) rectangle (6,2);
+            \fill[gray!40] (0,0) rectangle (3,2);
+            \foreach \x in {0.5,1,...,5.5} \draw[thick] (\x,0) -- (\x,2);
+            \node at (3,-0.5) {Partagée en \textbf{12}};
+        \end{tikzpicture}
+        
+        \vspace{0.3cm}
+        Fraction coloriée : $\dfrac{\dots}{\dots}$
+    \end{minipage}
+    
+\section*{2. Conclusion sur les égalités}
+    
+    Puisque la surface grise est toujours la même, on peut écrire :
+    \begin{center}
+        \Large $\dfrac{1}{2} = \dfrac{\dots}{4} = \dfrac{\dots}{6} = \dfrac{\dots}{12}$
+    \end{center}
+    
+    \begin{exerciceTitre}{Passer d'une écriture à l'autre}
+        Regarde comment on passe d'une fraction à l'autre mathématiquement :
+        \begin{itemize}
+            \item Pour passer de $\frac{1}{2}$ à $\frac{3}{6}$, on a multiplié le numérateur et le dénominateur par : \dots\dots
+            \item Pour passer de $\frac{6}{12}$ à $\frac{1}{2}$, on a divisé le numérateur et le dénominateur par : \dots\dots
+        \end{itemize}
+    \end{exerciceTitre}
+    
+    \section*{3. Vers la règle d'or}
+    
+    \begin{ZoneReponse}{3.5cm}
+    \textbf{À retenir :} 
+    On ne change pas la valeur d'une fraction si on \points[8] ou si on \points[8] son numérateur et son dénominateur par un \textbf{même nombre} non nul.
+    \vspace{0.5cm}
+    \begin{center}
+        \Large $\dfrac{a}{b} = \points[5]$ \quad et \quad $\dfrac{a}{b} = \points[5]$
+    \end{center}
+    \end{ZoneReponse}
+
+    \begin{exerciceTitre}{À toi de jouer !}
+        Complète les pointillés pour que les égalités soient vraies :
+        \vspace{0.4cm}
+        
+        \begin{minipage}{0.45\textwidth}
+            \begin{itemize}
+                \item $\dfrac{1}{2} = \dfrac{\dots\dots}{10}$ \normalsize (on a multiplié par \dots\dots)
+                \vspace{0.3cm}
+                \item $\dfrac{3}{4} = \dfrac{12}{\dots\dots}$ \normalsize (on a multiplié par \dots\dots)
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \begin{itemize}
+                \item $\dfrac{10}{30} = \dfrac{1}{\dots\dots}$ \normalsize (on a divisé par \dots\dots)
+                \vspace{0.3cm}
+                \item $\dfrac{14}{21} = \dfrac{\dots\dots}{3}$ \normalsize (on a divisé par \dots\dots)
+            \end{itemize}
+        \end{minipage}
+    \end{exerciceTitre}
+    
+
+\end{document}

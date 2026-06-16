@@ -1,0 +1,173 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{9} 
+\renewcommand{\monTitre}{Les angles - Approfondissement}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+%% --- PAGE 1 ---
+
+\section{Vocabulaires liés aux angles}
+\subsection{Angles opposés par le sommet}
+
+    
+    \begin{definition}
+        Deux angles sont dits \textbf{opposés par le sommet} si :
+        \begin{itemize}
+            \item ils ont le même sommet ;
+            \item leurs côtés sont dans le \textbf{prolongement} l'un de l'autre.
+        \end{itemize}
+    \end{definition}
+    
+    
+    \begin{exemple}[Identifier des angles opposés par le sommet]
+        \begin{minipage}{0.5\linewidth}
+            Les droites $(AC)$ et $(BD)$ sont sécantes en $O$. Citer deux paires d'angles opposés par le sommet.
+            \begin{ZoneReponse}{3 cm}
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=1]
+                % Droites sécantes
+                \draw[thick] (-2,-1) -- (3,1.5);
+                \draw[thick] (-1.5,1.5) -- (2.5,-1);
+                \coordinate (O) at (0.5,0.25);
+                
+                % Points
+                \fill (O) circle (1.5pt) node[above=4pt] {$O$};
+                \fill (-1.5,1.5) circle (1.5pt) node[above left] {$A$};
+                \fill (-2,-1) circle (1.5pt) node[below left] {$B$};
+                \fill (3,1.5) circle (1.5pt) node[above right] {$C$};
+                \fill (2.5,-1) circle (1.5pt) node[below right] {$D$};
+                
+                % Arcs (optionnel pour aider)
+                \draw[blue, thick] (0.2,0.05) arc (200:135:0.3);
+                \draw[blue, thick] (0.8,0.45) arc (20:-45:0.3);
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+    
+    
+    \begin{propriete}
+        Si deux angles sont opposés par le sommet, alors ils ont la \textbf{la même mesure}.
+    \end{propriete}
+    
+        
+\subsection{Angles adjacents}
+    
+    \begin{definition}
+        Deux angles sont dits \textbf{adjacents} s'ils vérifient simultanément ces trois conditions :
+        \begin{itemize}
+            \item ils ont le \textbf{même sommet} ;
+            \item ils ont un \textbf{côté commun};
+            \item ils sont \textbf{situés de part et d'autre de ce côté commun}.
+        \end{itemize}
+    \end{definition}
+    
+    \begin{exemple}[Reconnaître des angles adjacents]
+        \begin{minipage}{0.6\linewidth}
+            Les angles $\widehat{XOY}$ et $\widehat{YOZ}$ sont \textbf{adjacents} car :
+            \begin{itemize}
+                \item ils ont le même sommet : le point \points[6]
+                \item ils ont un côté commun : la demi-droite \points[6]
+                \item ils sont de part et d'autre de la demi-droite \points[6]
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.38\linewidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=1]
+                \coordinate (O) at (0,0);
+                \coordinate (X) at (3,0);
+                \coordinate (Y) at (2.5,1.5);
+                \coordinate (Z) at (-0.5,2);
+                
+                \draw[thick] (O) -- (X) node[right] {$X$};
+                \draw[thick] (O) -- (Y) node[above right] {$Y$};
+                \draw[thick] (O) -- (Z) node[above left] {$Z$};
+                \node[below left] at (O) {$O$};
+                
+                \draw[red, thick] (0.6,0) arc (0:31:0.6) node[midway, right=2pt] {\scriptsize $1$};
+                \draw[blue, thick] (0.8,0.48) arc (31:104:0.8) node[midway, above=2pt] {\scriptsize $2$};
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}  
+    \end{exemple}
+
+    
+\newpage
+    
+    %% --- PAGE 2 ---
+    
+\subsection{Angles supplémentaires}
+    
+    \begin{definition}
+        Deux angles sont dits \textbf{supplémentaires} si la somme de leurs mesures est égale à \textbf{180}$^\circ$ (ce qui correspond à un angle plat).
+    \end{definition}
+    
+    \begin{exemple}[Calculer avec des angles supplémentaires]
+        Calculer la mesure de l'angle $\widehat{BOC}$ en justifiant.
+        
+        \begin{minipage}{0.40\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (3,0);
+                \coordinate (B) at (-3,0);
+                \coordinate (C) at (1.5,2);
+                \draw[thick] (B) -- (A);
+                \draw[thick] (O) -- (C);
+                \node[below] at (A) {$A$};
+                \node[below] at (B) {$B$};
+                \node[below] at (O) {$O$};
+                \node[above] at (C) {$C$};
+                
+                \draw[thick, red] (0.5,0) arc (0:53:0.5);
+                \node[red] at (25:0.9) {$53^\circ$};
+                
+                \draw[thick, blue] (-0.5,0) arc (180:53:0.5);
+                \node[blue] at (115:0.9) {$?$};
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.55\textwidth}
+            Les points $B, O$ et $A$ sont alignés. \\
+            L'angle $\widehat{BOA}$ est donc un angle \points[4] qui mesure $180^\circ$. \\
+        \end{minipage}
+
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+        
+    \end{exemple}
+    
+    \vspace{0.5cm}
+    
+\section{Vers la cinquième : construction de triangles}
+    
+    \begin{methode}
+        Pour construire un triangle dont on connaît \textbf{une longueur et deux angles} :
+        \begin{enumerate}
+            \item On trace une \textbf{figure} à main levée pour y placer les informations (longueurs et angles).
+            \item On trace d'abord avec la règle le \textbf{côté} dont on connaît la longueur.
+            \item On trace les deux \textbf{angles} à l'aide du rapporteur en partant des extrémités du segment.
+            \item Le troisième sommet se trouve à \textbf{l'intersection} des deux demi-droites.
+        \end{enumerate}
+    \end{methode}
+    
+    \begin{exemple}[À toi de jouer !]
+        Construis le triangle $DEF$ tel que $DE = 6$~cm, $\widehat{EDF} = 45^\circ$ et $\widehat{DEF} = 75^\circ$.
+        
+        \begin{ZoneReponse}{7cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+\end{document}

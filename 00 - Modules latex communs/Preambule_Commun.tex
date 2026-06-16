@@ -1,0 +1,157 @@
+\setlength{\headheight}{14.5pt}
+
+% --- 1. ENCODAGE ET LANGUE (À mettre en premier) ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+% --- 2. POLICES ET SYMBOLES ---
+% fourier : police élégante pour les maths (lmodern supprimé car doublon)
+\usepackage{fourier}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage[right]{eurosym}
+\usepackage[np]{numprint}
+\usepackage[nointegrals]{wasysym}
+
+% --- 3. GÉOMÉTRIE ET MISE EN PAGE ---
+\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage[most,skins,breakable]{tcolorbox}
+\usepackage{tagging}
+
+% --- 4. GRAPHISMES ET DIAGRAMMES ---
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{babel, shapes, fit} % 'babel' évite les bugs avec TikZ
+
+% --- 5. TABLEAUX ---
+\usepackage{array, booktabs, multirow, tabularx, longtable}
+
+% --- 6. STRUCTURE ET TITRES ---
+% titlesec est plus moderne que sectsty, on garde uniquement celui-ci
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem} % 'normalem' évite que \emph devienne souligné
+
+% --- 7. HYPERLIENS (toujours en dernier ou presque) ---
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\frenchbsetup{StandardItemLabels=true}
+
+% Le package ultime
+\usepackage{ProfCollege}
+
+
+% =================================================================
+% COMMANDES GÉNÉRALES
+% =================================================================
+
+% Une ligne de points (usage : \points[15])
+\newcommand{\points}[1][1]{%
+    \foreach \n in {1,...,#1} { \ldots}%
+}
+
+% Plusieurs lignes de points (usage : \lignesPoints{3})
+\newcommand{\lignesPoints}[1]{%
+    \foreach \n in {1,...,#1} {%
+        \dotfill \newline
+    }%
+}
+
+
+% =================================================================
+% ZONES RÉPONSE
+% =================================================================
+
+% Zone réponse universelle (usage : \begin{ZoneReponse}{4cm})
+\newtcolorbox{ZoneReponse}[1]{
+    enhanced,
+    colback=white,
+    colframe=gray!50,
+    arc=2mm,
+    boxrule=0.5mm,
+    width=\textwidth,
+    height=#1,
+    valign=top,
+    fonttitle=\bfseries,
+    colbacktitle=gray!20,
+    coltitle=black,
+    attach title to upper,
+    after skip=10pt plus 2pt minus 2pt
+}
+
+
+% =================================================================
+% COMMANDES MATHÉMATIQUES COLLÈGE
+% =================================================================
+
+% Ensembles de nombres
+\newcommand{\N}{\ensuremath{\mathbf{N}}}
+\newcommand{\Z}{\ensuremath{\mathbf{Z}}}
+\newcommand{\D}{\ensuremath{\mathbf{D}}}
+\newcommand{\Q}{\ensuremath{\mathbf{Q}}}
+\newcommand{\R}{\ensuremath{\mathbf{R}}}
+
+% Valeur absolue
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+
+% Arc géométrique (usage : $\arc{AB}$)
+% Note : utilise la fonte tipa pour le symbole arc
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+\newcommand{\arc@arc}[2]{%
+  \sbox0{$\m@th#1#2$}%
+  \vbox{\hbox{\resizebox{\wd0}{\height}{\arc@char}}\nointerlineskip\box0}%
+}
+\makeatother
+
+% Comparaison : boîte vide entre deux nombres pour écrire le symbole
+% Usage : \compare{102}{120}  ou  \compare[0.5]{\np{132999999}}{\np{133000000}}
+% Argument optionnel : ignoré (compatibilité ascendante), la boîte s'adapte
+\newcommand{\compare}[3][0]{%
+    #2 \kern0.4em
+    \tikz[baseline=-0.6ex]
+        \node[rectangle, draw=gray!60, thick, dotted, minimum height=0.6cm,
+              minimum width=0.6cm, inner sep=2pt] {};%
+    \kern0.4em #3%
+}
+
+% Encadrement : deux boîtes vides autour d'un nombre
+% Usage : \encadre{\np{1389}}  ou  \encadre[1.8]{\np{652176}}
+% Argument optionnel : largeur des boîtes en cm (défaut 1.5)
+\newcommand{\encadre}[2][1.5]{%
+    \tikz[baseline=-0.6ex]
+        \node[rectangle, draw=gray!60, thick, dotted, minimum height=0.6cm,
+              minimum width=#1cm, inner sep=2pt] {};%
+    \kern0.3em $<$ #2 $<$ \kern0.3em
+    \tikz[baseline=-0.6ex]
+        \node[rectangle, draw=gray!60, thick, dotted, minimum height=0.6cm,
+              minimum width=#1cm, inner sep=2pt] {};%
+}
+
+% Diagramme de proportionnalité simple
+% Usage : \diagrammesimple{A}{B}{×3}
+\newcommand{\diagrammesimple}[3]{%
+\begin{tikzpicture}[baseline=(A.base)]
+    \node(A) at (0,0) {#1};
+    \node(B) at (5,0) {#2};
+    \draw[->, dashed, line width=0.8mm, green!50!black]
+        (A) to[bend left=20] node[midway, above=2pt] {#3} (B);
+\end{tikzpicture}}
+
+% Diagramme avec flèche aller-retour
+% Usage : \diagrammesimplereciproque{A}{B}{×3}{÷3}
+\newcommand{\diagrammesimplereciproque}[4]{%
+\begin{tikzpicture}[baseline=(A.base)]
+    \node(A) at (0,0) {#1};
+    \node(B) at (5,0) {#2};
+    \draw[->, dashed, line width=0.8mm, green!50!black]
+        (A) to[bend left=20] node[midway, above=2pt] {#3} (B);
+    \draw[->, dashed, line width=0.8mm, blue!50!black]
+        (B) to[bend left=20] node[midway, below=2pt] {#4} (A);
+\end{tikzpicture}}

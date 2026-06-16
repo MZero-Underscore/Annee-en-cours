@@ -1,0 +1,191 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{8}
+\renewcommand{\monTitre}{Les angles : Mesure et Construction}
+
+    % --- ENTÊTE ---
+    \fancyhead[RO,LE]{\monTitre}
+    
+    \begin{center}
+        \huge \bfseries \color{green!55!black} Fiche d'exercices : Mesure et construction d'angles
+    \end{center}
+    
+    \vspace{1cm}
+    
+    %% --- PREMIÈRE PAGE : VOCABULAIRE ET MESURE ---
+    
+    \begin{exerciceTitre}{Nommer et identifier}
+        Observer la figure ci-dessous et compléter le tableau.
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=1.2, >=latex]
+            % Points
+            \coordinate (B) at (0,0);
+            \coordinate (A) at (3.5,0.5);
+            \coordinate (C) at (1,2.5);
+            \coordinate (D) at (-2.5,1.5);
+            
+            % Tracé des demi-droites
+            \draw[thick] (B) -- (4,0.57); % Prolongation vers A
+            \draw[thick] (B) -- (1.2,3);   % Prolongation vers C
+            \draw[thick] (B) -- (-3,1.8);  % Prolongation vers D
+            
+            % Marquage des points
+            \fill (A) circle (1.5pt) node[below] {$A$};
+            \fill (B) circle (1.5pt) node[below left] {$B$};
+            \fill (C) circle (1.5pt) node[right] {$C$};
+            \fill (D) circle (1.5pt) node[above] {$D$};
+            
+            % Petits arcs pour aider à la lecture (optionnel)
+            \draw[blue, thick] (0.5,0.07) arc (8:68:0.5);
+            \node[blue] at (35:0.8) {1};
+            
+            \draw[red, thick] (-0.3,0.7) arc (115:68:0.8);
+            \node[red] at (90:1.1) {2};
+        \end{tikzpicture}
+        \end{center}
+        
+        \renewcommand{\arraystretch}{1.8} 
+        \begin{tabularx}{\textwidth}{|X|X|X|X|}
+            \hline
+            \textbf{Nom de l'angle} & \textbf{Sommet} & \textbf{Côtés} & \textbf{Nature} \\ \hline
+            $\widehat{ABC}$ (angle 1)   & \points[3]    & \points[3]        & \points[3] \\ \hline
+            $\widehat{CBD}$ (angle 2)   & \points[3]    & \points[3]        & \points[3] \\ \hline
+            \points[3]                  & \points[3]    & $[BD)$ et $[BA)$  & \points[3] \\ \hline
+        \end{tabularx}
+        \renewcommand{\arraystretch}{1} % On remet à la normale pour la suite
+    \end{exerciceTitre}
+    
+
+    \begin{exerciceTitre}{La bonne lecture}
+        Pour chaque rapporteur, indiquer la mesure de l'angle marqué (graduation intérieure).
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.85]
+                % Rapporteur 1 : 40°
+                \draw[fill=gray!10, opacity=0.5] (2,0) arc (0:180:2) -- (-2,0) -- cycle;
+                \foreach \a in {0,10,...,180} {\draw (\a:1.8) -- (\a:2);}
+                \foreach \a in {0,20,...,180} {\node[font=\tiny] at (\a:1.6) {\a};}
+                \draw[ultra thick, blue] (0,0) -- (2.5,0);
+                \draw[ultra thick, blue] (0,0) -- (40:2.5);
+                \draw[red, thick, ->] (0.8,0) arc (0:40:0.8) node[midway, right] {?};
+                \node at (0,-0.8) {\textbf{Angle 1}};
+            \end{tikzpicture}
+            \hfill
+            \begin{tikzpicture}[scale=0.85]
+                % Rapporteur 2 : 135°
+                \draw[fill=gray!10, opacity=0.5] (2,0) arc (0:180:2) -- (-2,0) -- cycle;
+                \foreach \a in {0,10,...,180} {\draw (\a:1.8) -- (\a:2);}
+                \foreach \a in {0,20,...,180} {\node[font=\tiny] at (\a:1.6) {\a};}
+                \draw[ultra thick, blue] (0,0) -- (2.5,0);
+                \draw[ultra thick, blue] (0,0) -- (135:2.5);
+                \draw[red, thick, ->] (0.8,0) arc (0:135:0.8) node[midway, above right] {?};
+                \node at (0,-0.8) {\textbf{Angle 2}};
+            \end{tikzpicture}
+            \hfill
+            \begin{tikzpicture}[scale=0.85]
+                % Rapporteur 3 : 75°
+                \draw[fill=gray!10, opacity=0.5] (2,0) arc (0:180:2) -- (-2,0) -- cycle;
+                \foreach \a in {0,10,...,180} {\draw (\a:1.8) -- (\a:2);}
+                \foreach \a in {0,20,...,180} {\node[font=\tiny] at (\a:1.6) {\a};}
+                \draw[ultra thick, blue!80!black] (0,0) -- (2.5,0);
+                \draw[ultra thick, blue!80!black] (0,0) -- (75:2.5);
+                \draw[red, thick, ->] (0.8,0) arc (0:75:0.8) node[midway, above right] {?};
+                \node at (0,-0.8) {\textbf{Angle 3}};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{center}
+            Angle 1 : \points[5] \quad Angle 2 : \points[5] \quad Angle 3 : \points[5]
+        \end{center}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Mesure et Nature}
+        Pour chaque angle ci-dessous :
+        \begin{enumerate}
+            \item Ajouter les points au bon endroit.
+            \item Indiquer sa nature (aigu, obtus ou droit).
+            \item Le mesurer avec un rapporteur le plus précisément possible.
+        \end{enumerate}
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % 1. Angle obtus (environ 130°)
+            \coordinate (B) at (0,0);
+            \coordinate (A) at (3,0);
+            \coordinate (C) at (130:2.5);
+            \draw[thick] (A) -- (B) -- (C);
+            \node at (0,-1.5) {$\widehat{RST}$ est un angle \dots\dots\dots};
+            \node at (0,-2.1) {Mesure : \dots\dots\dots};
+        \end{tikzpicture}
+        \hfill
+        \begin{tikzpicture}[scale=1]
+            % 2. Angle droit (90°)
+            \coordinate (E) at (0,0);
+            \coordinate (D) at (0,2.5);
+            \coordinate (F) at (2.5,0);
+            \draw[thick] (D) -- (E) -- (F);
+            % Codage de l'angle droit
+            \draw[thick] (0,0.3) -- (0.3,0.3) -- (0.3,0);
+            \node at (1.2,-1.5) {$\widehat{DEF}$ est un angle \dots\dots\dots};
+            \node at (1.2,-2.1) {Mesure : \dots\dots\dots};
+        \end{tikzpicture}
+        \hfill
+        \begin{tikzpicture}[scale=1]
+            % 3. Angle aigu (environ 35°)
+            \coordinate (O) at (0,0);
+            \coordinate (X) at (3,0);
+            \coordinate (Y) at (35:3);
+            \draw[thick] (X) -- (O) -- (Y);
+            \node at (1.5,-1.5) {$\widehat{XOY}$ est un angle \dots\dots\dots};
+            \node at (1.5,-2.1) {Mesure : \dots\dots\dots};
+        \end{tikzpicture}
+        \end{center}
+    \end{exerciceTitre}
+    
+    
+\newpage
+    
+    %% --- DEUXIÈME PAGE : CONSTRUCTION ET DÉFI ---
+    
+    \begin{exerciceTitre}{Construction guidée}
+        Construire dans le cadre les angles suivants.
+        \begin{enumerate}
+            \item $\widehat{MAN} = 45^\circ$ (Sommet $A$)
+            \item $\widehat{BUS} = 120^\circ$ (Sommet $U$)
+            \item $\widehat{TGV} = 165^\circ$ (Sommet $G$)
+        \end{enumerate}
+        
+        \begin{ZoneReponse}{6cm}
+            % Espace vide pour la construction du triangle
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+    
+    
+    \begin{exerciceTitre}{Tracé complet}
+        Dans le cadre ci-dessous, construire un triangle $ABC$ tel que :
+        $AB = 6$ cm ; $\widehat{BAC} = 40^\circ$ et $\widehat{ABC} = 75^\circ$.
+        
+        \textit{On pourra commencer par faire une petite figure à main levée.}
+        
+        \begin{ZoneReponse}{8cm}
+            % Espace vide pour la construction du triangle
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+    
+    \begin{exerciceTitre}{Le Défi}
+        Léo dit : « J'ai tracé un angle qui mesure $200^\circ$ ! ». 
+        Est-ce possible avec ton rapporteur habituel ? Comment pourrait-il faire ?
+        
+        \begin{ZoneReponse}{4cm}
+        \end{ZoneReponse}
+    \end{exerciceTitre}
+
+\end{document}

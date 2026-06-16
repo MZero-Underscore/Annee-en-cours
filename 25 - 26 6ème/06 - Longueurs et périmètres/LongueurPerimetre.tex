@@ -1,0 +1,355 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{5}
+\newcommand{\monTitre}{Longueur et périmètre}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+\section{Les unités de longueur}
+    L'unité de longueur de référence du système international est le \textbf{mètre}.
+
+    On peut utiliser l'un de ses multiples ou sous-multiples. Pour convertir les longueurs, on se réfère au tableau suivant.
+
+    \begin{center}
+        \includegraphics[scale=0.45]{images/TableauConversion.png}
+    \end{center}
+
+    \begin{remarque}
+        \begin{itemize}
+            \item Dans le tableau, deux unités de longueurs côte à côte sont 10 fois plus grandes ou 10 fois plus petites l'une par rapport à l'autre.
+
+            \item Le préfixe \textbf{déca} signifie \og dix \fg; \textbf{hecto} signifie \og cent\fg et \textbf{kilo} signifie \og mille\fg.
+
+            \item Le préfixe \textbf{déci} signifie \og dixième \fg; \textbf{centi} signifie \og centième \fg et \textbf{milli} signifie \og millième \fg.
+        \end{itemize}
+    \end{remarque}
+
+
+    \begin{exemple}
+        \textbf{Consigne :} Compléter les égalités suivantes en effectuant la conversion demandée. On peut s'aider du tableau de conversion ci-dessus.
+        
+    
+    \end{exemple}
+        \begin{minipage}{0.45\linewidth}
+            \begin{enumerate}
+                \item $45 \text{ m} = \dots\dots\dots\dots\dots \text{ cm}$
+                \item $7,2 \text{ km} = \dots\dots\dots\dots\dots \text{ m}$
+                \item $350 \text{ mm} = \dots\dots\dots\dots\dots \text{ dm}$
+            \end{enumerate} 
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.45\linewidth}
+            \begin{enumerate}
+                \setcounter{enumi}{3}
+                \item $1,25 \text{ m} = \dots\dots\dots\dots\dots \text{ mm}$
+                \item $850 \text{ m} = \dots\dots\dots\dots\dots \text{ km}$
+                \item $42,7 \text{ cm} = \dots\dots\dots\dots\dots \text{ dam}$
+            \end{enumerate} 
+        \end{minipage}
+
+
+\section{Calculer un périmètre}
+\subsection{Définition}
+    \begin{definitionTitre}{Périmètre}
+        Le \textbf{périmètre} d'une figure est la \textbf{longueur} de son contour. L’unité de mesure est le mètre ou l'un de ses multiples ou sous-multiples.
+    \end{definitionTitre}
+
+
+    \begin{exemple}
+        \section*{L'exemple du Petit Jardinier}
+
+        \begin{minipage}{0.5\linewidth}
+            \textbf{Situation :} \\
+            Tu souhaites installer une clôture tout autour de ton potager rectangulaire pour empêcher ton chien d'y entrer. Pour acheter la bonne quantité de grillage, tu dois calculer le \textbf{périmètre}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                % Dessin du rectangle (le potager)
+                \draw[thick, fill=green!10] (0,0) rectangle (6,3);
+                
+                % Dimensions
+                \draw[<->, >=stealth] (0,-0.5) -- (6,-0.5) node[midway, below] {Longueur $L = 6$ m};
+                \draw[<->, >=stealth] (6.5,0) -- (6.5,3) node[midway, right] {Largeur $l = 3$ m};
+                
+                % Labels des sommets
+                \node[below left] at (0,0) {A};
+                \node[below right] at (6,0) {B};
+                \node[above right] at (6,3) {C};
+                \node[above left] at (0,3) {D};
+                
+                % Petit schéma de clôture symbolique sur un côté
+                \foreach \x in {0,0.5,...,6}
+                    \draw[brown, thick] (\x,0) -- (\x,-0.2);
+            \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+
+                    
+\newpage
+
+            
+        \textbf{Le raisonnement :} \\
+        Le périmètre est la mesure du \textbf{contour} de la figure. Pour faire le tour complet du potager, on additionne les longueurs de \textbf{tous} les côtés :
+        \begin{itemize}
+            \item Deux fois la longueur ($6$ m + $6$ m)
+            \item Deux fois la largeur ($3$ m + $3$ m)
+        \end{itemize}
+        
+        \textbf{Le calcul :}
+        \[ P = 6+3+6+3 \]
+        \[ P = 9+9 \]
+        \[ P = 18 \text{ m} \]
+        
+        \textbf{Conclusion :} \\
+        Le jardinier devra acheter \textbf{18 mètres} de clôture. Le périmètre du rectangle est de 18 mètres.
+    \end{exemple}
+    
+
+\subsection{Les polygones}
+    \begin{propriete}
+        Le périmètre d'un polygone est la somme des longueurs de ses côtes.
+    \end{propriete}
+    
+
+    On retiendra les deux formules suivantes.
+    \begin{propriete}
+        \begin{minipage}{0.5\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.6]{images/Carré.png}
+
+                Carré
+
+                Périmètre = $4 \times c$
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.6]{images/Rectangle.png}
+
+                Rectangle
+
+                Périmètre = $2\times (L+l)= 2\times L + 2\times l$
+            \end{center}
+        \end{minipage}
+    \end{propriete}
+
+
+        \begin{exemple}
+        \begin{enumerate}
+            \item Calculer le périmètre $P$ des carrés suivants.
+
+            \begin{minipage}{0.45\linewidth}
+                \textbf{Carré ABCD} de côté $c = 5 \text{ cm}$. 
+
+                \medskip
+                
+                \begin{tikzpicture}[scale=0.5]
+                    \draw[thick] (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle;
+                    \node at (2,-0.5) {$5 \text{ cm}$};
+                    \draw (1.9,0.1) -- (2.1,0.1) (1.9,-0.1) -- (2.1,-0.1); % codage
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.45\linewidth}
+                \textbf{Carré EFGH} de côté $c = 12,5 \text{ m}$. 
+
+                \medskip
+                
+                \begin{tikzpicture}[scale=0.5]
+                    \draw[thick] (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle;
+                    \node at (2,-0.5) {$12,5 \text{ m}$};
+                \end{tikzpicture}
+            \end{minipage}
+            
+            \item Calculer le périmètre $P$ des rectangles suivants (attention aux unités) :
+
+            \begin{minipage}{0.45\linewidth}
+                \textbf{Rectangle IJKL} de longueur $L = 8 \text{ cm}$ et de largeur $l = 3 \text{ cm}$. 
+
+                \medskip
+                
+                \begin{tikzpicture}[scale=0.5]
+                    \draw[thick] (0,0) -- (6,0) -- (6,2) -- (0,2) -- cycle;
+                    \node at (3,-0.5) {$8 \text{ cm}$};
+                    \node at (6.8,1) {$3 \text{ cm}$};
+                \end{tikzpicture}
+
+                \vspace{1.5cm}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.45\linewidth}
+                \textbf{Rectangle MNOP} de longueur $L = 1,2 \text{ m}$ et de largeur $l = 40 \text{ cm}$. 
+
+                \medskip
+                
+                \begin{tikzpicture}[scale=0.5]
+                    \draw[thick] (0,0) -- (6,0) -- (6,2.5) -- (0,2.5) -- cycle;
+                    \node at (3,-0.5) {$1,2 \text{ m}$};
+                    \node at (7.2,1.25) {$40 \text{ cm}$};
+                \end{tikzpicture}
+                
+                \vspace{1cm}
+            \end{minipage}
+        \end{enumerate}
+    \end{exemple}
+
+
+\newpage
+
+
+    \begin{exemple}
+        \begin{enumerate}[leftmargin=*]
+            \item Calculer le périmètre de la figure ci-contre.
+            
+            \begin{minipage}{0.7\linewidth}
+            
+                \vspace{3cm}
+                
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.49\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.6]{images/PerimetreExemple1.png}
+                \end{center}
+            \end{minipage}
+
+            \item Calculer le périmètre de la figure ci-contre.
+            
+            \begin{minipage}{0.5\linewidth}
+                
+                \vspace{3cm}
+                
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.49\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.35]{images/PerimetreExemple2.png}
+                \end{center}
+            \end{minipage}
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Le cercle}
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Pi.png}    
+    \end{center}
+    
+    
+    \begin{propriete}
+        \begin{minipage}{0.5\linewidth}
+            Le périmètre d'un cercle de rayon $r$  ou de diamètre $d$ s'obtient grâce à la formule suivante :
+
+            \[\text{Périmètre} = 2 \times \pi \times r = d \times \pi\]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.4]{images/Cercle.png}
+            \end{center}      
+        \end{minipage}
+    \end{propriete}
+
+
+    \begin{remarque}
+        \begin{itemize}
+            \item Le nombre $\pi$ est le nombre qui lie le diamètre et le périmètre du cercle. Il est connu depuis au moins \np{4000} ans.
+
+            \item La lettre $\pi$ vient de l'alphabet grec. C'est notre P majuscule. L'utilisation de cette lettre pour désigner ce nombre est relativement récente et date d'environ 400 ans. C'est la première lettre du mot \textbf{P}érimètre. On doit cette écriture à un anglais !
+
+            \item \underline{Ce nombre n'est pas décimal}, mais on peut en donner une valeur approchée : $\pi\simeq 3,1415 \ldots$
+
+            \item Il existe des poèmes qui permet d'aider à mémoriser les premières décimales de $\pi$.\\
+            Le nombre de lettres de chaque mot donne une décimale de $\pi = 3,14159265...$. La ponctuation ne code rien.
+        \end{itemize}
+    \end{remarque}
+
+
+
+    \begin{center}
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{p{11cm} r}
+            Que j'aime à faire apprendre ce nombre utile aux sages ! & \textbf{3 1 4 1 5 9 2 6 5 3 5} \\
+            Immortel Archimède, artiste ingénieur, & \textbf{8 9 7 9} \\
+            Qui de ton jugement peut priser la valeur ? & \textbf{3 2 3 8 4 6 2 6} \\
+            Pour moi, ton problème eut de pareils avantages. & \textbf{4 3 3 8 3 2 7 9} \\
+            Jadis, mystérieux, un problème bloquait & \textbf{5 0 2 8 8} \\
+            Tout l'admirable procédé, l'œuvre grandiose & \textbf{4 1 9 7 1 6 9} \\
+            Que Pythagore découvrit aux anciens Grecs. & \textbf{3 9 9 3 7 5} \\
+            O quadrature ! Vieux tourment du philosophe & \textbf{1 0 5 8 2 9} \\
+            Insoluble rondeur, trop longtemps vous avez & \textbf{9 7 4 9 4 4} \\
+            Défié Pythagore et ses imitateurs. & \textbf{5 9 2 3 0} \\
+            Comment intégrer l'espace plan circulaire ? & \textbf{7 8 1 6 4 0} \\
+            Former un triangle auquel il équivaudra ? & \textbf{6 2 8 6 2 0} \\
+            Nouvelle invention : Archimède inscrira & \textbf{8 9 9 8} \\
+            Dedans un hexagone ; appréciera son aire & \textbf{6 2 8 0 3 4} \\
+            Fonction du rayon. Pas trop ne s'y tiendra : & \textbf{8 2 5 3 4 2 1 1 7} \\
+            Dédoublera chaque élément antérieur ; & \textbf{0 6 7 9} \\
+            Toujours de l'orbe calculée approchera ; & \textbf{8 2 1 4 8 0} \\
+            Définira limite ; enfin, l'arc, le limiteur & \textbf{8 6 5 1 3 2 8} \\
+            De cet inquiétant cercle, ennemi trop rebelle & \textbf{2 3 0 6 6 4 7} \\
+            Professeur, enseignez son problème avec zèle & \textbf{0 9 3 8 4 4} \\
+        \end{tabular}
+    \end{center}
+  
+
+    \begin{exemple}
+        Donner une valeur approchée au mm près des périmètres des figures suivantes.
+
+        \medskip
+        
+        \begin{minipage}{0.5\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.25]{images/PerimetreCercle1.png}
+            \end{center}    
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            c. 
+            \begin{center}
+                \includegraphics[scale=0.3]{images/PerimetreCercle2.png}
+            \end{center}   
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+    \bigskip
+
+
+\subsection{Les figures complexes}
+
+
+    \begin{exemple}
+        Calculer les périmètres des figures suivantes, les longueurs sont données en centimètre. On arrondira à 0,1 près (soit au mm près).
+
+        \begin{minipage}{0.45\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.35]{images/FigureComplexe1.png}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.35]{images/FigureComplexe2.png}
+            \end{center}
+        \end{minipage}    
+    \end{exemple}
+
+
+\newpage
+
+
+\end{document}

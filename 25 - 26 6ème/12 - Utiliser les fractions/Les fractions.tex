@@ -1,0 +1,493 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11} 
+\renewcommand{\monTitre}{Utiliser les fractions}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+\section{Sens d'une fraction}
+\subsection{En tant que partage}
+    
+    \begin{definitionTitre}{Le quotient et le partage}
+        Une fraction permet de représenter un \textbf{partage équitable}.\\
+        Lorsque l'on partage une unité en $b$ parts égales et que l'on en prend $a$, on obtient la fraction $\frac{a}{b}$.
+        \begin{itemize}
+            \item $a$ est le \textbf{numérateur} (il compte le nombre de parts que l'on prend).
+            \item $b$ est le \textbf{dénominateur} (il indique en combien de parts l'unité est découpée, il donne le nom de la part).
+        \end{itemize}
+    
+        \begin{center}
+            \begin{tabular}{cc}
+                % --- LE RECTANGLE ---
+                \begin{tikzpicture}[scale=0.8]
+                    % On colorie 3 parts sur 4
+                    \fill[cyan!30] (0,0) rectangle (3,2);
+                    % On trace la grille (4 parts égales)
+                    \draw[thick] (0,0) rectangle (4,2);
+                    \draw[thick] (1,0) -- (1,2);
+                    \draw[thick] (2,0) -- (2,2);
+                    \draw[thick] (3,0) -- (3,2);
+                    
+                    % Accolades pour la légende
+                    \draw [decorate, decoration={brace, amplitude=10pt, mirror}] (0,-0.2) -- (4,-0.2) node [black, midway, yshift=-0.6cm] {\footnotesize $b$ parts égales au total};
+                    \draw [decorate, decoration={brace, amplitude=5pt}] (0,2.2) -- (3,2.2) node [black, midway, yshift=0.4cm] {\footnotesize $a$ parts colorées};
+                \end{tikzpicture}
+                & 
+                % --- LE DISQUE ---
+                \begin{tikzpicture}[scale=0.8]
+                    % On colorie 3 parts sur 4
+                    \fill[cyan!30] (0,0) -- (0:1.5) arc (0:270:1.5) -- cycle;
+                    % On trace le cercle et les parts
+                    \draw[thick] (0,0) circle (1.5);
+                    \foreach \a in {0,90,180,270}
+                        \draw[thick] (0,0) -- (\a:1.5);
+                        
+                    % Légende à côté
+                    \node[anchor=west] at (1.8,0.5) {\footnotesize $a$ parts colorées};
+                    \node[anchor=west] at (1.8,-0.5) {\footnotesize $b$ parts égales};
+                    \draw[->,>=latex] (2,0.4) -- (0.5,0.5);
+                    \draw[->,>=latex] (2,-0.4) -- (1.2,-0.8);
+                \end{tikzpicture} \\
+                \textbf{Partage d'un rectangle} & \textbf{Partage d'un disque} \\
+            \end{tabular}
+        \end{center}
+    \end{definitionTitre}
+    
+    \begin{exemple}
+        Si on coupe un gâteau en 4 parts égales et qu'on en mange 3, on a mangé les $\frac{3}{4}$ du gâteau.
+    \end{exemple}
+    
+    \begin{remarque}
+        Le dénominateur $b$ ne peut \textbf{jamais} être égal à zéro ! On ne peut pas diviser par zéro.
+    \end{remarque}
+
+    \begin{exemple}[À toi de jouer !]
+        \begin{enumerate}
+            \item Colorier la fraction $\frac{5}{8}$ du rectangle et $\frac{3}{4}$ du disque ci-dessous :
+            \begin{center}
+                \begin{tabular}{cc}
+                    \begin{tikzpicture}[scale=0.8]
+                        \draw[thick] (0,0) rectangle (8,1.2);
+                        \foreach \x in {1,...,7} \draw (\x,0) -- (\x,1.2);
+                    \end{tikzpicture}
+                    & \quad
+                    \begin{tikzpicture}[scale=0.8]
+                        \draw[thick] (0,0) circle (1.2);
+                        \foreach \a in {0,90,180,270} \draw (0,0) -- (\a:1.2);
+                    \end{tikzpicture} \\
+                \end{tabular}
+            \end{center}
+        
+            \item Dans le rectangle blanc ci-dessous, effectuer le partage nécessaire pour représenter la fraction $\frac{2}{3}$, puis la colorier :
+            \begin{center}
+                \begin{tikzpicture}[scale=0.75]
+                    \draw[thick] (0,0) rectangle (6,1.2);
+                \end{tikzpicture}
+            \end{center}
+        \end{enumerate}
+    \end{exemple}
+
+    
+    \begin{exemple}[Lecture d'un partage]
+        Donner la fraction correspondant à chaque zone colorée :
+        \begin{center}
+            \begin{tabular}{ccc}
+                % Figure A : 1/4
+                \begin{tikzpicture}[scale=0.6]
+                    \fill[cyan!20] (0,0) -- (0:1.2) arc (0:90:1.2) -- cycle;
+                    \draw[thick] (0,0) circle (1.2);
+                    \foreach \a in {0,90,180,270} \draw (0,0) -- (\a:1.2);
+                    \node at (0,-1.8) {Fig. A : \dots\dots};
+                \end{tikzpicture} & 
+                % Figure B : 3/6
+                \begin{tikzpicture}[scale=0.6]
+                    \fill[cyan!20] (0,0) rectangle (3,1);
+                    \draw[thick] (0,0) rectangle (6,1);
+                    \foreach \x in {1,...,5} \draw (\x,0) -- (\x,1);
+                    \node at (3,-0.8) {Fig. B : \dots\dots};
+                \end{tikzpicture} & 
+                % Figure C : 2/5 (un peu plus dur)
+                \begin{tikzpicture}[scale=0.6]
+                    \foreach \i in {0,1} \fill[cyan!20] ({72*\i+18}:1.2) -- ({72*(\i+1)+18}:1.2) -- (0,0) -- cycle;
+                    \draw[thick] (0,0) circle (1.2);
+                    \foreach \a in {18,90,162,234,306} \draw (0,0) -- (\a:1.2);
+                    \node at (0,-1.8) {Fig. C : \dots\dots};
+                \end{tikzpicture} \\
+            \end{tabular}
+        \end{center}
+    \end{exemple}
+    
+       
+\subsection{En tant que nombre}
+
+    \begin{definitionTitre}{Nombre quotient}
+        La fraction $\frac{a}{b}$ est le nombre exact qui, lorsqu'il est multiplié par $b$, donne $a$. 
+        \[ b \times \frac{a}{b} = a \]
+        Ce nombre s'appelle le \textbf{quotient} de $a$ par $b$ et on a $\dfrac{a}{b}=a\div b$
+    \end{definitionTitre}
+    
+    
+    \begin{exemple}
+        \begin{itemize}
+            \item $3 \times \frac{5}{3} = 5$ \quad ($\frac{5}{3}$ est le nombre qui multiplié par 3 donne 5).
+            \item $7 \times \frac{2}{7} = 2$ \quad ($\frac{2}{7}$ est le nombre qui multiplié par 7 donne 2).
+        \end{itemize}
+    \end{exemple}
+    
+        
+    \begin{exemple}[Compléter les égalités]
+        Complèter les égalités suivantes :
+        
+        \begin{center}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabularx}{\textwidth}{XXX}
+            \textbf{a)} $5 \times \dfrac{7}{5} = \dots\dots$ & \textbf{b)} $12 \times \points[2] = 10$ & \textbf{c)} $\points[2] \times \dfrac{9}{4} = 9$ \\[1ex]
+            \textbf{d)} $8 \times \dfrac{3}{8} = \dots\dots$ & \textbf{e)} $100 \times \points[2] = 45$ & \textbf{f)} $13 \times \dfrac{2}{13} = \dots\dots$
+        \end{tabularx}
+        \end{center}
+    \end{exemple}
+    
+    
+    \begin{remarque}
+        Une fraction peut avoir une écriture décimale (un nombre à virgule) ou non :
+        \begin{itemize}
+            \item $\frac{3}{4} = 0,75$ (C'est un nombre décimal).
+            \item $\frac{1}{3} \approx 0,333\dots$ (Ce n'est pas un nombre décimal : il y a une infinité de chiffres après la virgule).
+            \item $\frac{12}{4} = 3$ (C'est un nombre entier donc un nombre décimal).
+        \end{itemize}
+    \end{remarque}
+
+
+\subsection{Repérage sur une demi-droite graduée}
+
+    \begin{definitionTitre}{L'abscisse}
+        Sur une demi-droite graduée, chaque point est repéré par un nombre appelé son \textbf{abscisse}. 
+    \end{definitionTitre}
+    
+    \begin{methodeTitre}{Placer ou lire une fraction}
+        Pour placer (ou lire) une fraction $\dfrac{a}{b}$ sur une demi-droite graduée :
+        \begin{enumerate}
+            \item On regarde le \textbf{dénominateur} ($b$) : il indique en combien de parts égales l'unité (l'écart entre $0$ et $1$) est découpée.
+            \item On regarde le \textbf{numérateur} ($a$) : il indique le nombre de graduations à compter à partir de l'origine ($0$).
+        \end{enumerate}
+    \end{methodeTitre}
+    
+    
+    \begin{exemple}[Exemple 8 : Lire l'abscisse d'un point]
+        Déterminer les abscisses des points $A$, $B$ et $C$ sur la demi-droite graduée ci-dessous :
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.5, x=1.5cm, y=1cm] % 1 unité = 4 graduations = 6cm (4 * 1.5)
+                % Axe principal
+                \draw[thick, ->, >=latex] (0,0) -- (9.5,0);
+                
+                % Graduations secondaires (les quarts)
+                \foreach \x in {0,1,...,9} {
+                    \draw (\x, -0.1) -- (\x, 0.1);
+                }
+                
+                % Graduations principales (0, 1, 2) - espacées de 4 sous-graduations
+                \foreach \x/\label in {0/0, 4/1, 8/2} {
+                    \draw[thick] (\x, -0.2) -- (\x, 0.2);
+                    \node[below=0.2cm] at (\x, 0) {$\label$};
+                }
+                
+                % Placement des points
+                \fill[red] (3,0) circle (2.5pt);
+                \node[above=0.2cm, text=red] at (3,0) {$A$};
+                
+                \fill[blue] (6,0) circle (2.5pt);
+                \node[above=0.2cm, text=blue] at (6,0) {$B$};
+                
+                \fill[green!60!black] (9,0) circle (2.5pt);
+                \node[above=0.2cm, text=green!60!black] at (9,0) {$C$};
+                
+            \end{tikzpicture}
+        \end{center}
+        
+        \vspace{0.2cm}
+        \textbf{Explication :} L'unité (entre $0$ et $1$) est partagée en \textbf{4 parts égales}. Les graduations représentent donc des \textbf{quarts}.
+        \begin{itemize}
+            \item Le point $A$ est sur la 3\up{ème} graduation : son abscisse est \colorbox{cyan!10}{$A\left( \dfrac{3}{4} \right)$}.
+            \item Le point $B$ est sur la 6\up{ème} graduation : son abscisse est \colorbox{cyan!10}{$B\left( \dfrac{6}{4} \right)$}.
+            \item Le point $C$ est sur la 9\up{ème} graduation : son abscisse est \colorbox{cyan!10}{$C\left( \dfrac{9}{4} \right)$}.
+        \end{itemize}
+    \end{exemple}
+
+    
+    \begin{exemple}[À toi de jouer !]
+        Placer les points suivants sur la demi-droite graduée : 
+        \quad $D\left( \dfrac{5}{6} \right)$ \quad ; \quad $E\left( \dfrac{11}{6} \right)$ \quad ; \quad $F\left( \dfrac{15}{6} \right)$
+        
+        \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm] 
+                % Axe principal
+                \draw[thick, ->, >=latex] (0,0) -- (16.5,0);
+                
+                % Graduations secondaires (les sixièmes)
+                \foreach \x in {0,1,...,16} {
+                    \draw (\x, -0.1) -- (\x, 0.1);
+                }
+                
+                % Graduations principales (0, 1, 2) - espacées de 6 sous-graduations
+                \foreach \x/\label in {0/0, 6/1, 12/2} {
+                    \draw[thick] (\x, -0.25) -- (\x, 0.25);
+                    \node[below=0.2cm] at (\x, 0) {$\label$};
+                }
+            \end{tikzpicture}
+        \end{center}
+    \end{exemple}
+    
+    
+\section{Fractions égales}
+\subsection{Cas général}
+    
+    \begin{proprieteTitre}{Fractions égales}
+        Un quotient ne change pas si on \textbf{multiplie} ou si on \textbf{divise} son numérateur ET son dénominateur par un \textbf{même nombre} (différent de zéro).
+    \end{proprieteTitre}
+    
+    
+    \begin{exemple}
+        $\dfrac{2}{3} = \dfrac{2 \times 4}{3 \times 4} = \dfrac{8}{12}$ \hspace{2cm} $\dfrac{15}{20} = \dfrac{15 \div 5}{20 \div 5} = \dfrac{3}{4}$
+    \end{exemple}
+    
+    
+    \begin{methodeTitre}{Simplifier une fraction}
+        Simplifier une fraction, c'est trouver une fraction égale mais avec un numérateur et un dénominateur plus petits. On utilise les critères de divisibilité pour trouver un diviseur commun aux deux nombres.
+    \end{methodeTitre}
+
+
+    \begin{exemple}[Simplifier des fractions]
+        Trouver le nombre manquant en utilisant la propriété.
+        \begin{center}
+            \renewcommand{\arraystretch}{3} % On augmente encore l'espace vertical
+            \begin{tabularx}{\textwidth}{XXX}
+                \textbf{a)} $\dfrac{2}{3} = \dfrac{\points[3]}{\points[3]} = \dfrac{\dots\dots}{15}$ & 
+                \textbf{b)} $\dfrac{21}{14} = \dfrac{\points[3]}{\points[3]} = \dfrac{3}{\dots\dots}$ & 
+                \textbf{c)} $\dfrac{5}{7} = \dfrac{\points[3]}{\points[3]} = \dfrac{\dots\dots}{28}$ \\
+            \end{tabularx}
+        \end{center}
+    \end{exemple}
+    
+    
+\subsection{Cas particulier des pourcentages}
+
+    \begin{definitionTitre}{Pourcentage}
+        Un pourcentage est une fraction dont le dénominateur est $100$. On utilise le symbole $\%$.
+    \end{definitionTitre}
+    
+    \begin{exemple}
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8, auto, >=latex, thick]
+                % Les noeuds (les nombres)
+                \node (A) at (0,0) {\Large $25\,\%$};
+                \node (B) at (3,0) {\Large $\dfrac{25}{100}$};
+                \node (C) at (7,0) {\Large $\dfrac{25 \div 25}{100 \div 25}$};
+                \node (D) at (11,0) {\Large $\dfrac{1}{4}$};
+    
+                % Les flèches avec les explications
+                \draw[->, cyan!70!black] (A) -- node[above] {\footnotesize s'écrit} (B);
+                \draw[->, cyan!70!black] (B) -- node[above] {\footnotesize on simplifie} (C);
+                \draw[->, cyan!70!black] (C) -- node[above] {\footnotesize on obtient} (D);
+            \end{tikzpicture}
+        \end{center}
+        
+        \vspace{0.3cm}
+        \textbf{Conclusion :} Prendre $\mathbf{25\,\%}$ d'une quantité revient donc à en prendre \textbf{le quart}.
+    \end{exemple}
+    
+    \begin{exemple}[À toi de jouer !]
+        En s'aidant de l'exemple ci-dessus, compléter les chaînes d'opérations pour trouver à quelle fraction simplifiée (ou nombre entier) correspond chaque pourcentage :
+    
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8, auto, >=latex, thick]
+
+                % --- 20 % (Moins guidé) ---
+                \node (A2) at (0,-2.5) {\Large $20\,\%$};
+                \node (B2) at (3,-2.5) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                \node (C2) at (7,-2.5) {\Large $\dfrac{\dots\dots \div \dots\dots}{\dots\dots \div \dots\dots}$};
+                \node (D2) at (11,-2.5) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                
+                % --- 50 % (Très guidé) ---
+                \node (A1) at (0,0) {\Large $50\,\%$};
+                \node (B1) at (3,0) {\Large $\dfrac{\dots\dots}{100}$};
+                \node (C1) at (7,0) {\Large $\dfrac{50 \div \dots\dots}{100 \div \dots\dots}$};
+                \node (D1) at (11,0) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                
+                \draw[->, cyan!70!black] (A1) -- node[above] {\footnotesize s'écrit} (B1);
+                \draw[->, cyan!70!black] (B1) -- node[above] {\footnotesize on simplifie} (C1);
+                \draw[->, cyan!70!black] (C1) -- node[above] {\footnotesize on obtient} (D1);
+                
+                \draw[->, cyan!70!black] (A2) -- node[above] {\footnotesize s'écrit} (B2);
+                \draw[->, cyan!70!black] (B2) -- node[above] {\footnotesize on simplifie} (C2);
+                \draw[->, cyan!70!black] (C2) -- node[above] {\footnotesize on obtient} (D2);
+    
+                % --- 75 % (Libre) ---
+                \node (A3) at (0,-5) {\Large $75\,\%$};
+                \node (B3) at (3,-5) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                \node (C3) at (7,-5) {\Large $\dfrac{\dots\dots \div \dots\dots}{\dots\dots \div \dots\dots}$};
+                \node (D3) at (11,-5) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                
+                \draw[->, cyan!70!black] (A3) -- node[above] {\footnotesize s'écrit} (B3);
+                \draw[->, cyan!70!black] (B3) -- node[above] {\footnotesize on simplifie} (C3);
+                \draw[->, cyan!70!black] (C3) -- node[above] {\footnotesize on obtient} (D3);
+    
+                % --- 100 % (Libre avec résultat entier) ---
+                \node (A4) at (0,-7.5) {\Large $100\,\%$};
+                \node (B4) at (3,-7.5) {\Large $\dfrac{\dots\dots}{\dots\dots}$};
+                \node (C4) at (7,-7.5) {\Large $\dfrac{\dots\dots \div \dots\dots}{\dots\dots \div \dots\dots}$};
+                \node (D4) at (11,-7.5) {\Large $\dots\dots$}; % Résultat entier, pas de fraction
+                
+                \draw[->, cyan!70!black] (A4) -- node[above] {\footnotesize s'écrit} (B4);
+                \draw[->, cyan!70!black] (B4) -- node[above] {\footnotesize on simplifie} (C4);
+                \draw[->, cyan!70!black] (C4) -- node[above] {\footnotesize on obtient} (D4);
+    
+            \end{tikzpicture}
+        \end{center}
+    \end{exemple}
+
+    
+\section{Ranger, encadrer, comparer des fractions}
+\subsection{Comparer une fraction à 1}
+    
+    \begin{propriete}
+        On peut savoir si une fraction est plus grande ou plus petite que 1 en regardant son numérateur et son dénominateur :
+        \begin{itemize}
+            \item Si le numérateur est \textbf{inférieur} au dénominateur, alors la fraction est \textbf{inférieure à 1}.
+            \item Si le numérateur est \textbf{supérieur} au dénominateur, alors la fraction est \textbf{supérieure à 1}.
+            \item Si le numérateur est \textbf{égal} au dénominateur, alors la fraction est \textbf{égale à 1}.
+        \end{itemize}
+    \end{propriete}
+    
+    \begin{exemple}[Comparaison à l'unité]
+    Complète avec les symboles $<$ , $>$ ou $=$ :
+    \begin{center}
+        \renewcommand{\arraystretch}{2}
+        \begin{tabularx}{0.8\textwidth}{XXX}
+            $\dfrac{14}{15} \points[2] 1$ & $\dfrac{3}{2} \points[2] 1$ & $\dfrac{8}{8} \points[2] 1$ \\
+        \end{tabularx}
+    \end{center}
+    \end{exemple}
+
+\subsection{Cas particuliers}
+    
+    \begin{propriete}
+        \begin{minipage}[t]{0.48\textwidth}
+            \textbf{1. Même dénominateur} \\
+            Si deux fractions ont le même dénominateur, la plus grande est celle qui a le \textbf{plus grand numérateur}. \\
+            \textit{(On prend plus de parts)}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.48\textwidth}
+            \textbf{2. Même numérateur} \\
+            Si deux fractions ont le même numérateur, la plus grande est celle qui a le \textbf{plus petit dénominateur}. \\
+            \textit{(Les parts sont plus grosses)}
+        \end{minipage}
+    \end{propriete}
+    
+    
+    \begin{exemple}[Exemples visuels]
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering
+            \textbf{Même dénominateur :} $\dfrac{3}{4}$ et $\dfrac{1}{4}$
+            \vspace{0.4cm}
+            
+            \begin{tikzpicture}[scale=0.6]
+                % Fraction 3/4 (en haut)
+                \fill[cyan!20] (0,1.5) rectangle (3,2.5);
+                \draw[thick] (0,1.5) rectangle (4,2.5);
+                \foreach \x in {1,2,3} \draw (\x,1.5) -- (\x,2.5);
+                \node[left] at (-0.2, 2) {$\dfrac{3}{4}$};
+                
+                % Fraction 1/4 (en bas)
+                \fill[cyan!20] (0,0) rectangle (1,1);
+                \draw[thick] (0,0) rectangle (4,1);
+                \foreach \x in {1,2,3} \draw (\x,0) -- (\x,1);
+                \node[left] at (-0.2, 0.5) {$\dfrac{1}{4}$};
+            \end{tikzpicture}
+            
+            \vspace{0.3cm}
+            On obtient : \quad \colorbox{cyan!10}{$\mathbf{\dfrac{3}{4} > \dfrac{1}{4}}$}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering
+            \textbf{Même numérateur :} $\dfrac{2}{3}$ et $\dfrac{2}{5}$
+            \vspace{0.4cm}
+            
+            \begin{tikzpicture}[scale=0.6]
+                % Fraction 2/3 (en haut, longueur totale = 6 pour être divisible par 3)
+                \fill[cyan!20] (0,1.5) rectangle (4,2.5);
+                \draw[thick] (0,1.5) rectangle (6,2.5);
+                \foreach \x in {2,4} \draw (\x,1.5) -- (\x,2.5);
+                \node[left] at (-0.2, 2) {$\dfrac{2}{3}$};
+                
+                % Fraction 2/5 (en bas, longueur totale = 6 pour être divisible par 5)
+                % 6 divisé par 5 = 1.2 par part. On colorie 2 parts, soit 2.4.
+                \fill[cyan!20] (0,0) rectangle (2.4,1);
+                \draw[thick] (0,0) rectangle (6,1);
+                \foreach \x in {1.2, 2.4, 3.6, 4.8} \draw (\x,0) -- (\x,1);
+                \node[left] at (-0.2, 0.5) {$\dfrac{2}{5}$};
+            \end{tikzpicture}
+            
+            \vspace{0.3cm}
+            On obtient : \quad \colorbox{cyan!10}{$\mathbf{\dfrac{2}{3} > \dfrac{2}{5}}$}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{exemple}[À toi de jouer !]        
+        Compléter avec le symbole $<$ (plus petit que) ou $>$ (plus grand que) :
+
+        \vspace{0.2cm}
+        \textit{Observe bien les fractions avant de répondre. Demande-toi d'abord si ce sont les numérateurs ou les dénominateurs qui sont identiques !}
+        
+        \begin{center}
+            \renewcommand{\arraystretch}{2.5}
+            % J'utilise >{\centering\arraybackslash}X pour forcer le centrage sans erreur
+            \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+                \textbf{a)} $\dfrac{5}{8} \dots\dots \dfrac{7}{8}$ & 
+                \textbf{b)} $\dfrac{3}{5} \dots\dots \dfrac{3}{8}$ & 
+                \textbf{c)} $\dfrac{14}{10} \dots\dots \dfrac{9}{10}$ \\
+                \textbf{d)} $\dfrac{7}{12} \dots\dots \dfrac{7}{10}$ & 
+                \textbf{e)} $\dfrac{11}{4} \dots\dots \dfrac{11}{3}$ & 
+                \textbf{f)} $\dfrac{6}{7} \dots\dots \dfrac{5}{7}$ \\
+            \end{tabularx}
+        \end{center}
+    \end{exemple}
+
+
+\subsection{Décomposer une fraction}
+
+    \begin{propriete}
+        Toute fraction peut s'écrire comme la \textbf{somme d'un nombre entier et d'une fraction inférieure à 1}.        
+    \end{propriete}
+    
+    
+    \begin{exemple}
+        Prenons la fraction $\dfrac{22}{5}$. 
+        \begin{itemize}
+            \item On cherche combien de fois 5 rentre dans 22 : il y va \textbf{4} fois ($4 \times 5 = 20$) et il reste \textbf{2}.
+            \item On peut donc écrire : $\dfrac{22}{5} = \dfrac{20}{5} + \dfrac{2}{5} = 4 + \dfrac{2}{5}$.
+        \end{itemize}
+    \end{exemple}
+    
+    \begin{exemple}[À toi de jouer]
+        Décomposer les fractions suivantes sous la forme \textit{Entier + Fraction < 1} :
+        \begin{center}
+            \renewcommand{\arraystretch}{2.5}
+            \begin{tabularx}{\textwidth}{XX}
+                \textbf{a)} $\dfrac{13}{4} = \points[2] + \dfrac{\dots\dots}{\dots\dots}$ & \textbf{b)} $\dfrac{37}{10} = \points[2] + \dfrac{\dots\dots}{\dots\dots}$ \\[20ex]
+                \textbf{c)} $\dfrac{17}{3} = \points[2] + \dfrac{\dots\dots}{\dots\dots}$ & \textbf{d)} $\dfrac{42}{8} = \points[2] + \dfrac{\dots\dots}{\dots\dots}$ \\
+            \end{tabularx}
+        \end{center}
+    \end{exemple}
+
+
+\end{document}

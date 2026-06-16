@@ -1,0 +1,386 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle3.tex}
+
+
+\begin{document}
+\setcounter{Interro}{9}
+\newcommand{\maDate}{04/05}
+\usetag{correction}
+
+
+\untagged{correction}{
+\NomPrenom
+\enteteInterroUnique{\theInterro}{\maDate}
+    
+    % --- Tableau des compétences ---
+    \TableauCompetencesQuatre
+        {\CompetenceSept}
+        {\CompetenceSix{5}}
+        {\CompetenceTrois{10}} 
+        {\CompetenceTrois{7}}
+        
+    
+    % --- EXERCICE 1 : COURS ---
+    \begin{exerciceNote}{5}
+        \begin{enumerate}
+            \item Compléter le tableau suivant en associant chaque figure à son nom et à sa nature.
+        
+            \begin{center}
+            \renewcommand{\arraystretch}{4} % Hauteur des lignes augmentée
+            \begin{tabularx}{\textwidth}{|m{3.5cm}|*3{>{\centering\arraybackslash}X|}}
+                \hline
+                \rowcolor{gray!15} \textbf{Schéma} & \textbf{Nom} & \textbf{Mesure} & \textbf{Nature} \\ \hline
+                % Ligne 1 : On donne le dessin
+                \centering
+                \begin{tikzpicture}[baseline=(current bounding box.center), scale=0.7]
+                    \draw[thick] (0,0) node[left]{$O$} -- (30:1.5) node[right]{$x$};
+                    \draw[thick] (0,0) -- (0:1.5) node[right]{$y$};
+                    \draw[green!55!black] (0.4,0) arc (0:30:0.4);
+                \end{tikzpicture} & \points[2] & \points[2] & \points[3] \\ \hline
+                % Ligne 2 : On donne le nom et la mesure (Case schéma vide)
+                \vspace{2.5cm} & $\widehat{ABC}$ & $90^{\circ}$ & \points[3] \\ \hline
+                % Ligne 3 : On donne le dessin (On garde l'obtus)
+                \centering
+                \begin{tikzpicture}[baseline=(current bounding box.center), scale=0.7]
+                    \draw[thick] (1.5,0) node[right]{$L$} -- (0,0) node[left]{$K$} -- (135:1.5) node[above]{$M$};
+                    \draw[green!55!black] (0.4,0) arc (0:135:0.4);
+                \end{tikzpicture} & \points[2] & $135^{\circ}$ & \points[3] \\ \hline
+                % Ligne 4 : Angle plat (Case schéma vide)
+                \vspace{2.5cm} & $\widehat{uOv}$ & $180^{\circ}$ & \points[3] \\ \hline
+            \end{tabularx}
+            \end{center}
+            
+            \item Donner la définition de deux angles \textbf{supplémentaires}.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+            
+            \item Faire un schéma à main levée de deux angles \textbf{adjacents} puis en donner la définition.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item Faire un schéma à main levée de deux angles \textbf{opposés par le sommet}. Coder sur la figure les angles de même mesure.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+    
+
+\newpage
+
+
+    % --- EXERCICE 2 : LECTURE ---
+    \begin{exerciceNote}{3}
+        Indiquer la mesure des deux angles ci-dessous en utilisant les graduations du rapporteur.
+        
+        \begin{center}
+            \includegraphics[scale=0.22]{images/Interro09_Exo02.png}
+        \end{center}
+    
+        \text{} \hspace{1cm}
+        Mesure de l'Angle 1 : \points[2] $^{\circ}$ \hfill Mesure de l'Angle 2 : \points[2] $^{\circ}$ \hfill Mesure de l'Angle 3 : \points[2] $^{\circ}$
+        \hspace{1cm} \text{}
+    \end{exerciceNote}
+    
+    
+    % --- EXERCICE 3 : CONSTRUCTION ---
+    \begin{exerciceNote}{3}
+        1. Construire les angles suivants en utilisant le segment $[AB]$ comme côté : \\
+        $\widehat{BAC} = 55^{\circ}$ \quad $\widehat{ABD} = 140^{\circ}$
+
+        2. Construire en vert la bissectrice de l'angle $\widehat{ABD}$.
+        
+        \vspace{3cm} % Espace pour tracer
+        \centering\begin{tikzpicture} \draw[thick] (0,0) node[left]{$A$} -- (5,0) node[right]{$B$}; \end{tikzpicture}
+    \end{exerciceNote}
+    
+    
+    % --- EXERCICE 4 : CALCULS ---
+    \begin{exerciceNote}{2}
+        Les points $A, O, B$ sont alignés. Sachant que $\widehat{AOC} = 42^{\circ}$, calculer la mesure de $\widehat{COB}$. Justifier.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.6]
+                \draw[thick] (-2,0) node[below]{$A$} -- (0,0) node[below]{$O$} -- (3,0) node[below]{$B$};
+                \draw[thick] (0,0) -- (140:2.5) node[left]{$C$};
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{ZoneReponse}{2.5cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+    
+    % --- EXERCICE 5 : TRIANGLES ET FIGURES ---
+    \begin{exerciceNote}{3}
+        Construire un triangle $EFG$ tel que $EF = 6$~cm, $\widehat{FEG} = 40^{\circ}$ et $\widehat{EFG} = 70^{\circ}$.
+        
+        \begin{ZoneReponse}{6cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+
+\newpage
+
+
+    % --- EXERCICE 5 : FIGURE COMPLEXE ---
+    \begin{exerciceNote}{4}
+        La figure ci-dessous est donnée à titre indicatif (elle n'est pas en vraie grandeur).
+        \\ \textbf{Consigne :} Reproduire cette figure en vraie grandeur sur l'espace vide ci-dessous.
+        
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % 1. Définition des points (Cercle de rayon 3cm)
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (110:3);
+            \coordinate (B) at (40:3);
+            \coordinate (C) at (-20:3);
+            \coordinate (D) at (-100:3);
+            \coordinate (E) at (190:3);
+        
+            % 2. Tracé du cercle et des segments
+            \draw[thick] (O) circle (3cm);
+            \draw[thick] (A) -- (B) -- (C) -- (D) -- (O) -- (E) -- cycle;
+        
+            % 3. Marquage des angles (avec remplissage couleur)
+            % Angle A (jaune)
+            \begin{scope}
+                \clip (A) -- (B) -- (E) -- cycle;
+                \draw[fill=yellow, opacity=0.6] (A) circle (0.7);
+            \end{scope}
+            \node at (105:2.2) {$108^\circ$};
+        
+            % Angle E (rouge)
+            \begin{scope}
+                \clip (E) -- (A) -- (O) -- cycle;
+                \draw[fill=red, opacity=0.6] (E) circle (0.6);
+            \end{scope}
+            \node at (185:2.3) {$60^\circ$};
+        
+            % Angle O (vert)
+            \begin{scope}
+                \clip (O) -- (E) -- (D) -- cycle;
+                \draw[fill=green!70!black, opacity=0.6] (O) circle (0.6);
+            \end{scope}
+            \node at (-130:0.8) {$53^\circ$};
+        
+            % Angle D (bleu)
+            \begin{scope}
+                \clip (D) -- (O) -- (C) -- cycle;
+                \draw[fill=cyan, opacity=0.6] (D) circle (0.7);
+            \end{scope}
+            \node at (-90:2.2) {$42^\circ$};
+        
+            % 4. Codage des longueurs (le petit trait sur OE et OD)
+            \draw[thick] ($(O)!0.5!(E)+(80:0.15)$) -- ($(O)!0.5!(E)+(-100:0.15)$);
+            \draw[thick] ($(O)!0.5!(D)+(10:0.15)$) -- ($(O)!0.5!(D)+(190:0.15)$);
+            
+            % 5. Texte des mesures de segments
+            \node[above] at ($(O)!0.5!(E)$) {4 cm};
+        
+            % 6. Nom des sommets
+            \node[above left] at (A) {A};
+            \node[above right] at (B) {B};
+            \node[right] at (C) {C};
+            \node[below] at (D) {D};
+            \node[left] at (E) {E};
+            \node[above right] at (O) {O};            
+        \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+}
+
+
+\tagged{correction}{
+\enteteInterroUniqueCorrection{\theInterro}{\maDate}
+
+    % --- EXERCICE 1 : COURS ---
+    \begin{exerciceNote}{5}
+        \begin{enumerate}
+            \item \textbf{Tableau complété :}
+            \begin{center}
+            \renewcommand{\arraystretch}{2.5}
+            \begin{tabularx}{\textwidth}{|m{3.5cm}|*3{>{\centering\arraybackslash}X|}}
+                \hline
+                \rowcolor{gray!15} \textbf{Schéma} & \textbf{Nom} & \textbf{Mesure} & \textbf{Nature} \\ \hline
+                \centering \begin{tikzpicture}[scale=0.5] \draw[thick] (0,0) -- (30:1.5); \draw[thick] (0,0) -- (0:1.5); \draw[green!55!black] (0.4,0) arc (0:30:0.4); \end{tikzpicture} & \color{blue} $\widehat{xOy}$ & \color{blue} $30^{\circ}$ & \color{blue} Aigu \\ \hline
+                \centering \color{blue} \begin{tikzpicture}[scale=0.4] \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (0,1.5); \draw (0.3,0) -- (0.3,0.3) -- (0,0.3); \end{tikzpicture} & $\widehat{ABC}$ & $90^{\circ}$ & \color{blue} Droit \\ \hline
+                \centering \begin{tikzpicture}[scale=0.5] \draw[thick] (1.5,0) -- (0,0) -- (135:1.5); \draw[green!55!black] (0.4,0) arc (0:135:0.4); \end{tikzpicture} & \color{blue} $\widehat{LKM}$ & $135^{\circ}$ & \color{blue} Obtus \\ \hline
+                \centering \color{blue} \begin{tikzpicture}[scale=0.4] \draw[thick] (-1.5,0) -- (1.5,0); \draw[green!55!black] (0.5,0) arc (0:180:0.5); \end{tikzpicture} & $\widehat{uOv}$ & $180^{\circ}$ & \color{blue} Plat \\ \hline
+            \end{tabularx}
+            \end{center}
+            
+            \item \textbf{Angles supplémentaires :} \color{blue} Deux angles sont dits supplémentaires si la somme de leurs mesures est égale à $180^{\circ}$.
+            
+            \item \textbf{Angles adjacents :} \color{blue} Deux angles sont adjacents s'ils ont un sommet commun, un côté commun et s'ils sont situés de part et d'autre de ce côté commun.
+            
+            \item \textbf{Angles opposés par le sommet :} \color{blue} Deux angles sont opposés par le sommet s'ils ont un sommet commun et si leurs côtés sont dans le prolongement l'un de l'autre. Ils ont alors la même mesure.
+        \end{enumerate}
+    \end{exerciceNote}
+    
+
+    % --- EXERCICE 2 : LECTURE ---
+    \begin{exerciceNote}{3}
+        Indiquer la mesure des deux angles ci-dessous en utilisant les graduations du rapporteur.
+        
+        \begin{center}
+            \includegraphics[scale=0.22]{images/Interro09_Exo02.png}
+        \end{center}
+        
+        \color{blue} 
+        Angle 1 : $59^{\circ}$ \hfill Angle 2 : $161^{\circ}$ \hfill Angle 3 : $73^{\circ}$
+    \end{exerciceNote}
+    
+
+    % --- EXERCICE 3 : CONSTRUCTION ---
+    \begin{exerciceNote}{3}
+        1. Construire les angles suivants en utilisant le segment $[AB]$ comme côté : \\
+        $\widehat{BAC} = 55^{\circ}$ \quad $\widehat{ABD} = 140^{\circ}$
+
+        2. Construire en vert la bissectrice de l'angle $\widehat{ABD}$.
+        
+        \textbf{Tracé de la correction :}
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % 1. Segment de base
+            \draw[thick] (0,0) coordinate(A) node[left]{$A$} -- (5,0) coordinate(B) node[right]{$B$};
+            
+            % 2. Angle BAC = 55° (Sommet A, direction 55°)
+            \draw[blue, thick] (A) -- (55:4.5) coordinate(C) node[above]{$C$};
+            \draw[red, thick] (0.8,0) arc (0:55:0.8) node[midway, right, xshift=2pt] {$55^\circ$};
+            
+            % 3. Angle ABD = 140° (Sommet B, direction 180-140 = 40°)
+            % On part de B(5,0) et on trace vers le haut-droite pour que l'angle avec [BA] soit de 140°
+            \draw[blue, thick] (B) -- ++(40:4.5) coordinate(D) node[above]{$D$};
+            \draw[red, thick] (4.2,0) arc (180:40:0.8) node[midway, above left] {$140^\circ$};
+            
+            % 4. Bissectrice de l'angle ABD (Vert)
+            % La bissectrice est au milieu de 180° (vers A) et 40° (vers D)
+            % (180 + 40) / 2 = 110°
+            \draw[ForestGreen, thick, dashed] (B) -- ++(110:5) node[above]{bissectrice};
+            
+            % Codage de la bissectrice (deux arcs simples)
+            \draw[ForestGreen] (4.4,0) arc (180:110:0.6) node[midway, left, yshift=2pt] {$\times$};
+            \draw[ForestGreen] (4.4,0) arc (110:40:0.6) node[midway, right, yshift=3pt] {$\times$};
+        \end{tikzpicture}
+        \end{center}
+        \color{blue}
+        \textbf{Note :} L'angle $\widehat{ABD}$ est bien obtus. La bissectrice partage l'angle de $140^{\circ}$ en deux angles égaux de $70^{\circ}$.
+    \end{exerciceNote}
+    
+
+     % --- EXERCICE 4 : CALCULS ---
+    \begin{exerciceNote}{2}
+        \color{blue}
+        Les points $A, O, B$ sont alignés, donc $\widehat{AOB}$ est un angle plat qui mesure $180^{\circ}$.\\
+        Les angles $\widehat{AOC}$ et $\widehat{COB}$ sont donc supplémentaires.\\
+        $\widehat{COB} = 180^{\circ} - \widehat{AOC} = 180^{\circ} - 42^{\circ} = \mathbf{138^{\circ}}$.
+    \end{exerciceNote}
+
+
+    % --- EXERCICE 5 : TRIANGLE EFG (CORRIGÉ) ---
+    \begin{exerciceNote}{3}
+        \textbf{Tracé du triangle $EFG$ :}
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % 1. Points de base
+            \coordinate (E) at (0,0);
+            \coordinate (F) at (6,0);
+            
+            % 2. Placement précis de G 
+            % Comme l'angle G = 70°, le triangle est isocèle en E (EG = EF = 6cm)
+            \coordinate (G) at (40:6); 
+
+            % 3. Tracé des demi-droites prolongées (comme sur l'image)
+            \draw[blue, thick] (E) -- (40:7.5); % Segment EG prolongé
+            \draw[blue, thick] (F) -- ++(110:6); % Segment FG prolongé vers le haut
+
+            % 4. Tracé de la base
+            \draw[blue, ultra thick] (E) node[left]{$E$} -- (F) node[right]{$F$};
+            \node[blue, below] at (3,0) {6 cm};
+
+            % 5. Marquage du sommet G
+            \node[above, blue, xshift=-2pt] at (G) {$G$};
+
+            % 6. Marquage des angles
+            \draw[red, thick] (0.8,0) arc (0:40:0.8) node[midway, right, xshift=2pt] {40$^\circ$};
+            \draw[red, thick] (5.2,0) arc (180:110:0.8) node[midway, left, xshift=-2pt] {70$^\circ$};
+        \end{tikzpicture}
+        \end{center}
+        \color{blue}
+        \textbf{Vérification :} L'angle en $F$ est obtenu en traçant une demi-droite inclinée à $110^\circ$ ($180 - 70$) par rapport à l'axe horizontal.
+    \end{exerciceNote}
+
+   
+    % --- EXERCICE 6 : FIGURE COMPLEXE (VERSION CORRIGÉE) ---
+    \begin{exerciceNote}{4}
+        \textbf{Figure finale attendue :}
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            % 1. Définition des coordonnées (ajustées pour la géométrie)
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (110:3);
+            \coordinate (B) at (40:3);
+            \coordinate (C) at (-15:3);
+            \coordinate (D) at (-117:3); % 190 + 53 = 243 (ou -117)
+            \coordinate (E) at (190:3);
+
+            % 2. Remplissage des angles avec la méthode CLIP (Zéro erreur d'angle)
+            % Angle A (Jaune) - délimité par B, A et E
+            \begin{scope}
+                \clip (A) -- (B) -- (E) -- cycle;
+                \fill[yellow, opacity=0.5] (A) circle (0.8);
+            \end{scope}
+            
+            % Angle E (Rouge) - délimité par A, E et O
+            \begin{scope}
+                \clip (E) -- (A) -- (O) -- cycle;
+                \fill[red, opacity=0.5] (E) circle (0.7);
+            \end{scope}
+            
+            % Angle O (Vert) - délimité par E, O et D
+            \begin{scope}
+                \clip (O) -- (E) -- (D) -- cycle;
+                \fill[green!70!black, opacity=0.5] (O) circle (0.7);
+            \end{scope}
+            
+            % Angle D (Bleu) - délimité par O, D et C
+            \begin{scope}
+                \clip (D) -- (O) -- (C) -- cycle;
+                \fill[cyan, opacity=0.5] (D) circle (0.8);
+            \end{scope}
+
+            % 3. Tracés des segments et du cercle
+            \draw[gray!30] (O) circle (3);
+            \draw[blue, ultra thick] (A) -- (B) -- (C) -- (D) -- (O) -- (E) -- cycle;
+
+            % 4. Labels des sommets et mesures
+            \node[above left] at (A) {A}; 
+            \node[above right] at (B) {B};
+            \node[right] at (C) {C}; 
+            \node[below] at (D) {D};
+            \node[left] at (E) {E}; 
+            \node[above right] at (O) {O};
+            
+            \node at (105:2.1) {\small $108^\circ$};
+            \node at (185:2.3) {\small $60^\circ$};
+            \node at (-135:0.8) {\small $53^\circ$};
+            \node at (-95:2.3) {\small $42^\circ$};
+            \node[above, blue, rotate=10] at (195:1.5) {4 cm};
+
+            % 5. Codage des segments égaux (OE et OD)
+            \draw[thick] (190:1.5) ++(100:0.15) -- ++(-80:0.3);
+            \draw[thick] (-117:1.5) ++(-27:0.15) -- ++(153:0.3);
+        \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+
+   
+}
+
+\end{document}
