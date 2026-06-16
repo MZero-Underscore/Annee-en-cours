@@ -10,7 +10,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: last.tex # <-- Remplace par le nom de ton fichier principal s'il est différent
+          root_file: 25 - 26 6ème/15 - Figures usuelles et aires/FiguresUsuelles_Aires.tex # <-- Remplace par le nom de ton fichier principal s'il est différent
 
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
