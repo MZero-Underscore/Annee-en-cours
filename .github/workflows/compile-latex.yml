@@ -24,8 +24,23 @@ jobs:
           working_directory: ${{ inputs.dossier }}
           root_file: ${{ inputs.fichier }}
 
+      - name: Organize and Rename PDF
+        run: |
+          # 1. Création du dossier "pdf" à la racine du dépôt s'il n'existe pas
+          mkdir -p pdf
+          
+          # 2. Extraction dynamique du niveau (ex: isole "6ème" de "25 - 26 6ème")
+          PREMIER_DOSSIER=$(echo "${{ inputs.dossier }}" | cut -d'/' -f1)
+          NIVEAU=$(echo "$PREMIER_DOSSIER" | sed 's/25 - 26 //g')
+          
+          # 3. Récupération du nom de base sans l'extension .tex
+          NOM_BASE=$(basename "${{ inputs.fichier }}" .tex)
+          
+          # 4. Copie et renommage du PDF vers le dossier racine avec des guillemets pour protéger les espaces
+          cp "${{ inputs.dossier }}/${NOM_BASE}.pdf" "pdf/${NIVEAU}_${NOM_BASE}.pdf"
+
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF-Document
-          path: ${{ inputs.dossier }}/*.pdf
+          path: pdf/
