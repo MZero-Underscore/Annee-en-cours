@@ -10,7 +10,8 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: '25 - 26 6ème/15 - Figures usuelles et aires/FiguresUsuelles_Aires.tex'
+          working_directory: '25 - 26 6ème/15 - Figures usuelles et aires' # Le robot se place ici
+          root_file: FiguresUsuelles_Aires.tex # Plus d'espaces dans ce nom, le robot est content !
 
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
