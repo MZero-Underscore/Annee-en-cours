@@ -1,7 +1,15 @@
 name: Compile LaTeX Document
 on:
-  push:
   workflow_dispatch:
+    inputs:
+      dossier:
+        description: 'Chemin du dossier (ex: 25 - 26 6ème/15 - Figures usuelles et aires)'
+        required: true
+        type: string
+      fichier:
+        description: 'Nom du fichier .tex (ex: FiguresUsuelles_Aires.tex)'
+        required: true
+        type: string
 
 jobs:
   build_latex:
@@ -13,11 +21,11 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          working_directory: '25 - 26 6ème/15 - Figures usuelles et aires'
-          root_file: FiguresUsuelles_Aires.tex
+          working_directory: ${{ inputs.dossier }}
+          root_file: ${{ inputs.fichier }}
 
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF-Document
-          path: '25 - 26 6ème/15 - Figures usuelles et aires/FiguresUsuelles_Aires.pdf'
+          path: ${{ inputs.dossier }}/*.pdf
