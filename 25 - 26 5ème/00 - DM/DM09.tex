@@ -1,0 +1,235 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle4.tex}
+
+
+\begin{document}
+\setcounter{DM}{9}
+\renewcommand{\maDate}{20/04}
+\usetag{correction}
+
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+% Tableau de compétences adapté (à vérifier avec tes numéros de compétences)
+\TableauCompetencesQuatre
+        {\CompetenceCinq{8}}
+        {\CompetenceCinq{9}}
+        {\CompetenceDeux{6}}
+        {\CompetenceQuatre{8}}
+
+\vspace{0.5cm}
+
+    \begin{exercice}[Sommes algébriques] 
+        Calculer les expressions suivantes (détailler les étapes pour $C$ et $D$) :
+        \begin{center}
+            $A = -8 + 15$ \quad \quad $B = -6 - 11$ \quad \quad $C = 14 - (-5) + (-8)$ \quad \quad $D = -4 + 12 - 7 + 5$
+        \end{center}
+        \begin{ZoneReponse}{4cm} 
+        \end{ZoneReponse}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Conventions d'écriture et réductions] 
+        1. Simplifier les expressions suivantes en supprimant les signes $\times$ inutiles (et en utilisant la notation "au carré" si besoin) :
+        \begin{center}
+            $A = 5 \times x + 4 \times y$ \quad \quad $B = x \times x + 3 \times x$ \quad \quad $C = 7 \times (x + 2)$
+        \end{center}
+
+        2. Réduire les expressions suivantes :
+        \begin{center}
+             $D = 4x + 3x$ \quad \quad $E = 8a + 5 + 2a + 3$
+        \end{center}
+        \begin{ZoneReponse}{4cm} 
+        \end{ZoneReponse}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Développer (Distributivité simple)] 
+        Développer les expressions suivantes en distribuant le facteur sur la parenthèse, puis réduire si possible :
+        \begin{center}
+            $F = 4(x + 5)$ \quad \quad $G = 3(2x - 4)$ \quad \quad $H = x(x + 6)$
+        \end{center}
+        \begin{ZoneReponse}{4cm} 
+        \end{ZoneReponse}
+    \end{exercice}
+
+   
+\newpage
+
+    
+    \begin{exercice}[Programme de calcul et évaluation] 
+        On considère le programme de calcul suivant :
+        \begin{itemize}
+            \item Choisir un nombre.
+            \item Le multiplier par 4.
+            \item Ajouter 10 au résultat.
+        \end{itemize}
+        \begin{enumerate}
+            \item Quel résultat obtient-on si l'on choisit le nombre $3$ au départ ? Et avec $1,5$ ?
+            \item On note $x$ le nombre choisi au départ. Écrire l'expression littérale simplifiée correspondant à ce programme.
+        \end{enumerate}
+        \begin{ZoneReponse}{4.5cm} 
+        \end{ZoneReponse}
+    \end{exercice}
+
+
+    \textbf{Les deux derniers exercices sont à rendre sur une feuille à part (manque de place sur le sujet :-( )}
+
+   
+    \begin{exercice}[Des périmètres mystérieux]
+        On considère deux figures géométriques :
+        \begin{itemize}
+            \item \textbf{Figure 1 :} Un rectangle dont la longueur est $2x$ et la largeur est $x + 3$.
+            \item \textbf{Figure 2 :} Un triangle dont les trois côtés mesurent $3x$, $x + 5$ et $2x + 1$.
+        \end{itemize}
+        \textit{L'unité de longueur est le centimètre et $x$ désigne un nombre positif.}
+        
+        \begin{enumerate}
+            \item Écrire l'expression du périmètre de la Figure 1, puis la réduire.
+            \item Écrire l'expression du périmètre de la Figure 2, puis la réduire.
+            \item Que remarque-t-on ?
+            \item Calculer ce périmètre lorsque $x = 4$ cm.
+        \end{enumerate}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Data Centers : Les données et l'énergie] 
+        \textbf{On pourra faire les calculs à la calculatrice !}
+        
+        Un \textit{Data Center} télécharge et traite en permanence des données sur Internet. 
+        
+        \begin{enumerate}
+            \item \textbf{Le téléchargement des données} \\
+            Ce centre traite \textbf{300 Go} (Gigaoctets) de données en \textbf{4 heures}.
+            \begin{enumerate}
+                \item En supposant que le débit est régulier, quel volume de données est traité en 1 heure ?
+                \item \textit{Pour se rendre compte :} Un film en très haute définition pèse environ 5 Go. Combien de films ce Data Center traite-il en une seule heure ?
+                \item Combien de temps lui faut-il pour traiter \textbf{1 To} (Téraoctet), sachant que $1 \text{ To} = 1\,000 \text{ Go}$ ?
+            \end{enumerate}
+            
+            \item \textbf{La consommation d'énergie} \\
+            Pour fonctionner, les serveurs informatiques ont besoin d'électricité. La consommation est proportionnelle au temps d'utilisation. \\
+            Ce Data Center consomme \textbf{60 MWh} (Mégawattheures) en \textbf{10 heures}.
+            \begin{enumerate}
+                \item Quelle est sa consommation électrique pour une journée complète (24 heures) ?
+                \item Quelle est sa consommation pour un mois complet de 30 jours ?
+                \item \textit{Pour se rendre compte :} Un collège moyen (avec le chauffage, l'éclairage et la cantine) consomme environ \textbf{400 MWh en une année entière}. \\
+                À combien d'années de fonctionnement de ce collège correspond la consommation de ce Data Center en \textbf{un seul mois} ?
+            \end{enumerate}
+        \end{enumerate}
+    \end{exercice}
+
+}
+
+
+\tagged{correction}{
+
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exercice}[Sommes algébriques] 
+        Calculer les expressions suivantes :
+        \begin{itemize}
+            \item $A = -8 + 15 \quad \textcolor{red}{\mathbf{= 7}}$
+            \item $B = -6 - 11 \quad \textcolor{red}{\mathbf{= -17}}$
+            \item $C = 14 - (-5) + (-8) \textcolor{red}{ = 14 + 5 - 8 = 19 - 8 \mathbf{ = 11}}$
+            \item $D = -4 + 12 - 7 + 5 \textcolor{red}{ = 8 - 7 + 5 = 1 + 5 \mathbf{ = 6}}$
+        \end{itemize}
+    \end{exercice}
+
+        
+    \begin{exercice}[Conventions d'écriture et réductions] 
+        1. Simplifier les expressions en supprimant les signes $\times$ inutiles :
+        \begin{itemize}
+            \item $A = 5 \times x + 4 \times y \quad \textcolor{red}{\mathbf{= 5x + 4y}}$
+            \item $B = x \times x + 3 \times x \quad \textcolor{red}{\mathbf{= x^2 + 3x}}$
+            \item $C = 7 \times (x + 2) \quad \textcolor{red}{\mathbf{= 7(x + 2)}}$
+        \end{itemize}
+        2. Réduire les expressions :
+        \begin{itemize}
+            \item $D = 4x + 3x \quad \textcolor{red}{\mathbf{= 7x}}$
+            \item $E = 8a + 5 + 2a + 3 \quad \textcolor{red}{\mathbf{= 10a + 8}}$
+        \end{itemize}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Développer (Distributivité simple)] 
+        Développer puis réduire :
+        \begin{itemize}
+            \item $F = 4(x + 5) \textcolor{red}{ = 4 \times x + 4 \times 5 \mathbf{ = 4x + 20}}$
+            \item $G = 3(2x - 4) \textcolor{red}{ = 3 \times 2x - 3 \times 4 \mathbf{ = 6x - 12}}$
+            \item $H = x(x + 6) \textcolor{red}{ = x \times x + x \times 6 \mathbf{ = x^2 + 6x}}$
+        \end{itemize}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Programme de calcul et évaluation] 
+        1. \textcolor{red}{Avec \textbf{3} : $3 \times 4 + 10 = 12 + 10 = \mathbf{22}$. \\ Avec \textbf{1,5} : $1,5 \times 4 + 10 = 6 + 10 = \mathbf{16}$.} \\
+        2. \textcolor{red}{Avec $x$ au départ, on obtient : $\mathbf{4x + 10}$.}
+    \end{exercice}
+    
+
+    
+    \begin{exercice}[Des périmètres mystérieux]
+        On considère deux figures géométriques :
+        \begin{itemize}
+            \item \textbf{Figure 1 :} Un rectangle de longueur $2x$ et de largeur $x + 3$.
+            \item \textbf{Figure 2 :} Un triangle de côtés $3x$, $x + 5$ et $2x + 1$.
+        \end{itemize}
+        \begin{enumerate}
+            \item Écrire l'expression du périmètre de la Figure 1, puis la réduire. \\
+            \textcolor{red}{$P_1 = 2x + (x+3) + 2x + (x+3) = 2x + x + 3 + 2x + x + 3 \mathbf{ = 6x + 6}$.}
+            \item Écrire l'expression du périmètre de la Figure 2, puis la réduire. \\
+            \textcolor{red}{$P_2 = 3x + (x + 5) + (2x + 1) = 3x + x + 5 + 2x + 1 \mathbf{ = 6x + 6}$.}
+            \item Que remarque-t-on ? \\
+            \textcolor{red}{On remarque que les deux figures ont \textbf{le même périmètre} quelle que soit la valeur de $x$.}
+            \item Calculer ce périmètre lorsque $x = 4$ cm. \\
+            \textcolor{red}{$P = 6 \times 4 + 6 = 24 + 6 \mathbf{ = 30 \text{ cm}}$.}
+        \end{enumerate}
+    \end{exercice}
+    
+    
+    \begin{exercice}[Data Centers : Les données et l'énergie] 
+    Un \textit{Data Center} télécharge et traite en permanence des données sur Internet. 
+    
+    \begin{enumerate}
+        \item \textbf{Le téléchargement des données} \\
+        Ce centre traite \textbf{300 Go} (Gigaoctets) de données en \textbf{4 heures}.
+        \begin{enumerate}
+            \item En supposant que le débit est régulier, quel volume de données est traité en 1 heure ? \\
+            \textcolor{red}{\textbf{Réponse :} $300 \div 4 = \mathbf{75 \text{ Go}}$. En une heure, 75 Go sont traités.}
+            
+            \item \textit{Pour se rendre compte :} Un film en très haute définition pèse environ 5 Go. Combien de films ce Data Center traite-il en une seule heure ? \\
+            \textcolor{red}{\textbf{Réponse :} $75 \div 5 = \mathbf{15 \text{ films}}$. Cela correspond à 15 films par heure.}
+            
+            \item Combien de temps lui faut-il pour traiter \textbf{1 To} (Téraoctet), sachant que $1 \text{ To} = 1\,000 \text{ Go}$ ? \\
+            \textcolor{red}{\textbf{Réponse :} $1\,000 \div 75 \approx \mathbf{13,33 \text{ heures}}$ (soit environ 13h et 20 minutes).}
+        \end{enumerate}
+        
+        \item \textbf{La consommation d'énergie} \\
+        Pour fonctionner, les serveurs informatiques ont besoin d'électricité. La consommation est proportionnelle au temps d'utilisation. \\
+        Ce Data Center consomme \textbf{60 MWh} (Mégawattheures) en \textbf{10 heures}.
+        \begin{enumerate}
+            \item Quelle est sa consommation électrique pour une journée complète (24 heures) ? \\
+            \textcolor{red}{\textbf{Réponse :} Consommation pour 1h : $60 \div 10 = 6$ MWh. \\ Pour 24h : $6 \times 24 = \mathbf{144 \text{ MWh}}$.}
+            
+            \item Quelle est sa consommation pour un mois complet de 30 jours ? \\
+            \textcolor{red}{\textbf{Réponse :} $144 \times 30 = \mathbf{4\,320 \text{ MWh}}$.}
+            
+            \item \textit{Pour se rendre compte :} Un collège moyen (avec le chauffage, l'éclairage et la cantine) consomme environ \textbf{400 MWh en une année entière}. \\
+            À combien d'années de fonctionnement de ce collège correspond la consommation de ce Data Center en \textbf{un seul mois} ? \\
+            \textcolor{red}{\textbf{Réponse :} $4\,320 \div 400 = \mathbf{10,8 \text{ années}}$. La consommation mensuelle du Data Center représente presque \textbf{11 ans} de la vie du collège !}
+        \end{enumerate}
+    \end{enumerate}
+    \end{exercice}
+
+
+}
+
+\end{document}

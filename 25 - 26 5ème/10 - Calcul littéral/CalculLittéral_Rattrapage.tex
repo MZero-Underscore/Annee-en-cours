@@ -1,0 +1,255 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{-1}
+\renewcommand{\monTitre}{Calcul littéral}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+\section{Expressions littérales}
+
+    \begin{definition}
+        Une \textbf{expression littérale} est une expression dans laquelle un ou plusieurs nombres sont remplacés par des \textbf{lettres}. Ces lettres désignent des nombres dont on ne connaît pas la valeur.
+        On les appelle des \textbf{variables}.
+    \end{definition}
+
+    
+    \begin{exemple}
+        Donner des exemples de formules connues ou \og célèbres \fg.
+        \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+    \end{exemple}
+    
+\subsection{Simplification d'écriture}
+    
+    \begin{convention}
+        Pour alléger les écritures, on peut \textbf{supprimer le signe $\times$} :
+        \begin{itemize}
+            \item Devant une \textbf{lettre} : $3 \times a$ s'écrit $3a$.
+            \item Devant une \textbf{parenthèse} : $5 \times (x + 2)$ s'écrit $5(x + 2)$.
+        \end{itemize}
+    \end{convention}
+    
+    
+    \begin{remarque}
+        \begin{itemize}
+            \item On ne supprime jamais le signe $\times$ entre deux nombres ($3 \times 5$ ne s'écrit pas $35$ !).
+            \item $1 \times x$ s'écrit simplement $x$.
+            \item $x \times x$ se note $x^2$ (se lit « $x$ au carré »).
+        \end{itemize}
+    \end{remarque}
+    
+    
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=3\times a$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=8\times a+5\times b$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=x\times 5$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=3\times (x+5)$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{convention}
+        Pour noter le produit d'un nombre par lui-même, on utilise la notation \textbf{puissance} :
+        \begin{itemize}
+            \item $x \times x$ se note \textbf{$x^2$} (et se lit « $x$ au carré »).
+            \item $x \times x \times x$ se note \textbf{$x^3$} (et se lit « $x$ au cube »).
+        \end{itemize}
+    \end{convention}
+    
+    
+    \begin{exemple}
+        Simplifier les écritures suivantes.
+
+        \medskip
+
+        \begin{minipage}{0.24\linewidth}
+            $A=x\times x\times x \times 4$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B=2x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C=7\times x\times y \times x \times 3$
+
+            \vspace{1cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D=x\times3+10\times x\times x$
+
+            \vspace{1cm}
+        \end{minipage}
+    \end{exemple}
+    
+    
+    \begin{remarque}
+        Attention à ne pas confondre $x + x$ et $x \times x$ :
+        \begin{itemize}
+            \item $x + x = 2x$ (c'est le double de $x$).
+            \item $x \times x = x^2$ (c'est le carré de $x$).
+        \end{itemize}
+    \end{remarque}
+    
+    
+\section{Utiliser une expression littérale}  
+\subsection{Évaluer une expression}
+    
+    \begin{definition}[Évaluer]
+        \textbf{Évaluer} une expression littérale, c'est calculer sa valeur numérique en \textbf{remplaçant les variables} par leur valeur dans cette expression littérale.
+    \end{definition}
+
+    
+    \begin{exemple}
+        Évaluer les expressions suivantes pour les valeurs demandées.
+
+        \smallskip
+
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $A=3x^2-5x$.
+
+            \smallskip
+
+            Évaluer $A$ pour $x=5$ puis pour $x=4$.
+
+            \vspace{4.5cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.49\linewidth}
+            On considère l'expression $B=5xy-8x+3y$.
+
+            \smallskip
+
+            Évaluer $B$ pour $x=7$ et $y=2$ puis pour $x=5$ et $y=0$.
+
+            \vspace{4.5cm}
+        \end{minipage}
+    \end{exemple}
+    
+    
+\subsection{Tester une égalité}
+    
+    \begin{definition}[Égalité]
+        Une \textbf{égalité} est constituée de deux membres séparés par un signe « $=$ ».
+    \end{definition}
+    
+    
+    \begin{methode}
+        Pour tester si une égalité est \textbf{vraie} pour des valeurs données :
+        \begin{enumerate}
+            \item On calcule le membre de gauche séparément.
+            \item On calcule le membre de droite séparément.
+            \item On compare les deux résultats.
+        \end{enumerate}
+    \end{methode}
+    
+    
+    \begin{exemple}
+        L'égalité $3x + 15 = 7 + 5x$ est-elle vraie pour $x = 2$ ? et pour $x = 4$ ?
+        \begin{ZoneReponse}{4cm}
+            
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\section{Exercices}
+    \begin{exercice}
+        Simplifier au maximum les expressions littérales suivantes en supprimant les signes $\times$ inutiles :
+        \begin{enumerate}[label=\alph*)]
+            \item $A = 7 \times x + 3 = \dotfill$
+            \item $B = y \times 4 - 5 \times (z + 1) = \dotfill$
+            \item $C = 1 \times a + b \times b = \dotfill$
+            \item $D = 3 \times x \times x + 4 \times x \times y = \dotfill$
+        \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}
+        Réécrire les expressions suivantes en faisant apparaître tous les signes $\times$ cachés :
+        \begin{enumerate}[label=\alph*)]
+            \item $E = 5a^2 + 4b = \dotfill$
+            \item $F = x(2x + 3) = \dotfill$
+        \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}[Évaluer une expression]
+        On considère l'expression $G = 5x^2 - 3x + 7$.
+        Calculer la valeur de $G$ pour les valeurs suivantes :
+        
+        \medskip
+        \begin{minipage}{0.48\linewidth}
+            \textbf{Pour $x = 2$ :}
+            \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\linewidth}
+            \textbf{Pour $x = 10$ :}
+            \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+        \end{minipage}
+    \end{exercice}
+    
+    \begin{exercice}[Tester une égalité]
+        On considère l'égalité suivante : $4x - 3 = 2x + 5$.
+        
+        \begin{enumerate}
+            \item Cette égalité est-elle vraie pour $x = 3$ ?
+            \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+            
+            \item Cette égalité est-elle vraie pour $x = 4$ ?
+            \begin{ZoneReponse}{3cm}\end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}[Géométrie et Littéral]
+        \begin{minipage}{0.6\linewidth}
+            On considère un rectangle de longueur $L = x + 3$ et de largeur $l = 5$.
+            \begin{enumerate}
+                \item Exprimer le périmètre $\mathcal{P}$ de ce rectangle en fonction de $x$.
+                \item Exprimer l'aire $\mathcal{A}$ de ce rectangle en fonction de $x$.
+                \item Calculer le périmètre pour $x = 4$ cm.
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.35\linewidth}
+            % Petit schéma TikZ simple
+            \begin{tikzpicture}[scale=0.8]
+                \draw[thick] (0,0) rectangle (3,2);
+                \node at (1.5,-0.3) {$x+3$};
+                \node at (3.3,1) {$5$};
+            \end{tikzpicture}
+        \end{minipage}
+    \end{exercice}
+      
+
+\end{document}

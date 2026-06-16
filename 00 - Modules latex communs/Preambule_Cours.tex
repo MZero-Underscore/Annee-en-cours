@@ -134,8 +134,9 @@
 \newtcolorbox{application}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!75!black}, title=Application \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!75!black,colframe=orange!75!black, arc=3mm}}
 
 % --- DIVERS (Exercices, Python, Conséquences) ---
-\newtcolorbox{exercice}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{green!55!black}, title=Exercice n°\theexo, colback=white, code={\stepcounter{exo}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}}
-\newtcolorbox{exerciceTitre}[1]{enhanced, breakable, frame empty, borderline west={0.5mm}{0mm}{green!55!black}, title=Exercice n°\theexo\ - #1, colback=white, code={\stepcounter{exo}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}}
+% Usage : \begin{exercice}            -> "Exercice n°1"
+%         \begin{exercice}[Mon titre] -> "Exercice n°1 - Mon titre"
+\newtcolorbox{exercice}[1][]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{green!55!black}, title={Exercice n°\theexo\ifx&#1&\else\ - #1\fi}, colback=white, code={\stepcounter{exo}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=green!55!black,colframe=green!55!black, arc=3mm}}
 \newtcolorbox{consequences}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{ProcessBlue}, title=Conséquences, colback=white, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=ProcessBlue,colframe=ProcessBlue, arc=3mm}}
 \newtcolorbox{programme}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{gray!55!black}, title=Programme Python, colback=white, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=gray!55!black,colframe=gray!55!black, arc=3mm}}
 

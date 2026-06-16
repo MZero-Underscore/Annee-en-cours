@@ -1,0 +1,586 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle4.tex}
+
+\begin{document}
+\setcounter{Interro}{10}
+\newcommand{\maDate}{13/05}
+%\usetag{correction}
+
+\setcounter{exo}{0}
+
+\untagged{correction}{
+
+\NomPrenom
+\enteteInterro{\theInterro}{\maDate}{A}
+
+    \TableauCompetencesQuatre
+        {\CompetenceTrois{8}} % Agrandissement / Réduction}
+        {\CompetenceCinq{9}} % Calcul littéral
+        {\CompetenceDeux{11}} % Probabilités (nouvelle)
+        {\CompetenceQuatre{9}} % Thalès (nouvelle)
+        
+        
+
+    \begin{exerciceNote}{3}
+        \textbf{Agrandissement et Réduction (Cours et construction)}
+        \begin{enumerate}
+            \item Compléter la propriété suivante : "Lors d'un agrandissement ou d'une réduction de rapport $k$, les longueurs sont multipliées par \points[2], les aires sont multipliées par \points[2] et les volumes sont multipliés par \points[2]."
+            \item Sur le quadrillage ci-dessous, construire un agrandissement de la figure $\mathcal{F}$ avec un rapport $k = 2,5$.
+        \end{enumerate}
+
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                % Quadrillage (12x7 cases)
+                \draw[help lines, color=gray!50, dashed] (0,0) grid (13,8);
+                
+                % Figure initiale F
+                \draw[thick, fill=blue!10] (1,2) -- (3,2) -- (3,5) -- (2,5) -- cycle;
+                \node at (2, 3.5) {$\mathcal{F}$};
+            \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+    
+    \begin{exerciceNote}{3}
+        \textbf{Calcul littéral : Test de manipulation}
+        
+        Soit l'expression $E = (4x+5)(2x-4)+(3x-5)(x-7)$.
+
+        \medskip
+
+        \begin{minipage}{0.5\linewidth}
+            \textbf{1.} Calculer la valeur de $E$ pour $x = -2$.
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \textbf{2.} Développer puis réduire l'expression $E$.
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exerciceNote}
+
+    \vfill
+    \hfill Tourner la page !
+
+
+\newpage
+    
+    
+    \begin{exerciceNote}{3}
+        \textbf{Le sac de billes}
+        
+        Un sac contient 5 billes rouges, 3 billes bleues et 2 billes vertes, toutes indiscernables au toucher.
+        \begin{enumerate}
+            \item Quelle est la probabilité de tirer une bille bleue ?
+            \item On ajoute des billes noires dans le sac. On sait maintenant que la probabilité de tirer une bille noire est de $\frac{1}{3}$. Combien de billes noires a-t-on ajoutées ?
+        \end{enumerate}
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+
+    
+    \begin{exerciceNote}{3}
+        \begin{minipage}{0.4\linewidth}
+            \textbf{La rampe d'accès}
+            
+            Sur la figure ci-dessous (qui n'est pas à l'échelle), les droites $(AB)$ et $(CD)$ sont parallèles.
+            On donne : $OA = 5$ cm ; $OB = 4$ cm ; $OC = 12,5$ cm.
+
+            \bigskip
+
+            Calculer la longueur $OD$.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) node[left]{$O$} -- (5,2) node[above]{$D$} -- (5,0) node[right]{$C$} -- cycle;
+                    \draw (2,0.8) node[above]{$B$} -- (2,0) node[below]{$A$};
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+        
+            
+        \begin{ZoneReponse}{6cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+     
+    \begin{exerciceNote}{4}
+        \textbf{Problème : La statue en bronze}
+        
+        Un artiste a sculpté une petite maquette de statue en bronze. Cette maquette mesure 20 cm de haut et a un volume de 150 cm$^3$. 
+        La statue finale, qui sera coulée dans le même bronze, est un agrandissement exact de cette maquette et mesurera 1 m de haut.
+        
+        \begin{enumerate}
+            \item Montrer que le coefficient d'agrandissement $k$ est égal à 5.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Par quel nombre est multiplié le volume de la maquette pour obtenir celui de la statue finale ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Calculer le volume de la statue finale en cm$^3$.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Défi :} Sachant que la petite maquette pèse 1,2 kg, quelle sera la masse de la statue géante ? \textit{Expliquer la démarche.}
+            \begin{ZoneReponse}{2.5cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{4}
+        \textbf{Exercice Expert : Le logo}
+        
+        Un infographiste crée un logo en forme de triangle rectangle. \\
+        On considère le triangle $ABC$ rectangle en $A$ tel que $AB = 5$ cm et $AC = 12$ cm.
+        Pour la charte graphique, il trace un segment $[MN]$ parallèle à $[BC]$ avec $M \in [AB]$ et $N \in [AC]$. 
+        On sait que $MN = 3,9$ cm.
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.4]
+                % Triangle ABC
+                \draw[thick] (0,0) node[below left]{$A$} -- (5,0) node[below]{$B$} -- (0,12) node[above]{$C$} -- cycle;
+                % Droite MN
+                \draw[thick, blue] (0,3.6) node[left]{$N$} -- (1.5,0) node[below]{$M$};
+                % Angle droit
+                \draw (0,0.5) -- (0.5,0.5) -- (0.5,0);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}
+            \item Montrer que la longueur $BC$ est égale à $13$ cm.
+            \begin{ZoneReponse}{2.5cm}
+            \end{ZoneReponse}
+            
+            \item Le triangle $AMN$ est une réduction du triangle $ABC$. Quel est le rapport exact de cette réduction ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Calculer l'aire du grand triangle $ABC$.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{En déduire} l'aire du petit triangle $AMN$, \textbf{sans} calculer les longueurs $AM$ et $AN$.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+\newpage
+\setcounter{exo}{0}
+
+\NomPrenom
+\enteteInterro{\theInterro}{\maDate}{B}
+
+
+    \TableauCompetencesQuatre
+        {\CompetenceTrois{8}} % Agrandissement / Réduction}
+        {\CompetenceCinq{9}} % Calcul littéral
+        {\CompetenceDeux{11}} % Probabilités (nouvelle)
+        {\CompetenceQuatre{9}} % Thalès (nouvelle)
+
+
+    \begin{exerciceNote}{3}
+        \textbf{Agrandissement et Réduction (Cours et construction)}
+        \begin{enumerate}
+            \item Compléter la propriété suivante : "Lors d'un agrandissement ou d'une réduction de rapport $k$, les longueurs sont multipliées par \points[2], les aires sont multipliées par \points[2] et les volumes sont multipliés par \points[2]."
+            \item Sur le quadrillage ci-dessous, construire un agrandissement de la figure $\mathcal{F}$ avec un rapport $k = 2,5$.
+        \end{enumerate}
+
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                % Quadrillage (13x8 cases)
+                \draw[help lines, color=gray!50, dashed] (0,0) grid (13,8);
+                
+                % Figure initiale F (Sujet B)
+                \draw[thick, fill=blue!10] (1,2) -- (4,2) -- (4,4) -- (2,4) -- cycle;
+                \node at (2.5, 3) {$\mathcal{F}$};
+            \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+    
+    \begin{exerciceNote}{3}
+        \textbf{Calcul littéral : Test de manipulation}
+        
+        Soit l'expression $E = (5x-3)(2x+4) + (4x-1)(x-5)$.
+
+        \medskip
+
+        \begin{minipage}{0.5\linewidth}
+            \textbf{1.} Calculer la valeur de $E$ pour $x = -3$.
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \textbf{2.} Développer puis réduire l'expression $E$.
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exerciceNote}
+
+
+    \vfill
+    \hfill Tourner la page !
+
+
+\newpage
+    
+    
+    \begin{exerciceNote}{3}
+        \textbf{Le sac de billes}
+        
+        Un sac contient 4 billes jaunes, 5 billes bleues et 3 billes rouges, toutes indiscernables au toucher.
+        \begin{enumerate}
+            \item Quelle est la probabilité de tirer une bille bleue ?
+            \item On ajoute des billes blanches dans le sac. On sait maintenant que la probabilité de tirer une bille blanche est de $\frac{1}{4}$. Combien de billes blanches a-t-on ajoutées ?
+        \end{enumerate}
+        \begin{ZoneReponse}{3cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+    
+    \begin{exerciceNote}{3}
+        \begin{minipage}{0.4\linewidth}
+            \textbf{La rampe d'accès}
+            
+            Sur la figure ci-dessous (qui n'est pas à l'échelle), les droites $(AB)$ et $(CD)$ sont parallèles.
+            On donne : $OA = 6$ cm ; $OB = 4,5$ cm ; $OC = 14$ cm.
+
+            \bigskip
+
+            Calculer la longueur $OD$.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) node[left]{$O$} -- (5,2) node[above]{$D$} -- (5,0) node[right]{$C$} -- cycle;
+                    \draw (2,0.8) node[above]{$B$} -- (2,0) node[below]{$A$};
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+                
+        \begin{ZoneReponse}{6cm}
+        \end{ZoneReponse}
+    \end{exerciceNote}
+
+     
+    \begin{exerciceNote}{4}
+        \textbf{Problème : Le vase en céramique}
+        
+        Un artisan a modelé une petite maquette de vase en argile. Cette maquette mesure 15 cm de haut et a un volume de 200 cm$^3$. 
+        Le vase final, qui sera moulé dans la même argile, est un agrandissement exact de cette maquette et mesurera 60 cm de haut.
+        
+        \begin{enumerate}
+            \item Montrer que le coefficient d'agrandissement $k$ est égal à 4.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Par quel nombre est multiplié le volume de la maquette pour obtenir celui du vase final ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Calculer le volume du vase final en cm$^3$.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Défi :} Sachant que la petite maquette pèse 0,8 kg, quelle sera la masse du grand vase ? \textit{Expliquer la démarche.}
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{4}
+        \textbf{Exercice Expert : Le logo}
+        
+        Un infographiste crée un logo en forme de triangle rectangle. \\
+        On considère le triangle $ABC$ rectangle en $A$ tel que $AB = 6$ cm et $AC = 8$ cm.
+        Pour la charte graphique, il trace un segment $[MN]$ parallèle à $[BC]$ avec $M \in [AB]$ et $N \in [AC]$. 
+        On sait que $MN = 4$ cm.
+        
+        \begin{center}
+            \begin{tikzpicture}[scale=0.4]
+                % Triangle ABC
+                \draw[thick] (0,0) node[below left]{$A$} -- (6,0) node[below]{$B$} -- (0,8) node[above]{$C$} -- cycle;
+                % Droite MN
+                \draw[thick, blue] (0,3.2) node[left]{$N$} -- (2.4,0) node[below]{$M$};
+                % Angle droit
+                \draw (0,0.5) -- (0.5,0.5) -- (0.5,0);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}
+            \item Montrer que la longueur $BC$ est égale à $10$ cm.
+            \begin{ZoneReponse}{4cm}
+            \end{ZoneReponse}
+            
+            \item Le triangle $AMN$ est une réduction du triangle $ABC$. Quel est le rapport exact de cette réduction ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item Calculer l'aire du grand triangle $ABC$.
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{En déduire} l'aire du petit triangle $AMN$, \textbf{sans} calculer les longueurs $AM$ et $AN$.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+}
+
+
+% =================================================================
+% SECTION CORRECTION COMPLÈTE (ÉNONCÉ + RÉPONSES)
+% =================================================================
+
+\tagged{correction}{
+    \enteteInterroCorrection{\theInterro}{\maDate}{A}
+
+    \begin{exerciceNote}{3}
+        \textbf{Agrandissement et Réduction (Cours et construction)}
+        \begin{enumerate}
+            \item "Lors d'un agrandissement ou d'une réduction de rapport $k$, les longueurs sont multipliées par \textbf{$k$}, les aires sont multipliées par \textbf{$k^2$} et les volumes sont multipliés par \textbf{$k^3$}."
+            \item Sur le quadrillage ci-dessous, construire un agrandissement de la figure $\mathcal{F}$ avec un rapport $k = 2,5$.
+        \end{enumerate}
+        
+        \textbf{Correction construction :} 
+        La base de 2 carreaux devient \textbf{5 carreaux} ($2 \times 2,5$). 
+        La hauteur de 3 carreaux devient \textbf{7,5 carreaux} ($3 \times 2,5$).
+        La petite base du haut de 1 carreau devient \textbf{2,5 carreaux} ($1 \times 2,5$).
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[help lines, color=gray!50, dashed] (0,0) grid (13,8);
+                % Figure initiale F
+                \draw[thick, fill=blue!5] (1,2) -- (3,2) -- (3,5) -- (2,5) -- cycle;
+                \node at (2, 3.5) {$\mathcal{F}$};
+                % Figure agrandie F' (Correction)
+                \draw[very thick, red, fill=red!10, opacity=0.7] (5,0.5) -- (10,0.5) -- (10,8) -- (7.5,8) -- cycle;
+                \node[red] at (8.5, 4.5) {$\mathcal{F}'$};
+            \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \textbf{Calcul littéral : Test de manipulation}
+        Soit l'expression $E = (4x+5)(2x-4)+(3x-5)(x-7)$.
+
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            \textbf{1. Calculer pour $x = -2$ :} \\
+            $E = (4 \times (-2)+5)(2 \times (-2)-4) + (3 \times (-2)-5)(-2-7)$ \\
+            $E = (-8+5)(-4-4) + (-6-5)(-9)$ \\
+            $E = (-3) \times (-8) + (-11) \times (-9)$ \\
+            $E = 24 + 99 = \mathbf{123}$
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \textbf{2. Développer et réduire $E$ :} \\
+            $E = [8x^2 - 16x + 10x - 20] + [3x^2 - 21x - 5x + 35]$ \\
+            $E = (8x^2 - 6x - 20) + (3x^2 - 26x + 35)$ \\
+            $E = 8x^2 + 3x^2 - 6x - 26x - 20 + 35$ \\
+            $E = \mathbf{11x^2 - 32x + 15}$
+        \end{minipage}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \textbf{Le sac de billes}
+        Un sac contient 5 billes rouges, 3 billes bleues et 2 billes vertes.
+        \begin{enumerate}
+            \item Quelle est la probabilité de tirer une bille bleue ? \\
+            \textbf{Il y a 10 billes au total. $P(\text{bleue}) = \frac{3}{10} = \mathbf{0,3}$.}
+            \item On ajoute des billes noires. $P(\text{noire}) = \frac{1}{3}$. Combien de billes noires ? \\
+            \textbf Il y a 10 billes avant l'ajout des billes noires.
+            
+            On cherche le nombre $x$ de billes noires telles que $\frac{x}{10+x}=\frac{1}{3}$\\
+            Par talonnement, on s'oriente rapidement vers $x=5$ ce qui nous donne $\frac{5}{15}=\frac{1}{3}$
+
+            Il y a donc 5 billes noires dans le sac.
+            
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \begin{minipage}{0.4\linewidth}
+            \textbf{La rampe d'accès} \\
+            Calculer la longueur $OD$.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) node[left]{$O$} -- (5,2) node[above]{$D$} -- (5,0) node[right]{$C$} -- cycle;
+                    \draw (2,0.8) node[above]{$B$} -- (2,0) node[below]{$A$};
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+        
+        \textbf{Réponse :} Les droites $(AB)$ et $(CD)$ sont parallèles. D'après le \textbf{théorème de Thalès} : \\
+        $\frac{OA}{OC} = \frac{OB}{OD} \implies \frac{5}{12,5} = \frac{4}{OD} \implies OD = \frac{4 \times 12,5}{5} = \frac{50}{5} = \mathbf{10}$ \textbf{cm}.
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{4}
+        \textbf{Problème : La statue en bronze}
+        \begin{enumerate}
+            \item Montrer que le coefficient d'agrandissement $k$ est égal à 5. \\
+            \textbf{$k = \frac{\text{Hauteur réelle}}{\text{Hauteur maquette}} = \frac{100 \text{ cm}}{20 \text{ cm}} = \mathbf{5}$.}
+            \item Par quel nombre est multiplié le volume ? \textbf{Par $k^3 = 5^3 = \mathbf{125}$.}
+            \item Volume final : \textbf{$V = 150 \times 125 = \mathbf{18\,750}$ cm$^3$ (soit 18,75 litres).}
+            \item \textbf{Défi :} Masse de la statue ? \\
+            \textbf{La masse est proportionnelle au volume. $M = 1,2 \text{ kg} \times 125 = \mathbf{150}$ kg.}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{4}
+        \textbf{Exercice Expert : Le logo}
+        \begin{enumerate}
+            \item Montrer que $BC = 13$ cm. \\
+            \textbf{Dans le triangle $ABC$ rectangle en $A$, d'après le théorème de Pythagore : \\
+            $BC^2 = AB^2 + AC^2 = 5^2 + 12^2 = 25 + 144 = 169$. Donc $BC = \sqrt{169} = \mathbf{13}$ cm.}
+            \item Rapport exact de la réduction : \textbf{$k = \frac{MN}{BC} = \frac{3,9}{13} = \mathbf{0,3}$.}
+            \item Aire de $ABC$ : \textbf{$\frac{5 \times 12}{2} = \mathbf{30}$ cm$^2$.}
+            \item Aire de $AMN$ : \textbf{Aire$(AMN) = \text{Aire}(ABC) \times k^2 = 30 \times 0,3^2 = 30 \times 0,09 = \mathbf{2,7}$ cm$^2$.}
+        \end{enumerate}
+    \end{exerciceNote}
+}
+
+
+% =================================================================
+% SECTION CORRECTION COMPLÈTE (ÉNONCÉ + RÉPONSES) - SUJET B
+% =================================================================
+
+\tagged{correction}{
+    \newpage
+    \enteteInterroCorrection{\theInterro}{\maDate}{B}
+
+    \begin{exerciceNote}{3}
+        \textbf{Agrandissement et Réduction (Cours et construction)}
+        \begin{enumerate}
+            \item "Lors d'un agrandissement ou d'une réduction de rapport $k$, les longueurs sont multipliées par \textbf{$k$}, les aires sont multipliées par \textbf{$k^2$} et les volumes sont multipliés par \textbf{$k^3$}."
+            \item Sur le quadrillage ci-dessous, construire un agrandissement de la figure $\mathcal{F}$ avec un rapport $k = 2,5$.
+        \end{enumerate}
+        
+        \textbf{Correction construction :} 
+        La grande base de 3 carreaux devient \textbf{7,5 carreaux} ($3 \times 2,5$). 
+        La hauteur droite de 2 carreaux devient \textbf{5 carreaux} ($2 \times 2,5$).
+        La petite base supérieure de 2 carreaux devient \textbf{5 carreaux} ($2 \times 2,5$).
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[help lines, color=gray!50, dashed] (0,0) grid (13,8);
+                % Figure initiale F
+                \draw[thick, fill=blue!5] (1,2) -- (4,2) -- (4,4) -- (2,4) -- cycle;
+                \node at (2.5, 3) {$\mathcal{F}$};
+                % Figure agrandie F' (Correction)
+                \draw[very thick, red, fill=red!10, opacity=0.7] (5,0.5) -- (12.5,0.5) -- (12.5,5.5) -- (7.5,5.5) -- cycle;
+                \node[red] at (10, 3) {$\mathcal{F}'$};
+            \end{tikzpicture}
+        \end{center}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \textbf{Calcul littéral : Test de manipulation}
+        Soit l'expression $E = (5x-3)(2x+4) + (4x-1)(x-5)$.
+
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            \textbf{1. Calculer pour $x = -3$ :} \\
+            $E = (5 \times (-3)-3)(2 \times (-3)+4) + (4 \times (-3)-1)(-3-5)$ \\
+            $E = (-15-3)(-6+4) + (-12-1)(-8)$ \\
+            $E = (-18) \times (-2) + (-13) \times (-8)$ \\
+            $E = 36 + 104 = \mathbf{140}$
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \textbf{2. Développer et réduire $E$ :} \\
+            $E = [10x^2 + 20x - 6x - 12] + [4x^2 - 20x - x + 5]$ \\
+            $E = (10x^2 + 14x - 12) + (4x^2 - 21x + 5)$ \\
+            $E = 10x^2 + 4x^2 + 14x - 21x - 12 + 5$ \\
+            $E = \mathbf{14x^2 - 7x - 7}$
+        \end{minipage}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \textbf{Le sac de billes}
+        Un sac contient 4 billes jaunes, 5 billes bleues et 3 billes rouges.
+        \begin{enumerate}
+            \item Quelle est la probabilité de tirer une bille bleue ? \\
+            \textbf{Il y a 12 billes au total. $P(\text{bleue}) = \frac{5}{12}$.}
+            \item On ajoute des billes blanches. $P(\text{blanche}) = \frac{1}{4}$. Combien de billes blanches ? \\
+            \textbf{Il y a 12 billes avant l'ajout des billes blanches.}
+            
+            \textbf{On cherche le nombre $x$ de billes blanches telles que $\frac{x}{12+x}=\frac{1}{4}$}\\
+            \textbf{Par tâtonnement, on s'oriente rapidement vers $x=4$ ce qui nous donne $\frac{4}{16}=\frac{1}{4}$}
+
+            \textbf{Il y a donc 4 billes blanches ajoutées dans le sac.}
+            
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        \begin{minipage}{0.4\linewidth}
+            \textbf{La rampe d'accès} \\
+            Calculer la longueur $OD$.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.39\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) node[left]{$O$} -- (5,2) node[above]{$D$} -- (5,0) node[right]{$C$} -- cycle;
+                    \draw (2,0.8) node[above]{$B$} -- (2,0) node[below]{$A$};
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+        
+        \textbf{Réponse :} Les droites $(AB)$ et $(CD)$ sont parallèles. D'après le \textbf{théorème de Thalès} : \\
+        $\frac{OA}{OC} = \frac{OB}{OD} \implies \frac{6}{14} = \frac{4,5}{OD} \implies OD = \frac{4,5 \times 14}{6} = \frac{63}{6} = \mathbf{10,5}$ \textbf{cm}.
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{4}
+        \textbf{Problème : Le vase en céramique}
+        \begin{enumerate}
+            \item Montrer que le coefficient d'agrandissement $k$ est égal à 4. \\
+            \textbf{$k = \frac{\text{Hauteur réelle}}{\text{Hauteur maquette}} = \frac{60 \text{ cm}}{15 \text{ cm}} = \mathbf{4}$.}
+            \item Par quel nombre est multiplié le volume ? \textbf{Par $k^3 = 4^3 = \mathbf{64}$.}
+            \item Volume final : \textbf{$V = 200 \times 64 = \mathbf{12\,800}$ cm$^3$ (soit 12,8 litres).}
+            \item \textbf{Défi :} Masse du vase ? \\
+            \textbf{La masse est proportionnelle au volume. $M = 0,8 \text{ kg} \times 64 = \mathbf{51,2}$ kg.}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{4}
+        \textbf{Exercice Expert : Le logo}
+        \begin{enumerate}
+            \item Montrer que $BC = 10$ cm. \\
+            \textbf{Dans le triangle $ABC$ rectangle en $A$, d'après le théorème de Pythagore : \\
+            $BC^2 = AB^2 + AC^2 = 6^2 + 8^2 = 36 + 64 = 100$. Donc $BC = \sqrt{100} = \mathbf{10}$ cm.}
+            \item Rapport exact de la réduction : \textbf{$k = \frac{MN}{BC} = \frac{4}{10} = \mathbf{0,4}$ (ou $\frac{2}{5}$).}
+            \item Aire de $ABC$ : \textbf{$\frac{6 \times 8}{2} = \mathbf{24}$ cm$^2$.}
+            \item Aire de $AMN$ : \textbf{Aire$(AMN) = \text{Aire}(ABC) \times k^2 = 24 \times 0,4^2 = 24 \times 0,16 = \mathbf{3,84}$ cm$^2$.}
+        \end{enumerate}
+    \end{exerciceNote}
+}
+
+\end{document}

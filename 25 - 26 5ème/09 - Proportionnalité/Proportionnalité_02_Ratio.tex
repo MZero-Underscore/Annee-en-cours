@@ -1,0 +1,60 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{9}
+\renewcommand{\monTitre}{Proportionnalité}
+
+\enteteActivite{2}{\monTitre}{\thechapter}
+
+    \begin{exercice}
+        Pour obtenir un \textit{Vert Turquoise}, un peintre doit mélanger de la peinture bleue et de la peinture verte.
+
+        \medskip
+
+        La consigne sur le pot indique que le mélange doit être fait dans le \textbf{ratio $2:3$} (on lit "2 pour 3").\\
+        Cela signifie que pour 2 doses de bleu, il faut ajouter 3 doses de vert.
+
+        \begin{enumerate}
+            \item Colorier les carrés suivants de la bonne couleur pour respecter le ratio proposé.
+            \begin{ZoneReponse}{2cm}  
+                \begin{center}
+                    \begin{tikzpicture}
+                        % Boucle pour créer 5 carrés
+                        % \i est l'indice du carré (de 0 à 4)
+                        % La position x est calculée par : \i * (largeur_carré + espacement)
+                        % Ici : \i * (1 + 1) = \i * 2
+                        \foreach \i in {0,1,2,3,4} {
+                            \draw[thick] (2*\i, 0) rectangle (2*\i + 1, 1);
+                            
+                            % Optionnel : ajouter un numéro ou une étiquette sous chaque carré
+                            \node at (2*\i + 0.5, -0.3) {Part \the\numexpr\i+1\relax};
+                        }
+                    \end{tikzpicture}
+                \end{center}
+            \end{ZoneReponse}
+            
+            \item \textbf{Utilisation du ratio :} Le peintre verse 10 litres de bleu. Quelle quantité de vert doit-il verser pour que le mélange soit correct ?
+            \begin{ZoneReponse}{4cm}    
+            \end{ZoneReponse}
+            
+            \item \textbf{Partage d'une quantité totale :} Le peintre veut préparer 50 litres de mélange au total.
+            
+            Calculer le volume de peinture bleue et le volume de peinture verte nécessaires.
+            \begin{ZoneReponse}{4cm}
+            \end{ZoneReponse}
+            
+            \item \textbf{Vérification d'un ratio:} Dans un autre seau, on a mélangé 12 L de bleu et 20 L de vert.\\
+            Ce mélange respecte-t-il le ratio $2:3$ ? Justifier la réponse.
+            \begin{ZoneReponse}{4cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}
+
+
+
+\end{document}

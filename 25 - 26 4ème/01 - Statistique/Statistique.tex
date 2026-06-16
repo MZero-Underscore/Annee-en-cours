@@ -1,0 +1,329 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{1}
+\renewcommand{\monTitre}{La statistique descriptive}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+On peut voir la \textbf{statistique descriptive} comme le domaine des mathématiques qui cherche à donner du sens à la collecte d’un grand nombre de données et à leurs représentations.  \\
+La collecte peut se faire par le biais d’une observation, d’une expérience scientifique ou d’une enquête d’opinion \ldots.\\
+On peut relever des informations chiffrées, des opinions, un trait de caractère \ldots.
+
+\section{Vocabulaire}
+
+    On va illustrer le vocabulaire de base à l'aide de l'exemple suivant : \\
+    On demande aux élèves d'une classe de quatrième combien ils ont de frères et sœurs puis on note les
+    réponses :
+    
+    \begin{tabular}{|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|}
+        \hline
+        & & & & & & & & & & & \\ \hline
+        & & & & & & & & & & & \\ \hline
+        & & & & & & & & & & & \\ \hline
+    \end{tabular}
+
+\subsection{La population}
+    \begin{definition}
+        \textbf{Population} : ensemble sur lequel porte l'étude statistique.
+        
+        \textbf{Individu} : élément de la population étudiée.
+    \end{definition}
+    
+    Dans notre exemple :
+    \begin{itemize}
+        \item La population étudiée est : $\ldots\ldots\ldots$
+        \item Les individus sont : $\ldots\ldots\ldots$
+    \end{itemize}
+    
+\subsection{Le caractère étudié}
+    \begin{definition}
+        Un \textbf{caractère} est la propriété que l'on souhaite étudier sur notre population.\\
+        Une \textbf{valeur du caractère} est un résultat/réponse possible.
+    \end{definition}
+
+    \medskip    
+    Dans notre exemple :
+    \begin{itemize}
+        \item Le caractère est : $\ldots\ldots\ldots$
+    \end{itemize}
+    
+\subsection{Les effectifs}
+    \begin{definition}
+        \begin{itemize}
+            \item L'\textbf{effectif total}, que l'on note $N$, est le nombre d'individus de la population.
+            \item L'\textbf{effectif d'une valeur}, que l'on note $n_{ }$, est le nombre de fois que cette valeur revient dans le décompte.
+        \end{itemize}        
+    \end{definition}
+
+    \medskip    
+    Dans notre exemple :
+    \begin{itemize}
+        \item L'effectif total est : $\ldots\ldots\ldots$
+        \item L'effectif de la valeur 2 est : $\ldots\ldots\ldots$
+    \end{itemize}
+
+\newpage
+
+
+\subsection{Une série statistique}
+    \begin{definition}
+        Une \textbf{série statistique} est l’ensemble des valeurs prises par le caractère étudié associées aux effectifs correspondants.
+    \end{definition}
+
+    \begin{remarque}
+        Il y a plusieurs façon de représenter une série statistique : 
+
+        tableau, diagramme en bâtons, diagramme circulaire ou semi-circulaire, \ldots
+
+        \begin{center}
+            \includegraphics[scale=0.5]{images/Tableau2entrées.png}    
+            \includegraphics[scale=0.5]{images/Diagrammes.png}    
+        \end{center}
+    \end{remarque}
+    
+
+\section{Calculer la fréquence d'une valeur}
+    \begin{definition}
+        La \textbf{fréquence} d'une valeur est le quotient de l'effectif de cette valeur par l'effectif total.
+        \[f_{\mbox{valeur}}=\frac{\mbox{effectif valeur}}{\mbox{effectif total}}\]
+    \end{definition}
+    
+    Dans l'exemple du I., la fréquence de la valeur 1 que l'on va noter $f_1$ vaut : $f_1=\ldots$
+
+
+    \begin{exemple}
+        On a étudié le moyen de transport d'élèves pour venir au collège. Compléter ce tableau.
+        
+        \begin{center}
+            \begin{tabular}{l|c|c|c|c|c}
+                \toprule
+                Transport & \textbf{Pied} & \textbf{Vélo} & \textbf{Voiture} & \textbf{Bus} & \textbf{Total} \\\hline
+                Effectif & 11 & 8 & 4 & 9 & \\
+                \midrule
+                Fréquence (arrondie à 0,01 près) & & & & & \\\hline
+                Fréquence en \% & & & & & \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{exemple}
+
+
+\section{Représentation d'une série statistique}
+\subsection{Tableau à double entrées}
+
+    \begin{exemple}
+        Le tableau ci-dessous présente la répartition par jour des quantités de lait (en L) produite dans une ferme, selon le type de lait. Attention, il est incomplet, aider le fermier à retrouver les valeurs manquantes.
+        
+        \begin{center}
+            \begin{tabular}{l|c|c|c|c}
+                \toprule
+                 & \textbf{Entier} & \textbf{Demi-écrémé} & \textbf{Écrémé} & \textbf{Total} \\
+                \midrule
+                \textbf{Vitaminé} & 45 & 225 & 45 &  \\ \hline
+                \textbf{Non vitaminé} &  & 315 &  &  \\
+                \midrule
+                \textbf{Total} & 225 &  & 135 &  \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{exemple}
+
+\subsection{Diagramme en bâtons}
+
+    \begin{exemple}
+        On a consigné dans le tableau suivant le chiffre d'affaires (CA), en millions d'euros, généré par les mangas, les BD et les comics entre janvier et juillet en France, en 2020 et en 2021.
+        
+        \begin{center}
+            \begin{tabular}{l|c|c|c|c}
+                \toprule
+                 & \textbf{Manga} & \textbf{BD adulte} & \textbf{BD jeunesse} & \textbf{Comics} \\
+                \midrule
+                \textbf{CA en 2020} & 80 & 92 & 68 & 21 \\\hline
+                \textbf{CA en 2021} & 186 & 142 & 94 & 26 \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+
+        Représenter ces séries en complétant la représentation graphique suivante.
+    
+        \[\includegraphics[scale=0.6]{images/ExempleDiagrammeBatons.png}\]
+    \end{exemple}
+
+\subsection{Diagramme circulaire ou semi-circulaire}
+
+    \begin{exemple}
+        On a demandé à 450 personnes de choisir un chiffre entre 1 et 5. 25 personnes ont choisi 1, 150 personnes ont choisi 2, 75 personnes ont choisi 3, un tiers des personnes ont choisi 4 et les autres ont choisi 5.
+
+        \begin{enumerate}
+            \item Combien de personnes ont choisi 4 ?
+
+            \item Combien de personnes ont choisi 5 ?
+        
+            \item Compléter le tableau de proportionnalité suivant.
+        
+            \begin{center}
+                \begin{tabular}{c|c|c|c|c|c|c}
+                    \toprule
+                    \textbf{Réponse} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{Total} \\
+                    \midrule
+                    \textbf{Effectifs} & 25 & 150 & 75 & \phantom{150} & \phantom{150} & 450 \\\hline
+                    \textbf{Fréquence} &  &  & & \phantom{150} & \phantom{150} & 1 \\\hline
+                    \textbf{Mesure d'angle (en °)} & \phantom{72} & \phantom{72} & \phantom{72} & \phantom{72} & \phantom{72} & 360 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+
+            \item Compléter le diagramme circulaire sachant que le disque est gradué de 10$^\circ$ en 10$^\circ$.
+            
+            \begin{center}
+                \begin{tikzpicture}[scale=0.6]
+                    \draw (0,0) circle (5cm);
+                    \foreach \angle in {0, 10, ..., 350}
+                    \draw[gray] (0,0) -- (\angle:5.2cm);
+                \end{tikzpicture}
+            \end{center}
+        \end{enumerate}
+    \end{exemple}
+
+
+    \begin{remarque}
+        Dans le cas où l'on demande un diagramme semi-circulaire, \fbox{\textbf{il faut remplacer 360 par 180 dans les calculs}}.
+
+        \underline{On reprend l'exemple précédent}.
+
+        \begin{enumerate}
+            \item Compléter le tableau de proportionnalité suivant.
+
+            \begin{center}
+                \begin{tabular}{c|c|c|c|c|c|c}
+                    \toprule
+                    \textbf{Réponse} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{Total} \\
+                    \midrule
+                    \textbf{Effectifs} & 25 & 150 & 75 & 150 & 50 & 450 \\\hline
+                    \textbf{Fréquence} &  &  & & \phantom{150} & \phantom{150} & 1 \\\hline
+                    \textbf{Mesure d'angle (en °)} & \phantom{72} & \phantom{72} & \phantom{72} & \phantom{72} & \phantom{72} & 180 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+
+            \item Compléter le diagramme circulaire sachant que le demi-disque est gradué de 10$^\circ$ en 10$^\circ$.
+    
+            \begin{center}
+                \begin{tikzpicture}[scale=0.6]
+                    \draw (0,0) -- (180:5cm) arc (180:0:5cm) -- cycle;
+                    \foreach \angle in {0, 10, ..., 170}
+                    \draw[gray] (0,0) -- (\angle:5.2cm);
+                \end{tikzpicture}
+            \end{center}
+        \end{enumerate}
+    \end{remarque}
+
+
+\section{Indicateurs de tendance centrale}
+\subsection{La moyenne pondérée}
+\subsubsection{Définition et calcul}
+    \begin{definition}[Moyenne pondérée]
+        La \textbf{moyenne pondérée} d'une série exprime la valeur qu'aurait chaque individu si le partage était équitable.
+
+        \medskip
+
+        En pratique, on additionne toutes les valeurs et on calcule le quotient de cette somme par l'effectif total.
+    \end{definition}
+
+    
+    \begin{exemple}
+        \begin{itemize}
+            \item \underline{Cas n°1 : La série est donnée sous forme de liste}
+
+            Calculer la moyenne des deux séries suivantes :
+
+            \begin{enumerate}
+                \item Série n°1 : 5 - 12 - 18 - 45
+                \item Série n°2 : 2 - 8 - 9 - 45 - 92 - 4 - 7 - 6 - 15 - 21
+            \end{enumerate}
+
+            \item \underline{Cas n°2 : La série est donnée sous forme de tableau avec les effectifs de chaque valeur.}
+            
+            Le tableau ci-dessous donne les salaires mensuels nets des employés d’une PME en 2015.
+    
+            \begin{center}\begin{tabular}{|l|c|c|c|c|c|c|}
+                \hline
+                Salaire           & 1250 & 1300 & 1500 & 1800 & 2200 & 2800 \\ \hline
+                Nombre d'employés & 6    & 10   & 9    & 14   & 7    & 4    \\ \hline
+            \end{tabular}\end{center}
+    
+            Déterminer le salaire mensuel net moyen des employés de cette PME.
+
+            \begin{methode}
+                \begin{itemize}
+                    \item On multiplie toutes les valeurs de la série par leurs effectifs respectifs.
+                    \item On calcule la somme des nombres obtenus.
+                    \item On calcule le quotient de cette somme par l'effectif total (qu'il faut en général calculer)
+                \end{itemize}
+            \end{methode}
+        \end{itemize}
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{La médiane}
+    Commençons par une réflexion pertinente du Chat de Geluck avant de donner la définition de la médiane.
+    
+    \[\includegraphics[scale=0.6]{images/MedianeChat.png}\]
+    
+    \begin{definition}[Médiane]
+        La \textbf{médiane} d’une série statistique \textbf{dont les valeurs sont ordonnées} (ordre croissant ou décroissant) est un réel, noté $Me$, tel qu’au moins 50 \% des valeurs de la série lui soit inférieures ou égales et au moins 50 \% lui soit supérieures ou égales.
+
+        \medskip
+        
+        Par convention, si \textbf{on note N l’effectif total}, la médiane se calcule différemment en fonction de la parité de N.
+        \begin{itemize}
+            \item Si N est impair, \\
+            alors la médiane est la valeur située au milieu des valeurs ordonnées.
+            
+            \item Si N est pair, \\
+            alors la médiane est le milieu des valeurs elles mêmes situées au milieu des valeurs ordonnées.
+        \end{itemize}
+    \end{definition}
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item (Cas impair) On a relevé le prix (en €) de sept articles achetés par une personne dans un même magasin. On a rangé par ordre croissant ces prix, déterminer la médiane : \\
+            4 \hspace{0.5cm} 4 \hspace{0.5cm} 6 \hspace{0.5cm} 7 \hspace{0.5cm} 7 \hspace{0.5cm} 10 \hspace{0.5cm} 15
+
+            \item (Cas pair) On a relevé le prix (en €) de 8 articles achetés par une personne dans un même magasin. On a rangé par ordre croissant ces prix, déterminer la médiane : \\
+            4 \hspace{0.5cm} 4 \hspace{0.5cm} 6 \hspace{0.5cm} 7 \hspace{0.5cm} 8 \hspace{0.5cm} 10 \hspace{0.5cm} 10 \hspace{0.5cm} 15
+            
+            \item Voici les notes d’un devoir de maths d’une classe de quatrième, arrondies au point près.
+
+            \begin{center}\scalebox{0.8}{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+                \hline
+                Note     & 0 & 3 & 5 & 8 & 11 & 12 & 14 & 16 & 17 \\ \hline
+                Effectif & 1 & 1 & 3 & 4 & 6  & 4  & 2  & 3  & 1  \\ \hline
+            \end{tabular}}\end{center} 
+            
+            Calculer la note médiane.
+        \end{enumerate}
+    \end{exemple}
+
+
+\section{Indicateur de dispersion}
+    \begin{definition}[Etendue]
+        L'\textbf{étendue} d'une série statistique est la différence entre la plus grande valeur et la plus petite valeur.
+    \end{definition}
+
+
+    \begin{exemple}
+        Calculer l'étendue du 3. de l'exemple 6.
+    \end{exemple}
+
+
+\end{document}

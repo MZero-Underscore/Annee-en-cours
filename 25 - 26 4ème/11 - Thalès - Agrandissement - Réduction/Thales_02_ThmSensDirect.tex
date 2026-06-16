@@ -1,0 +1,100 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\setcounter{chapter}{11} 
+\renewcommand{\monTitre}{Théorème de Thalès}
+
+\enteteActivite{2}{\monTitre}{\thechapter}
+
+\section*{Une histoire de triangles emboîtés}
+
+    Dans la figure ci-dessous, les droites $(d)$ et $(d')$ sont sécantes en $A$. 
+    Les droites \textbf{$(MN)$ et $(BC)$ sont parallèles}.
+    
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,0);
+            \coordinate (C) at (4,3);
+            \coordinate (M) at (2,0);
+            \coordinate (N) at (1.6,1.2);
+
+            \draw[thick] (-0.5,0) -- (6,0) node[right] {$(d)$};
+            \draw[thick] (-0.4,-0.3) -- (4.4,3.3) node[right] {$(d')$};
+            
+            \draw[blue, ultra thick] (M) -- (N);
+            \draw[red, ultra thick] (B) -- (C);
+            
+            \node at (A) [below left] {$A$};
+            \node at (M) [below] {$M$};
+            \node at (B) [below] {$B$};
+            \node at (N) [above left] {$N$};
+            \node at (C) [above left] {$C$};
+        \end{tikzpicture}
+    \end{center}
+
+\subsection*{1. Mesures des segments}
+
+    Mesurer le plus précisément possible les segments suivants (en cm) :
+    
+    \begin{center}
+    % Utilisation de >{\centering\arraybackslash}X pour le centrage horizontal
+    \begin{tabularx}{0.9\textwidth}{|>{\centering\arraybackslash}X|c|>{\centering\arraybackslash}X|c|}
+        \hline
+        \rowcolor{gray!15} \multicolumn{2}{|c|}{\textbf{Petit triangle $AMN$}} & \multicolumn{2}{c|}{\textbf{Grand triangle $ABC$}} \\
+        \hline
+        \rule{0pt}{15pt} $AM =$ & \hspace{1.5cm} cm & $AB =$ & \hspace{1.5cm} cm \\[1ex]
+        \hline
+        \rule{0pt}{15pt} $AN =$ & \hspace{1.5cm} cm & $AC =$ & \hspace{1.5cm} cm \\[1ex]
+        \hline
+        \rule{0pt}{15pt} $MN =$ & \hspace{1.5cm} cm & $BC =$ & \hspace{1.5cm} cm \\[1ex]
+        \hline
+    \end{tabularx}
+    \end{center}
+
+\subsection*{2. Comparaison des rapports}
+
+    Calculer les rapports suivants à l'aide de la calculatrice (donner une valeur approchée au centième si besoin) :
+    
+    \medskip
+    \begin{minipage}[t]{0.33\textwidth}
+        \centering $\dfrac{AM}{AB} = \dfrac{\dots\dots\dots}{\dots\dots\dots} \approx \dots\dots\dots$
+    \end{minipage}
+    \begin{minipage}[t]{0.33\textwidth}
+        \centering $\dfrac{AN}{AC} = \dfrac{\dots\dots\dots}{\dots\dots\dots} \approx \dots\dots\dots$
+    \end{minipage}
+    \begin{minipage}[t]{0.33\textwidth}
+        \centering $\dfrac{MN}{BC} = \dfrac{\dots\dots\dots}{\dots\dots\dots} \approx \dots\dots\dots$
+    \end{minipage}
+
+\subsection*{3. Conclusion et conjecture}
+
+    \begin{enumerate}
+        \item Que peut-on remarquer concernant les résultats de la question précédente ?
+        \begin{ZoneReponse}{1.5cm}
+        \end{ZoneReponse}
+        
+        \item Le triangle $AMN$ semble être une \dots\dots\dots\dots\dots\dots\dots\dots du triangle $ABC$.
+        \item Compléter l'égalité suivante (nommée égalité de Thalès) :
+        \vspace{0.5cm}
+        \begin{center}
+            {\Large $\dfrac{AM}{\dots\dots} = \dfrac{\dots\dots}{AC} = \dfrac{MN}{\dots\dots}$}
+        \end{center}
+    \end{enumerate}
+
+
+    \begin{cultureMaths}
+        Selon la \textbf{tradition} rapportée par les auteurs grecs, le philosophe \textit{\textbf{Thalès de Milet}} aurait réalisé un exploit scientifique en Égypte vers \textbf{600 av. J.-C.} : mesurer la hauteur de la grande pyramide de Khéops à l'aide d'une simple ombre portée.
+
+        L'astuce repose sur un principe de \textbf{proportionnalité} :
+        \begin{itemize}
+            \item En plaçant un bâton verticalement, il remarqua que le \textit{\textbf{rapport}} entre la hauteur de l'objet et la longueur de son ombre était \textbf{identique} pour le bâton et pour la pyramide.
+            \item Bien que ce savoir pratique fût probablement déjà utilisé par les \textit{bâtisseurs égyptiens}, cet épisode marque, dans la pensée occidentale, la formalisation de la notion de \textbf{triangles semblables}.
+        \end{itemize}
+    \end{cultureMaths}
+
+\end{document}

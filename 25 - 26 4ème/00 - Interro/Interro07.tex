@@ -1,0 +1,1164 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle4.tex}
+
+
+%Commandes pour les graphiques
+\newcommand{\GraphExoDeuxA}{
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            grid = major,
+            xmin=0, xmax=6,
+            ymin=0, ymax=30
+        ]
+            % On utilise (x, 5*x) pour être ultra-explicite sur les coordonnées
+            \addplot[domain=0:5.5, blue, thick] {5*x};
+        \end{axis}
+    \end{tikzpicture}}
+
+\newcommand{\GraphExoDeuxB}{
+    \begin{tikzpicture}[scale=0.8]
+        \begin{axis}[axis lines=middle, grid=both, xmin=0, xmax=7, ymin=0, ymax=30, xlabel={m}, ylabel={€}]
+            \addplot[domain=0:6, blue, thick]{4*x};
+        \end{axis}
+    \end{tikzpicture}}
+
+
+\begin{document}
+\setcounter{Interro}{7}
+\renewcommand{\maDate}{11/03}
+%\usetag{correction}
+
+\setcounter{exo}{0}
+
+
+\untagged{correction}{
+\NomPrenom
+\enteteInterro{\theInterro}{\maDate}{A}
+\TableauCompetencesQuatre
+            {\CompetenceSept}
+            {\CompetenceDeux{8}}
+            {\CompetenceQuatre{7}}
+            {\CompetenceQuatre{5}}
+
+
+    \begin{exerciceNote}{4}
+        \begin{enumerate}[leftmargin=*]
+            \item Les tableaux suivants sont-ils des tableaux de proportionnalité ? Justifier par un calcul.
+
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|}
+                \hline
+                3 & 5 & 8 & 10 \\ \hline
+                10,5 & 17,5 & 28 & 35 \\ \hline
+                \end{tabular}
+                \end{center}
+
+                \medskip
+
+                \begin{ZoneReponse}{2cm}
+                \end{ZoneReponse}
+                
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|}
+                    \hline
+                    2 & 4 & 6 & 9 \\ \hline
+                    5 & 10 & 15 & 22 \\ \hline
+                \end{tabular}
+                \end{center}
+
+                \medskip
+
+                \begin{ZoneReponse}{2cm}
+                \end{ZoneReponse}
+            \end{minipage}
+
+            \medskip
+
+            \item Compléter le tableau de proportionnalité suivant. Indiquer les calculs dans la zone prévue en dessous. 
+            \begin{center}
+                \begin{tabular}{|l|c|c|c|}
+                \hline
+                Masse d'oranges (kg) & 2,5 & 4 & \dots \\ \hline
+                Prix payé (€) & 3,75 & \dots & 9 \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item Compléter les égalités suivantes.
+
+            \medskip
+
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    $3,42m^3=\points[6] L$
+    
+                    \medskip
+    
+                    3 h 20 min = \points[6] h
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    8,5 t =\points[6] kg
+    
+                    \medskip
+    
+                    50 L = \points[6] $cm^3$
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    35 cm=\points[6] m
+    
+                    \medskip
+    
+                    137,5 min = \points h \points min \points s.
+                \end{center}
+            \end{minipage}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le graphique ci-dessous représente le prix d'un tissu en fonction de sa longueur.
+        
+        \begin{center}
+            \GraphExoDeuxA
+        \end{center}
+
+        \newpage
+
+        \begin{enumerate}[leftmargin=*]
+            \item Expliquer pourquoi ce graphique représente une situation de proportionnalité.
+
+            \begin{ZoneReponse}{2cm}                
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement le prix de 4 mètres de tissu.
+
+            \begin{ZoneReponse}{1cm}                
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement la longueur de tissu que l'on peut acheter avec 15 €.
+
+            \begin{ZoneReponse}{1cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Répondre de la façon souhaitée, soit par tableau, soit directement avec les formules.
+        \begin{enumerate}[leftmargin=*]
+            \item Un automobiliste parcourt $210 \text{ km}$ en $2 \text{ h } 30 \text{ min}$. Calculer sa vitesse moyenne en $\text{km/h}$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Un TGV roule à une vitesse moyenne de $300 \text{ km/h}$. Quelle distance parcourt-il en $12$ minutes ? 
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Un marcheur parcourt $12 \text{ km}$ à la vitesse de $5 \text{ km/h}$. Combien de temps a duré sa marche ? (Donner le résultat en heures et minutes).
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}       
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Même consigne que le précédent exercice.
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Masse volumique} \\
+            On rappelle la formule : $\rho = \frac{m}{V}$ (où $m$ est la masse et $V$ le volume). \\
+            La masse volumique de l'acier est $\rho = 7,8 \text{ g/cm}^3$. 
+            Calculer la masse $m$ d'une pièce en acier dont le volume $V$ est de $150 \text{ cm}^3$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+            
+            \item \textbf{Débit} \\
+            On rappelle la formule du débit \textbf{D} : $D = \frac{V}{t}$ (où $V$ est le volume et $t$ le temps). \\
+            Une pompe a un débit $D = 12 \text{ m}^3\text{/h}$. Combien de temps $t$ (en heures et minutes) faut-il pour remplir une piscine de $V = 30 \text{ m}^3$ ?
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Énergie électrique} \\
+            On rappelle la formule : $E = P \times t$ (où $P$ est la puissance et $t$ le temps). \\
+            Un fer à repasser d'une puissance $P = 2400 \text{ W}$ est utilisé pendant une durée $t = 45 \text{ minutes}$. 
+            Calculer l'énergie $E$ consommée en Watt-heures (Wh).
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le débit d'un robinet est de $15 \text{ litres par minute}$.
+        \begin{enumerate}[leftmargin=*]
+            \item 
+            Combien de temps faut-il pour remplir un bassin de $450 \text{ litres}$ ? 
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Si on double le débit du robinet, comment évolue le temps de remplissage ? Justifier.
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{6}
+        Un technicien utilise un drone pour inspecter le sommet d'une éolienne. \\
+        Le mât $[AB]$ de l'éolienne mesure $20\text{ m}$ de haut et est perpendiculaire au sol. \\
+        Le technicien se trouve au point $C$, à $21\text{ m}$ du pied du mât.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.2] % Échelle adaptée aux dimensions 20 et 21
+                % Points
+                \coordinate (B) at (0,0);
+                \coordinate (A) at (0,20);
+                \coordinate (C) at (21,0);
+            
+                % Sol
+                \draw[thick] (-5,0) -- (25,0);
+                \fill[gray!20] (-5,-0.5) rectangle (25,0);
+            
+                % Mât de l'éolienne
+                \draw[line width=1.5pt, brown] (B) -- (A) node[midway, left] {$20\text{ m}$};
+                \node at (0, -1.5) {B (Pied)};
+                \node at (0, 21.5) {A (Sommet)};
+            
+                % Distance au sol
+                \draw[<->, >=stealth] (0,-3) -- (21,-3) node[midway, below] {$21\text{ m}$};
+                \node at (21, -1.5) {C (Technicien)};
+            
+                % Trajectoire du drone (pointillés)
+                \draw[dashed, blue, thick] (C) -- (A) node[midway, above right] {Trajectoire};
+            
+                % Angle droit
+                \draw (0,1) -- (1,1) -- (1,0);
+            
+                % Petit dessin du drone au point C
+                \fill[black] (C) circle (0.3);
+                \draw[thick] (20.5, 0.3) -- (21.5, 0.3);
+                \draw[thick] (21, 0) -- (21, 0.3);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Étude de la trajectoire :} Le drone décolle du point $C$ et rejoint le sommet $A$ en ligne droite. Calculer la distance exacte parcourue par le drone.
+
+            \begin{ZoneReponse}{4cm}                
+            \end{ZoneReponse}
+
+\vfill
+
+\hfill Tourner la page !
+
+\newpage
+            
+            \item \textbf{Étude de la vitesse :} Le drone met $4$ secondes pour effectuer ce trajet $CA$. 
+            \begin{enumerate}
+                \item Calculer sa vitesse moyenne en m/s.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+                
+                \item Convertir cette vitesse en km/h. Est-elle supérieure à la limite de $25\text{ km/h}$ autorisée dans cette zone ?
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+            \end{enumerate}
+        
+            \item \textbf{Étude de l'énergie :} 
+           La batterie du drone a une capacité totale de $4000 \text{ mAh}$ (milliampère-heure). On considère que la consommation d'énergie est une grandeur produit : $\text{Énergie consommée} = \text{Intensité} \times \text{Temps}$.
+
+            \begin{itemize}
+               \item L'intensité (I) se mesure en Ampère (A) ou milliAmpère (mA)
+               \item Le temps (t) se mesure en heure (h)
+               \item L'énergie consommée (E) se mesure en Ampère-heure(Ah) ou milliampère-heure (mAh)
+            \end{itemize}         
+           
+            Le drone consomme une intensité constante de $12 \text{ A}$ (soit $12\,000 \text{ mA}$) en vol.
+            
+            \begin{enumerate}[leftmargin=*]
+                \item Calculer l'énergie consommée par le drone pour un vol de $15\text{ minutes}$.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+                
+                \item Le drone pourra-t-il tenir ces $15\text{ minutes}$ sans tomber en panne de batterie ? Justifier.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+            \end{enumerate}              
+        \end{enumerate}      
+    \end{exerciceNote}
+
+
+\newpage
+
+\raggedright
+\setcounter{exo}{0}
+\NomPrenom
+\enteteInterro{\theInterro}{\maDate}{B}
+\TableauCompetencesQuatre
+            {\CompetenceSept}
+            {\CompetenceDeux{8}}
+            {\CompetenceQuatre{7}}
+            {\CompetenceQuatre{5}}
+
+
+    \begin{exerciceNote}{4}
+        \begin{enumerate}[leftmargin=*]
+            \item Les tableaux suivants sont-ils des tableaux de proportionnalité ? Justifier.
+            
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|} \hline
+                4 & 6 & 7 & 10 \\ \hline
+                18 & 27 & 31,5 & 45 \\ \hline
+                \end{tabular}
+                \end{center}
+                \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|} \hline
+                3 & 5 & 8 & 9 \\ \hline
+                12 & 20 & 32 & 35 \\ \hline
+                \end{tabular}
+                \end{center}
+                \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+            \end{minipage}
+    
+            \item Compléter le tableau de proportionnalité.
+            
+            \begin{center}
+                \begin{tabular}{|l|c|c|c|} \hline
+                Masse d'oranges (kg) & 1,5 & 5 & \dots \\ \hline
+                Prix payé (€) & 2,10 & \dots & 11,20 \\ \hline
+                \end{tabular}
+            \end{center}
+            \begin{ZoneReponse}{1.5cm}\end{ZoneReponse}
+    
+            \item Compléter les égalités suivantes.
+
+            \medskip
+            
+            \begin{minipage}{0.25\linewidth}
+                \begin{center}                       
+                    $2,5 m^3 = \points[3] L$ \\ \medskip
+                    2 h 15 min = \points[3] h
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.25\linewidth}
+                \begin{center}                       
+                    4,2 t = \points[3] kg \\ \medskip
+                    80 L = \points[3] $cm^3$
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.4\linewidth}
+                \begin{center}                       
+                    12 cm = \points[3] m \\ \medskip
+                    137,5 min = \points[2] h \points[2] min \points[2] s.
+                \end{center}
+            \end{minipage}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le graphique ci-dessous représente le prix d'un tissu en fonction de sa longueur.
+        
+        \begin{center}
+            \GraphExoDeuxB
+        \end{center}
+
+        \newpage
+
+        \begin{enumerate}[leftmargin=*]
+            \item Expliquer pourquoi ce graphique représente une situation de proportionnalité.
+
+            \begin{ZoneReponse}{2cm}                
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement le prix de 4 mètres de tissu.
+
+            \begin{ZoneReponse}{1cm}                
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement la longueur de tissu que l'on peut acheter avec 15 €.
+
+            \begin{ZoneReponse}{1cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Répondre de la façon souhaitée, soit par tableau, soit directement avec les formules.
+        \begin{enumerate}[leftmargin=*]
+            \item Un automobiliste parcourt $180 \text{ km}$ en $2 \text{ h } 15 \text{ min}$. Calculer sa vitesse moyenne en $\text{km/h}$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Un TGV roule à une vitesse moyenne de $320 \text{ km/h}$. Quelle distance parcourt-il en $15$ minutes ? 
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Un marcheur parcourt $15 \text{ km}$ à la vitesse de $6 \text{ km/h}$. Combien de temps a duré sa marche ? (Donner le résultat en heures et minutes).
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}       
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Même consigne que le précédent exercice.
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Masse volumique} \\
+            On rappelle la formule : $\rho = \frac{m}{V}$ (où $m$ est la masse et $V$ le volume). \\
+            La masse volumique de l'aluminium est $\rho = 2,7 \text{ g/cm}^3$. 
+            Calculer la masse $m$ d'une pièce en aluminium dont le volume $V$ est de $200 \text{ cm}^3$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+            
+            \item \textbf{Débit} \\
+            On rappelle la formule du débit \textbf{D} : $D = \frac{V}{t}$ (où $V$ est le volume et $t$ le temps). \\
+            Une pompe a un débit $D = 15 \text{ m}^3\text{/h}$. Combien de temps $t$ (en heures et minutes) faut-il pour remplir une piscine de $V = 40 \text{ m}^3$ ?
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Énergie électrique} \\
+            On rappelle la formule : $E = P \times t$ (où $P$ est la puissance et $t$ le temps). \\
+            Un aspirateur d'une puissance $P = 800 \text{ W}$ est utilisé pendant une durée $t = 45 \text{ minutes}$. 
+            Calculer l'énergie $E$ consommée en Watt-heures (Wh).
+
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le débit d'un robinet est de $12 \text{ litres par minute}$.
+        \begin{enumerate}[leftmargin=*]
+            \item 
+            Combien de temps faut-il pour remplir un bassin de $540 \text{ litres}$ ? 
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+
+            \item Si on double le débit du robinet, comment évolue le temps de remplissage ? Justifier.
+            \begin{ZoneReponse}{1.5cm}                
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{6}
+        Un technicien utilise un drone pour inspecter le sommet d'une éolienne. \\
+        Le mât $[AB]$ de l'éolienne mesure $20\text{ m}$ de haut et est perpendiculaire au sol. \\
+        Le technicien se trouve au point $C$, à $21\text{ m}$ du pied du mât.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.2] % Échelle adaptée aux dimensions 20 et 21
+                % Points
+                \coordinate (B) at (0,0);
+                \coordinate (A) at (0,20);
+                \coordinate (C) at (21,0);
+            
+                % Sol
+                \draw[thick] (-5,0) -- (25,0);
+                \fill[gray!20] (-5,-0.5) rectangle (25,0);
+            
+                % Mât de l'éolienne
+                \draw[line width=1.5pt, brown] (B) -- (A) node[midway, left] {$20\text{ m}$};
+                \node at (0, -1.5) {B (Pied)};
+                \node at (0, 21.5) {A (Sommet)};
+            
+                % Distance au sol
+                \draw[<->, >=stealth] (0,-3) -- (21,-3) node[midway, below] {$21\text{ m}$};
+                \node at (21, -1.5) {C (Technicien)};
+            
+                % Trajectoire du drone (pointillés)
+                \draw[dashed, blue, thick] (C) -- (A) node[midway, above right] {Trajectoire};
+            
+                % Angle droit
+                \draw (0,1) -- (1,1) -- (1,0);
+            
+                % Petit dessin du drone au point C
+                \fill[black] (C) circle (0.3);
+                \draw[thick] (20.5, 0.3) -- (21.5, 0.3);
+                \draw[thick] (21, 0) -- (21, 0.3);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Étude de la trajectoire :} Le drone décolle du point $C$ et rejoint le sommet $A$ en ligne droite. Calculer la distance exacte parcourue par le drone.
+
+            \begin{ZoneReponse}{4cm}                
+            \end{ZoneReponse}
+
+\vfill
+
+\hfill Tourner la page !
+
+\newpage
+            
+            \item \textbf{Étude de la vitesse :} Le drone met $4$ secondes pour effectuer ce trajet $CA$. 
+            \begin{enumerate}
+                \item Calculer sa vitesse moyenne en m/s.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+                
+                \item Convertir cette vitesse en km/h. Est-elle supérieure à la limite de $25\text{ km/h}$ autorisée dans cette zone ?
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+            \end{enumerate}
+        
+            \item \textbf{Étude de l'énergie :} 
+            La batterie du drone a une capacité totale de $4000\text{ mAh}$ (milliampère-heure). 
+            On considère que la consommation d'énergie est une grandeur produit : $\text{Énergie consommée} = \text{Intensité} \times \text{Temps}$.
+
+            \begin{itemize}
+               \item L'intensité (I) se mesure en Ampère (A) ou milliAmpère (mA)
+               \item Le temps (t) se mesure en heure (h)
+               \item L'énergie consommée (E) se mesure en Ampère-heure(Ah) ou milliampère-heure (mAh)
+            \end{itemize}      
+            
+            Le drone consomme une intensité constante de $12\text{ A}$ (soit $12\,000\text{ mA}$) en vol.
+            \begin{enumerate}[leftmargin=*]
+                \item Calculer l'énergie consommée par le drone pour un vol de $15\text{ minutes}$.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+                
+                \item Le drone pourra-t-il tenir ces $15\text{ minutes}$ sans tomber en panne de batterie ? Justifier.
+                \begin{ZoneReponse}{1.5cm}                
+                \end{ZoneReponse}
+            \end{enumerate}
+                    
+        \end{enumerate}      
+    \end{exerciceNote}
+
+}
+
+
+\tagged{correction}{
+\enteteInterroCorrection{\theInterro}{\maDate}{A}
+
+
+    \begin{exerciceNote}{4}
+        \begin{enumerate}[leftmargin=*]
+            \item Les tableaux suivants sont-ils des tableaux de proportionnalité ? Justifier par un calcul.
+
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|}
+                \hline
+                3 & 5 & 8 & 10 \\ \hline
+                10,5 & 17,5 & 28 & 35 \\ \hline
+                \end{tabular}
+                \end{center}
+
+                \medskip
+
+                \begin{ZoneReponse}{2.5cm}
+                On calcule les rapports : \\
+                $\frac{10,5}{3} = 3,5$ ; $\frac{17,5}{5} = 3,5$ ; $\frac{28}{8} = 3,5$ ; $\frac{35}{10} = 3,5$. \\
+                Tous les rapports sont égaux, c'est un \textbf{tableau de proportionnalité}.
+                \end{ZoneReponse}
+                
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|}
+                    \hline
+                    2 & 4 & 6 & 9 \\ \hline
+                    5 & 10 & 15 & 22 \\ \hline
+                \end{tabular}
+                \end{center}
+
+                \medskip
+
+                \begin{ZoneReponse}{2.5cm}
+                $\frac{5}{2} = 2,5$ ; $\frac{10}{4} = 2,5$ ; $\frac{15}{6} = 2,5$ ;\\
+                mais $\frac{22}{9} \approx 2,44$. \\
+                Les rapports ne sont pas tous égaux ($2,5 \neq 2,44$), ce \textbf{n'est pas} de la proportionnalité.
+                \end{ZoneReponse}
+            \end{minipage}
+
+            \medskip
+
+            \item Compléter le tableau de proportionnalité suivant. Indiquer les calculs dans la zone prévue en dessous. 
+            \begin{center}
+                \begin{tabular}{|l|c|c|c|}
+                \hline
+                Masse d'oranges (kg) & 2,5 & 4 & \textbf{6} \\ \hline
+                Prix payé (€) & 3,75 & \textbf{6} & 9 \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \begin{ZoneReponse}{1.8cm} 
+            Le coefficient est $3,75 \div 2,5 = 1,5$ €/kg. \\
+            Calculs : $4 \times 1,5 = \mathbf{6}$ € \ et \ $9 \div 1,5 = \mathbf{6}$ kg.
+            \end{ZoneReponse}
+
+            \item Compléter les égalités suivantes.
+
+            \medskip
+
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    3,42 m$^3$ = $\mathbf{3\,420}$ L
+    
+                    \medskip
+    
+                    3 h 20 min = $\mathbf{3,33}$ h 
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    8,5 t =$\mathbf{8\,500}$ kg
+    
+                    \medskip
+    
+                    50 L = $\mathbf{50\,000}$  cm$^3$
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                
+                    35 cm=$\mathbf{0,35}$ m
+    
+                    \medskip
+    
+                    137,5 min = $\mathbf{2}$ h$ \mathbf{17}$ min $\mathbf{30}$ s. 
+                \end{center}
+            \end{minipage}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{2} 
+        Le graphique ci-dessous représente le prix d'un tissu en fonction de sa longueur.
+        
+        \begin{center}
+            \GraphExoDeuxA
+        \end{center}
+
+        \newpage
+
+        \begin{enumerate}[leftmargin=*]
+            \item Expliquer pourquoi ce graphique représente une situation de proportionnalité.
+
+            \begin{ZoneReponse}{1.5cm}            
+            Le graphique est une \textbf{droite qui passe par l'origine} du repère.
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement le prix de 4 mètres de tissu.
+
+            \begin{ZoneReponse}{1cm}          
+            Pour 4 m de tissu, le prix est de \textbf{20 €} (voir pointillés rouges).
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement la longueur de tissu que l'on peut acheter avec 15 €.
+
+            \begin{ZoneReponse}{1cm}           
+            Avec 15 €, on peut acheter \textbf{3 mètres} de tissu (voir pointillés verts).
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{3}
+        Répondre de la façon souhaitée, soit par tableau, soit directement avec les formules.
+        \begin{enumerate}[leftmargin=*]
+            \item Un automobiliste parcourt $210 \text{ km}$ en $2 \text{ h } 30 \text{ min}$. Calculer sa vitesse moyenne en $\text{km/h}$.
+
+            \begin{ZoneReponse}{1.5cm}           
+            $t = 2,5 \text{ h}$. Alors $v = \frac{d}{t} = \frac{210}{2,5} = \mathbf{84 \text{ km/h}}$.
+            \end{ZoneReponse}
+
+            \item Un TGV roule à une vitesse moyenne de $300 \text{ km/h}$. Quelle distance parcourt-il en $12$ minutes ? 
+
+            \begin{ZoneReponse}{1.5cm}         
+            $t = \frac{12}{60} = 0,2 \text{ h}$. Alors $d = v \times t = 300 \times 0,2 = \mathbf{60 \text{ km}}$.
+            \end{ZoneReponse}
+
+            \item Un marcheur parcourt $12 \text{ km}$ à la vitesse de $5 \text{ km/h}$. Combien de temps a duré sa marche ? (Donner le résultat en heures et minutes).
+
+            \begin{ZoneReponse}{1.5cm}           
+            $t = \frac{d}{v} = \frac{12}{5} = 2,4 \text{ h} = \mathbf{2 \text{ h } 24 \text{ min}}$ (car $0,4 \times 60 = 24$).
+            \end{ZoneReponse}
+        \end{enumerate}        
+    \end{exerciceNote}
+    
+
+    \begin{exerciceNote}{3} 
+        Même consigne que le précédent exercice.
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Masse volumique} \\
+            On rappelle la formule : $\rho = \frac{m}{V}$ (où $m$ est la masse et $V$ le volume). \\
+            La masse volumique de l'acier est $\rho = 7,8 \text{ g/cm}^3$. 
+            Calculer la masse $m$ d'une pièce en acier dont le volume $V$ est de $150 \text{ cm}^3$.
+
+            \begin{ZoneReponse}{1.5cm}           
+            $m = \rho \times V = 7,8 \text{ g/cm}^3 \times 150 \text{ cm}^3 = \mathbf{1\,170 \text{ g}}$.
+            \end{ZoneReponse}
+            
+            \item \textbf{Débit} \\
+            On rappelle la formule du débit \textbf{D} : $D = \frac{V}{t}$ (où $V$ est le volume et $t$ le temps). \\
+            Une pompe a un débit $D = 12 \text{ m}^3\text{/h}$. Combien de temps $t$ (en heures et minutes) faut-il pour remplir une piscine de $V = 30 \text{ m}^3$ ?
+
+            \begin{ZoneReponse}{1.5cm}            
+            $t = \frac{V}{D} = \frac{30}{12} = 2,5 \text{ h} = \mathbf{2 \text{ h } 30 \text{ min}}$.
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Énergie électrique} \\
+            On rappelle la formule : $E = P \times t$ (où $P$ est la puissance et $t$ le temps). \\
+            Un fer à repasser d'une puissance $P = 2400 \text{ W}$ est utilisé pendant une durée $t = 45 \text{ minutes}$. 
+            Calculer l'énergie $E$ consommée en Watt-heures (Wh).
+
+            \begin{ZoneReponse}{1.5cm}          
+            $t = \frac{45}{60} = 0,75 \text{ h}$. Alors $E = 2400 \text{ W} \times 0,75 \text{ h} = \mathbf{1\,800 \text{ Wh}}$.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{2}
+        Le débit d'un robinet est de $15 \text{ litres par minute}$.
+        \begin{enumerate}[leftmargin=*]
+            \item 
+            Combien de temps faut-il pour remplir un bassin de $450 \text{ litres}$ ? 
+            \begin{ZoneReponse}{1.5cm}          
+            $t = \frac{450}{15} = \mathbf{30 \text{ minutes}}$.
+            \end{ZoneReponse}
+
+            \item Si on double le débit du robinet, comment évolue le temps de remplissage ? Justifier.
+            \begin{ZoneReponse}{1.5cm}           
+            Le temps est \textbf{divisé par deux} (soit 15 min), car le temps est inversement proportionnel au débit.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+    \begin{exerciceNote}{6}
+        Un technicien utilise un drone pour inspecter le sommet d'une éolienne. \\
+        Le mât $[AB]$ de l'éolienne mesure $20\text{ m}$ de haut et est perpendiculaire au sol. \\
+        Le technicien se trouve au point $C$, à $21\text{ m}$ du pied du mât.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.2] % Échelle adaptée aux dimensions 20 et 21
+                % Points
+                \coordinate (B) at (0,0);
+                \coordinate (A) at (0,20);
+                \coordinate (C) at (21,0);
+            
+                % Sol
+                \draw[thick] (-5,0) -- (25,0);
+                \fill[gray!20] (-5,-0.5) rectangle (25,0);
+            
+                % Mât de l'éolienne
+                \draw[line width=1.5pt, brown] (B) -- (A) node[midway, left] {$20\text{ m}$};
+                \node at (0, -1.5) {B (Pied)};
+                \node at (0, 21.5) {A (Sommet)};
+            
+                % Distance au sol
+                \draw[<->, >=stealth] (0,-3) -- (21,-3) node[midway, below] {$21\text{ m}$};
+                \node at (21, -1.5) {C (Technicien)};
+            
+                % Trajectoire du drone (pointillés)
+                \draw[dashed, blue, thick] (C) -- (A) node[midway, above right] {Trajectoire};
+            
+                % Angle droit
+                \draw (0,1) -- (1,1) -- (1,0);
+            
+                % Petit dessin du drone au point C
+                \fill[black] (C) circle (0.3);
+                \draw[thick] (20.5, 0.3) -- (21.5, 0.3);
+                \draw[thick] (21, 0) -- (21, 0.3);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Étude de la trajectoire :} Le drone décolle du point $C$ et rejoint le sommet $A$ en ligne droite. Calculer la distance exacte parcourue par le drone.
+
+            \begin{ZoneReponse}{3.5cm}                
+            Le triangle $ABC$ est rectangle en $B$. D'après le théorème de Pythagore : \\
+            $AC^2 = AB^2 + BC^2$ \\
+            $AC^2 = 20^2 + 21^2 = 400 + 441 = 841$ \\
+            $AC = \sqrt{841} = \mathbf{29 \text{ m}}$.
+            \end{ZoneReponse}
+
+\vfill
+
+\hfill Tourner la page !
+
+\newpage
+            
+            \item \textbf{Étude de la vitesse :} Le drone met $4$ secondes pour effectuer ce trajet $CA$. 
+            \begin{enumerate}
+                \item Calculer sa vitesse moyenne en m/s.
+                \begin{ZoneReponse}{1.5cm}                
+                $v = \frac{d}{t} = \frac{29}{4} = \mathbf{7,25 \text{ m/s}}$.
+                \end{ZoneReponse}
+                
+                \item Convertir cette vitesse en km/h. Est-elle supérieure à la limite de $25\text{ km/h}$ autorisée dans cette zone ?
+                \begin{ZoneReponse}{1.5cm}                
+                $7,25 \text{ m/s} \times 3,6 = \mathbf{26,1 \text{ km/h}}$. \\
+                Cette vitesse est \textbf{supérieure} à la limite autorisée (26,1 > 25).
+                \end{ZoneReponse}
+            \end{enumerate}
+        
+            \item \textbf{Étude de l'énergie :} 
+            La batterie du drone a une capacité totale de $4000\text{ mAh}$ (milliampère-heure). 
+            On considère que la consommation d'énergie est une grandeur produit : $\text{Énergie} = \text{Intensité} \times \text{Temps}$.
+
+            \begin{itemize}
+               \item L'intensité (I) se mesure en Ampère (A) ou milliAmpère (mA)
+               \item Le temps (t) se mesure en heure (h)
+               \item L'énergie consommée (E) se mesure en Ampère-heure(Ah) ou milliampère-heure (mAh)
+            \end{itemize}      
+            
+            Le drone consomme une intensité constante de $12\text{ A}$ (soit $12\,000\text{ mA}$) en vol.
+            \begin{enumerate}[leftmargin=*]
+                \item Calculer l'énergie consommée par le drone pour un vol de $15\text{ minutes}$.
+                \begin{ZoneReponse}{1.5cm}                
+                $t = 15 \text{ min} = 0,25 \text{ h}$. \\
+                $E = 12\,000 \text{ mA} \times 0,25 \text{ h} = \mathbf{3\,000 \text{ mAh}}$.
+                \end{ZoneReponse}
+                
+                \item Le drone pourra-t-il tenir ces $15\text{ minutes}$ sans tomber en panne de batterie ? Justifier.
+                \begin{ZoneReponse}{1.5cm}                
+                \textbf{Oui}, car $3\,000 < 4\,000$. L'énergie consommée est inférieure à la capacité de la batterie.
+                \end{ZoneReponse}
+            \end{enumerate}              
+        \end{enumerate}      
+    \end{exerciceNote}
+
+
+\newpage
+
+
+\setcounter{exo}{0}
+\enteteInterroCorrection{\theInterro}{\maDate}{B}
+\raggedright
+
+
+    \begin{exerciceNote}{4}
+        \begin{enumerate}[leftmargin=*]
+            \item Les tableaux suivants sont-ils des tableaux de proportionnalité ? Justifier.
+            
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|} \hline
+                4 & 6 & 7 & 10 \\ \hline
+                18 & 27 & 31,5 & 45 \\ \hline
+                \end{tabular}
+                \end{center}
+                \begin{ZoneReponse}{2.5cm}
+                On vérifie les rapports : \\
+                $\frac{18}{4} = 4,5$ ; $\frac{27}{6} = 4,5$ ; $\frac{31,5}{7} = 4,5$ ; $\frac{45}{10} = 4,5$. \\
+                Tous les rapports sont égaux à 4,5. C'est un \textbf{tableau de proportionnalité}.
+                \end{ZoneReponse}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{center}
+                \begin{tabular}{|c|c|c|c|} \hline
+                3 & 5 & 8 & 9 \\ \hline
+                12 & 20 & 32 & 35 \\ \hline
+                \end{tabular}
+                \end{center}
+                \begin{ZoneReponse}{2.5cm}
+                On vérifie les rapports : \\
+                $\frac{12}{3} = 4$ ; $\frac{20}{5} = 4$ ; $\frac{32}{8} = 4$ ; \\
+                mais $\frac{35}{9} \approx 3,88$. \\
+                Les rapports ne sont pas tous égaux, ce \textbf{n'est pas} un tableau de proportionnalité.
+                \end{ZoneReponse}
+            \end{minipage}
+    
+            \medskip
+
+            \item Compléter le tableau de proportionnalité.
+            
+            \begin{center}
+                \begin{tabular}{|l|c|c|c|} \hline
+                Masse d'oranges (kg) & 1,5 & 5 & \textbf{8} \\ \hline
+                Prix payé (€) & 2,10 & \textbf{7} & 11,20 \\ \hline
+                \end{tabular}
+            \end{center}
+            \begin{ZoneReponse}{1.8cm}
+            Coefficient de proportionnalité : $2,10 \div 1,5 = 1,4$ €/kg. \\
+            $\bullet$ Pour 5 kg : $5 \times 1,4 = \mathbf{7}$ €. \\
+            $\bullet$ Pour 11,20 € : $11,20 \div 1,4 = \mathbf{8}$ kg.
+            \end{ZoneReponse}
+    
+            \medskip
+
+            \item Compléter les égalités suivantes.
+            
+            \medskip
+
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                        
+                    $2,5 m^3 = \mathbf{2\,500}$ L \\ \medskip
+                    2 h 15 min = $\mathbf{2,25}$ h
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                        
+                    4,2 t = $\mathbf{4\,200}$ kg \\ \medskip
+                    80 L = $\mathbf{80\,000}$ $cm^3$
+                \end{center}
+            \end{minipage}
+            \hfill \vline \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}                        
+                    12 cm = $\mathbf{0,12}$ m \\ \medskip
+                    137,5 min = $\mathbf{2}$ h $\mathbf{17}$ min $\mathbf{30}$ s.
+                \end{center}
+            \end{minipage}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le graphique ci-dessous représente le prix d'un tissu en fonction de sa longueur.
+        
+        \begin{center}
+            \GraphExoDeuxB
+        \end{center}
+
+        \newpage
+
+        \begin{enumerate}[leftmargin=*]
+            \item Expliquer pourquoi ce graphique représente une situation de proportionnalité.
+
+            \begin{ZoneReponse}{1.5cm}                
+            Ce graphique représente une situation de proportionnalité car les points sont alignés sur une \textbf{droite qui passe par l'origine} du repère.
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement le prix de 4 mètres de tissu.
+
+            \begin{ZoneReponse}{1cm}                
+            En partant de 4 m sur l'axe horizontal, on lit \textbf{16 €} sur l'axe vertical.
+            \end{ZoneReponse}
+
+            \item Déterminer graphiquement la longueur de tissu que l'on peut acheter avec 15 €.
+
+            \begin{ZoneReponse}{1cm}                
+            En partant de 15 € sur l'axe vertical, on lit \textbf{3,75 mètres} sur l'axe horizontal.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Répondre de la façon souhaitée, soit par tableau, soit directement avec les formules.
+        \begin{enumerate}[leftmargin=*]
+            \item Un automobiliste parcourt $180 \text{ km}$ en $2 \text{ h } 15 \text{ min}$. Calculer sa vitesse moyenne en $\text{km/h}$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            On a $t = 2,25 \text{ h}$. \\
+            $v = \frac{d}{t} = \frac{180}{2,25} = \mathbf{80 \text{ km/h}}$.
+            \end{ZoneReponse}
+
+            \item Un TGV roule à une vitesse moyenne de $320 \text{ km/h}$. Quelle distance parcourt-il en $15$ minutes ? 
+
+            \begin{ZoneReponse}{1.5cm}                
+            On a $t = \frac{15}{60} = 0,25 \text{ h}$. \\
+            $d = v \times t = 320 \times 0,25 = \mathbf{80 \text{ km}}$.
+            \end{ZoneReponse}
+
+            \item Un marcheur parcourt $15 \text{ km}$ à la vitesse de $6 \text{ km/h}$. Combien de temps a duré sa marche ? (Donner le résultat en heures et minutes).
+
+            \begin{ZoneReponse}{1.5cm}                
+            $t = \frac{d}{v} = \frac{15}{6} = 2,5 \text{ h}$. \\
+            Soit \textbf{2 h 30 min}.
+            \end{ZoneReponse}
+        \end{enumerate}        
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{3}
+        Même consigne que le précédent exercice.
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Masse volumique} \\
+            On rappelle la formule : $\rho = \frac{m}{V}$ (où $m$ est la masse et $V$ le volume). \\
+            La masse volumique de l'aluminium est $\rho = 2,7 \text{ g/cm}^3$. 
+            Calculer la masse $m$ d'une pièce en aluminium dont le volume $V$ est de $200 \text{ cm}^3$.
+
+            \begin{ZoneReponse}{1.5cm}                
+            $m = \rho \times V = 2,7 \times 200 = \mathbf{540 \text{ g}}$.
+            \end{ZoneReponse}
+            
+            \item \textbf{Débit} \\
+            On rappelle la formule du débit \textbf{D} : $D = \frac{V}{t}$ (où $V$ est le volume et $t$ le temps). \\
+            Une pompe a un débit $D = 15 \text{ m}^3\text{/h}$. Combien de temps $t$ (en heures et minutes) faut-il pour remplir une piscine de $V = 40 \text{ m}^3$ ?
+
+            \begin{ZoneReponse}{1.5cm}                
+            $t = \frac{V}{D} = \frac{40}{15} \approx 2,66... \text{ h}$. \\
+            $0,66... \times 60 = 40$. Soit \textbf{2 h 40 min}.
+            \end{ZoneReponse}
+
+\newpage
+            
+            \item \textbf{Énergie électrique} \\
+            On rappelle la formule : $E = P \times t$ (où $P$ est la puissance et $t$ le temps). \\
+            Un aspirateur d'une puissance $P = 800 \text{ W}$ est utilisé pendant une durée $t = 45 \text{ minutes}$. 
+            Calculer l'énergie $E$ consommée en Watt-heures (Wh).
+
+            \begin{ZoneReponse}{1.5cm}                
+            $t = 45 \text{ min} = 0,75 \text{ h}$. \\
+            $E = P \times t = 800 \times 0,75 = \mathbf{600 \text{ Wh}}$.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{2}
+        Le débit d'un robinet est de $12 \text{ litres par minute}$.
+        \begin{enumerate}[leftmargin=*]
+            \item 
+            Combien de temps faut-il pour remplir un bassin de $540 \text{ litres}$ ? 
+            \begin{ZoneReponse}{1.5cm}                
+            $t = \frac{540}{12} = \mathbf{45 \text{ minutes}}$.
+            \end{ZoneReponse}
+
+            \item Si on double le débit du robinet, comment évolue le temps de remplissage ? Justifier.
+            \begin{ZoneReponse}{1.5cm}                
+            Si on double le débit, le temps de remplissage est \textbf{divisé par deux} (soit 22,5 min). Le débit et le temps sont inversement proportionnels.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exerciceNote}
+
+
+    \begin{exerciceNote}{6}
+        Un technicien utilise un drone pour inspecter le sommet d'une éolienne. \\
+        Le mât $[AB]$ de l'éolienne mesure $20\text{ m}$ de haut et est perpendiculaire au sol. \\
+        Le technicien se trouve au point $C$, à $21\text{ m}$ du pied du mât.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.2] % Échelle adaptée aux dimensions 20 et 21
+                % Points
+                \coordinate (B) at (0,0);
+                \coordinate (A) at (0,20);
+                \coordinate (C) at (21,0);
+            
+                % Sol
+                \draw[thick] (-5,0) -- (25,0);
+                \fill[gray!20] (-5,-0.5) rectangle (25,0);
+            
+                % Mât de l'éolienne
+                \draw[line width=1.5pt, brown] (B) -- (A) node[midway, left] {$20\text{ m}$};
+                \node at (0, -1.5) {B (Pied)};
+                \node at (0, 21.5) {A (Sommet)};
+            
+                % Distance au sol
+                \draw[<->, >=stealth] (0,-3) -- (21,-3) node[midway, below] {$21\text{ m}$};
+                \node at (21, -1.5) {C (Technicien)};
+            
+                % Trajectoire du drone (pointillés)
+                \draw[dashed, blue, thick] (C) -- (A) node[midway, above right] {Trajectoire};
+            
+                % Angle droit
+                \draw (0,1) -- (1,1) -- (1,0);
+            
+                % Petit dessin du drone au point C
+                \fill[black] (C) circle (0.3);
+                \draw[thick] (20.5, 0.3) -- (21.5, 0.3);
+                \draw[thick] (21, 0) -- (21, 0.3);
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}[leftmargin=*]
+            \item \textbf{Étude de la trajectoire :} Le drone décolle du point $C$ et rejoint le sommet $A$ en ligne droite. Calculer la distance exacte parcourue par le drone.
+
+            \begin{ZoneReponse}{3.5cm}                
+            Le triangle $ABC$ est rectangle en $B$. D'après le théorème de Pythagore : \\
+            $AC^2 = AB^2 + BC^2$ \\
+            $AC^2 = 20^2 + 21^2 = 400 + 441 = 841$ \\
+            $AC = \sqrt{841} = \mathbf{29 \text{ m}}$.
+            \end{ZoneReponse}
+
+\vfill
+
+\hfill Tourner la page !
+
+\newpage
+            
+            \item \textbf{Étude de la vitesse :} Le drone met $4$ secondes pour effectuer ce trajet $CA$. 
+            \begin{enumerate}
+                \item Calculer sa vitesse moyenne en m/s.
+                \begin{ZoneReponse}{1.5cm}                
+                $v = \frac{d}{t} = \frac{29}{4} = \mathbf{7,25 \text{ m/s}}$.
+                \end{ZoneReponse}
+                
+                \item Convertir cette vitesse en km/h. Est-elle supérieure à la limite de $25\text{ km/h}$ autorisée dans cette zone ?
+                \begin{ZoneReponse}{1.5cm}                
+                $7,25 \text{ m/s} \times 3,6 = \mathbf{26,1 \text{ km/h}}$. \\
+                Cette vitesse est \textbf{supérieure} à la limite autorisée (26,1 > 25).
+                \end{ZoneReponse}
+            \end{enumerate}
+        
+            \item \textbf{Étude de l'énergie :} 
+            La batterie du drone a une capacité totale de $4000\text{ mAh}$ (milliampère-heure). 
+            On considère que la consommation d'énergie est une grandeur produit : $\text{Énergie consommée} = \text{Intensité} \times \text{Temps}$.
+
+            \begin{itemize}
+               \item L'intensité (I) se mesure en Ampère (A) ou milliAmpère (mA)
+               \item Le temps (t) se mesure en heure (h)
+               \item L'énergie consommée(E) se mesure en Ampère-heure(Ah) ou milliampère-heure (mAh)
+            \end{itemize}      
+            
+            Le drone consomme une intensité constante de $12\text{ A}$ (soit $12\,000\text{ mA}$) en vol.
+            \begin{enumerate}[leftmargin=*]
+                \item Calculer l'énergie consommée par le drone pour un vol de $15\text{ minutes}$.
+                \begin{ZoneReponse}{1.5cm}                
+                $t = 15 \text{ min} = 0,25 \text{ h}$. \\
+                $E = 12\,000 \text{ mA} \times 0,25 \text{ h} = \mathbf{3\,000 \text{ mAh}}$.
+                \end{ZoneReponse}
+                
+                \item Le drone pourra-t-il tenir ces $15\text{ minutes}$ sans tomber en panne de batterie ? Justifier.
+                \begin{ZoneReponse}{1.5cm}                
+                \textbf{Oui}, car $3\,000 < 4\,000$. L'énergie consommée est inférieure à la capacité de la batterie.
+                \end{ZoneReponse}
+            \end{enumerate}
+                    
+        \end{enumerate}      
+    \end{exerciceNote}
+
+}
+
+
+\end{document}

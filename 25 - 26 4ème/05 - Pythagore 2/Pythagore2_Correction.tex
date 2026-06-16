@@ -1,0 +1,69 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{2}
+\newcommand{\monTitre}{Le théorème de Pythagore - partie 2}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+\section{Démontrer qu'un triangle n'est pas rectangle}
+\subsection{Raisonnement par contraposition}
+
+    \textbf{Idée} : On va vérifier que l'égalité fournie par le théorème de Pythagore n'est pas vérifiée. Dans ce cas, il est impossible que le triangle soit rectangle. En effet, si le triangle est rectangle alors l'égalité doit être vérifiée.
+    
+    On appelle ce type de raisonnement le raisonnement par \textbf{contraposition}.
+
+    On utilise alors ce qu'on appelle \textbf{la contraposée du théorème de Pythagore}.
+
+\subsection{Exemple de rédaction}
+
+    Le triangle ABC suivant est-il rectangle ?
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.5]{images/ContraposéePythagore1.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+        Dans le triangle ABC, le plus grand côté est [AC].
+        
+        \(
+        \text{D'une part : }\mathrm{AC}^{2} = 14^{2} = 196 \\
+        \text{D'autre part : } \mathrm{AB}^{2} + \mathrm{BC}^{2} = 12^{2} + 7^{2} = 144 + 49 = 193
+        \)
+        
+        On constate que \( \mathrm{AC}^{2} \neq \mathrm{AB}^{2} + \mathrm{BC}^{2} \) donc le triangle ABC ne peut être rectangle.
+    \end{minipage}
+
+    
+\section{Démontrer qu'un triangle est rectangle}
+\subsection{La réciproque du théorème de Pythagore}
+
+    \begin{theoreme}[Réciproque du théorème de Pythagore] 
+        Dans un triangle, si le carré de la longueur \textbf{du plus grand côté} est égal à la somme des carrés des 2 autres longueurs alors ce triangle est rectangle.
+    \end{theoreme}\stepcounter{thm}
+
+\subsection{Exemple de rédaction}
+    Le triangle ABC suivant est-il rectangle ? 
+    
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.5]{images/ReciproquePythagore1.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+        Dans le triangle ABC, le plus grand côté est [AC].
+        
+        \(
+        \text{D'une part : }\mathrm{AC}^{2} = 10^{2} = 100 \\
+        \text{D'autre part : } \mathrm{AB}^{2} + \mathrm{BC}^{2} = 6^{2} + 8^{2} = 36 + 64 = 100
+        \)
+        
+        On constate que \( \mathrm{AC}^{2} = \mathrm{AB}^{2} + \mathrm{BC}^{2} \) donc, d'après la réciproque du théorème de Pythagore, le triangle ABC est rectangle en B.
+    \end{minipage}
+
+
+ \end{document}

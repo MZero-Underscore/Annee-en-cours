@@ -1,0 +1,69 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{8}
+\renewcommand{\monTitre}{Proportionnalité}
+
+\enteteActivite{1}{\monTitre}{\thechapter}
+
+
+    \begin{exercice}
+         Dans une jardinerie, les pancartes ci-dessous indiquent le nombres de sacs de graines à utiliser en fonction de la surface de terrain à ensemencer.
+    
+        \begin{center}
+            \includegraphics[scale=0.7]{images/Proportionnalité_Intro.png}
+        \end{center}
+
+        \begin{enumerate}
+            \item A l'aide des informations ci-dessus, compléter le tableau suivant.
+
+            \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+                \hline
+                &&&&&&&&&\\ 
+                Surface à ensemencer (en $m^2$) & & 500 & & & 1500 & & & 3875 & \\ 
+                &&&&&&&&&\\ \hline &&&&&&&&&\\ 
+                Nombre de sacs & 3 & & 7 & 6 & & 19 & 28 & & 21 \\ 
+                &&&&&&&&&\\ \hline
+            \end{tabular}
+
+            \item Que se passe-t-il lorsque l'on divise la surface à ensemencer par le nombre de sacs correspondants pour chaque colonne ? Comment s'explique ce résultat ? 
+
+            \begin{tabular}{|p{16cm}|}
+                \hline \\ \\ \\ \\ \\ \\  \hline            
+            \end{tabular}
+
+            \item Compléter le graphique suivant à l'aide des valeurs présentes dans le tableau. Que remarque-t-on ?
+
+            \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        title={Relation entre Nombre de Sacs et Surface},
+                        xlabel={Nombre de sacs},
+                        ylabel={Surface ($m^2$)},
+                        xmin=0, xmax=35,
+                        ymin=0, ymax=4500,
+                        grid=major,
+                        width=10cm
+                    ]
+                    %\addplot[
+                    %    color=blue,
+                    %    mark=*,
+                    %    only marks
+                    %]
+                    %coordinates {
+                    %    (3,375)(4,500)(7,875)(6,750)(12,1500)(19,2375)(28,3500)(31,3875)(21,2625)
+                    %};
+                    %\addplot[domain=0:32, color=red, no marks]{125*x};
+                    \end{axis}
+                \end{tikzpicture}
+            \end{center}
+        \end{enumerate} 
+    \end{exercice}
+
+
+\end{document}

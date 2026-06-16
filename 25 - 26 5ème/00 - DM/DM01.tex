@@ -1,0 +1,134 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle4.tex}
+
+
+\begin{document}
+\setcounter{DM}{1}
+\renewcommand{\maDate}{18/09}
+\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+\TableauCompetencesDeux
+            {\CompetenceSix{1}}
+            {\CompetenceSix{5}}
+
+    \begin{exercice}
+        Construire sur le sujet le symétrique de la figure par rapport à la droite $(BC)$.
+
+        \includegraphics[scale=0.75]{images/DM01_Exercice01.png}       
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.55\linewidth}
+            On a obtenu les deux quadrilatères  ci-contre par symétrie axiale.
+
+            \begin{enumerate}
+                \item Compléter le tableau suivant.
+
+                \begin{tabular}{|c|c|c|c|c|}
+                    \hline
+                    Point      & F & O & I & S \\\hline
+                    Symétrique &   &   &   &   \\\hline
+                \end{tabular}
+
+                \item Justifier ensuite les réponses des questions suivantes
+                \begin{enumerate}
+                    \item Quelle est la longueur du segment [LE] ?
+                    
+                    \points[10]\\\points[10]\\\points[10]
+                    \item Quelle autre longueur peut-on déterminer ?
+                    
+                    \points[10]\\\points[10]\\\points[10]
+                    \item Quelle est la mesure de l'angle $\widehat{XUE}$ ?
+                    
+                    \points[10]\\\points[10]\\\points[10]
+                \end{enumerate}
+    
+                \item \underline{Construire} sur la figure l'axe de symétrie effacé.
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.40\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DM01_Exercice02.png}
+            \end{center}
+        \end{minipage}
+    \end{exercice}\stepcounter{exo}
+}
+
+
+\tagged{correction}{
+\enteteDMCorrection{\theDM}{\maDate}
+
+    \begin{exercice}
+        Construire sur le sujet le symétrique de la figure par rapport à la droite $(BC)$.
+
+        \includegraphics[scale=0.75]{images/DM01_Exercice01_Correction.png}
+        
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        \begin{minipage}{0.55\linewidth}
+            On a obtenu les deux quadrilatères  ci-contre par symétrie axiale.
+
+            \begin{enumerate}
+                \item Compléter le tableau suivant.
+
+                \begin{tabular}{|c|c|c|c|c|}
+                    \hline
+                    Point      & F & O & I & S \\\hline
+                    Symétrique & E & L & X & U \\\hline
+                \end{tabular}
+
+                \item Justifier ensuite les réponses des questions suivantes
+                \begin{enumerate}
+                    \item Quelle est la longueur du segment [LE] ?
+
+                    [LE] est le symétrique du segment [FO].
+                    
+                    Or la symétrie axiale conserve les longueurs.
+
+                    Donc $LE=3,2$ cm
+                    
+                    \item Quelle autre longueur peut-on déterminer ?
+                    
+                    Pour les mêmes raisons, on peut affirmer que $XU=1,7$ cm.
+                    
+                    \item Quelle est la mesure de l'angle $\widehat{XUE}$ ?
+                    
+                    $\widehat{XUE}$ est le symétrique du segment $\widehat{FSI}$.
+                    
+                    Or la symétrie axiale conserve les angles.
+
+                    Donc $\widehat{XUE}=110^\circ$
+                \end{enumerate}
+    
+                \item \underline{Construire} sur la figure l'axe de symétrie effacé.
+
+            \end{enumerate}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.40\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DM01_Exercice02.png}
+            \end{center}
+        \end{minipage}
+
+        \begin{center}
+            \includegraphics[scale=0.5]{images/DM01_Exercice02_Correction.png}
+        \end{center}
+    \end{exercice}\stepcounter{exo}
+}
+
+\end{document}

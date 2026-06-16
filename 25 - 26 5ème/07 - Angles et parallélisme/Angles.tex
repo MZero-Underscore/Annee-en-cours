@@ -1,0 +1,306 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{7}
+\renewcommand{\monTitre}{Angles et parallélisme \\
+                    Application aux triangles}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Angles déterminés par deux droites}
+
+    \begin{definition}
+        \begin{minipage}{0.7\linewidth}
+            Deux angles \textbf{symétriques} par rapport à leur sommet sont dits \textbf{opposés par le sommet}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.25\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DefinitionAngles01.png}
+            \end{center}        
+        \end{minipage}
+    \end{definition}
+
+
+    \begin{remarque}
+        \begin{itemize}[leftmargin=*]
+            \item Il est question ici de \textbf{symétrie centrale}, les angles sont donc superposables par demi-tour par rapport à leur sommet commun.
+            \item Deux angles opposés par le sommet sont engendrés par 2 droites sécantes.
+        \end{itemize}
+    \end{remarque}
+
+
+    \begin{propriete}
+        Deux angles opposés par le sommet ont la même mesure.
+    \end{propriete}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Exemple complet d'utilisation de la propriété.
+
+            \begin{minipage}{0.65\linewidth}
+                On donne  $\widehat{xGu} =35^\circ$. Déterminer $\widehat{tGw}$ .
+
+                \medskip
+                
+                Les angles  $\widehat{xGu}$ et  $\widehat{tGw}$ sont opposés par le sommet, ils ont donc la même mesure.
+                Ainsi,  $\widehat{tGw}=35^\circ$.
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.7]{images/AnglesCours_Exemple01a.png}
+                \end{center}
+            \end{minipage}
+
+            \medskip
+
+            \item  Donner le nom de l'angle opposé par le sommet à chacun des angles suivants.
+            
+            \begin{minipage}{0.45\linewidth}
+                \begin{tabular}{c|c|c|c|c}
+                    Angle        & $\widehat{xFr}$ & $\widehat{yFt}$ 
+                    & $\widehat{sFr}$ & $\widehat{sFw}$\\ \hline 
+                    & & & & \\
+                    Angle opposé & & & & \\
+                    & & & & \\
+                \end{tabular}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.9]{images/AnglesCours_Exemple01b.png}
+                \end{center}
+            \end{minipage} 
+        \end{enumerate}
+    \end{exemple}
+
+
+\section{Angles déterminés par deux droites et une sécante}
+\subsection{Angles correspondants et alternes-internes}
+
+    \begin{definition}
+        \begin{minipage}{0.5\linewidth}
+            Sur la figure ci-contre :    
+            \begin{itemize}
+                \item Les angles verts sont \textbf{alternes-internes}. Ils sont déterminés par les droites d, d' et la sécante $d_1$.
+                \item Les angles rouges sont \textbf{correspondants}. Ils sont déterminés par les droites d, d' et la sécante $d_2$.
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.5]{images/DefinitionAngles02.png}
+            \end{center}
+        \end{minipage}   
+
+        \bigskip
+
+        \begin{minipage}{0.45\linewidth}
+            Formellement, deux angles \textbf{alternes-internes} :
+            \begin{itemize}
+                \item n'ont pas le même sommet,
+                \item \textbf{sont situés de part et d'autre de la} \textit{droite} \textbf{sécante} $d_1$;
+                \item \textbf{sont situés dans la bande} formée par les droites $d$ et $d'$.
+            \end{itemize}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}{0.45\linewidth}
+            Formellement, deux angles \textbf{correspondants} :
+            \begin{itemize}
+                \item n'ont pas le même sommet,
+                \item \textbf{sont situés du même côté de la} \textit{droite} \textbf{sécante} $d_2$;
+                \item \textbf{sont situés tous les deux du même côté} d'une des droites $d$ ou $d'$, ici $d'$.
+            \end{itemize}
+        \end{minipage}
+    \end{definition}
+
+
+\subsection{Propriétés liées aux angles alternes-internes et correspondants}
+    \begin{propriete}
+        Si deux angles alternes-internes ou correspondants sont déterminés par deux droites parallèles alors ils ont la même mesure.
+    \end{propriete}
+    
+    \begin{exemple}
+        \begin{enumerate}
+            \item Exemple complet d'utilisation de la propriété.
+
+            \begin{minipage}{0.65\linewidth}
+                Sur la figure suivante : $(vt) // (uy)$ .\\
+                Déterminer la mesure de l'angle $\widehat{zEy}$.
+
+                \medskip
+                
+                Les angles correspondants $\widehat{zGt}$ et $\widehat{zEy}$ et les les droites (vt) et (uy) sont parallèles. 
+
+                \medskip
+                
+                \underline{Donc} $\widehat{zEy}=\widehat{zGt}=72^\circ$.
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.9]{images/AnglesCours_Exemple02a.png}
+                \end{center}
+            \end{minipage}
+
+            \medskip
+
+            \item Exemple à rédiger en s'aidant de l'exemple ci-dessus.
+            
+            \begin{minipage}{0.65\linewidth}
+                Sur la figure ci-contre, A, E et B sont alignés, ainsi que C, F et D. De plus les droites (AB) et (CD) sont parallèles.
+
+                $\bullet$ Quelle est la mesure de l'angle $\widehat{DEF}$ ? Justifier.
+
+                \vspace{4cm}
+
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.6]{images/AnglesCours_Exemple02b.png}
+                \end{center}
+            \end{minipage} 
+        \end{enumerate}
+    \end{exemple}
+    
+
+    \begin{propriete}
+        Si deux angles alternes-internes ou correspondants sont de même mesure alors les deux  droites coupées par la sécante sont parallèles.
+    \end{propriete}
+
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Exemple complet d'utilisation de la propriété.
+            
+            \begin{minipage}{0.65\linewidth}
+                $\bullet$ Démontrer que les droites (vt) et (uy) sont parallèles.
+
+                \medskip
+
+                Les angles $\widehat{x'Ay'}$ et $\widehat{xBz}$ sont alternes-internes et $\widehat{x'Ay'}=\widehat{xBz}$. 
+
+                \medskip
+               
+                \underline{Donc} les droites $(yy')$ et $(zz')$ sont parallèles.
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.8]{images/AnglesCours_Exemple03a.png}
+                \end{center}
+            \end{minipage}
+
+\newpage
+
+            \item Exemple à rédiger en s'aidant de l'exemple ci-dessus.
+            
+            \begin{minipage}{0.65\linewidth}
+                
+                $\bullet$ Démontrer que les droites (EF) et (GH) sont parallèles.
+    
+                \vspace{4cm}
+    
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\linewidth}
+                \begin{center}
+                    \includegraphics[scale=0.6]{images/AnglesCours_Exemple03b.png}
+                \end{center}
+            \end{minipage} 
+        \end{enumerate}
+    \end{exemple}
+
+
+\section{Application aux triangles}
+\subsection{Cas général}
+
+    \begin{propriete}
+        Dans un triangle, la somme des mesures des angles vaut $180^\circ$.
+    \end{propriete}
+
+    \demonstration
+
+    \begin{ZoneReponse}{7cm}\end{ZoneReponse}
+
+    \medskip
+
+    \begin{exemple}
+        Dans les deux triangles, calculer la mesure de l'angle manquant.
+
+        \begin{minipage}{0.7\linewidth}
+            \vspace{3cm}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.7]{images/AnglesCours_Exemple04a.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Cas des triangles particuliers}
+
+    \begin{definition}[Angles complémentaires]
+        Deux angles sont \textbf{complémentaires} si la somme de leur mesure vaut $90^\circ$.
+    \end{definition}
+    
+
+    \begin{propriete}
+        \begin{enumerate}
+            \item Dans un triangle \textbf{rectangle}, les angles aigus sont complémentaires.
+            \item Dans un triangle \textbf{équilatéral}, chaque angle mesure $60^\circ$.
+            \item Dans un triangle \textbf{isocèle}, les angles à la base sont égaux.
+            \item Dans un triangle \textbf{rectangle isocèle}, les angles à la base mesurent tous les deux $45^\circ$.
+        \end{enumerate}
+    \end{propriete}
+
+    \demonstration
+
+    \begin{ZoneReponse}{6cm}\end{ZoneReponse}
+
+    \begin{exemple}
+        Dans les deux triangles, calculer la mesure de l'angle manquant.
+
+        \begin{minipage}{0.7\linewidth}
+            \vspace{4 cm}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.7]{images/AnglesCours_Exemple04b.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+    \bigskip
+
+    \begin{exemple}
+        Calcule, en justifiant, la mesure de l'angle, $\widehat{ABC}$ sachant que les points A, D et B sont alignés.
+
+        \begin{minipage}{0.7\linewidth}
+            \vspace{4 cm}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.29\linewidth}
+            \begin{center}
+                \includegraphics[scale=0.7]{images/AnglesCours_Exemple04c.png}
+            \end{center}
+        \end{minipage}
+    \end{exemple}
+
+      
+\end{document}

@@ -1,0 +1,124 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{2}
+\renewcommand{\monTitre}{Opérations sur les nombres relatifs \\ Partie 1}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+
+\section{Rappel - Priorité des opérations}
+    \begin{convention}
+        Dans une suite de calculs, on effectue :
+        \begin{itemize}
+            \item en premier les calculs entre parenthèses,
+            \item puis les multiplications et les divisions dans le sens de lecture,
+            \item on termine par les additions et les soustractions dans le sens de lecture.
+        \end{itemize}
+    \end{convention}
+    
+    
+    \begin{exemple}
+        Effectuer les calculs suivants.
+        
+        \(A = 16 + 4 \times 5\div2 \) puis 
+        \( B = 3\times[87-(3+2\times7)]\)
+    \end{exemple}
+
+    
+\section{Additions et soustractions}
+      
+    \begin{definition}[Distance à zéro]
+        La distance à zéro d'un nombre relatif \( a \) est la distance \( OA \) où :
+        \begin{itemize}
+            \item \( O \) est l'origine d'une droite graduée,
+            \item \( A \) est le point d'abscisse \( a \) sur cette droite.
+        \end{itemize}
+    \end{definition}
+    
+    \begin{exemple} 
+            \centering
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                Nombre & 5 & -12 & -3,3 & $-\frac{3}{2}$ \\ \hline
+                Distance à zéro & & & & \\ \hline
+            \end{tabular}
+    \end{exemple}
+
+    
+\subsection{Additionner}
+    
+    \begin{definition}[Addition]
+        \begin{itemize}
+            \item Pour additionner deux nombres de même signe :
+            \begin{itemize}
+                \item on garde le signe commun,
+                \item on effectue la somme des distances à zéro.
+            \end{itemize}
+            \item Pour additionner deux nombres de signes différents :
+            \begin{itemize}
+                \item on garde le signe du nombre qui a la plus grande distance à zéro,
+                \item on effectue la différence des distances à zéro.
+            \end{itemize}
+        \end{itemize}
+    \end{definition}
+    
+    \begin{exemple}
+        Effectuer les calculs suivants.
+        
+        $A = 5+ (-13) \quad  B = -15 + (-16)$ puis $C = - 4,25 + 6,5$
+    \end{exemple}
+
+    \begin{definition}[Opposés]
+        Deux nombres sont \textbf{opposés} si leur somme vaut 0.
+    \end{definition}
+        
+    \begin{exemple}
+        Donner l'opposé des nombres suivants.
+
+        $A=-6 \quad B=4$ et $C=-6,45$
+    \end{exemple}
+    
+\subsection{Soustraire}
+    
+    \begin{propriete} 
+        Soustraire un nombre revient à ajouter son opposé.
+    \end{propriete}
+    
+    \begin{exemple}
+        Transformer les soustractions suivantes en addition.
+        
+        $A = 5 - (+13) \quad B = -15 - (-16)$ puis $C = - 4 - 6$
+    \end{exemple}
+
+    \begin{methode}
+        On retiendra que cette propriété permet principalement de transformer les soustractions de nombres négatifs en additions de nombres positifs de même distance à zéro.
+
+        \setlength{\fboxsep}{0.7ex}
+        $A= 5$ \fbox{-} $\big( $ \fbox{-} $10\big)=5 $ \fbox{+} $ 10$ \quad $B= -17$ \fbox{-} $\big( $ \fbox{-} $23\big)=-17 $ \fbox{+} $ 23$ \quad 
+    \end{methode}
+
+
+\subsection{Enchaînement d'additions et de soustractions}
+    
+    \begin{definition}[somme algébrique]
+        Le résultat d'un enchaînement d’additions et/ou de soustractions s'appelle une \textbf{somme algébrique}.
+    \end{definition}
+
+    \begin{methode}
+        Pour calculer une somme algébrique, on commence généralement par regrouper les termes positifs puis les termes négatifs avant d'effectuer la dernière opération.
+    \end{methode}
+
+    \begin{exemple}
+        Effectuer les calculs suivants.
+
+        $A=-10+24-6+7-6 \quad B=17+3-6-45+2 \quad C=-5-(-6)+23-17$
+    \end{exemple}
+
+
+\end{document}

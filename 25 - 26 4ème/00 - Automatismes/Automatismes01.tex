@@ -1,0 +1,125 @@
+\documentclass[14]{article}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+\renewcommand{\monTitre}{Automatismes 4e}
+\setcounter{serie}{1}
+
+\enteteActivite{\monTitre}{\theserie}
+
+    \begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+        $3\times8=$ & $2+3\times4=$ & $12\times 7 = $ & $5\times9=$ & $89,1+10,9=$\\ 
+         
+        & & & &\\ \hline & & & &\\
+         
+        $-5+9=$ & $-2+14-8=$ & $(-8)\times7=$ &  $(-4)\times(-5)=$ & $9\times8=$\\
+         
+        & & & &\\ \hline \multicolumn{2}{c|}{} & \multicolumn{2}{c}{}\\
+         
+        \multicolumn{2}{l|}{Quelle est la longueur manquante?} & 
+        \multicolumn{3}{l}{Quelle est la longueur manquante?}\\
+
+        \multicolumn{2}{c|}{} & \multicolumn{2}{c}{} \\
+
+        \multicolumn{2}{c|}{
+        \begin{tikzpicture}[scale=0.5]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,3);
+            \draw (A) node[anchor=north east] {A} --
+            (B)node[anchor=north west] {B} --
+            (C)node[anchor=south east] {C}--cycle;
+
+            \draw (0.7, 0) -- (0.7, 0.7) ;
+            \draw (0, 0.7) -- (0.7, 0.7) ;
+
+            \draw (1.8,-1) node [above]  {$4$} ;
+            \draw (-0.5,1.5) node {$3$} ;
+        \end{tikzpicture}
+        }& 
+        \multicolumn{3}{c}{        
+        \begin{tikzpicture}[scale=0.5]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,3);
+            \draw (A) node[anchor=north east] {A} --
+            (B)node[anchor=north west] {B} --
+            (C)node[anchor=south east] {C}--cycle;
+
+            \draw (0.7, 0) -- (0.7, 0.7) ;
+            \draw (0, 0.7) -- (0.7, 0.7) ;
+
+            \draw (2,2) node [above]  {$10$} ;
+            \draw (-0.5,1.5) node {$6$} ;
+        \end{tikzpicture}         
+        }\\
+         
+        \multicolumn{2}{c|}{} & \multicolumn{2}{c}{} \\ \hline & & & &\\
+
+        $20-14\div2=$ & $12^2=$ & $\frac{12}{13} \quad \ldots \quad 1$ & $\sqrt{169}= $ & $13-(-7)=$ \\
+
+        & & & &\\ 
+    \end{tabular}
+
+\vspace{2cm}
+
+\enteteActivite{\monTitre}{1}
+
+    \begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+        $3\times8=$ & $2+3\times4=$ & $12\times 7 = $ & $5\times9=$ & $89,1+10,9=$\\ 
+         
+        & & & &\\ \hline & & & &\\
+         
+        $-5+9=$ & $-2+14-8=$ & $(-8)\times7=$ &  $(-4)\times(-5)=$ & $9\times8=$\\
+         
+        & & & &\\ \hline \multicolumn{2}{c|}{} & \multicolumn{2}{c}{}\\
+         
+        \multicolumn{2}{l|}{Quelle est la longueur manquante?} & 
+        \multicolumn{3}{l}{Quelle est la longueur manquante?}\\
+
+        \multicolumn{2}{c|}{} & \multicolumn{2}{c}{} \\
+
+        \multicolumn{2}{c|}{
+        \begin{tikzpicture}[scale=0.5]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,3);
+            \draw (A) node[anchor=north east] {A} --
+            (B)node[anchor=north west] {B} --
+            (C)node[anchor=south east] {C}--cycle;
+
+            \draw (0.7, 0) -- (0.7, 0.7) ;
+            \draw (0, 0.7) -- (0.7, 0.7) ;
+
+            \draw (1.8,-1) node [above]  {$4$} ;
+            \draw (-0.5,1.5) node {$3$} ;
+        \end{tikzpicture}
+        }& 
+        \multicolumn{3}{c}{        
+        \begin{tikzpicture}[scale=0.5]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,3);
+            \draw (A) node[anchor=north east] {A} --
+            (B)node[anchor=north west] {B} --
+            (C)node[anchor=south east] {C}--cycle;
+
+            \draw (0.7, 0) -- (0.7, 0.7) ;
+            \draw (0, 0.7) -- (0.7, 0.7) ;
+
+            \draw (2,2) node [above]  {$10$} ;
+            \draw (-0.5,1.5) node {$6$} ;
+        \end{tikzpicture}     
+        }\\
+         
+        \multicolumn{2}{c|}{} & \multicolumn{2}{c}{} \\ \hline & & & &\\
+
+        $20-14\div2=$ & $12^2=$ & $\frac{12}{13} \quad \ldots \quad 1$ & $\sqrt{169}= $ & $13-(-7)=$ \\
+
+        & & & &\\ 
+    \end{tabular}
+
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+
+\title{\textbf{Fiche Bilan : Le Calcul Littéral}}
+\author{Mathématiques --- Niveau 3\textsuperscript{e}}
+\maDate{}
+
+\begin{document}
+
+\maketitle
+
+% --- RECTO : CALCULS ---
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=Objectifs du Recto]
+Savoir réduire une expression, développer (simple et double distributivité) et gérer les signes.
+\end{tcolorbox}
+
+\section*{Exercice 1 : Réduction (La base)}
+\textit{Réduire au maximum les expressions suivantes :}
+\begin{itemize}[label=\textbullet]
+    \item $A = 5x^2 - 3x + 2 - 8x^2 + x - 7 = \dotfill$
+    \item $B = 4x - (2x - 5) + 3 = \dotfill$
+    \item $C = -x^2 + 4x - 10 - 5x + 3x^2 = \dotfill$
+\end{itemize}
+
+\section*{Exercice 2 : Développements simples}
+\textit{Développer puis réduire :}
+\begin{itemize}[label=\textbullet]
+    \item $D = 4(3x - 2) = \dotfill$
+    \item $E = -3(x - 5) = \dotfill$
+    \item $F = 2x(x + 4) = \dotfill$
+\end{itemize}
+
+\section*{Exercice 3 : Double Distributivité (Le cœur du bilan)}
+\textit{Développer et réduire chaque expression en détaillant les étapes :}
+\begin{enumerate}
+    \item $G = (x + 4)(x + 3) = \dotfill$
+    \item $H = (x - 2)(x + 7) = \dotfill$
+    \item $I = (2x - 3)(x - 5) = \dotfill$
+    \item $J = (3x + 2)(4x - 1) = \dotfill$
+\end{enumerate}
+
+\section*{Exercice 4 : Substitution}
+\textit{On considère l'expression $K = (x - 3)(2x + 4)$.}
+\begin{enumerate}
+    \item Développer et réduire $K$ : \dotfill
+    \item Calculer la valeur de $K$ pour $x = 5$ en utilisant la forme de ton choix. \\
+    \textit{Calcul :} \dotfill
+\end{enumerate}
+
+\newpage
+% --- VERSO : PETITS PROBLÈMES ---
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Objectifs du Verso]
+Utiliser le calcul littéral pour résoudre des situations géométriques ou numériques.
+\end{tcolorbox}
+
+\section*{Exercice 5 : Le programme de calcul}
+Voici un programme de calcul :
+\begin{center}
+\begin{tikzpicture}
+    \node[draw, rounded corners, inner sep=10pt] {
+    \begin{minipage}{0.4\textwidth}
+    \begin{itemize}
+        \item Choisir un nombre
+        \item Ajouter 3
+        \item Multiplier le résultat par 2
+        \item Soustraire le nombre de départ
+    \end{itemize}
+    \end{minipage}};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \item Si on choisit 5 au départ, quel résultat obtient-on ? \dotfill
+    \item Si on appelle $x$ le nombre de départ, écrire une expression littérale traduisant ce programme. \\
+    \dotfill
+    \item Réduire cette expression. Que remarques-tu ? \\
+    \dotfill
+\end{enumerate}
+
+\section*{Exercice 6 : Géométrie}
+On considère un rectangle dont la largeur mesure $x$ cm et la longueur mesure $x + 4$ cm.
+\begin{enumerate}
+    \item Exprimer le périmètre du rectangle en fonction de $x$. Réduire l'expression. \\
+    \dotfill
+    \item Exprimer l'aire du rectangle en fonction de $x$. Développer l'expression. \\
+    \dotfill
+    \item Si $x = 3$ cm, quelle est l'aire du rectangle ? \\
+    \dotfill
+\end{enumerate}
+
+\section*{Exercice 7 : Le carré agrandi}
+On a un carré de côté $x$. On augmente chaque côté de 2 cm.
+\begin{enumerate}
+    \item Quelle est la mesure du nouveau côté en fonction de $x$ ? \dotfill
+    \item Exprimer l'aire du nouveau carré sous la forme d'un produit : \dotfill
+    \item Développer cette expression pour montrer que l'aire est égale à $x^2 + 4x + 4$. \\
+    \dotfill
+\end{enumerate}
+
+\section*{Bonus (Optionnel)}
+\textit{Développer et réduire :} $L = (x + 1)(x + 2) - (x - 3)$. \\
+\dotfill
+
+\end{document}

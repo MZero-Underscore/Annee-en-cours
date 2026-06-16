@@ -1,0 +1,390 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Devoirs.tex}
+\input{../../00 - Modules latex communs/Preambule_Competences_Cycle4.tex}
+
+\begin{document}
+\setcounter{DM}{6}
+\renewcommand{\maDate}{29/01}
+%\usetag{correction}
+
+\setcounter{exo}{1}
+
+\untagged{correction}{
+\NomPrenom
+\enteteDM{\theDM}{\maDate}
+
+
+\TableauCompetencesQuatre
+            {\CompetenceCinq{4}}
+            {\CompetenceDeux{8}}
+            {\CompetenceQuatre{0}}
+            {\CompetenceSix{3}}
+
+
+    \begin{exerciceNote}{6}
+        Effectuer les calculs suivants, donner le résultat sous forme d'une fraction irréductible.
+
+        \begin{minipage}{0.24\linewidth}
+            $A = \dfrac{4}{3} - \dfrac{4}{3}\times\dfrac{27}{12}$
+            \vspace{5cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B = \dfrac{25}{7}\div\dfrac{15}{42}$
+            \vspace{5cm}
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C = \dfrac{77}{25} \times \dfrac{15}{22}-\dfrac{7}{5}$
+            \vspace{5cm}
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D = \dfrac{1}{4}\times\bigg(\dfrac{6}{5}-\dfrac{2}{3}\bigg)$
+            \vspace{5cm}
+        \end{minipage}
+    \end{exerciceNote}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Les deux questions sont indépendantes.
+        \begin{enumerate}
+            \item Un pâtissier utilise une recette où la quantité de farine est proportionnelle au nombre de gâteaux.
+
+            \vspace{0.5cm}
+            
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{|l|c|c|c|c|c|c|}
+                \hline
+                Nombre de gâteaux & 2 & 4 & 6 & 10 & 1 & 15 \\ \hline
+                Farine (en g) & 300 & \dots & \dots & \dots & \dots & \dots \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \vspace{0.5cm}
+            
+            \begin{enumerate}
+                \item Trouver le coefficient de proportionnalité pour remplir la colonne du "1". \dotfill
+
+                \medskip
+                
+                \item Utiliser des relations simples pour compléter les autres colonnes. Faire apparaître les opérations autour du tableau.
+            \end{enumerate}
+
+            \item Une voiture consomme 5 litres d'essence pour parcourir 80 km. La consommation est supposée proportionnelle à la distance parcourue.
+
+            \vspace{0.5cm}
+        
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{|l|c|c|c|c|}
+                \hline
+                Distance (km) & 80 & 130 & 200 & 350 \\ \hline
+                Essence (L) & 5 & \dots & \dots & \dots \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \vspace{1cm}
+            
+            Calculer les valeurs manquantes en utilisant la quatrième proportionnelle. Indiquer les calculs.
+
+            \begin{ZoneReponse}{2cm}\end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+\vfill\hfill Tourner la page !
+
+    \begin{exercice}
+        Un adolescent remarque que la batterie de son téléphone se décharge de façon régulière lorsqu'il regarde une vidéo.
+
+        \begin{enumerate}
+            \item Compléter le tableau suivant à partir des données : 3 \% pour 2 min, 9 \% pour 6 min et 15 \% pour 10 min.
+            
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|}
+            \hline
+            Temps (min) & 2 & 6 & 10 \\ \hline
+            Batterie perdue (\%) & 3 & \dots & \dots \\ \hline
+            \end{tabular}
+            \end{center}
+        
+            \item Représenter ces données dans un repère (en abscisse : 1 cm = 2 min ; en ordonnée : 1 cm = 3 \%).
+
+            \begin{center}
+                \begin{tikzpicture}[x=0.8cm, y=0.4cm, scale=0.7] 
+                    % On règle l'échelle : 1 unité en x = 0.8cm, 1 unité en y = 0.4cm
+                    
+                    % Grillage fin (petit carreaux)
+                    \draw[gray!20, very thin] (0,0) grid[step=1] (11,16);
+                    % Grillage principal (tous les 2 unités en x et 3 en y)
+                    \draw[gray!50, thin] (0,0) grid[xstep=2, ystep=3] (11,16);
+                    
+                    % Axes
+                    \draw[->, >=stealth, thick] (0,0) -- (11.5,0) node[right] {Temps (min)};
+                    \draw[->, >=stealth, thick] (0,0) -- (0,17) node[above] {Batterie (\%)};
+                    
+                    % Graduations x
+                    \foreach \x in {0,2,4,6,8,10} {
+                        \draw[thick] (\x,0.2) -- (\x,-0.2) node[below] {\small \x};
+                    }
+                        
+                    % Graduations y
+                    \foreach \y in {0,3,6,9,12,15} {
+                        \draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\small \y};
+                    }
+                
+                    % Placement des points (Croix bleues)
+                    %\foreach \coord in {(2,3), (6,9), (10,15)} {
+                    %    \draw[blue, thick] ([shift={(-3pt,-3pt)}]\coord) -- ([shift={(3pt,3pt)}]\coord);
+                    %    \draw[blue, thick] ([shift={(-3pt,3pt)}]\coord) -- ([shift={(3pt,-3pt)}]\coord);
+                    %}
+                    
+                    % Optionnel : La droite (à commenter avec un % si tu veux que l'élève la trace)
+                    %\draw[red, dashed] (0,0) -- (10.6,15.9);                  
+                \end{tikzpicture}
+            \end{center}
+            
+            \item Justifier, graphiquement et par une phrase, que la perte de batterie est proportionnelle au temps.
+
+            \begin{ZoneReponse}{1cm}\end{ZoneReponse}
+
+            \item Par lecture graphique, déterminer la perte pour 8 minutes d'utilisation. Ajouter le point nécessaire sur le graphique.
+
+            \begin{ZoneReponse}{1cm}\end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Deux drones, le Alpha-X et le Beta-Z, s'affrontent sur une distance de 100 mètres.
+
+        \begin{enumerate}
+            \item La distance du drone \textbf{Alpha-X} est proportionnelle au temps : il parcourt 16 m en 2 s. Calculer sa distance pour 1 s.
+
+            \begin{ZoneReponse}{1cm}\end{ZoneReponse}
+            
+            \item Voici les relevés du drone \textbf{Beta-Z} :
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|}
+            \hline
+            Temps (s) & 3 & 5 & 8 \\ \hline
+            Distance (m) & 21 & 35 & 56 \\ \hline
+            \end{tabular}
+            \end{center}
+            Prouver que le drone Beta-Z avance à une vitesse constante (proportionnalité).
+
+            \begin{ZoneReponse}{1.5cm}\end{ZoneReponse}
+            
+            \item Lequel des deux drones franchira la ligne d'arrivée des 100 m en premier ? Justifier par un calcul de durée.
+
+            \begin{ZoneReponse}{1.5cm}\end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}
+
+        
+}
+
+
+\tagged{correction}{
+\enteteDMCorrection{\theDM}{\maDate}
+
+
+    \begin{exerciceNote}{6}
+        Effectuer les calculs suivants, donner le résultat sous forme d'une fraction irréductible.
+
+        \begin{minipage}{0.24\linewidth}
+            $A = \dfrac{4}{3} - \dfrac{4}{3}\times\dfrac{27}{12}$ \\[2ex]
+            $A = \dfrac{4}{3}-\dfrac{4\times3\times3\times3}{3\times3\times4}$\\[2ex]
+            $A = \dfrac{4}{3}-\dfrac{3\times3}{3}$\\[2ex]
+            $A=\dfrac{-5}{3}$
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $B = \dfrac{25}{7}\div\dfrac{15}{42}$ \\[2ex]
+            $B = \dfrac{25}{7}\times\dfrac{42}{15}$ \\[2ex]
+            $B = \dfrac{5\times5\times7\times3\times2}{7\times3\times5}$ \\[2ex]
+            $B = \dfrac{5\times2}{1}$ \\[2ex]
+            $B = 10$ 
+        \end{minipage}        
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $C = \dfrac{77}{25} \times \dfrac{15}{22}-\dfrac{7}{5}$ \\[2ex]
+            $C = \dfrac{7\times11\times3\times5}{5\times5\times2\times11}-\dfrac{7}{5}$ \\[2ex]
+            $C = \dfrac{21}{10}-\dfrac{7\times2}{5\times2}$ \\[2ex]
+            $C = \dfrac{21}{10}-\dfrac{14}{10}$ \\[2ex]
+            $C = \dfrac{7}{10}$
+        \end{minipage}
+        \hfill\vline\hfill
+        \begin{minipage}{0.24\linewidth}
+            $D = \dfrac{1}{4}\times\bigg(\dfrac{6}{5}-\dfrac{2}{3}\bigg)$ \\[2ex]
+            $D = \frac{1}{4}\times\bigg(\dfrac{18}{15}-\dfrac{10}{15}\bigg)$ \\[2ex]
+            $D = \dfrac{1}{4}\times\dfrac{8}{15}$ \\[2ex]
+            $D = \dfrac{2\times2}{4\times15}$ \\[2ex]
+            $D = \dfrac{2}{15}$
+        \end{minipage}
+    \end{exerciceNote}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Les deux questions sont indépendantes.
+        \begin{enumerate}
+            \item Un pâtissier utilise une recette où la quantité de farine est proportionnelle au nombre de gâteaux.
+
+            \vspace{0.5cm}
+            
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{|l|c|c|c|c|c|c|}
+                \hline
+                Nombre de gâteaux & 2 & 4 & 6 & 10 & 1 & 15 \\ \hline
+                Farine (en g) & 300 & \textcolor{red}{600} & \textcolor{red}{900} & \textcolor{red}{\np{1500}} & \textcolor{red}{150} & \textcolor{red}{\np{2250}} \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \vspace{0.5cm}
+            
+            \begin{enumerate}
+                \item Trouver le coefficient de proportionnalité pour remplir la colonne du "1". \textcolor{red}{$300\div2=150$}.
+
+                \medskip
+                
+                \item Utiliser des relations simples pour compléter les autres colonnes. Faire apparaître les opérations autour du tableau.
+            \end{enumerate}
+
+            \item Une voiture consomme 5 litres d'essence pour parcourir 80 km. La consommation est supposée proportionnelle à la distance parcourue.
+
+            \vspace{0.5cm}
+        
+            \begin{center}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{|l|c|c|c|c|}
+                \hline
+                Distance (km) & 80 & 130 & 200 & 350 \\ \hline
+                Essence (L) & 5 & \textcolor{red}{8,125} & \textcolor{teal}{12,5} & \textcolor{orange}{21,875} \\ \hline
+                \end{tabular}
+            \end{center}
+
+            \vspace{1cm}
+            
+            Calculer les valeurs manquantes en utilisant la quatrième proportionnelle. Indiquer les calculs.
+
+            \begin{ZoneReponse}{2cm}
+                \textcolor{red}{$\dfrac{5\times130}{80}=8,125$} \quad \quad
+                \textcolor{teal}{$\dfrac{5\times200}{80}=12,5$} \quad \quad
+                \textcolor{orange}{$\dfrac{5\times350}{80}=21,875$}    
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+\vfill\hfill Tourner la page !
+
+    \begin{exercice}
+        Un adolescent remarque que la batterie de son téléphone se décharge de façon régulière lorsqu'il regarde une vidéo.
+
+        \begin{enumerate}
+            \item Compléter le tableau suivant à partir des données : 3 \% pour 2 min, 9 \% pour 6 min et 15 \% pour 10 min.
+            
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|}
+            \hline
+            Temps (min) & 2 & 6 & 10 \\ \hline
+            Batterie perdue (\%) & 3 & \textcolor{red}{9} & \textcolor{red}{15} \\ \hline
+            \end{tabular}
+            \end{center}
+        
+            \item Représenter ces données dans un repère (en abscisse : 1 cm = 2 min ; en ordonnée : 1 cm = 3 \%).
+
+            \begin{center}
+                \begin{tikzpicture}[x=0.8cm, y=0.4cm, scale=0.7] 
+                    % On règle l'échelle : 1 unité en x = 0.8cm, 1 unité en y = 0.4cm
+                    
+                    % Grillage fin (petit carreaux)
+                    \draw[gray!20, very thin] (0,0) grid[step=1] (11,16);
+                    % Grillage principal (tous les 2 unités en x et 3 en y)
+                    \draw[gray!50, thin] (0,0) grid[xstep=2, ystep=3] (11,16);
+                    
+                    % Axes
+                    \draw[->, >=stealth, thick] (0,0) -- (11.5,0) node[right] {Temps (min)};
+                    \draw[->, >=stealth, thick] (0,0) -- (0,17) node[above] {Batterie (\%)};
+                    
+                    % Graduations x
+                    \foreach \x in {0,2,4,6,8,10} {
+                        \draw[thick] (\x,0.2) -- (\x,-0.2) node[below] {\small \x};
+                    }
+                        
+                    % Graduations y
+                    \foreach \y in {0,3,6,9,12,15} {
+                        \draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\small \y};
+                    }
+                
+                    % Placement des points (Croix bleues)
+                    \foreach \x/\y in {2/3, 6/9, 10/15} {
+                        \draw[blue, thick] ([shift={(-3pt,-3pt)}]\x,\y) -- ([shift={(3pt,3pt)}]\x,\y);
+                        \draw[blue, thick] ([shift={(-3pt,3pt)}]\x,\y) -- ([shift={(3pt,-3pt)}]\x,\y);
+                    }
+                    
+                    % Optionnel : La droite (à commenter avec un % si tu veux que l'élève la trace)
+                    \draw[red, dashed] (0,0) -- (10.6,15.9);                  
+                \end{tikzpicture}
+            \end{center}
+            
+            \item Justifier, graphiquement et par une phrase, que la perte de batterie est proportionnelle au temps.
+
+            \begin{ZoneReponse}{1cm}
+                Les points sont alignés avec l'origine du repère, il y a donc proportionnalité entre les deux grandeurs.
+            \end{ZoneReponse}
+
+            \item Par lecture graphique, déterminer la perte pour 8 minutes d'utilisation. Ajouter le point nécessaire sur le graphique.
+
+            \begin{ZoneReponse}{1cm}
+                Graphiquement, on trouve une perde de 12\% de la batterie pour une utilisation de 8 min.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}\stepcounter{exo}
+
+
+    \begin{exercice}
+        Deux drones, le Alpha-X et le Beta-Z, s'affrontent sur une distance de 100 mètres.
+
+        \begin{enumerate}
+            \item La distance du drone \textbf{Alpha-X} est proportionnelle au temps : il parcourt 16 m en 2 s. Calculer sa distance pour 1 s.
+
+            \begin{ZoneReponse}{1.5cm}
+                $\dfrac{16}{2}=8$. Il parcourt 8 mètres en 1 seconde.
+            \end{ZoneReponse}
+            
+            \item Voici les relevés du drone \textbf{Beta-Z} :
+            \begin{center}
+            \begin{tabular}{|l|c|c|c|}
+            \hline
+            Temps (s) & 3 & 5 & 8 \\ \hline
+            Distance (m) & 21 & 35 & 56 \\ \hline
+            \end{tabular}
+            \end{center}
+            Prouver que le drone Beta-Z avance à une vitesse constante (proportionnalité).
+
+            \begin{ZoneReponse}{2cm}
+                $\dfrac{21}{3}=7 \quad \quad \dfrac{35}{7}=5 \quad \quad \dfrac{56}{8}=7$.\\[1ex]
+                Les 3 quotients sont égaux, il y a donc proportionnalité entre les deux grandeurs.
+            \end{ZoneReponse}
+            
+            \item Lequel des deux drones franchira la ligne d'arrivée des 100 m en premier ? Justifier par un calcul de durée.
+
+            \begin{ZoneReponse}{1.5cm}
+                Le drone Alpha-X parcourt 8m/s et Beta-Z avance à une vitesse de 7m/s.
+
+                C'est donc Alpha-X qui gagnera la course.
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exercice}
+        
+
+}
+
+\end{document}

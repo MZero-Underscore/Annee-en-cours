@@ -1,0 +1,99 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\setcounter{chapter}{13}
+\renewcommand{\monTitre}{Calculer avec des fractions}
+
+% --- EN-TÊTE ---
+\enteteActivite{4}{\monTitre}{\thechapter}
+
+
+% =========================================================================
+% EXERCICE 1 : Calcul pur et priorités
+% =========================================================================
+    \begin{exercice}[Compétence : Calculer]
+        Effectuer les calculs suivants en respectant les priorités opératoires. Pour les multiplications, on veillera à \textbf{simplifier avant de calculer} comme vu dans l'exemple 5 du cours. \newline
+        Tous les résultats doivent être donnés sous la forme d'une fraction irréductible (il faut au moins essayer).
+        
+        \vspace{0.3cm}
+        \begin{tabularx}{\textwidth}{@{}X p{1cm} X@{} p{1cm} X@{} p{1cm} X@{}}
+             $A = \dfrac{7}{6} + \dfrac{5}{3} \times \dfrac{9}{10}$ &&  $B = \left(2 - \dfrac{3}{4}\right) \times \dfrac{16}{25}$ &&
+             $C = \dfrac{55}{42} \times \dfrac{14}{33} \times \dfrac{9}{5}$ &&  $D = \dfrac{5}{8} - \dfrac{1}{12} + \dfrac{5}{6}$
+        \end{tabularx}
+    \end{exercice}
+    
+% =========================================================================
+% EXERCICE 2 : Le buffet
+% =========================================================================
+    \begin{exercice}[Compétences : Modéliser - Calculer]
+        Une entreprise de service dans l'événementiel prépare un grand buffet composé de $400$ pièces apéritives.
+        \begin{itemize}
+            \item Le quart ($\frac{1}{4}$) des pièces sont des préparations végétariennes.
+            \item Les $\frac{2}{5}$ \textbf{du reste} sont des pièces à base de produits de la mer.
+            \item Toutes les autres pièces sont à base de viande.
+        \end{itemize}
+        
+        \begin{enumerate}
+            \item Calculer le nombre de pièces végétariennes.
+            \item Calculer le nombre de pièces à base de produits de la mer.
+            \item \textbf{Modélisation :} Écrire une seule expression mathématique utilisant des fractions qui permette de calculer directement la \textit{proportion totale} (la fraction) du buffet que représentent les pièces à base de viande.
+        \end{enumerate}
+    \end{exercice}
+    
+% =========================================================================
+% EXERCICE 3 : Gestion de la batterie
+% =========================================================================
+    \begin{exercice}[Compétences : Chercher - Raisonner]
+        Le tableau de bord d'une voiture électrique (type MG4) indique que la batterie est remplie aux $\frac{3}{20}$ de sa capacité maximale. 
+        Le conducteur la branche sur une borne de recharge rapide à domicile. La borne injecte une quantité d'énergie correspondant à $\frac{3}{5}$ de la capacité totale de la batterie.
+        
+        Le conducteur affirme : \textit{« Super, avec cette recharge, ma batterie a dépassé les $80\%$ de charge ! »}
+        
+        Sachant que $80\% = \frac{80}{100}$, le conducteur a-t-il raison ? Justifier la réponse par des calculs précis.
+    \end{exercice}
+
+% =========================================================================
+% EXERCICE 4 : Tâche complexe
+% =========================================================================
+    \begin{exercice}[Compétences : Chercher - Modéliser - Communiquer]
+        Dans un sujet de devoir, on écrirait ce préambule : \textit{Dans cet exercice, toute trace de recherche, même incomplète, sera prise en compte dans l'évaluation.}
+        
+        Une famille organise un grand trek sur plusieurs jours dans le Parc de la Vanoise. Le parcours est divisé de la manière suivante :
+        \begin{itemize}
+            \item \textbf{Jour 1 :} L'étape représente $\frac{1}{3}$ de la distance totale du trek.
+            \item \textbf{Jour 2 :} L'étape représente $\frac{3}{8}$ de la distance totale du trek.
+            \item \textbf{Jour 3 :} C'est la dernière étape, elle mesure exactement $14$~km.
+        \end{itemize}
+        
+        \textbf{Mission :} Déterminer, en justifiant précisément votre démarche, la distance totale parcourue par cette famille lors de ce trek de 3 jours.
+    \end{exercice}
+
+% =========================================================================
+% EXERCICE : Le carré magique (Calculer, Chercher)
+% =========================================================================
+    \begin{exercice}[Compétences : Calculer - Chercher]
+        Dans ce carré magique, la somme des fractions de chaque ligne, de chaque colonne et de chaque diagonale doit toujours être égale au même nombre (la « somme magique »).
+        
+        \begin{enumerate}
+            \item Reproduire ce carré sur le cahier, puis le compléter en détaillant les calculs pour trouver les fractions manquantes $A$, $B$, $C$ et $D$. 
+            \textit{Pensez à simplifier les résultats lorsque c'est possible !}
+        \end{enumerate}
+        
+        \vspace{0.3cm}
+        \begin{center}
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}{|*{3}{>{\centering\arraybackslash}m{2.2cm}|}}
+        \hline
+        $\dfrac{2}{5}$ & \Large\textbf{A} & $\dfrac{8}{15}$ \\ \hline
+        \Large\textbf{B} & $\dfrac{1}{3}$ & \Large\textbf{C} \\ \hline
+        $\dfrac{2}{15}$ & \Large\textbf{D} & $\dfrac{4}{15}$ \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{exercice}
+    
+\end{document}

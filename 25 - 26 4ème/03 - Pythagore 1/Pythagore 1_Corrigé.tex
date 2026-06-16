@@ -1,0 +1,138 @@
+ \documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+
+\begin{document}
+\renewcommand{\monTitre}{Le théorème de Pythagore - partie 1}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+ 
+   
+\section{Aire d'un carré, notion de racine carrée}
+\subsection{Aire d'un carré}
+
+    \begin{propriete} 
+        L'aire d'un carré de côté \( c \) se calcule à l'aide de la formule \( c \times c \) (ce qui se note aussi \( c^{2} \)).
+    \end{propriete}\stepcounter{prp}
+    
+    \begin{exemple}
+        Déterminer l'aire des carrés suivants.
+    
+        \begin{center}
+            \includegraphics[scale=0.5]{images/AiresCarrés.png}
+        \end{center}  
+    \end{exemple}\stepcounter{ex}
+    
+    \textbf{Tableau des carrés parfaits}
+    
+    \begin{tabular}{@{}|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|@{}}
+        \hline
+        \( c \) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\ \hline
+        \( c^{2} \) & & & & & & & & & & & & & & &  \\ \hline
+    \end{tabular}
+
+
+\subsection{Notion de racine carrée}
+
+    \textbf{Idée} : On note \( a \) l'aire d'un carré et on souhaite retrouver la longueur du côté de ce carré.
+    
+    \begin{definition} 
+        La racine carrée d'un nombre \textbf{positif} \( a \) est le nombre positif qui, multiplié par lui-même, vaut \( a \). On le note, par convention, \( \sqrt{a} \).
+    \end{definition}
+    
+    
+    \begin{exemple}
+        \begin{minipage}{0.5\linewidth}
+            \[
+            \sqrt{36} = 6 \quad \text{parce que } 6 \times 6 = 36 
+            \]
+            \[
+            \sqrt{100} = 10 \quad \text{parce que } 10 \times 10 = 100
+            \]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\linewidth}
+            \[
+            \sqrt{1} = 1 \quad \text{parce que } 1 \times 1 = 1
+            \]
+            \[
+            \sqrt{-5} \text{ n'existe pas car } -5 \text{ est négatif}
+            \]
+        \end{minipage}
+    \end{exemple}\stepcounter{ex}
+    
+    
+    \textbf{Utilisation de la calculatrice} : 
+        En général, la racine carrée d'un nombre positif est un nombre qui n'est pas décimal et il est difficile d'obtenir de tête une valeur approchée. On utilise la calculatrice pour trouver une valeur approchée.
+
+
+\section{Calculer une longueur dans un triangle rectangle}
+\subsection{Le théorème de Pythagore}
+
+    \begin{theoreme}[Théorème de Pythagore]
+        Si un triangle est rectangle alors le carré de la longueur de l'hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés.    
+    \end{theoreme}\stepcounter{thm}
+
+\newpage
+
+    \textbf{Illustration} :
+    
+    \begin{center}
+    \begin{minipage}{0.5\linewidth}
+        \[\includegraphics[scale=0.7]{images/TriangleRectangle.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\linewidth}
+        Le triangle ABC est rectangle en A. On peut écrire :
+        \[
+        \mathrm{BC}^{2} = \mathrm{AC}^{2} + \mathrm{AB}^{2}
+        \]
+        
+        Mais également :
+        \[
+        \begin{aligned}
+        & \mathrm{AB}^{2} = \mathrm{BC}^{2} - \mathrm{AC}^{2} \\
+        & \mathrm{AC}^{2} = \mathrm{BC}^{2} - \mathrm{AB}^{2}
+        \end{aligned}
+        \]
+    \end{minipage}
+    \end{center}
+
+    
+\subsection{Deux exemples de rédaction}
+\subsubsection{Calculer la longueur de l’hypoténuse}
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.5]{images/Pythagore1.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+        Dans le triangle ABC rectangle en A, j'utilise le théorème de Pythagore.\\
+        L'hypoténuse est [BC] donc :
+        
+        \(
+        \mathrm{BC}^{2} = \mathrm{AB}^{2} + \mathrm{AC}^{2} \\
+        \mathrm{BC}^{2} = 4^{2} + 3^{2} \\
+        \mathrm{BC}^{2} = 16 + 9 \quad (4^{2} = 4 \times 4 = 16 \text{ et } 5^{2} = 5 \times 5 = 25) \\
+        \mathrm{BC}^{2} = 25
+        \)
+        
+        D'où \( \mathrm{BC} = \sqrt{25} = 5 \).
+    \end{minipage}
+    
+
+\subsubsection{Calculer la longueur d'un côté de l'angle droit}
+
+
+    \begin{minipage}{0.3\linewidth}
+        \[\includegraphics[scale=0.5]{images/Pythagore2.png}\]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\linewidth}
+        \Pythagore[Entier]{IJK}{13}{5}{}
+    \end{minipage}    
+
+\end{document}

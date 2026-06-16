@@ -1,0 +1,378 @@
+\documentclass[a4paper]{book}
+
+% --- IMPORTATION DES MODULES ---
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\setcounter{chapter}{11} % Chapitre 11
+\renewcommand{\monTitre}{Agrandissement, réduction \\ Théorème de Thalès}
+\chapter{\monTitre}
+\thispagestyle{fancy} 
+
+% ==================================================================
+% SECTION 1 : AGRANDISSEMENT ET RÉDUCTION
+% ==================================================================
+\section{Agrandissements et réductions de figures}
+\subsection{Définitions et constructions}
+
+    \begin{definition}
+        On dit qu'une figure est un \textbf{agrandissement} ou une \textbf{réduction} d'une autre figure lorsque leurs dimensions sont proportionnelles. Elles ont la même forme mais des tailles différentes.
+    \end{definition}
+    
+    \begin{definition}
+        Multiplier les dimensions d'une figure par un nombre $k$ ($k > 0$) est un:
+        \begin{itemize}
+            \item \textbf{Agrandissement} si $k > 1$.
+            \item \textbf{Réduction} si $0 < k < 1$.
+        \end{itemize}
+    \end{definition}
+    
+    \begin{exemple}[Illustration n°1 : Forme quelconque]
+        \centering
+        \begin{tikzpicture}[scale=0.8]
+            % Figure F1
+            \draw[thick, fill=red!20] (0,0) .. controls (0,0.5) and (0.5,0.5) .. (0.5,0) .. controls (0.5,-0.5) and (0,-0.7) .. (0,-1) .. controls (0,-0.7) and (-0.5,-0.5) .. (-0.5,0) .. controls (-0.5,0.5) and (0,0.5) .. (0,0);
+            \node at (0,-0.3) {$F_1$};
+            \draw[->, >=latex, thick] (1,-0.3) -- (2.5,-0.3) node[midway, above] {$\times 2,5$};
+            % Figure F2
+            \begin{scope}[shift={(4,0.5)}, scale=2.5]
+                \draw[thick, fill=red!50] (0,0) .. controls (0,0.5) and (0.5,0.5) .. (0.5,0) .. controls (0.5,-0.5) and (0,-0.7) .. (0,-1) .. controls (0,-0.7) and (-0.5,-0.5) .. (-0.5,0) .. controls (-0.5,0.5) and (0,0.5) .. (0,0);
+                \node at (0,-0.3) {$F_2$};
+            \end{scope}
+        \end{tikzpicture}
+    \end{exemple}
+    
+    \begin{exemple}[À toi de jouer : Construction]
+        Construire un rectangle $ABCD$ de $4$ cm sur $2$ cm.
+        \begin{enumerate}
+            \item Construis un agrandissement de ce rectangle de rapport $k = 1,5$.
+            \item Construis une réduction de ce rectangle de rapport $k = 0,5$.
+        \end{enumerate}
+        \begin{ZoneReponse}{3cm}
+            % Espace pour que l'élève note les nouvelles dimensions :
+            % 1) 4 * 1,5 = 6 cm / 2 * 1,5 = 3 cm
+            % 2) 4 * 0,5 = 2 cm / 2 * 0,5 = 1 cm
+        \end{ZoneReponse}
+    \end{exemple}
+    
+\subsection{Effets sur les aires et les volumes}
+    
+    \begin{propriete}
+        Dans un agrandissement ou une réduction de rapport $k$ :
+        \begin{itemize}
+            \item Les longueurs sont multipliées par $k$.
+            \item Les \textbf{aires} sont multipliées par $\mathbf{k^2}$.
+            \item Les \textbf{volumes} sont multipliés par $\mathbf{k^3}$.
+        \end{itemize}
+    \end{propriete}
+    
+    
+    \begin{exemple}
+        Une pizza de $20$ cm de diamètre coûte $8$ \euro. Le pizzaïolo propose une pizza "Géante" dont les dimensions sont doublées ($k=2$).
+        
+        \textbf{Quelle est l'aire de la nouvelle pizza ?}
+        \begin{ZoneReponse}{2.5cm}
+            %Le rapport d'agrandissement est $k=2$. \\
+            %L'aire est donc multipliée par $k^2 = 2^2 = 4$. \\
+            %La pizza géante est donc \textbf{4 fois plus grande} en surface que la normale.
+        \end{ZoneReponse}
+    \end{exemple}
+
+% ==================================================================
+% SECTION 2 : THÉORÈME DE THALÈS (Calculs)
+% ==================================================================
+\section{Calculer une longueur avec le théorème de Thalès}
+
+    \begin{remarque}
+        Le théorème de Thalès est le nom que l'on donne à la proportionnalité dans les triangles emboîtés. Le petit triangle est une \textbf{réduction} du grand (ou inversement).
+    \end{remarque}
+    
+\subsection{Énoncé et configuration}
+    
+    \begin{center}
+        \begin{tikzpicture}[scale=1.3]
+            % Les deux droites sécantes en A
+            \draw[thick] (0,0) node[left] {$A$} -- (6,0) node[right] {$(d)$};
+            \draw[thick] (0,0) -- (5,3) node[right] {$(d')$};
+            
+            % Le triangle ABC (Grand) en rouge
+            \draw[red, ultra thick] (5.5,0) node[below] {$B$} -- (4.16,2.5) node[above] {$C$};
+            
+            % Le triangle AMN (Petit) en bleu
+            \draw[blue, ultra thick] (2.5,0) node[below] {$M$} -- (1.9,1.14) node[above left] {$N$};
+            
+            % Rappel du parallélisme visuel
+            \draw[>=latex, <->, green!60!black, thick] (2.2,0.1) -- (1.8,0.9) node[midway, left, font=\tiny] {//};
+            \draw[>=latex, <->, green!60!black, thick] (5.2,0.1) -- (4.1,2.2) node[midway, left, font=\tiny] {//};
+            
+            % Légende
+            \node[below, font=\small\itshape] at (3,-0.8) {Configuration de Thalès : les triangles $AMN$ et $ABC$ ont des côtés proportionnels.};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{propriete}[Théorème de Thalès]
+        Soient deux droites $(d)$ et $(d')$ sécantes en $A$. \\
+        $B$ et $M$ sont deux points de $(d)$ distincts de $A$. \\
+        $C$ et $N$ sont deux points de $(d')$ distincts de $A$.
+        
+        \medskip
+        \textbf{SI} les droites $(MN)$ et $(BC)$ sont parallèles, \\
+        \textbf{ALORS} il y a égalité des rapports de longueurs :
+        
+        \begin{center}
+            {\Large $\dfrac{\color{blue}AM}{\color{red}AB} = \dfrac{\color{blue}AN}{\color{red}AC} = \dfrac{\color{blue}MN}{\color{red}BC}$}
+        \end{center}
+    \end{propriete}
+    
+    
+\subsection{Méthode de rédaction}
+    
+    \begin{methode}
+        Pour calculer une longueur avec le théorème de Thalès, on respecte toujours ces étapes :
+        \begin{enumerate}
+            \item \textbf{Vérifier les conditions :} Citer les droites sécantes et les droites parallèles.
+            \item \textbf{Citer le théorème :} "D'après le théorème de Thalès...".
+            \item \textbf{Écrire l'égalité :} Écrire les trois rapports (Petit côté / Grand côté).
+            \item \textbf{Calculer :} Utiliser le produit en croix pour trouver la valeur manquante.
+        \end{enumerate}
+    \end{methode}
+    
+    \begin{exemple}
+        \textbf{Entraînement au produit en croix (4e proportionnelle) :} \\
+        Déterminer la valeur de $x$ pour que les égalités soient vraies.\\
+        \medskip
+        \begin{tabularx}{\textwidth}{XXX}
+            1) $\dfrac{x}{6} = \dfrac{4}{3}$ & 2) $\dfrac{7}{x} = \dfrac{2}{5}$ & 3) $\dfrac{2,5}{10} = \dfrac{x}{4}$ \\
+            \rule{0pt}{30pt} $x = \dots \dots$ & $x = \dots \dots$ & $x = \dots \dots$
+        \end{tabularx}
+    \end{exemple}
+
+
+    \begin{exemple}
+        \begin{minipage}[t]{0.45\textwidth}
+            Dans la figure ci-contre, les droites $(BC)$ et $(MN)$ sont parallèles.
+            On donne : $AB = 5$, $AC = 6$, $BC = 4$ et $AM = 2$.
+            
+            \textbf{Calculer la longueur $AN$ puis la longueur $MN$.}
+            
+            \begin{tikzpicture}[scale=0.8, baseline=(current bounding box.north)]
+                \draw (0,0) node[left]{$A$} -- (5,0) node[right]{$B$};
+                \draw (0,0) -- (4,3) node[right]{$C$};
+                \draw (2,0) node[below]{$M$} -- (1.6,1.2) node[above left]{$N$};
+                \draw (5,0) -- (4,3);
+                \node at (1,-0.3) {2};
+                \node at (3.5,-0.3) {5};         
+            \end{tikzpicture}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.52\textwidth}
+            \underline{Rédaction}
+        \end{minipage} 
+    \end{exemple}
+
+
+% ==================================================================
+% SECTION 3 : RÉCIPROQUE ET CONTRAPOSÉE
+% ==================================================================
+\section{Démontrer que des droites sont ou ne sont pas parallèles}
+\subsection{Outil : Tester l'égalité de deux rapports}
+
+    \begin{methode}
+        Pour vérifier si deux rapports $\dfrac{AR}{AB}$ et $\dfrac{AS}{AC}$ sont égaux, on utilise l'égalité des \textbf{produits en croix} :
+        \begin{enumerate}
+            \item On calcule séparément les produits : $AR \times AC$ d'une part et $AB \times AS$ d'autre part.
+            \item \textbf{Si les résultats sont égaux}, alors les rapports sont égaux.
+            \item \textbf{Si les résultats sont différents}, alors les rapports sont différents.
+        \end{enumerate}
+    \end{methode}
+    
+    \begin{exemple}
+        \begin{minipage}[t]{0.48\textwidth}
+            $\dfrac{4}{7}$ et $\dfrac{6}{10,5}$ sont-ils égaux ?
+            \begin{ZoneReponse}{2.5cm}
+                %$4 \times 10,5 = 42$ \\
+                %$7 \times 6 = 42$ \\
+                %Les produits sont égaux, donc $\dfrac{4}{7} = \dfrac{6}{10,5}$.
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.48\textwidth}
+            $\dfrac{2}{6}$ et $\dfrac{3}{8}$ sont-ils égaux ?
+            \begin{ZoneReponse}{2.5cm}
+                %$2 \times 8 = 16$ \\
+                %$6 \times 3 = 18$ \\
+                %$16 \neq 18$, donc les rapports ne sont pas égaux.
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+
+    \begin{center}
+    \begin{tabularx}{\textwidth}{|X|X|}
+        \hline
+        \rowcolor{gray!15} \centering \textbf{Cas n°1 : Les rapports sont ÉGAUX} & \centering \textbf{Cas n°2 : Les rapports sont DIFFÉRENTS} \tabularnewline
+        \hline
+        & \\
+        \centering
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (A) at (0,0);
+            \coordinate (M) at (5,0); \coordinate (S) at (3,0);
+            \coordinate (N) at (4,2.5); \coordinate (T) at (2.4,1.5);
+            \draw[thick] (A) -- (M); \draw[thick] (A) -- (N);
+            \draw[blue, ultra thick] (S) -- (T);
+            \draw[blue, ultra thick] (M) -- (N);
+            % Cotes
+            \draw[<->, >=latex] (0,-0.6) -- (5,-0.6) node[midway, fill=white] {\tiny Grand};
+            \draw[<->, >=latex] (-0.5,0.3) -- (3.5,2.8) node[midway, fill=white, rotate=32] {\tiny Grand};
+            \node[blue] at (1.5,0.3) {\tiny petit};
+        \end{tikzpicture}
+        & 
+        \centering
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,0); \coordinate (R) at (2.5,0);
+            \coordinate (C) at (4,2.5); \coordinate (S) at (1.5,1.2); % Non parallèle
+            \draw[thick] (A) -- (B); \draw[thick] (A) -- (C);
+            \draw[orange, ultra thick] (R) -- (S);
+            \draw[red, ultra thick] (B) -- (C);
+            % Cotes
+            \draw[<->, >=latex] (0,-0.6) -- (5,-0.6) node[midway, fill=white] {\tiny Grand};
+            \draw[<->, >=latex] (-0.5,0.3) -- (3.5,2.8) node[midway, fill=white, rotate=32] {\tiny Grand};
+        \end{tikzpicture}
+        \tabularnewline
+        \centering $\dfrac{petit}{grand} = \dfrac{petit}{grand}$ & \centering $\dfrac{petit}{grand} \neq \dfrac{petit}{grand}$ \tabularnewline
+        & \\
+        On utilise la \textbf{RÉCIPROQUE}. & On utilise la \textbf{CONTRAPOSÉE}. \\
+        Les droites \textbf{sont parallèles}. & Les droites \textbf{ne sont pas parallèles}. \\
+        \hline
+    \end{tabularx}
+    \end{center}
+
+
+\subsection{La Réciproque (Pour prouver que les droites SONT parallèles)}
+
+    \begin{propriete}[Réciproque du théorème de Thalès]
+        Soient deux droites $(BM)$ et $(CN)$ sécantes en $A$. 
+        
+        Si les points $A, M, B$ et $A, N, C$ sont alignés \textbf{dans le même ordre} et si les rapports $\dfrac{AM}{AB}$ et $\dfrac{AN}{AC}$ \textbf{sont égaux}, alors les droites $(MN)$ et $(BC)$ \textbf{sont parallèles}.
+    \end{propriete}
+    
+    
+    \begin{exemple}
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Énoncé :} \\
+            On donne $AS = 3,5$ ; $AM = 5$. \\
+            $AT = 4,2$ ; $AN = 6$. \\
+            Les droites $(ST)$ et $(MN)$ sont-elles parallèles ?
+            
+            \vspace{0.8cm}
+            \centering
+            \begin{tikzpicture}[scale=0.9]
+                % Points
+                \coordinate (A) at (0,0);
+                \coordinate (M) at (6,0);
+                \coordinate (N) at (5.5,3);
+                \coordinate (S) at (4,0);
+                \coordinate (T) at (3.66,2);
+            
+                % Droites principales
+                \draw[thick] (A) -- (M) node[right]{$M$};
+                \draw[thick] (A) -- (N) node[right]{$N$};
+                \draw[blue, ultra thick] (S) node[below]{$S$} -- (T) node[above left]{$T$};
+                \draw[red, ultra thick] (M) -- (N);
+                \node at (A) [left] {$A$};
+            
+                % Cotes pour le côté AM
+                \draw[blue] (2,-0.3) node{\small 3,5}; % Longueur AS
+                \draw[<->, >=latex, red] (0,-0.8) -- (6,-0.8) node[midway, fill=white]{\small 5};
+                \draw[gray, dashed] (6,-0.1) -- (6,-0.9);
+                \draw[gray, dashed] (0,-0.1) -- (0,-0.9);
+            
+                % Cotes pour le côté AN
+                \node[blue, rotate=28] at (1.6,1.2) {\small 4,2}; % Longueur AT
+                \draw[<->, >=latex, red] (-0.4,0.3) -- (4.8,3.3) node[midway, fill=white, rotate=28]{\small 6};
+                \draw[gray, dashed] (0.1,0.2) -- (-0.5,0.5);
+                \draw[gray, dashed] (5.4,3.1) -- (4.7,3.5);
+            \end{tikzpicture}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.50\textwidth}
+            \underline{Rédaction type :}
+            \begin{ZoneReponse}{6cm}
+                %Les droites $(SM)$ et $(TN)$ sont sécantes en $A$. \\
+                %D'une part : $AS \times AN = 3,5 \times 6 = 21$. \\
+                %D'autre part : $AM \times AT = 5 \times 4,2 = 21$. \\
+                %On constate que $AS \times AN = AM \times AT$, donc $\dfrac{AS}{AM} = \dfrac{AT}{AN}$. \\
+                %De plus, les points $A, S, M$ et $A, T, N$ sont alignés dans le même ordre. \\
+                %D'après la \textbf{réciproque du thm de Thalès}, $(ST) // (MN)$.
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+
+\vspace{2cm}
+    
+    
+\subsection{La Contraposée (Pour prouver que les droites NE SONT PAS parallèles)}
+
+    
+    \begin{propriete}[Contraposée du théorème de Thalès]
+        Soient deux droites $(BM)$ et $(CN)$ sécantes en $A$.
+        
+        Si les rapports $\dfrac{AM}{AB}$ et $\dfrac{AN}{AC}$ \textbf{ne sont pas égaux}, alors les droites $(MN)$ et $(BC)$ \textbf{ne sont pas parallèles}.
+    \end{propriete}
+    
+    
+    \begin{exemple}
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Énoncé :} \\
+            $AR = 2$ cm ; $AB = 6$ cm. \\
+            $AS = 3$ cm ; $AC = 8$ cm. \\
+            $(RS)$ et $(BC)$ sont-elles parallèles ?
+            
+            \vspace{0.8cm}
+            \centering
+            \begin{tikzpicture}[scale=0.9]
+                % Points
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (6,0);
+                \coordinate (C) at (4.5,2.5);
+                \coordinate (R) at (2,0);
+                \coordinate (S) at (1.1,0.6); 
+            
+                % Dessin
+                \draw[thick] (A) node[left]{$A$} -- (B) node[right]{$B$};
+                \draw[thick] (A) -- (C) node[right]{$C$};
+                \draw[orange, ultra thick] (R) node[below]{$R$} -- (S) node[above left]{$S$};
+                \draw[red, thick] (B) -- (C);
+            
+                % Cote AB = 6 (sous le segment)
+                \node[below] at (1,0) {\small 2}; 
+                \draw[<->, >=latex] (0,-0.8) -- (6,-0.8) node[midway, fill=white]{\small 6};
+                \draw[gray, dashed] (0,-0.1) -- (0,-0.9);
+                \draw[gray, dashed] (6,-0.1) -- (6,-0.9);
+            
+                % Cote AC = 8 (déportée au-dessus, comme le AN de la figure 1)
+                \node[rotate=29, above] at (0.5,0.3) {\small 3}; 
+                \draw[<->, >=latex] (-0.5,0.4) -- (3.9,2.9) node[midway, fill=white, rotate=29]{\small 8};
+                \draw[gray, dashed] (0.1,0.2) -- (-0.6,0.5);
+                \draw[gray, dashed] (4.4,2.6) -- (3.8,3.0);
+            \end{tikzpicture}
+        \end{minipage}
+        \hfill \vline \hfill
+        \begin{minipage}[t]{0.50\textwidth}
+            \underline{Rédaction type :}
+            \begin{ZoneReponse}{7cm}
+                %Les droites $(RB)$ et $(SC)$ sont sécantes en $A$. \\
+                %D'une part : $AR \times AC = 2 \times 8 = 16$. \\
+                %D'autre part : $AB \times AS = 6 \times 3 = 18$. \\
+                %On constate que $16 \neq 18$, donc $\dfrac{AR}{AB} \neq \dfrac{AS}{AC}$. \\
+                %Puisque les rapports sont différents, d'après la \textbf{contraposée du thm de Thalès}, les droites $(RS)$ et $(BC)$ ne sont pas parallèles.
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+\end{document}
