@@ -80,16 +80,17 @@
 %% --- BLOC COMPLET DES BOITES TCOLORBOX ---
 
 % --- DÉFINITIONS (Bleu) ---
-\newtcolorbox{definition}{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définition \thedfn, code={\stepcounter{dfn}}, arc=3mm}
-\newtcolorbox{definitionTitre}[1]{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définition \thedfn\ - #1, code={\stepcounter{dfn}}, arc=3mm}
-\newtcolorbox{definitions}{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title=Définitions \thedfn, code={\stepcounter{dfn}}, arc=3mm}
+% Usage : \begin{definition}            -> "Définition 1"
+%         \begin{definition}[Mon titre] -> "Définition 1 - Mon titre"
+\newtcolorbox{definition}[1][]{breakable,colback=white!6!white,colframe=blue!85!white,fonttitle=\bfseries,title={Définition \thedfn\ifx&#1&\else\ - #1\fi}, code={\stepcounter{dfn}}, arc=3mm}
 
 % --- PROPRIÉTÉS & THÉORÈMES (Rouge/Orange) ---
-\newtcolorbox{theoreme}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Théorème \thethm, code={\stepcounter{thm}}, arc=3mm}
-\newtcolorbox{theoremeTitre}[1]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Théorème \thethm\ - #1, code={\stepcounter{thm}}, arc=3mm}
-\newtcolorbox{propriete}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriété \theprp, code={\stepcounter{prp}}, arc=3mm}
-\newtcolorbox{proprieteTitre}[1]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriété \theprp\ - #1, code={\stepcounter{prp}}, arc=3mm}
-\newtcolorbox{proprietes}{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title=Propriétés \theprp, code={\stepcounter{prp}}, arc=3mm}
+% Usage : \begin{theoreme}            -> "Théorème 1"
+%         \begin{theoreme}[Mon titre] -> "Théorème 1 - Mon titre"
+\newtcolorbox{theoreme}[1][]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title={Théorème \thethm\ifx&#1&\else\ - #1\fi}, code={\stepcounter{thm}}, arc=3mm}
+% Usage : \begin{propriete}            -> "Propriété 1"
+%         \begin{propriete}[Mon titre] -> "Propriété 1 - Mon titre"
+\newtcolorbox{propriete}[1][]{breakable,colback=red!6!white,colframe=red!85!white,fonttitle=\bfseries,title={Propriété \theprp\ifx&#1&\else\ - #1\fi}, code={\stepcounter{prp}}, arc=3mm}
 \newtcolorbox{lemme}{breakable,colback=red!6!white,colframe=orange!85!white,fonttitle=\bfseries,title=Lemme \theprp, code={\stepcounter{prp}}, arc=3mm}
 \newtcolorbox{convention}{breakable,colback=orange!6!white,colframe=orange!85!white,fonttitle=\bfseries,title=Convention \thecvn, code={\stepcounter{cvn}}, arc=3mm}
 
@@ -122,14 +123,14 @@
 }
 
 % --- REMARQUES (Orange) ---
-\newtcolorbox{remarque}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarque \therq, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
-\newtcolorbox{remarques}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarques \therq, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
-\newtcolorbox{remarqueTitre}[1]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title=Remarque \therq\ - #1, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
+% Usage : \begin{remarque}            -> "Remarque 1"
+%         \begin{remarque}[Mon titre] -> "Remarque 1 - Mon titre"
+\newtcolorbox{remarque}[1][]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!85!white}, title={Remarque \therq\ifx&#1&\else\ - #1\fi}, colback=white, code={\stepcounter{rq}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!85!white,colframe=orange!85!white, arc=3mm}}
 
 % --- MÉTHODES & APPLICATIONS (Bleu foncé) ---
-\newtcolorbox{methode}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthode \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
-\newtcolorbox{methodes}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthodes \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
-\newtcolorbox{methodeTitre}[1]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title=Méthode \themtd\ - #1, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
+% Usage : \begin{methode}            -> "Méthode 1"
+%         \begin{methode}[Mon titre] -> "Méthode 1 - Mon titre"
+\newtcolorbox{methode}[1][]{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{blue!75!black}, title={Méthode \themtd\ifx&#1&\else\ - #1\fi}, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=blue!75!black,colframe=blue!75!black, arc=3mm}}
 \newtcolorbox{application}{enhanced, breakable, frame empty, nobeforeafter, borderline west={0.5mm}{0mm}{orange!75!black}, title=Application \themtd, colback=white, code={\stepcounter{mtd}}, attach boxed title to top left = {xshift = -3mm}, boxed title style={size=small,colback=orange!75!black,colframe=orange!75!black, arc=3mm}}
 
 % --- DIVERS (Exercices, Python, Conséquences) ---
