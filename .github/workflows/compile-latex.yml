@@ -109,7 +109,7 @@ jobs:
                   result.append({'dossier': dossier, 'fichier': fichiers_principaux[0]})
               elif fichiers_tex:
                   # Aucun fichier sans underscore : on prend le premier et on avertit
-                  print(f"⚠️ Aucun fichier principal trouvé dans {dossier}, on prend {fichiers_tex[0]}", file=sys.stderr)
+                  print(f"AVERTISSEMENT : Aucun fichier principal trouve dans {dossier}, on prend {fichiers_tex[0]}", file=sys.stderr)
                   result.append({'dossier': dossier, 'fichier': fichiers_tex[0]})
           print(json.dumps(result))
           ")
