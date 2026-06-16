@@ -13,7 +13,7 @@ Pour que la compilation fonctionne correctement, il est impératif de respecter 
 
 ## 🚀 Comment générer un PDF ?
 
-La compilation est **manuelle** pour éviter de surcharger les serveurs à chaque petite modification de texte. Voici les étapes pour compiler un chapitre :
+La compilation est **manuelle** pour éviter de lancer des opérations à chaque petite modification de texte. Voici les étapes pour compiler un chapitre :
 
 1. Cliquez sur l'onglet **Actions** en haut de la page du dépôt GitHub.
 2. Dans le menu de gauche, sélectionnez **Compile LaTeX Document**.
@@ -21,13 +21,14 @@ La compilation est **manuelle** pour éviter de surcharger les serveurs à chaqu
 4. Renseignez les deux champs avec précision :
     * **Chemin du dossier :** Le chemin exact depuis la racine. *(Exemple : `25 - 26 6ème/15 - Figures usuelles et aires`)*
     * **Nom du fichier .tex :** Le nom exact du fichier à l'intérieur de ce dossier. *(Exemple : `FiguresUsuelles_Aires.tex`)*
-5. Cliquez sur le bouton vert **Run workflow** pour lancer le robot.
+5. Cliquez sur le bouton vert **Run workflow** pour lancer le script.
 
 ## 📥 Récupérer le résultat
 
-1. Une fois le robot lancé, un point orange va tourner. L'opération prend généralement entre 1 et 2 minutes.
-2. Quand la pastille passe au **vert**, cliquez sur le nom de l'exécution qui vient de se terminer.
-3. Descendez tout en bas de la page, dans la section **Artifacts**.
-4. Cliquez sur **PDF-Document** pour télécharger l'archive contenant votre PDF.
+Une fois la compilation terminée (le point de l'action passe au vert), le script se charge d'enregistrer le document directement dans les fichiers du dépôt :
 
-💡 *Note d'organisation : Le script récupère automatiquement le niveau depuis le nom du dossier parent et renomme le fichier final pour plus de clarté. Vous obtiendrez un fichier formaté ainsi : `<Niveau>_<NomDuFichier>.pdf` (ex : `6ème_FiguresUsuelles_Aires.pdf`).*
+1. Retournez sur la page d'accueil de ce dépôt (onglet **Code**).
+2. Ouvrez le dossier **`pdf/`** situé à la racine.
+3. Vous y trouverez votre document prêt à être consulté ou téléchargé d'un simple clic !
+
+💡 *Note d'organisation : Le script récupère automatiquement le niveau depuis le nom du dossier parent et renomme le fichier final pour un tri optimal. Vous obtiendrez un fichier formaté ainsi : `<Niveau>_<NomDuFichier>.pdf` (ex : `6ème_FiguresUsuelles_Aires.pdf`).*
