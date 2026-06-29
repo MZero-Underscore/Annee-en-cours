@@ -35,15 +35,17 @@ jobs:
     name: "Compiler un chapitre"
     if: ${{ inputs.mode == 'Un seul chapitre' }}
     runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+
     steps:
       - name: Recuperer les fichiers du depot
         uses: actions/checkout@v4
 
       - name: Compiler le document LaTeX
-        uses: xu-cheng/latex-action@v3
-        with:
-          working_directory: "${{ inputs.niveau }}/${{ inputs.dossier_chapitre }}"
-          root_file: "${{ inputs.fichier }}"
+        run: |
+          cd "${{ inputs.niveau }}/${{ inputs.dossier_chapitre }}"
+          latexmk -pdf -interaction=nonstopmode -halt-on-error "${{ inputs.fichier }}"
 
       - name: Verifier que le PDF a bien ete genere
         run: |
@@ -107,19 +109,21 @@ jobs:
     needs: lister_chapitres
     if: ${{ inputs.mode == 'Tout un niveau' }}
     runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
     strategy:
       matrix:
         chapitre: ${{ fromJson(needs.lister_chapitres.outputs.chapitres) }}
       fail-fast: false
+
     steps:
       - name: Recuperer les fichiers du depot
         uses: actions/checkout@v4
 
       - name: Compiler ${{ matrix.chapitre.fichier }}
-        uses: xu-cheng/latex-action@v3
-        with:
-          working_directory: "${{ matrix.chapitre.dossier }}"
-          root_file: "${{ matrix.chapitre.fichier }}"
+        run: |
+          cd "${{ matrix.chapitre.dossier }}"
+          latexmk -pdf -interaction=nonstopmode -halt-on-error "${{ matrix.chapitre.fichier }}"
 
       - name: Verifier que le PDF a bien ete genere
         run: |
@@ -160,7 +164,7 @@ jobs:
             NOM_BASE=$(basename "$fichier")
             cp "$fichier" "pdf/${NIVEAU}_${NOM_BASE}"
             echo "Copie : pdf/${NIVEAU}_${NOM_BASE}"
-          done < <(find "${{ inputs.niveau }}" -mindepth 1 -maxdepth 1 -type d | grep -v '/00' | sort)
+          done
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add pdf/
