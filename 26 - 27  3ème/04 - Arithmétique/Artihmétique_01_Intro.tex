@@ -1,0 +1,167 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\setcounter{chapter}{4}
+\renewcommand{\monTitre}{Arithmétique -- Remise en route}
+
+\enteteActivite{1}{\monTitre}{\thechapter}
+\thispagestyle{fancy}
+
+% ============================================================
+%  RECTO
+% ============================================================
+
+\section*{1. Division euclidienne}
+
+    \begin{definition}
+        Diviser un entier $a$ par un entier $b$ (avec $b \neq 0$), c'est trouver deux entiers $q$ et $r$ tels que :
+        \[
+            a = b \times q + r \qquad \text{avec} \qquad 0 \leq r < b
+        \]
+        \begin{itemize}
+            \item $a$ est le \textbf{dividende}, \quad $b$ est le \textbf{diviseur},
+            \item $q$ est le \textbf{quotient}, \quad $r$ est le \textbf{reste}.
+        \end{itemize}
+        Lorsque $r = 0$, on dit que $b$ \textbf{divise} $a$ (ou que $a$ est \textbf{divisible} par $b$).
+    \end{definition}
+
+    \begin{exemple}
+        Effectuer les divisions euclidiennes suivantes et compléter l'égalité $a = b \times q + r$ :
+
+        \medskip
+        \noindent
+        \begin{minipage}[t]{0.30\textwidth}
+            \centering
+            \textbf{a)} $127 \div 9$
+
+            \medskip
+            \begin{ZoneReponse}{3.5cm}
+            \end{ZoneReponse}
+
+            $127 = 9 \times \ldots + \ldots$
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.30\textwidth}
+            \centering
+            \textbf{b)} $\np{1001} \div 7$
+
+            \medskip
+            \begin{ZoneReponse}{3.5cm}
+            \end{ZoneReponse}
+
+            $\np{1001} = 7 \times \ldots + \ldots$
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.30\textwidth}
+            \centering
+            \textbf{c)} $\np{345} \div 12$
+
+            \medskip
+            \begin{ZoneReponse}{3.5cm}
+            \end{ZoneReponse}
+
+            $\np{345} = 12 \times \ldots + \ldots$
+        \end{minipage}
+    \end{exemple}
+
+    \begin{exemple}
+        Pour chaque division euclidienne ci-dessous, indiquer si le résultat est \textbf{exact} (reste nul) ou non, et justifier sans effectuer la division :
+
+        \medskip
+        \noindent
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{a)} $a = 7 \times 13 + 0$. \quad $7$ divise-t-il $91$ ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{b)} $a = 5 \times 20 + 3$. \quad $5$ divise-t-il $103$ ?
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+
+\section*{2. Multiples et diviseurs}
+
+    \begin{definition}
+        Soit $a$ et $b$ deux entiers avec $b \neq 0$. On dit que $b$ est un \textbf{diviseur} de $a$ (et que $a$ est un \textbf{multiple} de $b$) si la division euclidienne de $a$ par $b$ a un \textbf{reste nul}.
+    \end{definition}
+
+    \begin{exemple}
+        Lister tous les diviseurs de $36$ :
+        \begin{ZoneReponse}{1.5cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+% ============================================================
+%  VERSO
+% ============================================================
+
+\newpage
+
+\section*{3. Critères de divisibilité}
+
+    \begin{propriete}
+        Quelques critères de divisibilité courants (sans effectuer la division) :
+
+        \medskip
+        \begin{center}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{|c|p{9cm}|}
+        \hline
+        \textbf{Diviseur} & \textbf{Critère} \\ \hline
+        $2$  & Le chiffre des \textbf{unités} est $0, 2, 4, 6$ ou $8$. \\ \hline
+        $3$  & La \textbf{somme des chiffres} est divisible par $3$. \\ \hline
+        $4$  & Le nombre formé par les \textbf{deux derniers chiffres} est divisible par $4$. \\ \hline
+        $5$  & Le chiffre des \textbf{unités} est $0$ ou $5$. \\ \hline
+        $9$  & La \textbf{somme des chiffres} est divisible par $9$. \\ \hline
+        $10$ & Le chiffre des \textbf{unités} est $0$. \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{propriete}
+
+    \begin{exemple}
+        Compléter le tableau suivant en indiquant \textbf{oui} ou \textbf{non} pour chaque critère. Justifier pour les cases de la ligne $\np{2\,754}$.
+
+        \medskip
+        \begin{center}
+        \renewcommand{\arraystretch}{2.2}
+        \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Nombre} & \textbf{par 2} & \textbf{par 3} & \textbf{par 4} & \textbf{par 5} & \textbf{par 9} & \textbf{par 10} \\ \hline
+        $\np{2\,754}$   & \hspace{1cm}   & \hspace{1cm}   & \hspace{1cm}   & \hspace{1cm}   & \hspace{1cm}   & \hspace{1cm} \\ \hline
+        $\np{4\,815}$   &                &                &                &                &                & \\ \hline
+        $\np{7\,200}$   &                &                &                &                &                & \\ \hline
+        \end{tabular}
+        \end{center}
+
+        \medskip
+        Justification pour $\np{2\,754}$ :
+        \begin{ZoneReponse}{2cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\section*{4. Bilan -- Vocabulaire à retenir}
+
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+    \hline
+    \textbf{Terme} & \textbf{Définition / Exemple} \\ \hline
+    Division euclidienne & $a = b \times q + r$ avec $0 \leq r < b$ \\ \hline
+    Reste nul ($r = 0$)  & $b$ divise $a$, $a$ est un multiple de $b$ \\ \hline
+    Diviseur             & \hspace{6cm} \\ \hline
+    Multiple             & \hspace{6cm} \\ \hline
+    \end{tabular}
+    \end{center}
+
+\end{document}

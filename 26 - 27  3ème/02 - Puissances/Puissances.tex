@@ -1,0 +1,337 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\setcounter{chapter}{1}
+\renewcommand{\monTitre}{Les puissances}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+% ============================================================
+\section{Exposant entier positif}
+% ============================================================
+
+\subsection{Définition et notation}
+
+    \begin{definition}
+        Pour tout nombre $a$ et tout entier $n \geq 2$, on appelle \textbf{puissance $n$-ième de $a$} le produit de $n$ facteurs égaux à $a$ :
+        \[
+            a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ facteurs}}
+        \]
+        Par convention : $a^1 = a$ \quad et \quad $a^0 = 1$ \quad (pour $a \neq 0$).
+        
+        \medskip
+        $a$ s'appelle la \textbf{base} et $n$ s'\textbf{appelle l'exposant}.
+    \end{definition}
+
+    \begin{exemple}
+        Calculer les puissances suivantes :
+        \begin{enumerate}
+            \item $3^4 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $(-2)^3 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $(-5)^2 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $7^0 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{remarque}
+        \textbf{Attention au signe !} Il ne faut pas confondre $(-a)^n$ et $-a^n$ :
+        \begin{itemize}
+            \item $(-3)^2 = (-3) \times (-3) = 9$ \quad (on élève $-3$ au carré)
+            \item $-3^2 = -(3 \times 3) = -9$ \quad (on prend l'opposé de $3^2$)
+        \end{itemize}
+        De plus, une puissance d'exposant \textbf{pair} d'un nombre négatif est \textbf{toujours positive}.
+        Une puissance d'exposant \textbf{impair} d'un nombre négatif est \textbf{toujours négative}.
+    \end{remarque}
+
+
+\subsection{Propriétés de calcul}
+
+    \begin{propriete}[Produit de puissances de même base]
+        Pour tout nombre $a \neq 0$ et tous entiers $m$ et $n$ :
+        \[
+            a^m \times a^n = a^{m+n}
+        \]
+    \end{propriete}
+
+    \begin{exemple}
+        Simplifier en utilisant la propriété :
+        \begin{enumerate}
+            \item $5^3 \times 5^4 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $(-2)^5 \times (-2)^2 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{propriete}[Quotient de puissances de même base]
+        Pour tout nombre $a \neq 0$ et tous entiers $m$ et $n$ :
+        \[
+            \frac{a^m}{a^n} = a^{m-n}
+        \]
+    \end{propriete}
+
+    \begin{exemple}
+        Simplifier en utilisant la propriété :
+        \begin{enumerate}
+            \item $\dfrac{7^6}{7^2} = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $\dfrac{3^5}{3^5} = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{propriete}[Puissance d'une puissance]
+        Pour tout nombre $a$ et tous entiers $m$ et $n$ :
+        \[
+            \left(a^m\right)^n = a^{m \times n}
+        \]
+    \end{propriete}
+
+    \begin{exemple}
+        Simplifier :
+        \begin{enumerate}
+            \item $\left(4^3\right)^2 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $\left(10^2\right)^4 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{propriete}[Puissance d'un produit ou d'un quotient]
+        Pour tous nombres $a$ et $b$ et tout entier $n$ :
+        \[
+            (a \times b)^n = a^n \times b^n \qquad \text{et} \qquad \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \quad (b \neq 0)
+        \]
+    \end{propriete}
+
+    \begin{exemple}
+        Développer puis calculer :
+        \begin{enumerate}
+            \item $(3 \times 5)^2 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item $\left(\dfrac{2}{3}\right)^3 = $
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+
+% ============================================================
+\section{Exposant entier négatif}
+% ============================================================
+
+\subsection{Définition}
+
+    \begin{definition}
+        Pour tout nombre $a \neq 0$ et tout entier $n > 0$, $a^{-n}$ est l'inverse de  $a^n$, ce qui veut dire que:
+        \[
+            a^{-n} = \frac{1}{a^n}
+        \]
+        En particulier : $a^{-1} = \dfrac{1}{a}$.
+    \end{definition}
+
+    \begin{exemple}
+        Écrire chaque puissance sous forme de fraction puis calculer :
+        \begin{enumerate}
+            \item $2^{-3} = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item $10^{-2} = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item $5^{-1} = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{remarque}
+        Les puissances de $10$ négatives correspondent à des fractions décimales :
+        \[
+            10^{-1} = 0{,}1 \qquad 10^{-2} = 0{,}01 \qquad 10^{-3} = 0{,}001 \qquad \cdots
+        \]
+    \end{remarque}
+
+
+\newpage
+
+
+\subsection{Les propriétés restent valables}
+
+    \begin{propriete}
+        Toutes les propriétés vues en section~1 (produit, quotient, puissance d'une puissance…) restent valables pour des exposants entiers \textbf{relatifs} (positifs, nuls ou négatifs).
+    \end{propriete}
+
+    \begin{exemple}
+        Simplifier et écrire sous la forme $a^n$ avec $n$ entier relatif :
+        \begin{enumerate}
+            \item $10^3 \times 10^{-5} = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item $\dfrac{2^{-4}}{2^{-1}} = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item $\left(3^{-2}\right)^3 = $
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+
+% ============================================================
+\section{Écriture scientifique}
+% ============================================================
+
+\subsection{Définition}
+
+    \begin{definition}
+        Un nombre est écrit en \textbf{notation scientifique} (ou écriture scientifique) lorsqu'il est de la forme :
+        \[
+            a \times 10^n
+        \]
+        où $n$ est un entier relatif et $a$ est un nombre décimal tel que $1 \leq a < 10$.
+    \end{definition}
+
+    \begin{exemple}
+        Parmi les écritures suivantes, indiquer celles qui sont des notations scientifiques et corriger les autres :
+        \begin{enumerate}
+            \item $3{,}5 \times 10^4$
+            \begin{ZoneReponse}{0.8cm}
+            \end{ZoneReponse}
+
+            \item $15 \times 10^3$
+            \begin{ZoneReponse}{0.8cm}
+            \end{ZoneReponse}
+
+            \item $0{,}8 \times 10^{-2}$
+            \begin{ZoneReponse}{0.8cm}
+            \end{ZoneReponse}
+
+            \item $7 \times 10^{-5}$
+            \begin{ZoneReponse}{0.8cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Convertir en notation scientifique}
+
+    \begin{methode}
+        Pour écrire un nombre en notation scientifique :
+        \begin{enumerate}
+            \item On repère le premier chiffre significatif (le premier chiffre le plus à gauche différent de $0$).
+            \item On place la virgule juste après ce chiffre pour obtenir $a$ avec $1 \leq a < 10$.
+            \item On détermine $n$ : c'est le nombre de décimales dont on a \textbf{déplacé} la virgule.
+                \begin{itemize}
+                    \item Si on déplace vers la \textbf{gauche} (nombre $\geq 10$) : $n$ \textbf{est strictement positif}.
+                    \item Si on déplace vers la \textbf{droite} (nombre $< 1$) : $n$ \textbf{est strictement négatif}.
+                \end{itemize}
+        \end{enumerate}
+    \end{methode}
+
+    \begin{exemple}
+        Écrire les nombres suivants en notation scientifique :
+        \begin{enumerate}
+            \item $\np{384000}$
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item $0{,}00047$
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item $\np{5100000000}$ \quad (distance Terre-Jupiter en km, environ)
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item $0{,}000\,000\,001$ \quad (taille d'une bactérie en m, environ)
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Convertir depuis la notation scientifique}
+
+    \begin{exemple}
+        Écrire les nombres suivants sous forme décimale :
+        \begin{enumerate}
+            \item $6{,}02 \times 10^3$
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+
+            \item $3{,}1 \times 10^{-4}$
+            \begin{ZoneReponse}{1.5cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+
+\subsection{Opérations en notation scientifique}
+ 
+    \begin{methode}
+        Pour \textbf{multiplier} deux nombres en notation scientifique $(a \times 10^m) \times (b \times 10^n)$ :
+        \begin{enumerate}
+            \item On multiplie les parties décimales : $a \times b$.
+            \item On additionne les exposants : $10^{m+n}$.
+            \item Si le résultat n'est pas en notation scientifique, on ajuste.
+        \end{enumerate}
+        Pour \textbf{diviser} deux nombres en notation scientifique $\dfrac{a \times 10^m}{b \times 10^n}$ :
+        \begin{enumerate}
+            \item On divise les parties décimales : $a \div b$.
+            \item On soustrait les exposants : $10^{m-n}$.
+            \item Si le résultat n'est pas en notation scientifique, on ajuste.
+        \end{enumerate}
+    \end{methode}
+ 
+    \begin{exemple}[Type Brevet – Calculs en notation scientifique]
+        \begin{enumerate}
+            \item Calculer $(137 \times 10^4) \times (2{,}5 \times 10^3)$ et donner le résultat en notation scientifique.
+            \begin{ZoneReponse}{2.5cm}
+            \end{ZoneReponse}
+
+             \item Calculer $\dfrac{81 \times 10^7}{6 \times 10^{-2}}$ et donner le résultat en notation scientifique.
+            \begin{ZoneReponse}{2.5cm}
+            \end{ZoneReponse}
+          
+            \item La lumière parcourt environ $3 \times 10^8$ m par seconde. La distance de la Terre au Soleil est d'environ $1{,}5 \times 10^{11}$ m.
+            Calculer le temps que met la lumière pour parcourir cette distance. Exprimer le résultat en secondes en notation scientifique, puis en minutes.
+            \begin{ZoneReponse}{4cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+ 
+
+\end{document}

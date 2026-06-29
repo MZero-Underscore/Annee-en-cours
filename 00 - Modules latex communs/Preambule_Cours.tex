@@ -1,7 +1,8 @@
 %% --- PACKAGES PROPRES AUX COURS ---
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage[column=X]{cellspace}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 %% --- VARIABLES ---
 \newcommand{\monTitre}{Titre du cours} % À redéfinir dans chaque fichier : \renewcommand{\monTitre}{Mon titre}
@@ -51,12 +52,10 @@
 \fancyhead[LO,RE]{\maClasse}
 \fancyhead[RO,LE]{\monTitre}
 \renewcommand\footrulewidth{1pt}
-\fancyfoot[LO,RE]{Année 2025-2026}
+\fancyfoot[LO,RE]{Année 2026-2027}
 \fancyfoot[RO,LE]{\textbf{Page \thepage/\pageref{LastPage}}}
 
 %% --- RÉGLAGES PARAGRAPHES ---
-\setlength{\cellspacebottomlimit}{4pt}
-\setlength{\cellspacetoplimit}{4pt}
 \setlength{\parindent}{2pt}
 \setlength{\tabcolsep}{0.5cm}
 
@@ -158,11 +157,12 @@
 %% --- FIN DU BLOC DES BOITES ---
 
 % Activité (Numéro, Titre, Chapitre)
-\newcommand{\enteteActivite}[3]{
+\newcommand{\enteteActivite}[3]{%
     \noindent
-    \begin{tabularx}{\textwidth}{@{}p{2cm} >{\centering\arraybackslash}X p{2cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}p{2.5cm} >{\centering\arraybackslash}X p{2.5cm}@{}}
         \textbf{Activité n°#1} & \textbf{#2} & \textbf{Chapitre #3} \\
-    \end{tabularx}
+    \end{tabularx}%
+    \vspace{0.5cm}
 }
 
 

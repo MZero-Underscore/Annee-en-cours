@@ -1,0 +1,371 @@
+\documentclass[a4paper]{book}
+
+\input{../../00 - Modules latex communs/Preambule_Commun.tex}
+\input{../00 - Modules latex/Preambule_Niveau.tex}
+\input{../../00 - Modules latex communs/Preambule_Cours.tex}
+
+\begin{document}
+
+\setcounter{chapter}{3}
+\renewcommand{\monTitre}{Arithmétique}
+\chapter{\monTitre}
+\thispagestyle{fancy}
+
+
+% ============================================================
+\section{Multiples, diviseurs et nombres premiers}
+% ============================================================
+
+\subsection{Multiples et diviseurs}
+
+    \begin{definition}
+        Soit $a$ et $b$ deux entiers avec $b \neq 0$. On dit que :
+        \begin{itemize}
+            \item $b$ \textbf{divise} $a$ (ou que $b$ est un \textbf{diviseur} de $a$) si le reste de la division euclidienne de $a$ par $b$ est nul, c'est-à-dire si $a = b \times k$ pour un certain entier $k$.
+            \item Dans ce cas, $a$ est un \textbf{multiple} de $b$.
+        \end{itemize}
+    \end{definition}
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Lister tous les diviseurs de $24$ :
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item $7$ est-il un diviseur de $\np{1001}$ ? Justifier.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{remarque}
+        Quelques critères de divisibilité utiles à connaître :
+        \begin{itemize}
+            \item Par $2$ : le chiffre des unités est $0, 2, 4, 6$ ou $8$.
+            \item Par $3$ : la somme des chiffres est divisible par $3$.
+            \item Par $5$ : le chiffre des unités est $0$ ou $5$.
+            \item Par $9$ : la somme des chiffres est divisible par $9$.
+            \item Par $10$ : le chiffre des unités est $0$.
+        \end{itemize}
+    \end{remarque}
+
+    \begin{exemple}
+        Parmi les nombres suivants, indiquer par quels entiers (parmi $2$, $3$, $5$, $9$, $10$) chacun est divisible :
+        
+        \medskip
+        \noindent
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{a)} $\np{2430}$
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{b)} $\np{5175}$
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+
+\subsection{Nombres premiers}
+
+    \begin{definition}
+        Un \textbf{nombre premier} est un entier qui admet \textbf{exactement deux diviseurs distincts} : $1$ et lui-même.
+        
+        \medskip
+        Un entier supérieur à $1$ qui n'est pas premier est dit \textbf{composé}.
+    \end{definition}
+
+    \begin{exemple}
+        \begin{enumerate}
+            \item Expliquer pourquoi $1$ n'est pas un nombre premier.
+            \begin{ZoneReponse}{1cm}
+            \end{ZoneReponse}
+
+            \item Parmi les entiers suivants, entourer les nombres premiers :
+            \[
+                2 \quad 3 \quad 4 \quad 9 \quad 11 \quad 15 \quad 17 \quad 19 \quad 21 \quad 23 \quad 29 \quad 51
+            \]
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+    \begin{methode}[Crible d'Ératosthène]
+        Le \textbf{crible d'Ératosthène} est une méthode pour trouver tous les nombres premiers inférieurs à un entier donné $N$ :
+        \begin{enumerate}
+            \item On écrit tous les entiers de $2$ à $N$ dans un tableau.
+            \item On barre le 1 (qui n'est pas premier !).
+            \item On entoure $2$ (premier nombre premier), puis on \textbf{barre} tous ses multiples ($4, 6, 8, \ldots$).
+            \item On entoure le premier nombre non barré ($3$), puis on barre tous ses multiples non encore barrés.
+            \item On répète l'opération jusqu'à ce que tous les entiers soient soit entourés, soit barrés.
+            \item Les nombres \textbf{entourés} sont exactement les nombres premiers inférieurs à $N$.
+        \end{enumerate}
+    \end{methode}
+
+    \begin{exemple}
+        Utiliser le crible d'Ératosthène pour trouver tous les nombres premiers inférieurs ou égaux à $100$.
+
+        \medskip
+        \begin{center}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+         1  &  2  &  3  &  4  &  5  &  6  &  7  &  8  &  9  &  10 \\ \hline
+        11  & 12  & 13  & 14  & 15  & 16  & 17  & 18  & 19  &  20 \\ \hline
+        21  & 22  & 23  & 24  & 25  & 26  & 27  & 28  & 29  &  30 \\ \hline
+        31  & 32  & 33  & 34  & 35  & 36  & 37  & 38  & 39  &  40 \\ \hline
+        41  & 42  & 43  & 44  & 45  & 46  & 47  & 48  & 49  &  50 \\ \hline
+        51  & 52  & 53  & 54  & 55  & 56  & 57  & 58  & 59  &  60 \\ \hline
+        61  & 62  & 63  & 64  & 65  & 66  & 67  & 68  & 69  &  70 \\ \hline
+        71  & 72  & 73  & 74  & 75  & 76  & 77  & 78  & 79  &  80 \\ \hline
+        81  & 82  & 83  & 84  & 85  & 86  & 87  & 88  & 89  &  90 \\ \hline
+        91  & 92  & 93  & 94  & 95  & 96  & 97  & 98  & 99  & 100 \\ \hline
+        \end{tabular}
+        \end{center}
+
+        \medskip
+        Conclure : les nombres premiers inférieurs ou égaux à $100$ sont :
+        \begin{ZoneReponse}{1.5cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\newpage
+
+
+% ============================================================
+\section{Décomposition d'un entier en produit de facteurs premiers}
+% ============================================================
+
+\subsection{Théorème}
+
+    \begin{propriete}[Théorème fondamental de l'arithmétique]
+        Tout entier supérieur ou égal à $2$ peut s'écrire de manière \textbf{unique} comme un produit de facteurs premiers (à l'ordre des facteurs près). On appelle cela sa \textbf{décomposition en produit de facteurs premiers}.
+    \end{propriete}
+
+    \begin{methode}
+        Pour décomposer un entier $n$ en produit de facteurs premiers, on effectue des \textbf{divisions successives} par les nombres premiers ($2, 3, 5, 7, 11, \ldots$) dans l'ordre croissant, jusqu'à obtenir un quotient égal à $1$.
+    \end{methode}
+
+    \begin{exemple}
+        Décomposer $\np{360}$ en produit de facteurs premiers en utilisant le tableau de divisions successives.
+
+        \medskip
+        \begin{minipage}[c]{0.35\textwidth}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                \np{360} & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                        1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c]{0.58\textwidth}
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+    \begin{exemple}
+        Décomposer $\np{2}$~$\np{310}$ en produit de facteurs premiers.
+
+        \medskip
+        \begin{minipage}[c]{0.35\textwidth}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                \np{2310} & \\ \hline
+                           & \\ \hline
+                           & \\ \hline
+                           & \\ \hline
+                           & \\ \hline
+                         1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c]{0.58\textwidth}
+            \begin{ZoneReponse}{5cm}
+            \end{ZoneReponse}
+        \end{minipage}
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Application n°1 : rendre une fraction irréductible}
+
+    \begin{definition}
+        Une fraction $\dfrac{a}{b}$ est dite \textbf{irréductible} si $a$ et $b$ n'ont pas d'autre diviseur commun que $1$, c'est-à-dire si leur seul diviseur commun est $1$.
+    \end{definition}
+
+    \begin{methode}
+        Pour rendre une fraction irréductible en utilisant la décomposition en facteurs premiers :
+        \begin{enumerate}
+            \item On décompose le numérateur et le dénominateur en produit de facteurs premiers.
+            \item On repère les facteurs premiers \textbf{communs}.
+            \item On simplifie en divisant numérateur et dénominateur par ces facteurs communs.
+        \end{enumerate}
+    \end{methode}
+
+    \begin{exemple}
+        Rendre la fraction $\dfrac{180}{252}$ irréductible.
+
+        \medskip
+        \noindent
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Décomposition de $180$ :}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                $180$ & \\ \hline
+                      & \\ \hline
+                      & \\ \hline
+                      & \\ \hline
+                    1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Décomposition de $252$ :}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                $252$ & \\ \hline
+                      & \\ \hline
+                      & \\ \hline
+                      & \\ \hline
+                    1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+    \begin{exemple}
+        Rendre la fraction $\dfrac{\np{1050}}{\np{1260}}$ irréductible.
+
+        \medskip
+        \noindent
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Décomposition de $\np{1050}$ :}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                \np{1050} & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                        1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Décomposition de $\np{1260}$ :}
+            \begin{center}
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{r|l}
+                \np{1260} & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                          & \\ \hline
+                        1 & \\
+            \end{tabular}
+            \end{center}
+        \end{minipage}
+
+        \begin{ZoneReponse}{1cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+
+\newpage
+
+
+\subsection{Application n°2 : trouver le plus grand diviseur commun à deux entiers}
+
+    \begin{definition}
+        Le \textbf{plus grand diviseur commun} (PGCD) de deux entiers $a$ et $b$ est le plus grand entier qui divise à la fois $a$ et $b$. On le note $\text{PGCD}(a\,;\,b)$.
+    \end{definition}
+
+    \begin{methode}
+        Pour calculer le PGCD de deux entiers à l'aide de leur décomposition en facteurs premiers :
+        \begin{enumerate}
+            \item On décompose chaque entier en produit de facteurs premiers.
+            \item On relève les facteurs premiers \textbf{communs aux deux décompositions}.
+            \item Le PGCD est le produit de ces facteurs communs, chacun pris avec le plus \textbf{petit} exposant.
+        \end{enumerate}
+    \end{methode}
+
+    \begin{exemple}
+        Calculer $\text{PGCD}(180\,;\,252)$ en utilisant les décompositions obtenues dans l'exemple précédent.
+        \begin{ZoneReponse}{2cm}
+        \end{ZoneReponse}
+    \end{exemple}
+
+    \begin{remarque}
+        Si $\text{PGCD}(a\,;\,b) = 1$, on dit que $a$ et $b$ sont \textbf{premiers entre eux}. Cela signifie qu'ils n'ont aucun facteur premier en commun, et donc que la fraction $\dfrac{a}{b}$ est déjà irréductible.
+    \end{remarque}
+
+    \begin{exemple}[Type Brevet – Utilisation du PGCD]
+        Une association souhaite constituer des équipes identiques à partir de $\np{168}$ filles et $\np{252}$ garçons. Chaque équipe doit contenir uniquement des filles ou uniquement des garçons, et toutes les équipes doivent avoir le même effectif. On cherche le nombre maximum d'élèves par équipe.
+
+        \begin{enumerate}
+            \item Décomposer $\np{168}$ et $\np{252}$ en produit de facteurs premiers.
+
+            \medskip
+            \noindent
+            \begin{minipage}[t]{0.45\textwidth}
+                \textbf{Décomposition de $\np{168}$ :}
+                \begin{center}
+                \renewcommand{\arraystretch}{1.6}
+                \begin{tabular}{r|l}
+                    \np{168} & \\ \hline
+                             & \\ \hline
+                             & \\ \hline
+                             & \\ \hline
+                           1 & \\
+                \end{tabular}
+                \end{center}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[t]{0.45\textwidth}
+                \textbf{Décomposition de $\np{252}$ :}
+                \begin{center}
+                \renewcommand{\arraystretch}{1.6}
+                \begin{tabular}{r|l}
+                    \np{252} & \\ \hline
+                             & \\ \hline
+                             & \\ \hline
+                             & \\ \hline
+                           1 & \\
+                \end{tabular}
+                \end{center}
+            \end{minipage}
+
+            \item Calculer $\text{PGCD}(\np{168}\,;\,\np{252})$.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+
+            \item En déduire le nombre maximum d'élèves par équipe, ainsi que le nombre d'équipes de filles et d'équipes de garçons.
+            \begin{ZoneReponse}{2cm}
+            \end{ZoneReponse}
+        \end{enumerate}
+    \end{exemple}
+
+\end{document}
